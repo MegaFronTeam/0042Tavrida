@@ -1,8 +1,21 @@
-mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
-		+e.inner
+mixin mMenu()
+	+b.mm--js
+		+e.container.container
+			+e.top-row.row
+				.col-auto
+					.top-nav__burger.burger-js
+						span
+				.col-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logoxl.svg" alt="")
+				//-.col-auto.ms-auto
+					+b.login-btn(href="#")
+						+icon('user')
+						span.d-none.d-sm-block Войти
 			+mnu()
-			.text-right
+			+mmSocial()
+			+e.location г. Судак, бухта Капсель
+
 	//  мобильное меню
 
 mixin top-nav()
@@ -11,13 +24,31 @@ mixin top-nav()
 		+e.container.container
 			+e.row.row.align-items-center
 				.col-auto
-					+e.burger
+					+e.burger.burger-js
 						span
 				.col-auto
 					+e.logo(href='#')
-						img(loading="lazy" src="img/svg/logo.svg" alt="")
+						img(loading="lazy" src="img/svg/logoxl.svg" alt="")
 				.col-auto.ms-auto
 					+e.mail-us(href='#')
 						+icon('mail')
-						span.d-none.d-sm-block напишите нам
+						span.d-md-block.d-none напишите нам
+				.col-auto
+					+b.login-btn(href="#")
+						+icon('user')
+						span.d-md-block.d-none Войти
 	// end top-nav
+
+mixin mmSocial()
+	+e.soc
+		+e.s-row.row
+			+mmSocItem('fb')
+			+mmSocItem('vk')
+			+mmSocItem('yt')
+			+mmSocItem('ok')
+			+mmSocItem('inst')
+
+mixin mmSocItem(imgName)
+	.col-auto
+		+e.s-item(href='#')
+			img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")

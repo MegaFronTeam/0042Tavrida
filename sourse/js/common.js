@@ -1,9 +1,5 @@
 
 const JSCCommon = {
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-
 	modalCall() {
 
 		$(".link-modal").fancybox({
@@ -63,48 +59,6 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	toggleMenu() {
-		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.addEventListener('click', () => {
-					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
-					this.menuMobile.classList.toggle("active");
-					document.body.classList.toggle("fixed");
-					document.querySelector('html').classList.toggle("fixed");
-					return false;
-				});
-			});
-		}
-	},
-
-	closeMenu() {
-		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.classList.remove("on");
-			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
-			document.querySelector('html').classList.remove("fixed");
-		}
-
-	},
-	mobileMenu() {
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					this.closeMenu();
-				}
-			}, { passive: true });
-
-			window.addEventListener('resize', () => {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, { passive: true });
-		}
-	},
 	// /mobileMenu
 
 	// tabs  .
@@ -233,7 +187,7 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
+	//JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -456,7 +410,7 @@ function eventHandler() {
 		},
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 15,
+			loadPrevNextAmount: 30,
 		},
 		navigation: {
 			nextEl: '.partners-next-js',
@@ -480,6 +434,11 @@ function eventHandler() {
 			$(slide).addClass('pushed');
 		}
 	}
+	//mob-menu
+	$('.burger-js').click(function (){
+		$('.burger-js, .mm--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	});
 
 
 	//end luckyone js
