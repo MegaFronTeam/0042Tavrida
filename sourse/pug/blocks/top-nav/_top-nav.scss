@@ -1,57 +1,101 @@
 .top-nav {
-	position: sticky; 
-	left: 0;
-	// left: 200px;
-	// right: -200px;
-	// margin-right: -200px;
-	top: 0;
-	left: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	&.fixed { 
-		bottom: auto;
-		margin-top: 0;
-	}
-	.row{
-		@include roww(20px, m);
-	}
+  padding: rem(32) 0 rem(38) 0;
 
-	// 
-	@include media-breakpoint-up(xl) {}
+  &__container{
 
-	@include media-breakpoint-up(lg) {}
+  }
 
-	@include media-breakpoint-up(md) {}
+  &__row{
+    @include roww(20px);
+    @include media-breakpoint-up(sm){
+      @include roww(30px);
+    }
+  }
+  &__logo{
+    display: block;
 
-	@include media-breakpoint-up(sm) {}
+    width: 125px;
+    @include media-breakpoint-up(sm){
+      width: rem(202);
+    }
 
-	@include media-breakpoint-up(xs) {}
+    @include media-breakpoint-up(xl){
+      margin-left: rem(40);
+    }
 
-	// 
-	@include media-breakpoint-between(md, xl) {}
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__mail-us{
+    @include media-breakpoint-up(xxl){
+      padding-top: 4.5px;
+    }
+    display: flex;
+    align-items: center;
 
-	// 
-	@include media-breakpoint-only(xs) {}
+    color: $body-color;
+    &:hover{
+      color: $primary;
+    }
 
-	@include media-breakpoint-only(sm) {}
+    .icon{
+      color: currentColor;
+      font-size: 24px;
+      margin-right: 17px;
+    }
 
-	@include media-breakpoint-only(md) {}
+    span{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+  }
+  &__burger{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
 
-	@include media-breakpoint-only(lg) {}
+    @include media-breakpoint-up(xxl){
+      margin-bottom: 12px;
+    }
 
-	@include media-breakpoint-only(xl) {}
+    span,
+    span:after,
+    span:before {
+      display: block;
+      position: absolute;
+      @include mt();
+      background-color: $black;
+      width: 32px;
+      height: 0.9px;
+    }
 
-	// 
-	@include media-breakpoint-down(xl) {}
+    span:after,
+    span:before {
+      content: "";
+      left: 0;
+    }
 
-	@include media-breakpoint-down(lg) {}
+    span {
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
 
-	@include media-breakpoint-down(md) {}
+    span:before {
+      top: 8px;
+    }
 
-	@include media-breakpoint-down(sm) {}
+    span:after {
+      bottom: 8px;
+    }
+  }
 
-	@include media-breakpoint-down(xs) {}
+  &__{}
+  &__{}
 }
-
-

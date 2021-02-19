@@ -1,55 +1,71 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+  --sPT: 0;
+  --sTPB: 0;
+  --sPB: #{rem(37)};
 
-	h1 {
-		margin-bottom: 1px;
-	}
+  position: relative;
+  z-index: 2;
+  &__container{
+    position: relative;
+  }
+  .section-title{
+    z-index: 1;
 
-	h2 {
-		margin-bottom: 1px;
-	}
+    position: relative;
+    margin-bottom: -20px;
+    @include media-breakpoint-up(md){
+      margin-bottom: 0;
+      padding-top: rem(48);
+      position: absolute;
+      top: 0;
+    }
+    //left: 9px;
 
-	@include media-breakpoint-up(xl) {}
+    h1{
+      color: $body-color;
 
-	@include media-breakpoint-up(lg) {}
+      @include media-breakpoint-up(lg){
+        flex: rem(45);
+      }
+      @include media-breakpoint-up(lg){
+        flex: rem(60);
+      }
+      @include media-breakpoint-up(xl){
+        font-size: rem(100.3);
+      }
+      line-height: (88/101);
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+  }
+  //video
+  &__video-bl{
+    @extend .accept-ratio-frame-nh;
 
-	@include media-breakpoint-up(md) {}
+    padding-top: (544/976) * 100%;
+    background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(177, 217, 219, 0.8) 82.84%);
+    backdrop-filter: blur(32px);
 
-	@include media-breakpoint-up(sm) {}
+    border-radius: rem(25);
+    @include media-breakpoint-up(md){
+      border-radius: rem(50);
+    }
+  }
+  &__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
+  &__{}
+  &__{}
+  //
+  &__{}
+  &__{}
 }
 
 // end.headerBlock

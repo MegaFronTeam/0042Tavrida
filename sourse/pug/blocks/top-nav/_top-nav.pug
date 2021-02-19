@@ -1,30 +1,23 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+
+mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
+		+e.container.container
+			+e.row.row.align-items-center
+				.col-auto
+					+e.burger
 						span
-				.col
-					+mnu()
-					
+				.col-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.ms-auto
+					+e.mail-us(href='#')
+						+icon('mail')
+						span.d-none.d-sm-block напишите нам
 	// end top-nav

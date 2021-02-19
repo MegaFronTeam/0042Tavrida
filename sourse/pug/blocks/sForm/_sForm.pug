@@ -2,8 +2,21 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.box
+				+b.section-title
+					h2
+						| Хотите быть
+						|
+						br.d-none.d-xl-block
+						| в курсе всех последних
+						br.d-none.d-xl-block
+						|
+						| новостей и событий?
+				+form-wrap
+					+e.row.row.align-items-end
+						+e.col--inp.col-lg-7
+							+input('Введите Ваш e-mail', 'email')
+						+e.col--btn.col-lg-5
+							+e.BUTTON.btn(type="submit") Подписаться на рассылку
+
 	// end sForm

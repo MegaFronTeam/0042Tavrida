@@ -1,0 +1,55 @@
+mixin sResidents(data)
+	// start sResidents
+	+b.SECTION.sResidents.section#sResidents&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-md.mb-3.mb-md-0
+					h2 НАШИ резиденты
+				.col-12.col-md-auto
+					+b.sl-contr
+						+e.prev.resident-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+							//-+icon('arrow-left')
+						+e.next.resident-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+							//-+icon('arrow-right')
+			+e.slider
+				.swiper-container.resident-slider-js
+					.swiper-wrapper
+						+residentSlide(1, 'начинающий художник')
+							| Анастасия
+							br
+							| Прудаева
+						+residentSlide(2, 'начинающий исполнитель')
+							| Владислав
+							br
+							| Королёв
+						+residentSlide(3, 'начинающий исполнитель')
+							| Илья
+							br
+							| Аноприев
+						+residentSlide(4, 'начинающий исполнитель')
+							| Радмира
+							br
+							| Мантулина
+						+residentSlide(5, 'начинающий писатель')
+							| Александр
+							br
+							| Лазухин
+	// end sResidents
+
+mixin residentSlide(imgNum, role)
+	.swiper-slide
+		+e.item
+			+e.img
+				img.swiper-lazy(src="#" data-src=`img/@2x/portrait-${imgNum}.jpg` alt="")
+			+e.content
+				+e.name
+					block
+				+e.role=role
+			+e.content--hover
+				+e.name
+					block
+				+e.role=role
+				+e.descr В этом году арт-кластер «Таврида» запустил кастинг-платформу, благодаря которой я попал в 10-ку финалистов конкурса ArtMasters и получил возможность снять клип на собственную песню Take Me Home. Для кого-то это может показаться чем-то нереальным, но именно так, украдкой, «Таврида» исполняет мечты
+			+e.bio-btn(href='#') Биография

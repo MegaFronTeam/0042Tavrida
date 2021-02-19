@@ -1,10 +1,14 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
+		+e.container.container
+			+b.section-title
+				h1
+					| Арт-кластер
+					br
+					| «Таврида»
 			.row
-						
+				.col-12.col-sm-11.col-md-9.ms-auto
+					+e.video-bl
+						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
 	// end headerBlock

@@ -1,0 +1,38 @@
+mixin sFaumos(data)
+	// start sFaumos
+	+b.SECTION.sFaumos.section#sFaumos&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Известные люди о нас
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.famous-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.famous-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider
+				.swiper-container.famous-slider-js
+					.swiper-wrapper
+						+faumosSlide(1, 'Юлианна Караулова', 'Певица')
+						+faumosSlide(2, 'Сергей Кириенко', 'Первый заместитель Руководителя Администрации Президента РФ')
+							| Фестиваль «Таврида – АРТ» уже точно стал визитной карточкой Крыма и ежегодно привлекает множество творческих людей со всей России. А по мере строительства здесь творческой академии, проекты арт-кластера откроют возможности и для молодежи внутри полуострова
+						+faumosSlide(1, 'Юлианна Караулова', 'Певица')
+						+faumosSlide(1, 'Юлианна Караулова', 'Певица')
+						+faumosSlide(1, 'Юлианна Караулова', 'Певица')
+				+b.famous-pugin--js
+	// end sFaumos
+
+mixin faumosSlide(imgNum, name, prof)
+	.swiper-slide
+		+e.item
+			+e.img
+				img.swiper-lazy(src="#" data-src=`img/@2x/faumos-${imgNum}.png` alt="")
+			+e.txt-bl
+				+e.txt
+					if block
+						block
+					else
+						| Конечно, есть и другие проекты, где можно выступить с артистами, другие фестивали, где ты встречаешься с единомышленниками, но именно «Таврида – АРТ» это все объединяет. Считаю, что это бесценный опыт, и жалею, что в свое время у меня не было возможности побывать на таком фестивале.
+				+e.name=name
+				+e.prof=prof

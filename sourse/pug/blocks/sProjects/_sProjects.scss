@@ -1,0 +1,142 @@
+// start .sProjects
+.sProjects {
+	width: 100vw;
+	overflow: hidden;
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(75)};
+		--sTPB: #{rem(63)};
+		--sPB: #{rem(80)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__sliders{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&__slider{
+		&:nth-child(even){
+			.swiper-wrapper{
+				@include media-breakpoint-up(xl){
+					padding-left: rem(100);
+				}
+				@include media-breakpoint-up(xxl){
+					padding-left: rem(156);
+				}
+			}
+		}
+
+
+		margin-bottom: rem(40);
+		position: relative;
+		z-index: 0;
+		&:hover{
+			z-index: 1;
+		}
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{}
+		.swiper-slide{
+			position: relative;
+			z-index: 0;
+			&:hover{
+				z-index: 1;
+			}
+
+			height: auto;
+			&.long{
+				width: 100%;
+				@include media-breakpoint-up(md){
+					max-width: 100%;
+					width: rem(632);
+				}
+			}
+
+			&.short{
+				width: 100%;
+				@include media-breakpoint-up(md){
+					max-width: 75%;
+					width: rem(296);
+				}
+			}
+		}
+	}
+	&__item{
+		border: 3px solid;
+		display: block;
+		position: relative;
+		height: rem(280);
+		//background-color: rgba(pink, .2);
+
+		border-radius: rem(25);
+		@include media-breakpoint-up(md){
+			border-radius: rem(50);
+		}
+
+		--img-o: 0;
+		--title-col: currentColor;
+		--txt-shdw: 0px 0px 0px rgba(0, 0, 0, 0.0);
+		--content-h: 100%;
+		--content-w: 100%;
+		&:hover{
+			--img-o: 1;
+			--content-h: calc(100% + 162px);
+			--content-w: calc(100% + 170px);
+			--title-col: white;
+			--txt-shdw: 0px 4px 0px rgba(0, 0, 0, 0.46);
+		}
+	}
+	&__content{
+		@include mt();
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+
+		width: var(--content-w);
+		height: var(--content-h);
+
+		border-radius: rem(25);
+		@include media-breakpoint-up(md){
+			border-radius: rem(50);
+		}
+		overflow: hidden;
+	}
+	&__title{
+		display: block;
+		position: relative;
+		z-index: 2;
+		padding: rem(30) rem(34);
+
+		font-weight: 900;
+		font-size: rem(27);
+		line-height: (37/30);
+		text-transform: uppercase;
+		color: var(--title-col);
+		text-shadow: var(--txt-shdw);
+	}
+	&__img{
+		@include mt();
+		opacity: var(--img-o);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sProjects

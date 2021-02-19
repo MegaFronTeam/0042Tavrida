@@ -1,0 +1,29 @@
+mixin sStory(data)
+	// start sStory
+	+b.SECTION.sStory.section#sStory&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наша история
+			+e.slider
+				.swiper-container.story-slider-js
+					.swiper-wrapper
+						+storySlide(1, '2016 год')
+						+storySlide(2, '2018 год')
+						+storySlide(3, '2019 год')
+						+storySlide(4, '2020 год')
+						+storySlide(5, '2015 год')
+	// end sStory
+
+mixin storySlide(imgNum, headline)
+	.swiper-slide
+		+e.item
+			+e.dot
+				+e.circle
+				+e.img
+					img.swiper-lazy(src="#" data-src=`img/@2x/story-${imgNum}.jpg` alt="")
+			+e.txt-conntent
+				+e.headline=headline
+				if descr
+					+e.descr=descr
+				else
+					+e.descr Президент РФ Владимир Путин впервые посетил Всероссийский молодежный образовательный форум «Таврида»

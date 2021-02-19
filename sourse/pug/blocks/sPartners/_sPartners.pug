@@ -1,0 +1,25 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Партнеры
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.partners-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.partners-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider
+				.swiper-container.partners-slider-js
+					.swiper-wrapper
+						- for (var i = 0; i < 20; i++)
+							+partnersSlide()
+	// end sPartners
+
+mixin partnersSlide()
+	.swiper-slide
+		+e.img-box
+			+e.img
+				img.swiper-lazy(src="#" data-src="img/svg/logo.svg" alt="")

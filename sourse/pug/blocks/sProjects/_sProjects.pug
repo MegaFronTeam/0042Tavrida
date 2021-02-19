@@ -1,0 +1,87 @@
+mixin sProjects(data)
+	// start sProjects
+	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
+		.container
+			+b.section-title
+				h2 НАШИ проекты
+			+e.sliders
+				+e.slider--js
+					.swiper-container.project-slider-js
+						.swiper-wrapper
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+								| Форум
+								br
+								| «Таврида»
+							+projectSlide('short', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+								| Онлайн-
+								br
+								| конференция
+								br
+								| «ARTtalk»
+							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+								| Арт-парк
+								br
+								| «Таврида»
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+								| Кастинг-
+								br
+								| платформа
+								br
+								| «Таврида –
+								br
+								| АРТ»
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+								| Центр
+								br
+								| практики
+								br
+								| «Таврида»
+				+e.slider--js
+					.swiper-container.project-slider-js
+						.swiper-wrapper
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+								| Грантовый
+								br
+								| конкурс
+								br
+								| «Таврида»
+							+projectSlide('long', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+								| Фестиваль фестивалей
+								br
+								| «Таврида – АРТ»
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+								| Блог
+								br
+								| о креативных
+								br
+								| индустриях
+								br
+								| «Таврида Медиа»
+							+projectSlide('long', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+								| Образовательный центр
+								br
+								| «Арт-резиденция
+								br
+								| «Таврида»
+	// end sProjects
+
+mixin projectSlide(itemClasses, itemStyle)
+	.swiper-slide(class=itemClasses)
+		+e.item(style=itemStyle href='#')
+			+e.content
+				+e.title
+					block
+				+e.img
+					img.swiper-lazy(src="#" data-src="img/@2x/partners-img.png" alt="")
+
+mixin hint()
+	//to copy pastel
+	+projectSlide('', 'color: ; background-color: ; border-color: ')
+	//-white
+	+projectSlide('', 'color: #000; background-color: #fff; border-color: #000')
+	//-purple
+	+projectSlide('', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+	//-cyan
+	+projectSlide('', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+	//-blue
+	+projectSlide('', 'color: #fff; background-color: #284BA4; border-color: #284BA4')

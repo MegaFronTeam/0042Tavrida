@@ -1,0 +1,254 @@
+// start .sAchivment
+.sAchivment {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(96)};
+		--sTPB: #{rem(30)};
+		--sPB: #{rem(82px)};
+	}
+
+	&__row{
+		position: relative;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(lg){
+			display: block;
+			background-image: url(../img/svg/achivments-grid.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 580px;
+		}
+		@include media-breakpoint-up(xl){
+			background-image: url(../img/svg/achivments-grid.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 700px;
+		}
+		@include media-breakpoint-up(xxl){
+			min-height: 873.31px;
+			margin-top: -60px;
+			margin-left: -38px;
+		}
+	}
+	&__col{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+		}
+
+		//-1
+		&:nth-child(1){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				--num-fs: #{rem(120)};
+				--num-padd: 0 0 5px 0;
+				top: 70px;
+				left: 30px;
+			}
+			@include media-breakpoint-up(xl){
+				--num-fs: #{rem(130)};
+				--num-padd: 0 0 5px 0;
+				top: 116px;
+				left: 84px;
+			}
+			@include media-breakpoint-up(xxl){
+				--num-fs: #{rem(159)};
+				--num-padd: 0 0 5px 0;
+				top: 158px;
+				left: 84px;
+			}
+		}
+		//-2
+		&:nth-child(2){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 70px;
+				left: 340px;
+				--num-padd: 0 #{rem(30)} 0 0;
+				--num-fs: #{rem(70)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 104px;
+				left: 416px;
+				--num-padd: 0 30px 0 0;
+				--num-fs: #{rem(90)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 146px;
+				left: 544px;
+				--num-padd: 0 32px 0 0;
+				--num-fs: #{rem(106)};
+			}
+		}
+
+		//-3
+		&:nth-child(3){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 70px;
+				left: 680px;
+				--num-padd: 0 #{rem(30)} 0 0;
+				--num-fs: #{rem(70)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 106px;
+				left: 826px;
+				--num-padd: 0 30px 0 0;
+				--num-fs: #{rem(90)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 145px;
+				left: 995px;
+				--num-padd: 0 38px 0 0;
+				--num-fs: #{rem(106)};
+			}
+		}
+
+		//-4
+		&:nth-child(4){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 240px;
+				left: 350px;
+				--num-padd: 0 30px 0 0;
+				--num-fs: #{rem(65)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 302px;
+				left: 417px;
+				--num-padd: 0 30px 0 0;
+				--num-fs: #{rem(80)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 360px;
+				left: 527px;
+				--num-padd: 0 40px 0 0;
+				--num-fs: #{rem(89)};
+			}
+		}
+
+		//-5
+		&:nth-child(5){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 240px;
+				left: 680px;
+				--num-padd: 0 0 #{rem(15px)} 0;
+				--num-fs: #{rem(105)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 295px;
+				left: 790px;
+				--num-padd: 0 0 20px 0;
+				--num-fs: #{rem(135)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 378px;
+				left: 975px;
+				--num-padd: 0 0 25px 0;
+				--num-fs: #{rem(159)};
+			}
+		}
+
+		//-6
+		&:nth-child(6){
+			@include media-breakpoint-down(lg){
+				order: 1;
+				width: 100%;
+			}
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 420px;
+				left: 30px;
+				--num-padd: 0 0 20px 0;
+				--num-fs: #{rem(90)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 486px;
+				left: 30px;
+				--num-padd: 0 0 20px 0;
+				--num-fs: #{rem(110)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 600px;
+				left: 88px;
+				--num-padd: 0 0 25px 0;
+				--num-fs: #{rem(128)};
+			}
+		}
+		&:nth-child(7){
+			--num-padd: 0 0 #{rem(15)} 0;
+			@include media-breakpoint-up(lg){
+				top: 525px;
+				left: 653px;
+				--num-padd: 0 #{rem(20)} 0 0;
+				--num-fs: #{rem(60)};
+			}
+			@include media-breakpoint-up(xl){
+				top: 632px;
+				left: 783px;
+				--num-padd: 0 43px 0 0;
+				--num-fs: #{rem(80)};
+			}
+			@include media-breakpoint-up(xxl){
+				top: 790px;
+				left: 975px;
+				--num-padd: 0 43px 0 0;
+				--num-fs: #{rem(89)};
+			}
+		}
+
+
+		&.flex{
+			@include media-breakpoint-up(lg){
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		@include media-breakpoint-down(sm){
+			width: 100%;
+		}
+		@include media-breakpoint-down(lg){
+			--num-fs: #{rem(50)};
+			&:nth-child(odd){
+				--num-fs: #{rem(45)};
+			}
+
+			width: 50%;
+			padding: rem(20);
+
+			br{
+				display: none;
+			}
+		}
+		--num-fs: #{rem(70)};
+	}
+	&__number{
+		font-size: var(--num-fs);
+		font-weight: 900;
+		line-height: 1;
+		letter-spacing: -0.06em;
+		text-transform: uppercase;
+		//padding: rem(20);
+		padding: var(--num-padd);
+	}
+	&__txt{
+		@include media-breakpoint-up(lg){
+			font-weight: 600;
+			font-size: rem(20);
+		}
+		line-height: 1.8;
+
+		&--common{
+			@include media-breakpoint-up(lg){
+				font-weight: 400;
+				font-size: rem(16);
+			}
+		}
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sAchivment

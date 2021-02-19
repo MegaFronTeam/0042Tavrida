@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -253,7 +259,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -302,6 +308,177 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+
+	var residentSlider = new Swiper('.resident-slider-js', {
+		slidesPerView: "auto",
+		breakpoints: {
+			0: {
+				spaceBetween: 20
+			},
+			1200: {
+				spaceBetween: 40
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.resident-next-js',
+			prevEl: '.resident-prev-js'
+		} // on: {
+		// 	init: function () {
+		// 		$('.resident-slider-js .swiper-slide').mouseenter(function (){
+		// 			let thisSlide = this;
+		// 			if (!thisSlide.timeOutDown){
+		// 				$(this).find('.res-descr-js').slideDown(250, function (){
+		// 					$(this).toggleClass('active');
+		// 					thisSlide.timeOutDown = false;
+		// 				});
+		//
+		// 				this.timeOutDown = true;
+		// 			}
+		//
+		// 		});
+		//
+		// 		$('.resident-slider-js .swiper-slide').mouseleave(function (){
+		// 			let thisSlide = this;
+		// 			if (!thisSlide.timeOutUp){
+		// 				$(this).find('.res-descr-js').slideUp(250,function (){
+		// 					$(this).removeClass('active');
+		// 					thisSlide.timeOutUp = false;
+		// 				});
+		//
+		// 				this.timeOutUp = true;
+		// 			}
+		// 		});
+		// 	},
+		// },
+
+	});
+	$('.sProjects__slider--js').each(function () {
+		var projectSlider = new Swiper($(this).find('.project-slider-js'), {
+			slidesPerView: "auto",
+			loop: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 20
+				},
+				1200: {
+					spaceBetween: 40
+				}
+			},
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 10
+			}
+		});
+	}); //
+
+	var storySlider = new Swiper('.story-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+		spaceBetween: 0,
+		// breakpoints: {
+		// 	0:{
+		// 		spaceBetween: 20,
+		// 	},
+		// 	1200: {
+		// 		spaceBetween: 40,
+		// 	},
+		// },
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		}
+	}); //
+
+	var famousSlider = new Swiper('.famous-slider-js', {
+		slidesPerView: "auto",
+		breakpoints: {
+			0: {
+				spaceBetween: 20
+			},
+			768: {
+				spaceBetween: 40
+			},
+			1200: {
+				spaceBetween: 72
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		navigation: {
+			nextEl: '.famous-next-js',
+			prevEl: '.famous-prev-js'
+		},
+		pagination: {
+			el: '.famous-pugin--js',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //
+
+	var partnerSlider = new Swiper('.partners-slider-js', {
+		slidesPerColumnFill: 'row',
+		initialSlide: 1,
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+				slidesPerView: 2,
+				slidesPerColumn: 2
+			},
+			768: {
+				spaceBetween: 20,
+				slidesPerView: 3,
+				slidesPerColumn: 2
+			},
+			1200: {
+				spaceBetween: 38,
+				slidesPerView: 4,
+				slidesPerColumn: 2
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 15
+		},
+		navigation: {
+			nextEl: '.partners-next-js',
+			prevEl: '.partners-prev-js'
+		}
+	});
+	var allPatnerSlides = document.querySelectorAll('.partners-slider-js .swiper-slide');
+	var breakpoint;
+	var l = allPatnerSlides.length;
+
+	if (l % 2 === 0) {
+		breakpoint = l / 2;
+	} else {
+		breakpoint = l / 2 + 1;
+	}
+
+	var _iterator = _createForOfIteratorHelper(allPatnerSlides),
+			_step;
+
+	try {
+		for (_iterator.s(); !(_step = _iterator.n()).done;) {
+			var slide = _step.value;
+
+			if ($(slide).index() + 1 <= breakpoint) {
+				$(slide).addClass('pushed');
+			}
+		} //end luckyone js
+
+	} catch (err) {
+		_iterator.e(err);
+	} finally {
+		_iterator.f();
+	}
 }
 
 ;

@@ -1,78 +1,42 @@
-
-$h: em(2);
-
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
 	position: relative;
-	color: $primary;
-	font-size: 32px;
-	width: 1em;
-	&.on {
-		color: #ffffff;
+	width: 32px;
+	height: 32px;
+
+	color: $black;
+
+	span,
+	span:after,
+	span:before {
+		@include mt();
+		position: absolute;
+		background-color: $black;
+		width: 32px;
+		height: 1px;
 	}
 
 	span:after,
 	span:before {
 		content: "";
-		position: absolute;
 		left: 0;
 	}
 
 	span {
-		@include a-cent(y);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
 	}
 
 	span:before {
-
-
-		top: $h * 2;
+		top: 6px;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: 6px;
 	}
 
-	span { 
-		display: block;
-	}
-
-	span,
-	span:after,
-	span:before {
-		// width: 32px;
-		width: 1em;
-		height: $h;
-		background-color: currentColor;
-		transition: all 0.3s;
-		backface-visibility: hidden;
-		border-radius: 6px;
-		transform-origin: 50% 50%;
-	}
-
-	// &.on {
-	// 	// opacity: 0;
-	// }
-
-	&.on span {
-		background-color: transparent;
-	}
-
-	&.on span:after,
-	&.on span:before {
-
-		top: 0;
-		bottom: 0;
-		
-	}
-
-	&.on span:before {
-		transform: rotate3d(0,0,1, 45deg);
-	}
-
-	&.on span:after {
-		transform: rotate3d(0,0,1, -45deg);
-	}
 }
 
 .menu-mobile {
