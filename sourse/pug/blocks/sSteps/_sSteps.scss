@@ -1,0 +1,173 @@
+// start .sSteps
+.sSteps {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(34px)};
+		--sTPB: #{rem(51px)};
+		--sPB: #{rem(28px)};
+	}
+
+	.tabs{
+		&__caption{
+			@include media-breakpoint-up(sm){
+				@include roww(rem(60));
+			}
+
+			& > *{
+				margin-bottom: rem(20);
+			}
+
+			margin-bottom: rem(-20);
+
+			padding-bottom: rem(50);
+			@include media-breakpoint-up(lg){
+				padding-bottom: rem(125px);
+			}
+		}
+
+		&__btn{
+			@include mt();
+			font-weight: 900;
+			font-size: rem(24);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30);
+			}
+			line-height: (37/30);
+
+			text-transform: uppercase;
+			color: $purple;
+
+			&.active{
+				text-decoration: underline;
+			}
+
+			&:hover{
+				color: lighten($purple, 5);
+			}
+		}
+		&__{}
+		&__{}
+		&__{}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sSteps
+
+.steps{
+	&__row{
+		//@include roww(rem(10));
+		counter-reset: list 0;
+
+		& > *{
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(-40);
+
+		padding-bottom: rem(104px);
+	}
+	&__col{
+		text-align: left;
+
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(md){
+			display: block;
+			text-align: center;
+		}
+
+		@include media-breakpoint-up(lg){
+			width: 20%;
+		}
+
+		list-style-type: none;
+		&:before{
+			display: inline-block;
+
+			min-width: 50px;
+			font-size: rem(70);
+			margin: 0 rem(25) 0 0;
+			@include media-breakpoint-up(md){
+				min-width: 70px;
+				font-size: rem(90);
+				margin: 0 auto rem(26) auto;
+				text-align: inherit;
+			}
+			//width: 100%;
+			counter-increment: list;
+			content: counter(list);
+
+			font-weight: 900;
+			line-height: (11/9);
+			letter-spacing: -0.06em;
+			text-transform: uppercase;
+
+			//backdrop-filter: blur(32px);
+			background: linear-gradient(90deg, #6B1680, #00BAC3);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		position: relative;
+		&:after{
+			@include media-breakpoint-up(lg){
+				content: '';
+			}
+			position: absolute;
+
+			background-image: url(../img/svg/top-bend-dashed-line.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+
+			top: -20px;
+			width: rem(135);
+			height: rem(30);
+			left: calc(50% + 40px);
+			@include media-breakpoint-up(xl){
+				top: -20px;
+				width: rem(160);
+				height: rem(35);
+				left: calc(50% + 40px);
+			}
+			@include media-breakpoint-up(xxl){
+				top: -34px;
+				width: rem(184);
+				height: rem(40);
+				left: calc(50% + 35px);
+			}
+		}
+
+		&:nth-child(even){
+			&:after{
+				transform: rotate(180deg);
+				top: 74px;
+				left: calc(50% + 40px);
+				@include media-breakpoint-up(xxl){
+					left: calc(50% + 43px);
+				}
+			}
+		}
+		&:nth-child(5n){
+			&:after{
+				content: none;
+			}
+		}
+
+	}
+	&__txt{
+		font-weight: 600;
+		line-height: 1.8;
+
+		color: $dark;
+
+		font-size: rem(16.5px);
+		margin: 0 -12px;
+		@include media-breakpoint-up(xl){
+			font-size: rem(20px);
+			margin: 0 rem(-21px);
+		}
+	}
+
+	&__{}
+	&__{}
+}

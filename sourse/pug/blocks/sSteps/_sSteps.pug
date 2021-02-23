@@ -1,0 +1,58 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Этапы отбора
+			+b.tabs
+				+e.caption.row
+					.col-auto
+						+e.btn.active Участники
+					.col-auto
+						+e.btn Зрители
+				+e.wrap
+					+e.content.active
+						+b.steps
+							+e.row.row
+								+sStepsItem('')
+									| Зарегистрироваться
+									|
+									br.d-none.d-xl-block
+									| на официальном сайте арт-кластера
+									|
+									br.d-none.d-xl-block
+									| «Таврида»
+								+sStepsItem('')
+									|	Заполнить
+									|
+									br.d-none.d-xl-block
+									| анкету
+								+sStepsItem('')
+									| Прикрепить
+									|
+									br.d-none.d-xl-block
+									| портфолио/видеовизитку согласно выбранному направлению и требованиям
+								+sStepsItem('offset-md-2 offset-lg-0')
+									| Дождаться
+									|
+									br.d-none.d-xl-block
+									| оценки
+									|
+									br.d-none.d-xl-block
+									| экспертов
+								+sStepsItem('')
+									| Дождаться
+									|
+									br.d-none.d-xl-block
+									| результатов
+									|
+									br.d-none.d-xl-block
+									| рассмотрения заявки в личном кабинете
+							+e.until Регистрация до 1 сентября 2020 года
+					+e.content 2
+	// end sSteps
+
+mixin sStepsItem(bootClasses)
+	+e.col.col-12.col-md-4(class=bootClasses)
+		+e.txt
+			block
