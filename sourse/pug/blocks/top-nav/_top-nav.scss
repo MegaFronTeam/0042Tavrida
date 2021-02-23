@@ -1,12 +1,24 @@
 .top-nav {
   padding: rem(32) 0 rem(38) 0;
 
+  --burger-col: #{$black};
+  --mail-col: #{$body-color};
+  --mail-hov-col: #{$primary};
+  --login-col: #{$purple};
+  &.blue{
+    background-color: $blue2;
+    --burger-col: #{$white};
+    --mail-col: #{$white};
+    --mail-hov-col: #{rgba($white, .8)};
+    --login-col: #{$white};
+  }
+
   &__container{
 
   }
 
   &__row{
-    @include roww(10px);
+    @include roww(8px);
     @include media-breakpoint-up(sm){
       @include roww(30px);
     }
@@ -34,14 +46,14 @@
 
   &__mail-us{
     @include media-breakpoint-up(xxl){
-      padding-top: 4.5px;
+      //padding-top: 4.5px;
     }
     display: flex;
     align-items: center;
 
-    color: $body-color;
+    color: var(--mail-col);
     &:hover{
-      color: $primary;
+      color: var(--mail-hov-col);
     }
 
     .icon{
@@ -73,7 +85,7 @@
       display: block;
       position: absolute;
       @include mt();
-      background-color: $black;
+      background-color: var(--burger-col, #000);
       width: 32px;
       height: 0.9px;
     }
@@ -304,9 +316,9 @@
   font-weight: 600;
   line-height: 1.8;
 
-  color: $purple;
+  color: var(--login-col);
   &:hover{
-    color: $black;
+    color: var(--login-col);
   }
 
   .icon{
@@ -315,5 +327,23 @@
   }
   span{
     margin-left: 11px;
+  }
+
+  &__img{
+    width: rem(32);
+    height: rem(32);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: rem(5.6);
+
+    @include media-breakpoint-up(xl){
+      margin-left: rem(22px);
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

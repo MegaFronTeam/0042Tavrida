@@ -10,3 +10,29 @@ mixin sAbout(data)
 						h2 Об арт-кластере
 						p Арт-кластер «Таврида» – это первый в России центр культуры и искусств, который объединяет творческие сообщества в рамках одной культурно-образовательной экосистемы и предоставляет широкий спектр возможностей в сфере креативных индустрий для талантливой молодежи
 	// end sAbout
+
+mixin sAbout2(data)
+	// start sAbout
+	+b.SECTION.sAbout--blue.section#sAbout&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/@2x/about-bg2.jpg" alt="")
+		+e.dark-block
+		.container
+			.row
+				.col-12.col-lg-8.me-auto.ms-auto
+					+b.section-title
+						h2 О фестивале
+						p Фестиваль фестивалей «Таврида – АРТ» – это настоящий калейдоскоп разноформатных событий на Южном берегу Крыма, в бухте Капсель, с высоким уровнем концентрации представителей творческих сообществ
+
+mixin sAbout3(data)
+	// start sAbout
+	+b.SECTION.sAbout--forum.section#sAbout&attributes(attributes)
+		.container
+			.row
+				.col-12.col-lg-6
+					+b.section-title
+						//-about-bg3
+						h2 О форуме
+						p Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.
+			+e.bg-alt
+				img(loading="lazy" src="img/@2x/about-bg3.png" alt="")

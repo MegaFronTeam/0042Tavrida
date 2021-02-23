@@ -1,0 +1,36 @@
+mixin sActForm(data)
+	// start sActForm
+	+b.SECTION.sActForm.section#sActForm&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Аудитория форума
+			+e.slider
+				.swiper-container.act-slider-js
+					.swiper-wrapper
+						+sActSlide(1, 'Актеры')
+						+sActSlide(2, 'Художники')
+						+sActSlide(3, 'Режисеры')
+						+sActSlide(4, 'фотографы')
+	// end sActForm
+
+mixin sActSlide(imgNum, name, slideColor='#00BAC3')
+	.swiper-slide
+		+e.item
+			+e.bg(style=`background-color: ${slideColor}`)
+				img.swiper-lazy(src="#" data-src=`img/@2x/act-slide-${imgNum}.jpg` alt="")
+			+e.txt
+				if block
+					block
+				else
+					| Представители театара
+					|
+					br
+					| и кино с разлиными
+					|
+					br
+					| регалиями
+					|
+					br
+					| и послужным списком
+			+e.name=name
+		//-act-slide-

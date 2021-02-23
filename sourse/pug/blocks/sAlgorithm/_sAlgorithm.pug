@@ -1,0 +1,27 @@
+mixin sAlgorithm(data)
+	// start sAlgorithm
+	+b.SECTION.sAlgorithm.section#sAlgorithm&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Алгоритм регистрации
+			+e.row.row
+				+algorithmItem(1)
+				+algorithmItem(2)
+				+algorithmItem(3)
+				+algorithmItem(4)
+				//-bend-arrow-top
+
+	// end sAlgorithm
+
+mixin algorithmItem(num)
+	+e.col.col-sm-6.col-lg-3
+		+e.inner-row.row
+			.col-auto.col-sm-12
+				+e.img
+					+e.num=num
+					img(loading="lazy" src="img/svg/step-img.svg" alt="")
+			.col.col-sm-12
+				+e.headline
+					| Заголовок для этапа
+					br
+					| развития

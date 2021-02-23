@@ -1,0 +1,58 @@
+mixin sDirection(data)
+	// start sDirection
+	+b.SECTION.sDirection.section#sDirection&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Направления фестиваля
+			+e.slider
+				.swiper-container.direction-slider-js
+					.swiper-wrapper
+						+directionSlide()
+						+directionSlide()
+						+directionSlide()
+	// end sDirection
+
+mixin sDirection2(data)
+	// start sDirection
+	+b.SECTION.sDirection--on-white.section#sDirection&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Творческие антишколы форума
+			+e.slider
+				.swiper-container.direction-slider-js
+					.swiper-wrapper
+						+directionSlide(false)
+						+directionSlide(false)
+						+directionSlide(false)
+
+mixin directionSlide(hasbotStr=true)
+	.swiper-slide
+		+e.row.row
+			.col-4
+				+directionItem(1, 'Музыка')
+			.col-8
+				+directionItem(2, 'Танцы')
+			.col-2
+				+directionItem(3, 'АРТ')(class="text-center")
+			.col-6
+				+directionItem(4)
+					| Россия –
+					br
+					| страна
+					br
+					| возможностей
+			.col-4
+				+directionItem(5, 'Мюзикл')
+			if hasbotStr
+				.col-12
+					+directionItem(6, '#Мывместе')(class="item-small")
+
+
+mixin directionItem(imgName, txt)
+	+e.item&attributes(attributes)
+		img(src=`img/@2x/direction-${imgName}.jpg` alt="")
+		if txt
+			+e.txt=txt
+		else
+			+e.txt
+				block

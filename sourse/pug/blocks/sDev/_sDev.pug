@@ -1,0 +1,35 @@
+mixin sDev(data)
+	// start sDev
+	+b.SECTION.sDev.section#sDev&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Этапы развития проекта
+			+e.row.row
+				+devStep(1)
+				+devStep(2)
+				+devStep(3)
+				+devStep(6)
+				+devStep(5)
+				+devStep(4)
+	// end sDev
+
+mixin devStep(num)
+	+e.col.col-sm-6.col-lg-4
+		+e.inner-row.row
+			.col-auto.col-sm-12
+				+e.img
+					+e.num=num
+					img(loading="lazy" src="img/svg/step-img.svg" alt="")
+			.col.col-sm-12
+				+e.headline
+					| Заголовок для этапа
+					br
+					| развития
+				+e.txt
+					| Описание этапа развития
+					|
+					br.d-none.d-lg-block
+					| в несколько строк для наглядности
+					|
+					br.d-none.d-lg-block
+					| отображения информации

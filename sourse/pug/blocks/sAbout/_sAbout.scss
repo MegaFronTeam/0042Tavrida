@@ -23,9 +23,6 @@
 		//padding-top: (1280/1920) * 100%;
 
 		height: rem(1280);
-		@include media-breakpoint-up(md){
-			height: rem(1280);
-		}
 
 
 		&:before,
@@ -70,10 +67,98 @@
 			}
 		}
 	}
+	&--blue{
+		background-color: $blue2;
+		color: $white;
+
+		.section-title{
+			@include media-breakpoint-up(xxl){
+				padding-left: 10px;
+			}
+			color: $white;
+			h1,h2{
+				color: $white;
+			}
+		}
+
+		.sAbout__bg{
+			top: rem(-116px)!important;
+			&:before{
+				//top: -1px;
+				//height: (456/1280) * 100%;
+				//background: linear-gradient(180deg, #13477D 50%, rgba(7, 68, 127, 0) 100%);
+				top: rem(-330);
+				height: rem(1000);
+				background: linear-gradient(180deg, #13477D 50%, rgba(7, 68, 127, 0) 100%);
+			}
+			&:after{
+				height: rem(100);
+				bottom: -1px;
+				background: linear-gradient(180deg, #0E1D2D 0%, rgba(7, 12, 17, 0) 100%);
+			}
+		}
+	}
+	&__dark-block{
+		position: absolute;
+		top: rem(1160);
+		left: 0;
+		width: 100vw;
+
+		height: rem(1400);
+		@include media-breakpoint-up(sm){
+			height: rem(1055);
+		}
+		background-color: $dark-blue;
+		z-index: -2;
+	}
+
+
+	//
+	&--forum{
+		--sPT: #{rem(43)};
+		--sTPB: #{rem(20)};
+
+		--sPB: #{rem(20px)};
+		@include media-breakpoint-up(md){
+			--sPB: #{rem(220px)};
+		}
+		@include media-breakpoint-up(lg){
+			--sPB: #{rem(24px)};
+		}
+	}
+	&__bg-alt{
+
+		margin-bottom: -100px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 0px;
+			position: absolute;
+			z-index: -1;
+
+			max-width: 65vw;
+			top: rem(220);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 65vw;
+			top: rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			top: rem(-30);
+		}
+		@include media-breakpoint-up(xxl){
+			top: rem(-93);
+		}
+		right: 0;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
 	&__{}
 	&__{}
 	&__{}
-	&__{}
-	&__{}
+	//
 	&__{}
 } // end.sAbout

@@ -1,0 +1,44 @@
+mixin sDigits(data)
+	// start sDigits
+	+b.SECTION.sDigits.section#sDigits&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Форум в цифрах
+			+e.row.row
+				+digitsItem(32)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+				+digitsItem(400)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+				+digitsItem(32)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+				+digitsItem(1500)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+				+digitsItem(320)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+				+digitsItem(1500)
+					| тысячи участников
+					|
+					br.d-none.d-sm-block
+					| всех мероприятий
+	// end sDigits
+
+mixin digitsItem(num)
+	.col-6.col-md-4
+		+e.big=num
+		+e.txt
+			block

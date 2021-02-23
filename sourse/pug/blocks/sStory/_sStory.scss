@@ -159,6 +159,13 @@
 		}
 	}
 
+	&--fest{
+		.swiper-wrapper{
+			@include media-breakpoint-up(xxl){
+				padding-left: rem(412);
+			}
+		}
+	}
 	//
 	&__{}
 	&__{}

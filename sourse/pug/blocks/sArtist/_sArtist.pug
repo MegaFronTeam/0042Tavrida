@@ -1,0 +1,38 @@
+mixin sArtist(data)
+	// start sArtist
+	+b.SECTION.sArtist.section#sArtist&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Артисты фестиваля
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.artist-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.artist-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider
+				.swiper-container.artist-slider-js
+					.swiper-wrapper
+						+artistSlide(1)
+							| Сергей
+							br
+							| Лазарев
+						+artistSlide(2)
+							| Полина
+							br
+							| гагарина
+						+artistSlide(3)
+							| Юлианна
+							br
+							| Караулова
+						+artistSlide(4)
+							| МОТ
+	// end sArtist
+
+mixin artistSlide(imgNum)
+	.swiper-slide
+		+e.img
+			img.swiper-lazy(src="#" data-src=`img/@2x/artist-port-${imgNum}.jpg` alt="")
+		+e.txt
+			block

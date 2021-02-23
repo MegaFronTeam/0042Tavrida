@@ -14,7 +14,7 @@ mixin sStory(data)
 						+storySlide(5, '2015 год')
 	// end sStory
 
-mixin storySlide(imgNum, headline)
+mixin storySlide(imgNum, headline, descr)
 	.swiper-slide
 		+e.item
 			+e.dot
@@ -27,3 +27,18 @@ mixin storySlide(imgNum, headline)
 					+e.descr=descr
 				else
 					+e.descr Президент РФ Владимир Путин впервые посетил Всероссийский молодежный образовательный форум «Таврида»
+
+mixin sStory2(data)
+	// start sStory
+	+b.SECTION.sStory--fest.section#sStory&attributes(attributes)
+		.container
+			+b.section-title
+				h2 История фестиваля
+			+e.slider
+				.swiper-container.story-slider-js
+					.swiper-wrapper
+						+storySlide(1, '2019 год', 'Проект переехал в бухту Капсель под Судаком, где впервые состоялся фестиваль творческих сообществ «Таврида – АРТ»')
+						+storySlide(2, '2019 год')
+						+storySlide(3, '2019 год')
+						+storySlide(4, '2020 год')
+						+storySlide(5, '2018 год')

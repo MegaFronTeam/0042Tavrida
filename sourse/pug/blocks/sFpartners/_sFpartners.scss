@@ -1,0 +1,60 @@
+// start .sFpartners
+.sFpartners {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(67px)};
+		--sTPB: #{rem(172px)};
+		--sPB: #{rem(82px)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		& > *{
+			margin-bottom: rem(45);
+		}
+		margin-bottom: rem(-45);
+	}
+	&__item{
+		display: block;
+	}
+	&__img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		height: rem(269);
+		@include media-breakpoint-up(xxl){
+			height: rem(269);
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(30);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(63);
+		}
+	}
+	&__txt{
+		display: block;
+		font-weight: 600;
+		font-size: rem(20);
+
+		text-align: center;
+		color: $gray-650;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sFpartners

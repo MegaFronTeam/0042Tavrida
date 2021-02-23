@@ -54,9 +54,124 @@ mixin sVantage(data)
 						| Нетворкинг
 	// end sVantage
 
-mixin vantageItem(imgNum)
+mixin vantageItem(imgNum, imgClass="")
 	+e.col.col-12.col-sm-6.col-lg-3
-		+e.img
+		+e.img(class=imgClass)
 			img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
 		+e.txt.text-center
 			block
+
+mixin sVantage2(data)
+	// start sVantage
+	+b.SECTION.sVantage--blue.section#sVantage&attributes(attributes)
+		.container
+			+e.box
+				+b.section-title
+					h2 Преимущества фестиваля
+				+e.row.row
+					+vantageItem('d1')
+						| 5 дней
+						|
+						br.d-none.d-sm-block
+						| сплошного
+						|
+						br.d-none.d-sm-block
+						| искусства
+					+vantageItem('d2')
+						| 5 тематических сцен
+						|
+						br.d-none.d-sm-block
+						| для творческих
+						|
+						br.d-none.d-sm-block
+						| экспериментов
+					+vantageItem('d3')
+						| Образовательная программа от лидеров арт-индустрий
+					+vantageItem('d4')
+						| Крупнейшая
+						|
+						br.d-none.d-sm-block
+						| в России кастинг-платформа
+					+vantageItem('d5')
+						| Акселератор
+						|
+						br.d-none.d-sm-block
+						| творческих
+						|
+						br.d-none.d-sm-block
+						| стартапов
+					+vantageItem('d6')
+						| Насыщенный
+						|
+						br.d-none.d-sm-block
+						| лайн-ап
+						|
+						br.d-none.d-sm-block
+						| фестиваля
+					+vantageItem('d7')
+						| Звёзды
+						|
+						br.d-none.d-sm-block
+						| отечественной
+						|
+						br.d-none.d-sm-block
+						| и зарубежной эстрады
+					+vantageItem('d8')
+						| Бесплатное
+						|
+						br.d-none.d-sm-block
+						| участие
+						|
+						br.d-none.d-sm-block
+						| и посещение
+
+mixin sVantage3(data)
+	// start sVantage
+	+b.SECTION.sVantage--forum.section#sVantage&attributes(attributes)
+		.container
+			+e.box
+				+b.section-title
+					h2 Преимущества форума
+				+e.row.row
+					+vantageItem('f1', 'bigger-img')
+						| Новый формат
+						|
+						br.d-none.d-sm-block
+						| образовательного
+						|
+						br.d-none.d-sm-block
+						| контента
+					+vantageItem('f2', 'bigger-img')
+						| Проектные
+						|
+						br.d-none.d-sm-block
+						| кейсы
+					+vantageItem('f3', 'bigger-img')
+						| Продюсерское
+						|
+						br.d-none.d-sm-block
+						| сопровождение
+						|
+						br.d-none.d-sm-block
+						| талантливых участников
+					+vantageItem('f4', 'bigger-img')
+						| Нетворкинг
+					+vantageItem('f5')
+						| Центр оценки
+						|
+						br.d-none.d-sm-block
+						| компетенций
+					+vantageItem('f6', 'bigger-img')
+						| Арт-рекрутинг
+					+vantageItem('f7', 'bigger-img')
+						| Грантовый конкурс
+						|
+						br.d-none.d-sm-block
+						| до 2 500 000 рублей на твой
+						|
+						br.d-none.d-sm-block
+						| проект
+					+vantageItem('f8', 'bigger-img')
+						| Программа
+						br.d-none.d-sm-block
+						| лояльности

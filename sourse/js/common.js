@@ -196,7 +196,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '01.png';
+	screenName = '03.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -440,6 +440,142 @@ function eventHandler() {
 		$('body').toggleClass('fixed2');
 	});
 
+	//
+	let directionSlider = new Swiper('.direction-slider-js', {
+		spaceBetween: 20,
+		slidesPerView: 'auto',
+		//loop: true,
+		freeMode: true,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 30,
+		},
+	});
+	let artistSlider = new Swiper('.artist-slider-js', {
+		slidesPerView: "auto",
+
+		breakpoints: {
+			0:{
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+		navigation: {
+			nextEl: '.artist-next-js',
+			prevEl: '.artist-prev-js',
+		},
+	});
+	//
+	let feedbackSlider = new Swiper('.feedback-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+
+		breakpoints: {
+			0:{
+				spaceBetween: 30,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+		navigation: {
+			nextEl: '.feedback-next-js',
+			prevEl: '.feedback-prev-js',
+		},
+	});
+
+	function makeDDGroup(qSelecorts){
+		for (let parentSelect of qSelecorts){
+			let parent = document.querySelector(parentSelect);
+
+			if (parent){
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+
+				$(ChildHeads).click(function (){
+					let clickedHead = this;
+
+					$(ChildHeads).each(function (){
+						if (this === clickedHead){
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+								$(this).toggleClass('active');
+							});
+						}
+						else{
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function (){
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+
+			}
+
+		}
+	}
+	makeDDGroup(['.faq-items-js']);
+
+	//
+	let usefullSlider = new Swiper('.useful-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+
+		breakpoints: {
+			0:{
+				spaceBetween: 20,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+	});
+
+	//
+	let actSlider = new Swiper('.act-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+
+		breakpoints: {
+			0:{
+				spaceBetween: 30,
+			},
+			1200: {
+				spaceBetween: 40,
+			},
+			1400: {
+				spaceBetween: 48,
+			},
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+
+	});
 
 	//end luckyone js
 };

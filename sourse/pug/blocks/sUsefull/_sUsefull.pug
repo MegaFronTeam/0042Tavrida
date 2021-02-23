@@ -1,0 +1,63 @@
+mixin sUsefull(data)
+	// start sUsefull
+	+b.SECTION.sUsefull.section#sUsefull&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Полезные материалы
+			+e.slider
+				.swiper-container.useful-slider-js
+					.swiper-wrapper
+						+usefullSlide(1)
+							| Возможности
+							br
+							| наших медиа
+							br
+							| для ваших
+							br
+							| проектов
+						+usefullSlide(2)
+							| Как найти
+							br
+							| друзей
+							br
+							| на фествале
+						+usefullSlide(3)
+							| Как найти
+							br
+							| друзей
+							br
+							| на фествале
+						+usefullSlide(1)
+							| Возможности
+							br
+							| наших медиа
+							br
+							| для ваших
+							br
+							| проектов
+						+usefullSlide(2)
+							| Возможности
+							br
+							| наших медиа
+							br
+							| для ваших
+							br
+							| проектов
+						+usefullSlide(3)
+							| Что одеть
+							br
+							| и что с собой
+							br
+							| принести
+	// end sUsefull
+
+mixin usefullSlide(imgNum)
+	.swiper-slide
+		+e.item
+			+e.img(href='#')
+				img.swiper-lazy(src="#" data-src=`img/@2x/useful-${imgNum}.png` alt="")
+			+e.name(href='#')
+				block
+			+e.have-seen(href='#')
+				+icon('eye')
+				span 156

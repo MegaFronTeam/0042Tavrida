@@ -1,0 +1,32 @@
+mixin sFpartners(data)
+	// start sFpartners
+	+b.SECTION.sFpartners.section#sFpartners&attributes(attributes)
+		.container
+			+b.section-title.text-center.text-lg-start
+				h2 Фестивали-партнеры
+			+e.row.row
+				+sFPartnersItem(1)
+					| Новая
+					br
+					| волна
+				+sFPartnersItem(2)
+					| Усадьба
+					br
+					| JAZZ
+				+sFPartnersItem(3)
+					| Koktebel
+					br
+					| Jazz Party
+				+sFPartnersItem(4)
+					| RAP
+					br
+					| Koktebel
+	// end sFpartners
+
+mixin sFPartnersItem(imgNum)
+	.col-6.col-lg-3
+		+e.item(href='#')
+			+e.img
+				img(loading="lazy" src=`img/@2x/f-parnter-${imgNum}.png` alt="")
+			+e.txt
+				block

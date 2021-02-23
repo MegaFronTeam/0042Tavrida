@@ -14,15 +14,20 @@ $rfs-breakpoint: 1200px !default;
 
 $white: #fff !default;
 $dim: #EBF1F2;
+$dim2: #F8F8F8;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
+$gray-650: #707070;
+
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+$dark-blue: #0F1E2D;
+$dark-blue2: #14273A;
 $black: #000 !default;
 
 // fusv-disable
@@ -38,6 +43,7 @@ $grays: ("100": $gray-100,
 // fusv-enable
 
 $blue: #284BA4 !default;
+$blue2: #13487E !default;
 $indigo: #6610f2 !default;
 $purple: #6B1680 !default;
 $pink: #d63384 !default;

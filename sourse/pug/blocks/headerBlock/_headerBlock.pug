@@ -12,3 +12,36 @@ mixin headerBlock()
 					+e.video-bl
 						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
 	// end headerBlock
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--blue.section#headerBlock&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h1
+					| Фестиваль
+					br
+					| фестивалей
+					br
+					| «Таврида – АРТ»
+			.row
+				.col-12.col-sm-11.col-md-9.ms-auto
+					+e.video-bl
+						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
+
+mixin headerBlock3()
+	// start headerBlock
+	+b.headerBlock--forum.section#headerBlock&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h1 ФОРУМ
+				p
+					| Мир
+					br
+					| любовь
+					br
+					| искусство
+			.row
+				.col-12.col-sm-11.col-md-9.ms-auto
+					+e.video-bl
+						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)

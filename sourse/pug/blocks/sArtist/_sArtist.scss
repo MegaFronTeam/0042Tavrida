@@ -1,0 +1,61 @@
+// start .sArtist
+.sArtist {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(126px)};
+		--sTPB: #{rem(50px)};
+		--sPB: #{rem(82px)};
+	}
+
+	&__slider{
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			width: 260px;
+			@include media-breakpoint-up(sm){
+				width: calc((100% / 2) - (20px * 1 / 2));
+			}
+			@include media-breakpoint-up(md){
+				width: calc((100% / 3) - (20px * 2 / 3));
+			}
+			@include media-breakpoint-up(xl){
+				width: calc((100% / 3) - (40px * 2 / 3));
+			}
+		}
+	}
+
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		padding-top: (400/408) * 100%;
+
+		border-radius: rem(25);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md){
+			border-radius: rem(50);
+			margin-bottom: rem(32);
+		}
+	}
+
+	&__txt{
+		text-align: center;
+		display: block;
+		font-weight: 900;
+
+		font-size: rem(24);
+		line-height: 1.2;
+		@include media-breakpoint-up(sm){
+			font-size: rem(30);
+			line-height: (37/30);
+		}
+
+		text-transform: uppercase;
+	}
+	//
+
+	&__{}
+	&__{}
+	&__{}
+} // end.sArtist

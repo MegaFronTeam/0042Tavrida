@@ -1,0 +1,17 @@
+mixin sWay(data)
+	// start sWay
+	+b.SECTION.sWay.section#sWay&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Форматы участия в фестивале
+			+e.row.row
+				+wayItem(1,'Участник', 'color: #fff; text-align: right')(style="background-color:#6B1680")
+				+wayItem(2,'Зритель', 'color: #0A1124;')(style="background-color:#ffc107")
+	// end sWay
+
+mixin wayItem(imgNum,txt, txtStyle)
+	.col-12.col-sm-6
+		+e.item&attributes(attributes)
+			img(loading="lazy" src=`img/@2x/sWay-${imgNum}.jpg` alt="")
+			+e.txt(style=txtStyle)=txt
+
