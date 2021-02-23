@@ -30,8 +30,10 @@ mixin directionSlide(hasbotStr=true)
 		+e.row.row
 			.col-4
 				+directionItem(1, 'Музыка')
-			.col-8
+			.col-6
 				+directionItem(2, 'Танцы')
+			.col-2
+				+directionItem('new', 'Медиа')(class="text-center")
 			.col-2
 				+directionItem(3, 'АРТ')(class="text-center")
 			.col-6

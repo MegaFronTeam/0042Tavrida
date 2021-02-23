@@ -2,7 +2,7 @@
 .sDirection {
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(16px)};
-		--sPB: #{rem(34px)};
+		--sPB: #{rem(210px)};
 		--sTPB: #{rem(80px)}
 	}
 
@@ -42,9 +42,9 @@
 			@include roww(rem(40px));
 
 			& > *{
-				margin-bottom: rem(40px);
+				margin-bottom: rem(35px);
 			}
-			margin-bottom: rem(-40px);
+			margin-bottom: rem(-35px);
 		}
 	}
 	&__item{
@@ -54,7 +54,7 @@
 		@include media-breakpoint-up(lg){
 			padding: rem(40);
 		}
-		height: rem(400);
+		height: rem(333);
 
 		border-radius: rem(25);
 		@include media-breakpoint-up(lg){
@@ -63,7 +63,7 @@
 
 
 		&.item-small{
-			height: rem(185);
+			height: rem(154);
 			justify-content: center;
 		}
 

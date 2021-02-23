@@ -3,8 +3,8 @@ mixin sApply(data)
 	+b.SECTION.sApply.section#sApply&attributes(attributes)
 		.container
 			+e.box
-				+e.row.row.align-items-end
-					.col-12.col-md
+				+e.row.row
+					.col-12.col-lg
 						+b.section-title
 							h2
 								| Подайте
@@ -12,6 +12,8 @@ mixin sApply(data)
 								| заявку
 								br
 								| на участие
-					.col-12.col-md-auto
-						+e.btn(href='#') Подать заявку
+					+e.btns-col.col-12.col-lg-auto
+						+e.btn(ref='#') Подать заявку как волонтер
+						+e.btn(ref='#') Подать заявку как зритель
+						+e.btn(href='#') Подать заявку как участник
 	// end sApply

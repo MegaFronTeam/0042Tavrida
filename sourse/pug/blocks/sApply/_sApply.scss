@@ -3,7 +3,7 @@
 	--sTPB: #{0};
 
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(55px)};
+		--sPT: #{rem(9px)};
 		--sPB: #{rem(82px)};
 	}
 
@@ -40,7 +40,7 @@
 			padding: rem(60) rem(70);
 		}
 		@include media-breakpoint-up(xxl){
-			padding: rem(73) rem(105) rem(80) rem(112);
+			padding: rem(73) rem(68px) rem(80) rem(112);
 		}
 	}
 	&__row{
@@ -74,13 +74,25 @@
 		}
 	}
 
+	&__btns-col{
+		@include media-breakpoint-up(lg){
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}
+	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-warning;
-		margin-bottom: 10px;
 
 		text-transform: uppercase;
 		line-height: 1.2;
+
+		margin-bottom: rem(24);
+		&:last-child{
+			margin-bottom: 10px;
+		}
 	}
 	//
 	&__{}
