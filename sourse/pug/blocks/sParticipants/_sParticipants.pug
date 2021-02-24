@@ -1,0 +1,41 @@
+mixin sParticipants(data)
+	// start sParticipants
+	+b.SECTION.sParticipants.section#sParticipants&attributes(attributes)
+		.container
+			+e.back-link
+				img(loading="lazy" src="img/svg/black-arrow-left.svg" alt="")
+			+b.section-title
+				h2 Участники
+				p Участники фестиваля – это молодые деятели культуры и искусства, представители волонтерских движений, общественных организаций, проектов платформы «Россия – страна возможностей», медиаинфлюенсеры в возрасте от 18 до 35 лет, а также участники проекта «Большая перемена» с детьми в возрасте от 14 до 17 лет, прошедшие конкурсный отбор.
+			+e.gray-box
+				+b.tabs
+					+e.caption.row
+						.col-auto
+							+e.btn.active Резиденты
+						.col-auto
+							+e.btn Блогеры
+						.col-auto
+							+e.btn Полуфиналисты и финалисты
+						.col-auto
+							+e.btn Волонтеры
+						.col-auto
+							+e.btn Семьи с детьми
+					+e.wrap
+						+e.content.active
+							+e.c-row.row
+								.col-auto
+									+e.img
+										img(loading="lazy" src="img/svg/participants-1.svg" alt="")
+								.col
+									+e.bold Резиденты «Тавриды» (те, кто был на мероприятиях арт-кластера не менее 2 раз), участники проектов арт-кластера «Таврида», участники Национального открытого чемпионата в сфере творческих компетенций ArtMasters
+									+e.age Возраст от 18 до 35 лет включительно
+							+e.c-btns-row.row
+								.col-sm-auto
+									+e.c-btn(href='#') Сервисный пакет
+								.col-sm-auto
+									+e.c-btn(href='#') Творческое задание
+						+e.content 2
+						+e.content 3
+						+e.content 4
+						+e.content 5
+	// end sParticipants

@@ -24,16 +24,26 @@ include ../blocks/sDigits/_sDigits.pug
 include ../blocks/sActForm/_sActForm.pug
 include ../blocks/sDev/_sDev.pug
 include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sHeaderSlider/_sHeaderSlider.pug
+include ../blocks/sParticipants/_sParticipants.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sSteps/_sSteps.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '03'
+	- let  title= '04-participants'
 	title= title
 block pagecontent
 	+mMenu()
 	+header()
-		+top-nav()
+		+top-nav()(class="border-bot")
+	+sParticipants()
+	+sTransfer()
+	+sHow()
+
 	+headerBlock3()
 	+sAbout3()
 	+sVantage3()

@@ -13,6 +13,11 @@
     --login-col: #{$white};
   }
 
+  &.border-bot{
+    border-bottom: 1px solid rgba($gray-650, .2);
+    padding: rem(32px) 0 rem(21px);
+  }
+
   &__container{
 
   }

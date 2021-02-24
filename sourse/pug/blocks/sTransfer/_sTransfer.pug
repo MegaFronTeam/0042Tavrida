@@ -1,0 +1,19 @@
+mixin sTransfer(data)
+	// start sTransfer
+	+b.SECTION.sTransfer.section#sTransfer&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Трансфер участников
+				p Маршрут «место проживания – Республика Крым – место проживания» за счет направляющей стороны:
+			+e.row.row
+				+e.col.col-lg-4
+					+e.txt
+						| За счет органов исполнительной власти субъектов Российской Федерации, реализующих государственную
+						|
+						br.d-none.d-xxl-block
+						| молодежную политику
+				+e.col.col-lg-4
+					+e.txt За счет вуза/ссуза/работодателя/иной направляющей организации
+				+e.col.col-lg-4
+					+e.txt За свой счет
+	// end sTransfer

@@ -1,0 +1,57 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Как подать заявку?
+			+b.steps
+				+e.row.row
+					+sStepsItem('')
+						| Зарегистрироваться
+						|
+						br.d-none.d-xl-block
+						| на официальном сайте арт-кластера
+						|
+						br.d-none.d-xl-block
+						| «Таврида»
+					+sStepsItem('')
+						|  Заполнить
+						|
+						br.d-none.d-xl-block
+						| анкету
+					+sStepsItem('')
+						| Прикрепить
+						|
+						br.d-none.d-xl-block
+						| портфолио/видеовизитку согласно выбранному направлению и требованиям
+					+sStepsItem('offset-md-2 offset-lg-0')
+						| Дождаться
+						|
+						br.d-none.d-xl-block
+						| оценки
+						|
+						br.d-none.d-xl-block
+						| экспертов
+					+sStepsItem('')
+						| Дождаться
+						|
+						br.d-none.d-xl-block
+						| результатов
+						|
+						br.d-none.d-xl-block
+						| рассмотрения заявки в личном кабинете
+			+e.foot-row.row.align-items-center
+				.col-md-auto.order-last.order-md-0
+					+e.btn(href='#') Заполнить анкету
+				.col-md
+					+e.item
+						span
+							| Регистрация
+							|
+						strong до 1 августа 2020 года
+					+e.item
+						span
+							| Результаты
+							|
+						strong отбора после 23 августа 2020 года
+	// end sHow

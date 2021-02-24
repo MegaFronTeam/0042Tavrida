@@ -1,0 +1,55 @@
+// start .sHow
+.sHow {
+	--sTPB: #{rem(80px)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(41px)};
+		--sPB: #{rem(36px)};
+		--sTPB: #{rem(115px)}
+	}
+	.section-title{
+
+	}
+	.steps{
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(-48px);
+		}
+	}
+	&__foot-row{
+		@include roww(rem(30));
+
+		& > *{
+			margin-bottom: rem(20);
+		}
+		margin-bottom: rem(-20);
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-warning;
+		text-transform: uppercase;
+
+		padding: rem(18) rem(36);
+	}
+	&__item{
+		line-height: 1.8;
+		&:first-child{
+			@include media-breakpoint-up(xxl){
+				margin-top: 7px;
+			}
+		}
+
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+		}
+
+		span{
+			display: block;
+			@include media-breakpoint-up(sm){
+				display: inline;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sHow
