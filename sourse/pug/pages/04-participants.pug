@@ -29,6 +29,8 @@ include ../blocks/sParticipants/_sParticipants.pug
 include ../blocks/sTransfer/_sTransfer.pug
 include ../blocks/sHow/_sHow.pug
 include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sFormL/_sFormL.pug
+include ../blocks/sInfo/_sInfo.pug
 
 
 block variables
@@ -43,19 +45,22 @@ block pagecontent
 	+sParticipants()
 	+sTransfer()
 	+sHow()
-
-	+headerBlock3()
-	+sAbout3()
-	+sVantage3()
-	+sDirection2()
-	+sDigits()
-	+sActForm()
-	+sDev()
-	+sFeedBack2()
-	+sAlgorithm()
-	+sApply()
+	+sFormL()
+	+sInfo()
 	//-here
 	+sFAQ()
+	.container
+		+b.links-bl
+			+e.link
+				a(href='#') Перечень необходимых вещей
+			+e.link
+				a(href='#')
+					| Правила пребывания и правила
+					br
+					| безопасности
+			+e.link
+				a(href='#')
+					| Карта фестиваля
 	+sNews()
 	+sForm()
 	+sPartners()

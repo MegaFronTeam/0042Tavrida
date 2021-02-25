@@ -1,0 +1,117 @@
+// start .sInfo
+.sInfo {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(70px)};
+		--sPB: #{rem(109px)};
+		--sTPB: #{rem(70px)}
+	}
+
+	&__container{
+		padding-top: rem(50)!important;
+		padding-bottom: rem(50) !important;
+		@include media-breakpoint-up(lg){
+			padding-top: rem(89)!important;
+			padding-bottom: rem(109) !important;
+		}
+
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			height: 100%;
+			background-color: $dim;
+
+			width: calc(100vw - 0px);
+			left: calc(-1 * (100vw - 0px - 100%) / 2);
+			border-radius: rem(0);
+			@include media-breakpoint-up(sm){
+				left: rem(-60px);
+				width: calc(100% + #{rem(120px)});
+				border-radius: rem(60);
+			}
+			@include media-breakpoint-up(xl){
+				left: -84px;
+				width: calc(100% + 168px);
+				border-radius: rem(120);
+			}
+			@include media-breakpoint-up(xxl){
+				border-radius: rem(150);
+			}
+		}
+	}
+
+	.section-title{
+		h2{
+			margin-bottom: rem(22);
+		}
+		strong{
+			display: block;
+			font-weight: 600;
+			font-size: rem(20);
+			line-height: 1.8;
+			color: $dark;
+			margin-bottom: rem(30);
+		}
+	}
+	&__docs{
+		h2{
+			text-transform: uppercase;
+			margin-bottom: rem(49);
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li{
+				position: relative;
+				&:before{
+					content: '';
+					background-color: $purple;
+					position: absolute;
+					left: 0;
+					top: rem(14);
+					width: rem(8);
+					height: rem(8);
+					border-radius: 50%;
+				}
+
+				font-weight: 600;
+				font-size: rem(20);
+				line-height: 1.8;
+				color: $dark;
+
+				padding: 0 0 rem(20) rem(30);
+			}
+		}
+	}
+	.sm-txt{
+		line-height: 1.8;
+		color: $dark;
+	}
+
+	&__{}
+	&__{}
+} // end.sInfo
+
+.links-bl{
+	&__link{
+		font-weight: 900;
+		font-size: rem(50px);
+		line-height: (61/50);
+
+		text-transform: uppercase;
+		color: $dark;
+		margin-bottom: rem(43);
+		a{
+			color: $dark;
+			&:hover{
+				color: lighten($dark, 5);
+			}
+			display: block;
+		}
+	}
+}

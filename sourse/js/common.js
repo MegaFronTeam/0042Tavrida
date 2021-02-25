@@ -572,6 +572,25 @@ function eventHandler() {
 
 	});
 
+	//custom ph
+	$('input.has-ph-js').blur(checkEmptyVal);
+	$('input.has-ph-js').each(checkEmptyVal);
+	function checkEmptyVal() {
+		if (this.value !== ''){
+			$(this).addClass('not-empty');
+		}
+		else {
+			$(this).removeClass('not-empty');
+		}
+	}
+	//
+	//-var myDropzone = new Dropzone("div#dropzone-foto", { url: "/file/post"});
+
+	// $(".dropzone-box--js").each(function (){
+	// 	$(this).dropzone({ url: "/file/post" });
+	// })
+
+
 	//end luckyone js
 };
 if (document.readyState !== 'loading') {

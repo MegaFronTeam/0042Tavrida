@@ -1,0 +1,137 @@
+// start .sFormL
+.sFormL {
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(53px)};
+		--sPB: #{rem(70px)};
+		--sTPB: #{rem(51px)}
+	}
+
+	.form-wrap{
+		.row{
+			@include roww(rem(30px));
+
+			& > *{
+				margin-bottom: rem(30);
+			}
+
+			margin-bottom: rem(-30);
+
+			@include media-breakpoint-up(xxl){
+				@include roww(40px);
+
+				& > *{
+					margin-bottom: rem(32);
+				}
+
+				margin-bottom: rem(-32);
+			}
+		}
+
+		label{
+			position: relative;
+
+			input.not-empty, input:focus{
+				//border: 1px solid $input-border-color;
+			}
+
+			input.not-empty + span,
+			input:focus + span,
+			textarea.not-empty + span,
+			textarea:focus + span{
+
+				top: rem(6px)!important;
+				@include media-breakpoint-up(xxl){
+					top: rem(9px)!important;
+				}
+				//transform: translateY(-90%)!important;
+				font-size: rem(12);
+			}
+		}
+		&__title{
+			@include mt();
+			position: absolute;
+
+			top: calc(#{$input-padding-y} + 2px);
+			left: calc(#{$input-padding-x} + #{$input-border-width});
+
+			font-weight: 300;
+
+			@include media-breakpoint-up(xl){
+				font-size: rem(20);
+			}
+
+			line-height: $input-line-height;
+			color: $gray-650;
+		}
+		&__input{
+			padding-top: rem(18);
+			padding-bottom: rem(5);
+			@include media-breakpoint-up(xxl){
+				padding-top: rem(20);
+				padding-bottom: rem(2);
+			}
+
+			@include media-breakpoint-up(xl){
+				font-size: rem(20);
+			}
+		}
+		select{
+			@include media-breakpoint-up(xl){
+				font-size: rem(20);
+			}
+		}
+
+		input[type="date"]{
+			background-image: url(../img/svg/calendar.svg);
+			background-repeat: no-repeat;
+			background-size: rem(30);
+			background-position-x: calc(100% - #{$input-padding-x});
+			background-position-y: $input-padding-y;
+		}
+		input[type="date"]::-webkit-calendar-picker-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: auto;
+			height: auto;
+			color: transparent;
+			background: transparent;
+		}
+
+		&__radio-txt{
+			font-weight: 600;
+			font-size: rem(20);
+			color: $dark;
+
+			height: rem(64);
+			line-height: rem(64);
+		}
+		&__sm{
+			margin-top: rem(6);
+			font-weight: 300;
+			font-size: rem(12);
+			line-height: 1.8;
+			color: $black;
+		}
+		&__sub-title{
+			font-weight: 900;
+			font-size: rem(30);
+			line-height: (37/30);
+
+			text-transform: uppercase;
+			color: $dark;
+
+			margin-bottom: rem(22);
+			margin-top: rem(45);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-warning;
+
+			text-transform: uppercase;
+		}
+		&__{}
+	}
+} // end.sFormL

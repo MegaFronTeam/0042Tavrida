@@ -1,0 +1,206 @@
+mixin sFormL(data)
+	// start sFormL
+	+b.SECTION.sFormL.section#sFormL&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Анкета участника фестиваля
+			+form-wrap(false)
+				.row
+					.col-12
+						.row
+							//-1 line
+							.col-sm-6.col-lg-4
+								+inp3('ID', 'number', '566988633')
+							.col-sm-6.col-lg-4
+								+inp3('E-mail', 'email', 'sample@sample.com')
+							.col-sm-6.col-lg-4
+								+inp3('Телефон', 'tel', '+79854458899')
+							//-2 line
+							.col-sm-6.col-lg-4
+								+inp3('Фамилия', 'text', 'Варьяновский')
+							.col-sm-6.col-lg-4
+								+inp3('Имя', 'text', '')
+							.col-sm-6.col-lg-4
+								+inp3('Отчество', 'text', '')
+					//-left-col
+					.col-lg-8
+						.row
+							//- 1 line
+							.col-sm-6
+								.row.align-items-center
+									.col-3.me-xl-3
+										+e.radio-txt Пол
+									.col-4
+										+in-c("radio", "Муж.", 'male')(checked)
+									.col-4
+										+in-c("radio", "Жен.", 'male')
+							.col-sm-6
+								+inp3('Дата рождения', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							//-2 line
+							.col-sm-6
+								+inp3('Национальность', 'text', '')
+							.col-sm-6
+								+cSelect('Регион подачи')
+							//- other
+							.col-12
+								+inp3('Физические отклонения', 'text', '')
+									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-12
+								+inp3('Группа инвалидности', 'text', '')
+									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-12
+								+inp3('Группа инвалидности', 'text', '')
+									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-12
+								+inp3('Аллергичность', 'text', '')
+									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-12
+								+inp3('Аллергены', 'text', '')
+									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-sm-6
+								+cSelect('Размер одежды')
+							//-+inp3('', '', '')
+					//-right-col
+					.col-lg-4
+						label.dropzone-wrapper.d-block
+							.dz-gray.text-center Фото участника
+							+b.dropzone(action='/file-upload')
+								#dropzone
+									+e.prev-wrap
+										+icon('dz-plus')
+										| Выбрать
+										br
+										| фото
+									.fallback
+										input(name='file', type='file', multiple='')
+				+e.sub-title Личные данные
+				.row
+					.col-lg-8
+						.row
+							//-line 1
+							.col-sm-6
+								+inp3('Контактное лицо', 'text', '')
+							.col-sm-6
+								+inp3('Телефон контактного лица', 'tel', '')
+							//- l2
+							.col-sm-6
+								+inp3('Гражданство', 'text', '')
+							.col-sm-6
+								.row
+									.col-xxl-5
+										+inp3('Серия', 'text', '')
+									.col-xxl-7
+										+inp3('Номер', 'text', '')
+							//- l3
+							.col-12
+								+inp3('Кем выдан', 'text', '')
+							//- l4
+							.col-sm-6
+								+inp3('Дата выдачи', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							.col-sm-6
+								+inp3('Действителен до', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							//- l5
+							.col-sm-5
+								+inp3('Код подразделения', 'text', '')
+							.col-sm-7
+								+inp3('Место рождения', 'text', '')
+							// - l6
+							.col-sm-6
+								+cSelect('Страна проживания')
+							.col-sm-6
+								+cSelect('Федеральный округ проживания')
+							//- l7
+							.col-sm-6
+								+inp3('Регион проживания', 'text', '')
+							.col-sm-6
+								+inp3('Город проживания', 'text', '')
+							//- l8
+							.col-sm-6
+								+inp3('Улица проживания', 'text', '')
+							.col-sm-6
+								+inp3('Дом проживания', 'text', '')
+					.col-lg-4
+						label.dropzone-wrapper.d-block
+							.dz-gray.text-center Скан паспорта
+							+b.dropzone(action='/file-upload')
+								#dropzone2
+									+e.prev-wrap
+										+icon('dz-plus')
+										| Выбрать
+										br
+										| скан
+									.fallback
+										input(name='file', type='file', multiple='')
+				+e.sub-title Работа
+				.row
+					.col-lg-8
+						.row
+							.col-sm-6
+								+inp3('Организация', 'text', '')
+							.col-sm-6
+								+inp3('Должность', 'text', '')
+				+e.sub-title Образование
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+inp3('Образование (степень, учебное заведение, направление)', 'text', '')
+							.col-12
+								+inp3('Инностранные языки', 'text', '')
+				+e.sub-title Социальные сети
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+inp3('Facebook', 'text', '')
+							.col-12
+								+inp3('Вконтакте', 'text', '')
+							.col-12
+								+inp3('Instagram', 'text', '')
+				+e.sub-title Категория участия
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+e.radio-txt Принимал ли участие в проектах арт-кластера раньше
+							.col-auto
+								+in-c("radio", "Муж.", 'male')(checked)
+							.col-auto
+								+in-c("radio", "Жен.", 'male')
+							.col-12
+								+inp3('В каком году, статусе и мероприятии', 'text', '')
+							.col-12
+								+inp3('О себе (опыт участия в проектах, достижения)', 'text', '')
+							.col-sm-6
+								+cSelect('Выбери категорию участия')
+							.col-sm-6
+								+cSelect('Выбери категорию участия')
+				+e.sub-title Портфолио и видеовизитка
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+inp3('Ссылка на портфолио и видеовизитку (1 ссылка)', 'text', '')
+							.col-auto
+								+e.BUTTON.btn(type="submit") Отправить
+	// end sFormL
+
+mixin cSelect(placeholder)
+	+e.select
+		select.form-select.form-control
+			if placeholder
+				option(selected disabled class="d-none")=placeholder
+				option option 1
+			else
+				if val
+					option=val
+				else
+					option option 1
+			option option 2
+			option option 3
+
+mixin inp3(ph, type, val='', labelClass)
+	label(class=labelClass)
+		+e.INPUT.input.form-control.has-ph-js(type=type name="name" value=val)&attributes(attributes)
+		+e.SPAN.title=ph
+		block
