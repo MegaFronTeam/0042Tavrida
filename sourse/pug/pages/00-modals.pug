@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-modals'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()(class="border-bot")
+	.container.section.mt-5
+		.row
+			.col-auto
+				a.btn.btn-warning.link-modal(href='#modal-serv') Сервисный пакет
+			.col-auto
+				a.btn.btn-warning.link-modal(href='#modal-art') Творческое задание
+	+sForm()
+	+sPartners()
+	+footer()
