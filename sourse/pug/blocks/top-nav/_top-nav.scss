@@ -152,7 +152,9 @@
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-color: $white;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
 
   &__container{
     height: 100vh;

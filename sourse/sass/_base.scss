@@ -730,6 +730,7 @@ h2{
 }
 
 .fancybox-bg{
-	background: rgba(255, 255, 255, 0.8)!important;
+	opacity: 1!important;
+	background-color: rgba(255, 255, 255, 0.8)!important;
 	backdrop-filter: blur(24px)!important;
 }
