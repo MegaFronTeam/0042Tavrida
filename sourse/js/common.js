@@ -58,10 +58,6 @@ const JSCCommon = {
 		}
 		if (linkModal) addData();
 	},
-	// /modalCall
-	// /mobileMenu
-
-	// tabs  .
 	tabscostume(tab) {
 		let tabs = {
 			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
@@ -85,8 +81,6 @@ const JSCCommon = {
 			})
 		})
 	},
-	// /tabs
-
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
@@ -95,56 +89,11 @@ const JSCCommon = {
 		});
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
-	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				});
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
 	},
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -159,22 +108,6 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
-	animateScroll() {
-
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
-
-			$('html, body').animate({ scrollTop: destination }, 1100);
-
-			return false;
-		});
-	},
-	getCurrentYear(el) {
-		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
 };
 const $ = jQuery;
 
@@ -182,79 +115,15 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	//JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
-
-	// JSCCommon.CustomInputFile(); 
+	//remove on prod
 	var x = window.location.host;
 	let screenName;
 	screenName = '04.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
-
-
-
-	function whenResize() {
-		const topH = document.querySelector("header ").offsetHeight;
-		if (topH) {
-
-			if ($(window).scrollTop() > topH) {
-				document.querySelector('.top-nav  ').classList.add('fixed');
-			} else {
-				document.querySelector('.top-nav  ').classList.remove('fixed');
-			}
-		}
-		
-	}
-
-	window.addEventListener('resize', () => {
-		whenResize();
-
-	}, { passive: true });
-
-	whenResize();
-
-
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	}
-
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-	// modal window
-
-
 	//luckyone js
 	let residentSlider = new Swiper('.resident-slider-js', {
 		slidesPerView: "auto",
@@ -278,35 +147,6 @@ function eventHandler() {
 			nextEl: '.resident-next-js',
 			prevEl: '.resident-prev-js',
 		},
-
-		// on: {
-		// 	init: function () {
-		// 		$('.resident-slider-js .swiper-slide').mouseenter(function (){
-		// 			let thisSlide = this;
-		// 			if (!thisSlide.timeOutDown){
-		// 				$(this).find('.res-descr-js').slideDown(250, function (){
-		// 					$(this).toggleClass('active');
-		// 					thisSlide.timeOutDown = false;
-		// 				});
-		//
-		// 				this.timeOutDown = true;
-		// 			}
-		//
-		// 		});
-		//
-		// 		$('.resident-slider-js .swiper-slide').mouseleave(function (){
-		// 			let thisSlide = this;
-		// 			if (!thisSlide.timeOutUp){
-		// 				$(this).find('.res-descr-js').slideUp(250,function (){
-		// 					$(this).removeClass('active');
-		// 					thisSlide.timeOutUp = false;
-		// 				});
-		//
-		// 				this.timeOutUp = true;
-		// 			}
-		// 		});
-		// 	},
-		// },
 	});
 
 	$('.sProjects__slider--js').each(function (){
@@ -584,12 +424,6 @@ function eventHandler() {
 		}
 	}
 	//
-	//-var myDropzone = new Dropzone("div#dropzone-foto", { url: "/file/post"});
-
-	// $(".dropzone-box--js").each(function (){
-	// 	$(this).dropzone({ url: "/file/post" });
-	// })
-
 
 	//end luckyone js
 };
@@ -598,11 +432,3 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
