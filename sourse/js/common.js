@@ -413,8 +413,8 @@ function eventHandler() {
 	});
 
 	//custom ph
-	$('input.has-ph-js').blur(checkEmptyVal);
-	$('input.has-ph-js').each(checkEmptyVal);
+	$('.has-ph-js').blur(checkEmptyVal);
+	$('.has-ph-js').each(checkEmptyVal);
 	function checkEmptyVal() {
 		if (this.value !== ''){
 			$(this).addClass('not-empty');

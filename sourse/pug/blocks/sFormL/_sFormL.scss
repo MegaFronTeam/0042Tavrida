@@ -105,8 +105,9 @@
 			font-size: rem(20);
 			color: $dark;
 
-			height: rem(64);
-			line-height: rem(64);
+			min-height: rem(64);//?
+			display: flex;
+			align-items: center;
 		}
 		&__sm{
 			margin-top: rem(6);
