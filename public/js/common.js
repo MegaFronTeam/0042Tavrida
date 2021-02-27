@@ -370,7 +370,7 @@ function eventHandler() {
 		}
 	}
 
-	makeDDGroup(['.faq-items-js']); //
+	makeDDGroup(['.faq-items-js', '.participants-items-js']); //
 
 	var usefullSlider = new Swiper('.useful-slider-js', {
 		slidesPerView: "auto",

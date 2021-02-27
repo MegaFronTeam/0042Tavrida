@@ -365,7 +365,7 @@ function eventHandler() {
 
 		}
 	}
-	makeDDGroup(['.faq-items-js']);
+	makeDDGroup(['.faq-items-js', '.participants-items-js']);
 
 	//
 	let usefullSlider = new Swiper('.useful-slider-js', {

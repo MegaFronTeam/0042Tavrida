@@ -69,6 +69,161 @@
 			}
 		}
 	}
+	&__dd-items{
+
+	}
+	&__dd-item{
+		margin-bottom: 20px;
+
+		--pl-aft-o: 1;
+		&.active{
+			--pl-aft-o: 0;
+		}
+	}
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+
+		--head-txt-col: #{$purple};
+		&:hover{
+			--head-txt-col: #{$black};
+		}
+	}
+	&__txt{
+		@include mt();
+		font-weight: 900;
+		color: var(--head-txt-col);
+
+		font-size: rem(24);
+		line-height: 1.2;
+
+		text-transform: uppercase;
+	}
+	&__plus{
+		@include mt();
+		flex-shrink: 0;
+		color: $black;
+
+		width: rem(24);
+		height: rem(24);
+		margin-left: rem(24);
+		@include media-breakpoint-up(sm){
+			width: rem(40);
+			height: rem(40);
+			margin-left: rem(40);
+		}
+		@include media-breakpoint-up(xl){
+			margin-left: rem(140);
+		}
+
+		position: relative;
+		&:before,
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: currentColor;
+
+		}
+		&:before{
+			width: 100%;
+			height: 3px;
+		}
+		&:after{
+			opacity: var(--pl-aft-o);
+			width: 3px;
+			height: 100%;
+		}
+	}
+	&__content{
+		display: none;
+		&.active{
+			display: block;
+		}
+		line-height: 1.8;
+		padding-top: 30px;
+
+		& > * {
+			padding-bottom: rem(20);
+		}
+
+		h4,h5,h6,ul{
+			text-transform: uppercase;
+			padding-bottom: rem(30)!important;
+		}
+
+		p{
+			font-size: rem(16);
+		}
+
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li{
+				position: relative;
+				&:before{
+					content: '';
+					background-color: $purple;
+					position: absolute;
+					left: 0;
+					top: rem(14);
+					width: rem(8);
+					height: rem(8);
+					border-radius: 50%;
+				}
+
+				font-weight: 600;
+				font-size: rem(18);
+				line-height: 1.8;
+				color: $dark;
+
+				padding: 0 0 rem(20) rem(30);
+			}
+		}
+	}
+	&__mail-txt{
+		padding: rem(30) 0;
+		font-size: rem(18);
+		font-weight: 500;
+		a{
+			font-weight: 600;
+		}
+	}
+	&__c-btns-row{
+		@include roww(rem(30px));
+		@include media-breakpoint-up(xxl){
+			@include roww(42px);
+		}
+
+		& > *{
+			margin-bottom: rem(20);
+		}
+		margin-bottom: rem(-20);
+	}
+	&__c-btn{
+		@extend .btn;
+		@extend .btn-warning;
+
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(lg){
+			padding: rem(15) rem(20);
+			font-size: rem(18);
+		}
+
+		width: 100%;
+		@include media-breakpoint-up(sm){
+			width: auto;
+		}
+	}
+	&__{}
+
 	.tabs{
 		&__caption{
 			@include roww(rem(20px));
