@@ -40,19 +40,19 @@
 		&:nth-child(1){
 			--num-padd: 0 0 #{rem(15)} 0;
 			@include media-breakpoint-up(lg){
-				--num-fs: #{rem(120)};
+				--num-fs: #{rem(70)};
 				--num-padd: 0 0 5px 0;
 				top: 70px;
 				left: 30px;
 			}
 			@include media-breakpoint-up(xl){
-				--num-fs: #{rem(130)};
+				--num-fs: #{rem(80)};
 				--num-padd: 0 0 5px 0;
 				top: 116px;
 				left: 84px;
 			}
 			@include media-breakpoint-up(xxl){
-				--num-fs: #{rem(159)};
+				--num-fs: #{rem(100)};
 				--num-padd: 0 0 5px 0;
 				top: 158px;
 				left: 84px;
@@ -65,19 +65,19 @@
 				top: 70px;
 				left: 340px;
 				--num-padd: 0 #{rem(30)} 0 0;
-				--num-fs: #{rem(70)};
+				--num-fs: #{rem(60)};
 			}
 			@include media-breakpoint-up(xl){
 				top: 104px;
 				left: 416px;
 				--num-padd: 0 30px 0 0;
-				--num-fs: #{rem(90)};
+				--num-fs: #{rem(70)};
 			}
 			@include media-breakpoint-up(xxl){
 				top: 146px;
 				left: 544px;
 				--num-padd: 0 32px 0 0;
-				--num-fs: #{rem(106)};
+				--num-fs: #{rem(80)};
 			}
 		}
 
