@@ -8,21 +8,21 @@ mixin sProjects(data)
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
-								| Форум
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680', '1')
+								| Образовательные
 								br
-								| «Таврида»
-							+projectSlide('short', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+								| антишколы
+							+projectSlide('short', 'color: #fff; background-color: #284BA4; border-color: #284BA4', '3')
 								| Онлайн-
 								br
 								| конференция
 								br
 								| «ARTtalk»
-							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3', '4')
 								| Арт-парк
 								br
 								| «Таврида»
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000', '7')
 								| Кастинг-
 								br
 								| платформа
@@ -30,7 +30,7 @@ mixin sProjects(data)
 								| «Таврида –
 								br
 								| АРТ»
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000','8')
 								| Центр
 								br
 								| практики
@@ -39,25 +39,23 @@ mixin sProjects(data)
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000', '5')
 								| Грантовый
 								br
 								| конкурс
 								br
 								| «Таврида»
-							+projectSlide('long', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+							+projectSlide('long', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3', '2')
 								| Фестиваль фестивалей
 								br
 								| «Таврида – АРТ»
-							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680', '9')
 								| Блог
 								br
 								| о креативных
 								br
 								| индустриях
-								br
-								| «Таврида Медиа»
-							+projectSlide('long', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+							+projectSlide('long', 'color: #fff; background-color: #284BA4; border-color: #284BA4', '6')
 								| Образовательный центр
 								br
 								| «Арт-резиденция
@@ -65,14 +63,14 @@ mixin sProjects(data)
 								| «Таврида»
 	// end sProjects
 
-mixin projectSlide(itemClasses, itemStyle)
+mixin projectSlide(itemClasses, itemStyle, i)
 	.swiper-slide(class=itemClasses)
 		+e.item(style=itemStyle href='#')
 			+e.content
 				+e.title
 					block
 				+e.img
-					img.swiper-lazy(src="#" data-src="img/@2x/partners-img.png" alt="")
+					img.swiper-lazy(src="#" data-src=`img/@2x/projects-${i}.jpg` alt="")
 
 mixin sProjects2(data)
 	// start sProjects
