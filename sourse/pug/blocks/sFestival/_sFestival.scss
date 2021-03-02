@@ -69,6 +69,9 @@
       font-size: rem(40);
     }
     @include media-breakpoint-up(lg){
+      font-size: rem(45);
+    }
+    @include media-breakpoint-up(xl){
       font-size: rem(50);
     }
     color: $dark;

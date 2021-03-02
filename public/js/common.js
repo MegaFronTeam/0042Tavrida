@@ -423,7 +423,7 @@ function eventHandler() {
 
 	var festSlider = new Swiper('.fest-slider-js', {
 		slidesPerView: "auto",
-		loop: true,
+		//loop: true,
 		spaceBetween: 30,
 		lazy: {
 			loadPrevNext: true,
