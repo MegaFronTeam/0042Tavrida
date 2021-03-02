@@ -147,7 +147,7 @@
 				}
 			}
 		}
-		&:nth-child(5n){
+		&:last-child{
 			&:after{
 				content: none;
 			}

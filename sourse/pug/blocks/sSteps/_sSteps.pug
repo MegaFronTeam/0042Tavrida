@@ -15,13 +15,13 @@ mixin sSteps(data)
 						+b.steps
 							+e.row.row
 								+sStepsItem('')
-									| Зарегистрироваться
+									| Зарегистрироваться  
 									|
 									br.d-none.d-xl-block
-									| на официальном сайте арт-кластера
+									| на&nbsp;официальном сайте арт-кластера
 									|
 									br.d-none.d-xl-block
-									| «Таврида»
+									| &laquo;Таврида&raquo;
 								+sStepsItem('')
 									|	Заполнить
 									|
@@ -48,8 +48,25 @@ mixin sSteps(data)
 									|
 									br.d-none.d-xl-block
 									| рассмотрения заявки в личном кабинете
-							+e.until Регистрация до 1 сентября 2020 года
-					+e.content 2
+							//- +e.until Регистрация до 1 сентября 2020 года
+					+e.content
+						+b.steps
+							+e.row.row
+								+sStepsItem('')
+									| Зарегистрироваться  
+									|
+									br.d-none.d-xl-block
+									| на&nbsp;официальном сайте арт-кластера
+									|
+									br.d-none.d-xl-block
+									| &laquo;Таврида&raquo;
+								+sStepsItem('')
+									|	Подать заявку
+
+								+sStepsItem('')
+									| Дождаться результатов рассмотрения заявки в&nbsp;личном кабинете
+
+							//- +e.until Регистрация до 1 сентября 2020 года
 	// end sSteps
 
 mixin sStepsItem(bootClasses)

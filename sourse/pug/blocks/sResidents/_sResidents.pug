@@ -40,7 +40,7 @@ mixin sResidents(data)
 							| Вадим
 							br
 							| Чмутин
-						+residentSlide(6, 'начинающая исполнительница', `&laquo;Таврида&raquo; в&nbsp;первую нашу встречу подарила мне глоток воздуха ‒ я&nbsp;не&nbsp;понимала, куда я&nbsp;хочу нести свою музыку и&nbsp;кому нужны песни на&nbsp;английском. Все было очень абстрактно в&nbsp;моей голове. Но&nbsp;на&nbsp;форуме я&nbsp;обрела своих слушателей и&nbsp;получила менторскую поддержку. Появилась цель становиться с&nbsp;каждым днем все лучше и&nbsp;лучше.`)
+						+residentSlide(7, 'начинающая исполнительница', `&laquo;Таврида&raquo; в&nbsp;первую нашу встречу подарила мне глоток воздуха ‒ я&nbsp;не&nbsp;понимала, куда я&nbsp;хочу нести свою музыку и&nbsp;кому нужны песни на&nbsp;английском. Все было очень абстрактно в&nbsp;моей голове. Но&nbsp;на&nbsp;форуме я&nbsp;обрела своих слушателей и&nbsp;получила менторскую поддержку. Появилась цель становиться с&nbsp;каждым днем все лучше и&nbsp;лучше.`)
 							| Ирина
 							br
 							| Тарасова
@@ -49,7 +49,8 @@ mixin sResidents(data)
 mixin residentSlide(imgNum, role, text)
 	.swiper-slide
 		+e.item
-			+e.img
+			+e.PICTURE.img
+				source.swiper-lazy( type="image/webp" srcset="#" data-srcset=`img/@2x/webp/portrait-${imgNum}.webp` )
 				img.swiper-lazy(src="#" data-src=`img/@2x/portrait-${imgNum}.jpg` alt="")
 			+e.content
 				+e.name
@@ -60,4 +61,4 @@ mixin residentSlide(imgNum, role, text)
 					block
 				+e.role=role
 				+e.descr!= text
-			+e.bio-btn(href='#') Биография
+			//- +e.bio-btn(href='#') Биография
