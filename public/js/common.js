@@ -419,8 +419,28 @@ function eventHandler() {
 			$(this).removeClass('not-empty');
 		}
 	} //
-	//end luckyone js
 
+
+	var festSlider = new Swiper('.fest-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+		spaceBetween: 30,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		//
+		navigation: {
+			nextEl: '.fest-next-js',
+			prevEl: '.fest-prev-js'
+		},
+		//
+		pagination: {
+			el: '.fest-pugin--js',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //end luckyone js
 }
 
 ;

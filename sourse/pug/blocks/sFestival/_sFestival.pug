@@ -1,0 +1,32 @@
+mixin sFestival(data)
+	// start sFestival
+	+b.sFestival.section#sFestival&attributes(attributes)
+		.container
+			+e.slider
+				+b.section-title.row.align-items-center
+					.col-auto.ms-lg-auto
+						+b.sl-contr
+							+e.prev.fest-prev-js
+								img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+							+e.next.fest-next-js
+								img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.swiper-container.fest-slider-js
+					.swiper-wrapper
+						+festSlide()
+						+festSlide()
+						+festSlide()
+						+festSlide()
+				+b.fest-pugin--js
+	// end sFestival
+
+mixin festSlide()
+	.swiper-slide
+		+e.row.row
+			.col-lg-5
+				+e.txt-content
+					+e.H4.title Фестиваль фестивалей «Таврида.АРТ»
+					+e.txt Старт регистрации – 15 марта
+					+e.btn(href='#') Подробнее
+			.col-lg-7
+				+e.img
+					img.swiper-lazy(src="#" data-src="img/@2x/sFestival.jpg" alt="")
