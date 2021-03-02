@@ -98,7 +98,7 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-warning;
-
+		position: relative;z-index: 3;
 		text-transform: uppercase;
 	}
 	//
