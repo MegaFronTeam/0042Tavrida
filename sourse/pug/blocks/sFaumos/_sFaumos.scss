@@ -123,17 +123,17 @@
 		line-height: 1.8;
 
 		font-size: rem(14.5);
-		margin-bottom: rem(20);
+		margin-bottom: rem(10);
 		@include media-breakpoint-up(md){
 			font-size: rem(16);
-			margin-bottom: rem(30);
+			// margin-bottom: rem(30);
 		}
 		@include media-breakpoint-up(lg){
 			font-size: rem(20);
-			margin-bottom: rem(40);
+			// margin-bottom: rem(40);
 		}
 		@include media-breakpoint-up(xl){
-			margin-bottom: rem(86);
+			// margin-bottom: rem(86);
 		}
 	}
 	&__name{

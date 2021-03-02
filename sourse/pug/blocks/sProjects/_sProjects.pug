@@ -8,29 +8,27 @@ mixin sProjects(data)
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
-								| Форум
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680', '1')
+								| Образовательные
 								br
-								| «Таврида»
-							+projectSlide('short', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+								| антишколы
+							+projectSlide('short', 'color: #fff; background-color: #284BA4; border-color: #284BA4', '3')
 								| Онлайн-
 								br
 								| конференция
 								br
 								| «ARTtalk»
-							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3', '4')
 								| Арт-парк
 								br
 								| «Таврида»
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000', '7')
 								| Кастинг-
 								br
 								| платформа
 								br
-								| «Таврида –
-								br
-								| АРТ»
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+								| «Таврида.АРТ»
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000','8')
 								| Центр
 								br
 								| практики
@@ -39,25 +37,23 @@ mixin sProjects(data)
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('short', 'color: #000; background-color: #fff; border-color: #000', '5')
 								| Грантовый
 								br
 								| конкурс
 								br
 								| «Таврида»
-							+projectSlide('long', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+							+projectSlide('long', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3', '2')
 								| Фестиваль фестивалей
 								br
-								| «Таврида – АРТ»
-							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+								| «Таврида.АРТ»
+							+projectSlide('long', 'color: #fff; background-color: #6B1680; border-color: #6B1680', '9')
 								| Блог
 								br
 								| о креативных
 								br
 								| индустриях
-								br
-								| «Таврида Медиа»
-							+projectSlide('long', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
+							+projectSlide('long', 'color: #fff; background-color: #284BA4; border-color: #284BA4', '6')
 								| Образовательный центр
 								br
 								| «Арт-резиденция
@@ -65,14 +61,15 @@ mixin sProjects(data)
 								| «Таврида»
 	// end sProjects
 
-mixin projectSlide(itemClasses, itemStyle)
+mixin projectSlide(itemClasses, itemStyle, i)
 	.swiper-slide(class=itemClasses)
-		+e.item(style=itemStyle href='#')
+		+e.item(style=itemStyle )
 			+e.content
 				+e.title
 					block
-				+e.img
-					img.swiper-lazy(src="#" data-src="img/@2x/partners-img.png" alt="")
+				+e.PICTURE.img
+					source.swiper-lazy( type="image/webp" srcset="#" data-srcset=`img/@2x/webp/projects-${i}.webp` )
+					img.swiper-lazy(src="#" data-src=`img/@2x/projects-${i}.jpg` alt="")
 
 mixin sProjects2(data)
 	// start sProjects
@@ -84,13 +81,13 @@ mixin sProjects2(data)
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('xl-long', 'color: #000; background-color: #fff; border-color: #000')
+							+projectSlide('xl-long', 'color: #000; background-color: #fff; border-color: #000','fest-1')
 								| Шоу резидентов
 								br
 								| и хедлайнеров
 								br
 								| фестиваля
-							+projectSlide('medium', 'color: #fff; background-color: #0A1124; border-color: #0A1124')
+							+projectSlide('medium', 'color: #fff; background-color: #0A1124; border-color: #0A1124','fest-2')
 								| Фестиваль
 								br
 								| авторской
@@ -102,39 +99,33 @@ mixin sProjects2(data)
 								| вечера
 								br
 								| на костровой
-							+projectSlide('', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3')
+							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3',`fest-3`)
 								| Шоу-показ молодых
 								br
 								| российских дизайнеров
+							+projectSlide('medium', 'color: #fff; background-color: #0cd486; border-color: #0cd486','fest-8')
+								| Шоу на воде <br> «33 русалки»
+							+projectSlide('short', 'color: #fff; background-color: #0A1124; border-color: #AA1124','fest-9')
+								| Гастрономический <br> фестиваль
 				+e.slider--js
 					.swiper-container.project-slider-js
 						.swiper-wrapper
-							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680','fest-4')
 								| Мюзикл
 								br
 								| на холмах
-							+projectSlide('long', 'color: #000; background-color: #FF8000; border-color: #FF8000')
-								| Шоу «Арт-шествие»
-							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680')
+							+projectSlide('long', 'color: #000; background-color: #FF8000; border-color: #FF8000','fest-5')
+								| Шоу <br> «Арт-шествие»
+							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680','fest-6')
 								| Парад
 								br
 								| маломерных
 								br
 								| судов
-							+projectSlide('long', 'color: #000; background-color: #FF8000; border-color: #FF8000')
-								| Шоу «Арт-шествие»
-							+projectSlide('medium', 'color: #fff; background-color: #0A1124; border-color: #0A1124')
-								| Фестиваль
-								br
-								| авторской
-								br
-								| песни
-								br
-								| и акустические
-								br
-								| вечера
-								br
-								| на костровой
+							+projectSlide('long', 'color: #000; background-color: #d40cb6; border-color: #d40cb6','fest-7')
+								| Шоу <br> дронов
+							+projectSlide('short', 'color: #fff; background-color: #166580; border-color: #166580','fest-10')
+								| Фестиваль <br> воздушных <br> шаров 
 
 mixin hint()
 	//to copy pastel
