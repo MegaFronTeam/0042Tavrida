@@ -40,6 +40,7 @@
 			border-radius: rem(50);
 		}
 		overflow: hidden;
+		
 
 		padding: rem(30) rem(20px) rem(40) rem(20);
 		@media (min-width: 430px) {
@@ -51,7 +52,8 @@
 			min-height: 500px;
 		}
 		@include media-breakpoint-up(lg){
-			min-height: 100%;
+			min-height: 550px;
+			// min-height: 100%;
 			padding: rem(50) rem(120px) rem(60) rem(40);
 		}
 		@include media-breakpoint-up(xl){
