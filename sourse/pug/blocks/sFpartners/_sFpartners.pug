@@ -21,16 +21,14 @@ mixin sFpartners(data)
 					| RAP
 					br
 					| Koktebel
-				+sFPartnersItem(0)
-					| Всероссийский фестиваль авторской песни
-					br
-					| имени Валерия Грушина
+				+sFPartnersItem(5)
+					| Всероссийский фестиваль авторской песни имени Валерия Грушина
 	// end sFpartners
 
 mixin sFPartnersItem(imgNum)
-	.col-6.col-lg-3
+	.col-6.col-lg-3.col-xxl
 		+e.item(href='#')
-			+e.img
-				img(loading="lazy" src=`img/@2x/f-parnter-${imgNum}.png` alt="")
+			//- +e.img
+			+pic(`f-parnter-${imgNum}.png`,``,0) 
 			+e.txt
 				block

@@ -2,7 +2,7 @@
 .sFaumos {
 	width: 100vw;
 	overflow: hidden;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(131px)};
 		--sTPB: #{rem(91px)};
 		--sPB: #{rem(80px)};
@@ -34,7 +34,7 @@
 	}
 	.famous-pugin{
 		padding-top: rem(40);
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xxl){
 			padding-top: rem(139px);
 		}
 		@extend .sw-pug-frame;

@@ -14,7 +14,7 @@
 		background-color: $dim;
 	}
 
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(60px)};
 		--sTPB: #{rem(78px)};
 		--sPB: #{rem(99px)};

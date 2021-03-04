@@ -1,7 +1,7 @@
 // start .sNews
 .sNews {
 
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(73px)};
 		--sTPB: #{rem(58px)};
 		--sPB: #{rem(82px)};

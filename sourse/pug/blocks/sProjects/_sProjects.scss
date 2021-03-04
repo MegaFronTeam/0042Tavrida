@@ -2,7 +2,7 @@
 .sProjects {
 	width: 100vw;
 	overflow: hidden;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(75)};
 		--sTPB: #{rem(63)};
 		--sPB: #{rem(80)};
@@ -23,7 +23,7 @@
 		&:nth-child(even){
 			.swiper-wrapper{
 				@include media-breakpoint-up(xl){
-					padding-left: rem(100);
+					// padding-left: rem(100);
 				}
 				@include media-breakpoint-up(xxl){
 					padding-left: rem(156);

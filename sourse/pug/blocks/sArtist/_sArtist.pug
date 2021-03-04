@@ -100,7 +100,8 @@ mixin sArtist(data)
 
 mixin artistSlide(imgNum)
 	.swiper-slide
-		+e.img
+		+e.PICTURE.img
+			source.swiper-lazy( type="image/webp" srcset="#" data-srcset=`img/@2x/webp/artist-port-${imgNum}.webp` )
 			img.swiper-lazy(src="#" data-src=`img/@2x/artist-port-${imgNum}.jpg` alt="")
 		+e.txt
 			block

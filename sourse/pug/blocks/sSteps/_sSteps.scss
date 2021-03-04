@@ -1,6 +1,6 @@
 // start .sSteps
 .sSteps {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(34px)};
 		--sTPB: #{rem(51px)};
 		--sPB: #{rem(28px)};

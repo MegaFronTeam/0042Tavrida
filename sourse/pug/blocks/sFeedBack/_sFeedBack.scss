@@ -1,6 +1,6 @@
 // start .sFeedBack
 .sFeedBack {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(70px)};
 		--sTPB: #{rem(67px)};
 		--sPB: #{rem(82px)};

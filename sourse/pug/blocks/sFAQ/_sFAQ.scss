@@ -1,6 +1,6 @@
 // start .sFAQ
 .sFAQ {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(30px)};
 		--sTPB: #{rem(73px)};
 		--sPB: #{rem(55px)};

@@ -2,7 +2,7 @@
 .sResidents {
 	width: 100vw;
 	overflow: hidden;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(80)};
 		--sTPB: #{rem(88px)};
 		--sPB: #{rem(97)};

@@ -1,6 +1,6 @@
 // start .sFpartners
 .sFpartners {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(67px)};
 		--sTPB: #{rem(172px)};
 		--sPB: #{rem(82px)};
@@ -20,16 +20,16 @@
 	&__item{
 		display: block;
 	}
-	&__img{
+	picture{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 
-		height: rem(269);
-		@include media-breakpoint-up(xxl){
-			height: rem(269);
-		}
+		height: rem(209);
+		// @include media-breakpoint-up(xxl){
+		// 	height: rem(269);
+		// }
 
 		img{
 			width: auto;
@@ -43,7 +43,7 @@
 			margin-bottom: rem(30);
 		}
 		@include media-breakpoint-up(xxl){
-			margin-bottom: rem(63);
+			// margin-bottom: rem(63);
 		}
 	}
 	&__txt{

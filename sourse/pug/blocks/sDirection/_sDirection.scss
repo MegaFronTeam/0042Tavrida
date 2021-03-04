@@ -1,6 +1,6 @@
 // start .sDirection
 .sDirection {
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xxl) {
 		--sPT: #{rem(16px)};
 		--sPB: #{rem(210px)};
 		--sTPB: #{rem(80px)};
