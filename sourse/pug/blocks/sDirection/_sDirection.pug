@@ -44,7 +44,7 @@ mixin directionSlide(hasbotStr=true)
 					br
 					| возможностей
 			.col-4
-				+directionItem(5, 'Мюзикл')
+				+directionItem(5, 'Театр и кино')
 			if hasbotStr
 				.col-12
 					+directionItem(6, '#Мывместе')(class="item-small")
@@ -52,7 +52,8 @@ mixin directionSlide(hasbotStr=true)
 
 mixin directionItem(imgName, txt)
 	+e.item&attributes(attributes)
-		img(src=`img/@2x/direction-${imgName}.jpg` alt="")
+		+pic(`direction-${imgName}.jpg`, ``, 0)
+		//- img(src=`img/@2x/direction-${imgName}.jpg` alt="")
 		if txt
 			+e.txt=txt
 		else

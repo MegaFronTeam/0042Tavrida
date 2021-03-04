@@ -4,7 +4,7 @@ mixin sArtist(data)
 		.container
 			+b.section-title.row.align-items-center
 				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Артисты фестиваля
+					h2 Гости и&nbsp;артисты Фестивалей <br> 2019-2020 годов
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.artist-prev-js
@@ -14,6 +14,10 @@ mixin sArtist(data)
 			+e.slider
 				.swiper-container.artist-slider-js
 					.swiper-wrapper
+						+artistSlide(0)
+							| Сергей
+							br
+							| Шнуров
 						+artistSlide(1)
 							| Сергей
 							br
@@ -21,13 +25,77 @@ mixin sArtist(data)
 						+artistSlide(2)
 							| Полина
 							br
-							| гагарина
+							| Гагарина
 						+artistSlide(3)
 							| Юлианна
 							br
 							| Караулова
 						+artistSlide(4)
 							| МОТ
+						+artistSlide(5)
+							| Клава
+							br
+							| Кока
+						+artistSlide(6)
+							| ST
+						+artistSlide(7)
+							| Гарик
+							br
+							| Сукачев
+						+artistSlide(8)
+							| Лариса
+							br
+							| Долина
+						+artistSlide(9)
+							| Леонид
+							br
+							| Агутин
+						+artistSlide(10)
+							| Игорь
+							br
+							| Бутман
+						+artistSlide(11)
+							| Диана Арбенина
+							br
+							| и&nbsp;группа
+							br
+							| &laquo;Ночные снайперы&raquo;
+						+artistSlide(12)
+							| Сергей Жилин и&nbsp;&laquo;Фонограф-Джаз-Бэнд&raquo;
+						+artistSlide(13)
+							| Этери
+							br
+							| Бериашвили
+						+artistSlide(14)
+							| Сергей Галанин
+							br
+							| и&nbsp;группа &laquo;СерьГа&raquo;
+						+artistSlide(15)
+							| Владислав
+							br
+							| Маленко
+						+artistSlide(16)
+							| Ирина
+							br
+							| Чеснокова
+						+artistSlide(17)
+							| Анет Сай
+						+artistSlide(18)
+							| SHOO
+						+artistSlide(19)
+							| Duo RO
+						+artistSlide(20)
+							| Светлана
+							br
+							| Касьян
+						+artistSlide(21)
+							| Евгений
+							br
+							| Князев
+						+artistSlide(22)
+							| Танцевальный коллектив
+							br
+							| Russian Dream
 	// end sArtist
 
 mixin artistSlide(imgNum)

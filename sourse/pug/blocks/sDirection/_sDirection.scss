@@ -1,89 +1,90 @@
 // start .sDirection
 .sDirection {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(16px)};
 		--sPB: #{rem(210px)};
-		--sTPB: #{rem(80px)}
+		--sTPB: #{rem(80px)};
 	}
 
 	position: relative;
 	z-index: 1;
 	color: $white;
 
-	.section-title{
-		h2{
+	.section-title {
+		h2 {
 			color: $white;
 		}
 	}
 
-	&__slider{
-		.swiper-container{
-			@include media-breakpoint-down(lg){
-				overflow: visible!important;
+	&__slider {
+		.swiper-container {
+			@include media-breakpoint-down(lg) {
+				overflow: visible !important;
 			}
 		}
-		.swiper-wrapper{
+		.swiper-wrapper {
 		}
-		.swiper-slide{
+		.swiper-slide {
 			width: 960px;
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				width: 100%;
 			}
 		}
 	}
-	&__row{
+	&__row {
 		@include roww(rem(15px));
 
-		& > *{
+		& > * {
 			margin-bottom: rem(15px);
 		}
 		margin-bottom: rem(-15px);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			@include roww(rem(40px));
 
-			& > *{
+			& > * {
 				margin-bottom: rem(35px);
 			}
 			margin-bottom: rem(-35px);
 		}
 	}
-	&__item{
+	&__item {
 		overflow: hidden;
+		background-color: $primary;
 
 		padding: rem(20);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding: rem(40);
 		}
 		height: rem(333);
 
 		border-radius: rem(25);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			border-radius: rem(50);
 		}
 
-
-		&.item-small{
+		&.item-small {
 			height: rem(154);
 			justify-content: center;
 		}
 
 		position: relative;
 		z-index: 1;
-		img{
+		img {
 			position: absolute;
 			z-index: -1;
-			top: -1px;
-			left: -1px;
+			top: 0px;
+			left: 0px;
 			width: calc(100% + 2px);
 			height: calc(100% + 2px);
 			object-fit: cover;
+			opacity: 0.8;
 		}
 
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 	}
-	&__txt{
+	&__txt {
 		font-weight: 900;
 		font-size: rem(30);
 		line-height: (37/30);
@@ -91,20 +92,18 @@
 		color: $white;
 	}
 
-	&--on-white{
+	&--on-white {
 		color: $body-color;
 
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(50px)};
 			--sPB: #{rem(30px)};
-			--sTPB: #{rem(80px)}
+			--sTPB: #{rem(80px)};
 		}
-		.section-title{
-			h2{
+		.section-title {
+			h2 {
 				color: $dark;
 			}
 		}
 	}
-	&__{}
-	&__{}
 } // end.sDirection
