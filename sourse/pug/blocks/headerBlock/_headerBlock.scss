@@ -32,7 +32,8 @@
         flex: rem(60);
       }
       @include media-breakpoint-up(xl){
-        font-size: rem(100.3);
+        font-size: rem(70);
+        // font-size: rem(100.3);
       }
       line-height: (88/101);
       letter-spacing: -0.06em;
@@ -52,11 +53,14 @@
       border-radius: rem(50);
     }
     > * {
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
-      position: absolute;
+      @include a-cent1;
+      width: 125% !important;
+      height: 125% !important;
+      // top: 0;
+      // left: 0;
+      // width: 100% !important;
+      // height: 100% !important;
+      // position: absolute;
     }
   }
   &__video{

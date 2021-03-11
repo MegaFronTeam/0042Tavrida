@@ -28,7 +28,8 @@ mixin headerBlock2()
 			.row
 				.col-12.col-sm-11.col-md-9.ms-auto
 					+e.video-bl
-						<iframe src="https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=2" loading='lazy' width="853" height="480" frameborder="0" allowfullscreen></iframe>
+						iframe(id="ytplayer" type="text/html" width="853" height="480" src="https://www.youtube.com/embed/JN3p9Vzb_nI?autoplay=1" frameborder="0" allowfullscreen)
+						//- <iframe src="https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=2" loading='lazy' width="853" height="480" frameborder="0" allowfullscreen></iframe>
 
 mixin headerBlock3()
 	// start headerBlock
