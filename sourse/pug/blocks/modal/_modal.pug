@@ -14,6 +14,7 @@ mixin modal()
 			+modalItem('Ж/д вокзал', 'г. Симферополь')
 			+modalItem('Автовокзал', 'г. Судак')
 			+modalItem('Ж/д вокзал', 'с. Владиславовка')
+
 	+b.art.modal-win(id="modal-art" class=" " style="display: none" )
 		+e.H4.title Творческое задание
 		+e.big-txt На одну ссылку залить портфолио и видеовизитку:
@@ -34,7 +35,70 @@ mixin modal()
 				+e.tel(href="tel:88003022704") 8 (800) 302-27-04
 			.col-auto
 				+e.mail(href='mailto:info@crki.art') info@crki.art
-	// #modal-serv
+
+	+b.modal-win(id="modal-serv-country" class=" " style="display: none" )
+		+e.H4.title Сервисный пакет
+		+e.UL.list
+			li Вход на&nbsp;территорию Фестиваля бесплатный
+			li Участие в&nbsp;программе Фестиваля бесплатное
+			li Мерч &laquo;Тавриды&raquo; бесплатный
+			li Проживание: за&nbsp;свой счет за&nbsp;территорией Фестиваля
+			li Питание: за&nbsp;свой счет
+		+e.title-sm Бесплатные шаттлы:
+		+e.row.row
+			+modalItem('Судак', 'площадка')
+				+e.l-name Судак
+
+	+b.art.modal-win(id="modal-art-country" class=" " style="display: none" )
+		+e.H4.title Творческое задание
+		+e.sm-title Видеовизитка
+		+e.md-txt.mb-2 Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+		+e.list
+			li Что для тебя арт-кластер &laquo;Таврида&raquo;?
+			li Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?
+			li Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?
+		+e.sm-title Правильно оформи видеовизитку!
+		+e.md-txt.mb-2 Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+		+e.md-txt.mb-2 ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_ инициалы участника (иванов_аб).
+		.sm-txt.mb-0 * при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.
+		.sm-txt * обязательно установи настройку доступа по&nbsp;ссылке.
+		+e.foot-row.row.align-items-center
+			.col-auto
+				+e.f-txt При возникновении вопросов обращаться на&nbsp;почту:
+			.col-auto
+				+e.mail(href='mailto:info@crki.art') info@crki.art
+
+	+b.modal-win(id="modal-serv-child" class=" " style="display: none" )
+		+e.H4.title Сервисный пакет
+		+e.UL.list
+			li Вход на&nbsp;территорию Фестиваля бесплатный
+			li Участие в&nbsp;программе Фестиваля бесплатное
+			li Мерч &laquo;Тавриды&raquo; бесплатный
+			li Проживание: за&nbsp;свой счет за&nbsp;территорией Фестиваля
+			li Питание: за&nbsp;свой счет
+		+e.title-sm Бесплатные шаттлы:
+		+e.row.row
+			+modalItem('Судак', 'площадка')
+				+e.l-name Судак
+
+	+b.art.modal-win(id="modal-art-child" class=" " style="display: none" )
+		+e.H4.title Творческое задание
+		+e.sm-title Видеовизитка
+		+e.md-txt.mb-2 Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+		+e.list
+			li Что для тебя арт-кластер &laquo;Таврида&raquo;?
+			li Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?
+			li Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?
+		+e.sm-title Правильно оформи видеовизитку!
+		+e.md-txt.mb-2 Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+		+e.md-txt.mb-2 ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_ инициалы участника (иванов_аб).
+		.sm-txt.mb-0 * при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.
+		.sm-txt * обязательно установи настройку доступа по&nbsp;ссылке.
+		+e.foot-row.row.align-items-center
+			.col-auto
+				+e.f-txt При возникновении вопросов обращаться на&nbsp;почту:
+			.col-auto
+				+e.mail(href='mailto:info@crki.art') info@crki.art
 	
 	// end modals
 
@@ -46,3 +110,5 @@ mixin modalItem(name, place)
 			.col
 				+e.l-name=name
 				+e.l-place=place
+					if block
+						block

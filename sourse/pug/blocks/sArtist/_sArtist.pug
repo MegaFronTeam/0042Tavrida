@@ -3,14 +3,14 @@ mixin sArtist(data)
 	+b.SECTION.sArtist.section#sArtist&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Гости и&nbsp;артисты Фестивалей <br> 2019-2020 годов
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.artist-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.artist-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Гости и&nbsp;артисты Фестивалей <br> 2019-2020 годов
 			+e.slider
 				.swiper-container.artist-slider-js
 					.swiper-wrapper

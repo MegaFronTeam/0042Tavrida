@@ -8,6 +8,8 @@ mixin sParticipants(data)
 				h2 Участники
 				p Участники фестиваля&nbsp;&mdash; это молодые деятели культуры и&nbsp;искусства, представители волонтерских движений, общественных организаций, проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;, медиаинфлюенсеры в&nbsp;возрасте от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет, а&nbsp;также участники проекта &laquo;Большая перемена&raquo; с&nbsp;детьми в&nbsp;возрасте от&nbsp;14&nbsp;до&nbsp;17&nbsp;лет, прошедшие конкурсный отбор.
 				p Зрителем фестиваля может стать любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию на&nbsp;сайте и&nbsp;получивший подтверждение в&nbsp;личном кабинете.
+			+b.section-title.pb-0
+				h2 Направления участия
 			+e.gray-box
 				+e.dd-items.participants-items-js
 					+participantDDItem('Резиденты «Тавриды» и участники чемпионата ArtMasters', 'active')
@@ -94,7 +96,7 @@ mixin sParticipants(data)
 							| заливай на файлообменник по одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с портфолио: фамилия_ инициалы участника (иванов_аб).
 						p при загрузке файла на Яндекс.диск необходимо включить ссылку.
 						p обязательно установи настройку доступа по ссылке.
-					+participantDDItem('Участники проектов платформы «Россия ‒ страна возможностей»', undefined, false)
+					+participantDDItem('Полуфиналисты и финалисты проектов платформы «Россия ‒ страна возможностей»', undefined, true, '#modal-serv-country', '#modal-art-country')
 						p Полуфиналисты и финалисты проектов платформы «Россия – страна возможностей». Возраст от 18 до 35 лет включительно
 						p Регистрация откроется в ближайшее время
 					+participantDDItem('#МыВместе')
@@ -137,12 +139,12 @@ mixin sParticipants(data)
 							| заливай на файлообменник по одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с портфолио: фамилия_ инициалы участника (иванов_аб).
 						p при загрузке файла на Яндекс.диск необходимо включить ссылку.
 						p обязательно установи настройку доступа по ссылке
-					+participantDDItem('Участники проекта «Большая перемена»', undefined, false)
+					+participantDDItem('Семьи с детьми – участниками проекта «Большая перемена»', undefined, true, '#modal-serv-child', '#modal-art-child')
 						p Семьи с детьми – участниками проекта «Большая перемена». Дети в возрасте от 14 до 17 лет включительно
 						p Регистрация откроется в ближайшее время
 	// end sParticipants
 
-mixin participantDDItem(headerTxt, activeClass='', hasBtns=true)
+mixin participantDDItem(headerTxt, activeClass='', hasBtns=true, a1, a2)
 	+e.dd-item(class=activeClass)
 		+e.header.dd-head-js
 			+e.txt=headerTxt
@@ -157,6 +159,6 @@ mixin participantDDItem(headerTxt, activeClass='', hasBtns=true)
 			if hasBtns
 				+e.c-btns-row.row
 					.col-sm-auto
-						+e.c-btn(href='#') Сервисный пакет
+						+e.c-btn.link-modal(href=a1) Сервисный пакет
 					.col-sm-auto
-						+e.c-btn(href='#') Творческое задание
+						+e.c-btn.link-modal(href=a2) Творческое задание

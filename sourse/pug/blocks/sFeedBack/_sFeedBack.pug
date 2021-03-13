@@ -3,22 +3,22 @@ mixin sFeedBack(data)
 	+b.SECTION.sFeedBack.section#sFeedBack&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Отзывы участников
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.feedback-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.feedback-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Отзывы участников
 			+e.slider
 				.swiper-container.feedback-slider-js
 					.swiper-wrapper
-						+feedbackSldide("3.jpg", 'Пьянзина', 'Ольга')
+						+feedbackSldide("1.jpg", 'Пьянзина', 'Ольга')
 							| Это был мой первый фестиваль, и он превзошел все мои ожидания. Когда я закрываю глаза и вспоминаю, каким он был – вижу подиум уходящий в море, Арбенину, врывающуюся в толпу зрителей, Ассоль, наблюдающую с берега за Алыми парусами. На фестивале я была в компании единомышленников и мы просто наслаждались происходящим
 						+feedbackSldide("2.jpg", 'Анастасия', 'Головинова')
 							| Лично для меня «Таврида» – это площадка возможностей. И для меня большая честь и радость быть частью этой команды. За тот период времени, которой я была здесь, я многому научилась, «Таврида» умеет удивлять, вдохновлять и заряжать
-						+feedbackSldide("1.jpg", 'Кудряшова', 'Ксения')
+						+feedbackSldide("3.jpg", 'Кудряшова', 'Ксения')
 							| «Таврида» для меня – это энергия, вдохновение и искусство во всём. А также место с огромнейшей концентрацией творческих и креативных людей, желающих творить и создавать. Фестиваль в 2020 году подарил мне много ярких эмоций – насыщенная образовательная программа, крутые шоу и популярные артисты!
 	// end sFeedBack
 
@@ -42,14 +42,14 @@ mixin sFeedBack2(data)
 	+b.SECTION.sFeedBack.section#sFeedBack&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Отзывы участников
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.feedback-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.feedback-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Отзывы участников
 			+e.slider
 				.swiper-container.feedback-slider-js
 					.swiper-wrapper

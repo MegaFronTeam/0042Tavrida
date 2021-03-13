@@ -3,14 +3,14 @@ mixin sFaumos(data)
 	+b.SECTION.sFaumos.section#sFaumos&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Известные люди о нас
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.famous-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.famous-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Известные люди о нас
 			+e.slider
 				.swiper-container.famous-slider-js
 					.swiper-wrapper

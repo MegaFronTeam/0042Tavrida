@@ -2,8 +2,15 @@ mixin sProjects(data)
 	// start sProjects
 	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
 		.container
-			+b.section-title
-				h2 НАШИ проекты
+			+b.section-title.row.align-items-center
+				.col-12.col-lg-auto
+						+b.sl-contr
+							+e.prev.projects-prev-js
+								img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+							+e.next.projects-next-js
+								img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 НАШИ проекты
 			+e.sliders
 				+e.slider--js
 					.swiper-container.project-slider-js
@@ -75,8 +82,15 @@ mixin sProjects2(data)
 	// start sProjects
 	+b.SECTION.sProjects--key-ev.section#sProjects&attributes(attributes)
 		.container
-			+b.section-title
-				h2 Что тебя ждет в&nbsp;этом году?
+			+b.section-title.row.align-items-center
+				.col-12.col-lg-auto
+						+b.sl-contr
+							+e.prev.projects-prev-js
+								img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+							+e.next.projects-next-js
+								img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2 Что тебя ждет в&nbsp;этом году?
 			+e.sliders
 				+e.slider--js
 					.swiper-container.project-slider-js

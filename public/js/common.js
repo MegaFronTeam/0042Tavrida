@@ -168,6 +168,10 @@ function eventHandler() {
 			lazy: {
 				loadPrevNext: true,
 				loadPrevNextAmount: 10
+			},
+			navigation: {
+				nextEl: '.projects-next-js',
+				prevEl: '.projects-prev-js'
 			}
 		});
 	}); //
@@ -187,6 +191,10 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 10
+		},
+		navigation: {
+			nextEl: '.story-next-js',
+			prevEl: '.story-prev-js'
 		}
 	}); //
 
@@ -288,6 +296,10 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 30
+		},
+		navigation: {
+			nextEl: '.direction-next-js',
+			prevEl: '.direction-prev-js'
 		}
 	});
 	var artistSlider = new Swiper('.artist-slider-js', {
@@ -406,6 +418,10 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 5
+		},
+		navigation: {
+			nextEl: '.act-next-js',
+			prevEl: '.act-prev-js'
 		}
 	}); //custom ph
 
