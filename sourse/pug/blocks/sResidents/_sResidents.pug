@@ -3,14 +3,14 @@ mixin sResidents(data)
 	+b.SECTION.sResidents.section#sResidents&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
+				.col-12.col-md.mb-3.mb-md-0.order-md-2
+					h2 НАШИ резиденты
 				.col-12.col-md-auto
 					+b.sl-contr
 						+e.prev.resident-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.resident-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-				.col-12.col-md.mb-3.mb-md-0
-					h2 НАШИ резиденты
 			+e.slider
 				.swiper-container.resident-slider-js
 					.swiper-wrapper

@@ -100,8 +100,12 @@
 .links-bl {
 	&__link {
 		font-weight: 900;
-		font-size: rem(50px);
+		@include rfs(50px);
+		// font-size: rem(50px);
 		line-height: (61/50);
+		@include media-breakpoint-up(xxl){
+			font-size: rem(50px);
+		}
 
 		text-transform: uppercase;
 		color: $dark;
@@ -109,7 +113,7 @@
 		a {
 			color: $dark;
 			&:hover {
-				color: lighten($dark, 5);
+				color: lighten($dark, 20);
 			}
 			display: block;
 		}

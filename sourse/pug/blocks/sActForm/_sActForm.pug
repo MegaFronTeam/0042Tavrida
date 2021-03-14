@@ -3,14 +3,14 @@ mixin sActForm(data)
 	+b.SECTION.sActForm.section#sActForm&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2 Аудитория форума
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.act-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.act-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Аудитория форума
 			+e.slider
 				.swiper-container.act-slider-js
 					.swiper-wrapper

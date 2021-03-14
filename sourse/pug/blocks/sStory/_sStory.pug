@@ -3,14 +3,14 @@ mixin sStory(data)
 	+b.SECTION.sStory.section#sStory&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2 Наша история
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.story-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.story-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 Наша история
 			+e.slider
 				.swiper-container.story-slider-js
 					.swiper-wrapper
@@ -44,14 +44,14 @@ mixin sStory2(data)
 	+b.SECTION.sStory--fest.section#sStory&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2 История фестиваля
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.story-prev-js
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.story-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-				.col-12.col-lg.mb-3.mb-lg-0
-					h2 История фестиваля
 			+e.slider
 				.swiper-container.story-slider-js
 					.swiper-wrapper
