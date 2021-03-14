@@ -45,7 +45,7 @@ mixin sFormL(data)
 							.col-sm-6
 								+inp3('Национальность', 'text', '')
 							.col-sm-6
-								+cSelect('Регион подачи')
+								+input('Регион подачи', 'select')
 							//- other
 							.col-12
 								+inp3('Физические отклонения', 'text', '')
@@ -63,7 +63,7 @@ mixin sFormL(data)
 								+inp3('Аллергены', 'text', '')
 									+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
 							.col-sm-6
-								+cSelect('Размер одежды')
+								+input('Размер одежды', 'select')
 							//-+inp3('', '', '')
 					//-right-col
 					.col-lg-4
@@ -111,9 +111,9 @@ mixin sFormL(data)
 								+inp3('Место рождения', 'text', '')
 							// - l6
 							.col-sm-6
-								+cSelect('Страна проживания')
+								+input('Страна проживания', 'select')
 							.col-sm-6
-								+cSelect('Федеральный округ проживания')
+								+input('Федеральный округ проживания', 'select')
 							//- l7
 							.col-sm-6
 								+inp3('Регион проживания', 'text', '')
@@ -177,9 +177,10 @@ mixin sFormL(data)
 							.col-12
 								+inp3('О себе (опыт участия в проектах, достижения)', 'text', '')
 							.col-sm-6
-								+cSelect('Выбери категорию участия')
+								+input('Выбери категорию участия', 'select')
 							.col-sm-6
-								+cSelect('Выбери категорию участия')
+								+input('Выбери категорию участия', 'select')
+
 				+e.sub-title Портфолио и видеовизитка
 				.row
 					.col-lg-8
@@ -188,11 +189,201 @@ mixin sFormL(data)
 								+inp3('Ссылка на портфолио и видеовизитку (1 ссылка)', 'text', '')
 							.col-auto
 								+e.BUTTON.btn(type="submit") Отправить
+
+mixin sFormL2(data)
+	// start sFormL
+	+b.SECTION.sFormL.section#sFormL&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Заявка зрителя фестиваля
+			+form-wrap(false)
+				.row
+					+e.sub-title.mt-3 Личные данные и здоровье
+					.col-lg-8
+						.row
+							.col-sm-6
+								.row.align-items-center
+									.col-5
+										+e.radio-txt Пол
+									.col-3
+										+in-c("radio", "Муж.", 'male')(checked)
+									.col-3
+										+in-c("radio", "Жен.", 'male')
+							.col-sm-6
+								+inp3('Дата рождения', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							.col-sm-6
+								+inp3('ФИО контактного лица', 'text', 'Варьяновский')
+							.col-sm-6
+								+inp3('Телефон контактного лица', 'tel', '')
+							.col-sm-6
+								.row.align-items-center
+									.col-5
+										+e.radio-txt Инвалидность
+									.col-3
+										+in-c("radio", "Да", 'disability')
+									.col-3
+										+in-c("radio", "Нет", 'disability')(checked)
+							.col-sm-6
+								+input('Группа инвалидности', 'select')
+								+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+							.col-12
+								+input('Категория инвалидности', 'select')
+								+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+
+					.col-lg-4
+						label.dropzone-wrapper.d-block
+							.dz-gray.text-center Фото участника
+							+b.dropzone(action='/file-upload')
+								#dropzone
+									+e.prev-wrap
+										+icon('dz-plus')
+										| Выбрать
+										br
+										| фото
+									.fallback
+										input(name='file', type='file', multiple='')
+
+				+e.sub-title Паспортные данные
+				.row
+					.col-lg-8
+						.row
+							.col-sm-6
+								+input('Гражданство', 'select')
+							.col-sm-6
+								+input('Документ, удостоверяющий личность', 'select')
+							.col-sm-6
+								.row
+									.col-xxl-5
+										+inp3('Серия', 'text', '')
+									.col-xxl-7
+										+inp3('Номер', 'text', '')
+							.col-12
+								+inp3('Кем выдан', 'text', '')
+							.col-sm-6
+								+inp3('Дата выдачи', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							.col-sm-6
+								+inp3('Действителен до', 'date', '2005-08-18')(min="2000-01-01" max="2018-12-31")
+							.col-sm-5
+								+inp3('Код подразделения', 'text', '')
+							.col-sm-7
+								+inp3('Место рождения', 'text', '')
+							.col-sm-12
+								+inp3('Адрес прописки', 'text', '')
+
+				+e.sub-title Проживание
+				.row
+					.col-lg-8
+						.row
+							.col-sm-6
+								+input('Страна проживания', 'select')
+							.col-sm-6
+								+input('Федеральный округ проживания', 'select')
+							.col-sm-6
+								+inp3('Регион проживания', 'text', '')
+							.col-sm-6
+								+inp3('Город проживания', 'text', '')
+							.col-sm-6
+								+inp3('Улица проживания', 'text', '')
+							.col-sm-6
+								+inp3('Дом проживания', 'text', '')
+
+				+e.sub-title Работа
+				.row
+					.col-lg-8
+						.row
+							.col-sm-6
+								+inp3('Организация', 'text', '')
+							.col-sm-6
+								+inp3('Должность', 'text', '')
+
+				+e.sub-title Образование
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+inp3('Образование (степень, учебное заведение, направление)', 'text', '')
+							.col-12
+								+inp3('Название учебного заведения', 'text', '')
+
+				+e.sub-title Социальные сети
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+inp3('Facebook', 'text', '')
+							.col-12
+								+inp3('Вконтакте', 'text', '')
+							.col-12
+								+inp3('Instagram', 'text', '')
+							.col-12
+								+inp3('Tik-Tok', 'text', '')
+
+				+e.sub-title Общие вопросы
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+e.radio-txt Посещали ли вы раньше площадку Фестиваля фестивалей «Таврида – АРТ»?
+							.col-sm-6.align-self-center
+								.row.align-items-center
+									.col-6
+										+in-c("radio", "Да", 'visit')
+									.col-6
+										+in-c("radio", "Нет", 'visit')
+							.col-sm-6
+								+inp3('В каком году', 'text', '')
+							.col-12
+								label
+									+e.TEXTAREA.input.form-control.has-ph-js
+									+e.SPAN.title Почему вы&nbsp;решили посетить фестиваль фестивалей &laquo;Таврида-АРТ&raquo;?
+							.col-12
+								label
+									+e.TEXTAREA.input.form-control.has-ph-js
+									+e.SPAN.title Какие мероприятия вы&nbsp;планируете посетить на&nbsp;фестивале?
+							.col-12
+								label
+									+e.TEXTAREA.input.form-control.has-ph-js
+									+e.SPAN.title Кого вы&nbsp;ожидаете увидеть на&nbsp;Фестивале?
+								+e.sm известные артисты, актеры, исполнители
+							.col-sm-6
+								+input('Откуда вы узнали о Фестивале?', 'select')
+							.col-12
+								+e.radio-txt День посещения Фестиваля
+							.col-12
+								.row
+									.col-auto
+										+in-c('checkbox', '9 сентября', 'date')
+									.col-auto
+										+in-c('checkbox', '10 сентября', 'date')
+									.col-auto
+										+in-c('checkbox', '11 сентября', 'date')
+
+				+e.sub-title Автомобиль
+				.row
+					.col-lg-8
+						.row
+							.col-12
+								+e.radio-txt Планируете ли вы приехать на своем автомобиле?
+							.col-4.col-sm-3
+								+in-c("radio", "Да", 'auto')(checked)
+							.col-4.col-sm-3
+								+in-c("radio", "Нет", 'auto')
+							.row.mb-0
+							.col-sm-6
+								+inp3('Марка автомобиля', 'text', '')
+							.col-sm-6
+								+inp3('Гос. номер автомобиля', 'text', '')
+							.col-12.mb-2
+								+inp3('ФИО водителя', 'text', '')
+							.col-12
+								+e.sm На&nbsp;территории фестиваля есть бесплатная парковка. Только при наличии свободных парковочных мест есть возможность оставить авто. Предварительно необходимо сообщить данные авто для получения пропуска.
+							.col-auto
+								+e.BUTTON.btn(type="submit") Отправить заявку
 	// end sFormL
 
 mixin cSelect(placeholder)
 	+e.select
-		select.form-select.form-control
+		select.form-select
 			if placeholder
 				option(selected disabled class="d-none")=placeholder
 				option option 1

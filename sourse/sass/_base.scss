@@ -555,23 +555,24 @@ h2{
 	height: 25px;
 	flex-shrink: 0;
 
-	&:checked{
-		border: 3px solid $purple!important;
-		box-shadow: none;
-		background-color: transparent;
+	&[type="radio"]:checked{
+		background-color: #fff;
+		// border: 3px solid $purple!important;
+		// box-shadow: none;
+		// background-color: transparent;
 
-		position: relative;
-		&:before{
-			content: '';
-			position: absolute;
-			top: 2px;
-			left: 2px;
-			border-radius: 50%;
-			//transform: translateY(-50%) translateX(-50%);
-			width: 15px;
-			height: 15px;
-			background-color: $purple;
-		}
+		// position: relative;
+		// &:before{
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 2px;
+		// 	left: 2px;
+		// 	border-radius: 50%;
+		// 	//transform: translateY(-50%) translateX(-50%);
+		// 	width: 15px;
+		// 	height: 15px;
+		// 	background-color: $purple;
+		// }
 	}
 }
 

@@ -1,0 +1,26 @@
+mixin sRegister(data)
+	// start sRegister
+	+b.sRegister.section#sRegister&attributes(attributes)
+		.container
+			+e.wrap
+				.row.align-items-center
+					.col-md-auto
+						+e.btn(href='#') Зарегистрироваться
+					.col
+						+e.item.ps-2
+							span
+								| Регистрация
+								|
+							strong до&nbsp;1&nbsp;августа&nbsp;2020 года
+					.col-md-auto
+						+e.item
+							span
+								|•	Трансфер, проживание и&nbsp;питание
+								|
+							strong не&nbsp;предоставляется
+						+e.item.mb-0
+							span
+								|•	На&nbsp;территории фестиваля действуют
+								|
+							strong фудкорты
+	// end sRegister

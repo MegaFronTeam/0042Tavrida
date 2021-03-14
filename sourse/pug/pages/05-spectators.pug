@@ -1,0 +1,69 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sHeaderSlider/_sHeaderSlider.pug
+include ../blocks/sParticipants/_sParticipants.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sFormL/_sFormL.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sRegister/_sRegister.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '05-spectators'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()(class="border-bot")
+	+sParticipants2()
+	+sHow2()
+	//- +sTransfer()
+	+sFormL2()
+	+sInfo2() 
+	//-here
+	+sFAQ2()
+	.container
+		+b.links-bl
+			+e.link
+				a(href='#') Перечень необходимых вещей
+			+e.link
+				a(href='#')
+					| Правила пребывания и правила
+					br
+					| безопасности
+			+e.link
+				a(href='#')
+					| Карта фестиваля
+	+sRegister()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()

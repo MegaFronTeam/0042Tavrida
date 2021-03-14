@@ -87,7 +87,7 @@ const JSCCommon = {
 		InputTel.forEach(function (element) {
 			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}")
 		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
+		Inputmask("+9(999)999-99-99",{showMaskOnHover: false,}).mask(InputTel);
 	},
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

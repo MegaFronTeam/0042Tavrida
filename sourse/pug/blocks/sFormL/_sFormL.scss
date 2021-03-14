@@ -1,25 +1,25 @@
 // start .sFormL
 .sFormL {
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(53px)};
 		--sPB: #{rem(70px)};
-		--sTPB: #{rem(51px)}
+		--sTPB: #{rem(51px)};
 	}
 
-	.form-wrap{
-		.row{
+	.form-wrap {
+		.row {
 			@include roww(rem(30px));
 
-			& > *{
+			& > * {
 				margin-bottom: rem(30);
 			}
 
 			margin-bottom: rem(-30);
 
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				@include roww(40px);
 
-				& > *{
+				& > * {
 					margin-bottom: rem(32);
 				}
 
@@ -27,27 +27,27 @@
 			}
 		}
 
-		label{
+		label {
 			position: relative;
 
-			input.not-empty, input:focus{
+			input.not-empty,
+			input:focus {
 				//border: 1px solid $input-border-color;
 			}
 
 			input.not-empty + span,
 			input:focus + span,
 			textarea.not-empty + span,
-			textarea:focus + span{
-
-				top: rem(6px)!important;
-				@include media-breakpoint-up(xxl){
-					top: rem(9px)!important;
+			textarea:focus + span {
+				top: rem(6px) !important;
+				@include media-breakpoint-up(xxl) {
+					top: rem(9px) !important;
 				}
 				//transform: translateY(-90%)!important;
 				font-size: rem(12);
 			}
 		}
-		&__title{
+		&__title {
 			@include mt();
 			position: absolute;
 
@@ -56,32 +56,36 @@
 
 			font-weight: 300;
 
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				font-size: rem(20);
 			}
 
 			line-height: $input-line-height;
 			color: $gray-650;
 		}
-		&__input{
+
+		&__input.form-control {
 			padding-top: rem(18);
 			padding-bottom: rem(5);
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				padding-top: rem(20);
 				padding-bottom: rem(2);
 			}
+		}
 
-			@include media-breakpoint-up(xl){
+		&__input {
+			@include media-breakpoint-up(xl) {
 				font-size: rem(20);
 			}
 		}
-		select{
-			@include media-breakpoint-up(xl){
+		select {
+			@include media-breakpoint-up(xl) {
 				font-size: rem(20);
 			}
 		}
 
-		input[type="date"]{
+
+		input[type="date"] {
 			background-image: url(../img/svg/calendar.svg);
 			background-repeat: no-repeat;
 			background-size: rem(30);
@@ -100,23 +104,23 @@
 			background: transparent;
 		}
 
-		&__radio-txt{
+		&__radio-txt {
 			font-weight: 600;
 			font-size: rem(20);
 			color: $dark;
 
-			min-height: rem(64);//?
+			min-height: rem(64); //?
 			display: flex;
 			align-items: center;
 		}
-		&__sm{
+		&__sm {
 			margin-top: rem(6);
 			font-weight: 300;
 			font-size: rem(12);
 			line-height: 1.8;
 			color: $black;
 		}
-		&__sub-title{
+		&__sub-title {
 			font-weight: 900;
 			font-size: rem(30);
 			line-height: (37/30);
@@ -127,12 +131,13 @@
 			margin-bottom: rem(22);
 			margin-top: rem(45);
 		}
-		&__btn{
+		&__btn {
 			@extend .btn;
 			@extend .btn-warning;
 
 			text-transform: uppercase;
 		}
-		&__{}
+		&__ {
+		}
 	}
 } // end.sFormL

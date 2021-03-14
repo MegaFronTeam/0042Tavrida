@@ -55,3 +55,47 @@ mixin sHow(data)
 							|
 						strong отбора после 23 августа 2020 года
 	// end sHow
+
+mixin sHow2(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Как подать заявку?
+			+b.steps
+				+e.row.row
+					+sStepsItem('steps__col--3')
+						| Зарегистрироваться
+						|
+						br.d-none.d-lg-block
+						| на официальном сайте 
+						|
+						br.d-none.d-lg-block
+						| арт-кластера «Таврида»
+					+sStepsItem('steps__col--3')
+						| Подать заявку
+						|
+					+sStepsItem('steps__col--3')
+						| Дождаться результатов
+						|
+						br.d-none.d-lg-block
+						| рассмотрения заявки
+						|
+						br.d-none.d-lg-block
+						| в личном кабинете
+						|
+			+e.foot-row 
+				//- .row.align-items-center
+				//- .col-md-auto.order-last.order-md-0
+				//- 	+e.btn(href='#') Заполнить анкету
+				//- .col-md
+				+e.item
+					span
+						|•	Трансфер, проживание и питание 
+						|
+					strong не предоставляется
+				+e.item
+					span
+						|•	На территории фестиваля действуют 
+						|
+					strong фудкорты

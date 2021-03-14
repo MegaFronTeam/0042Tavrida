@@ -7,7 +7,7 @@ mixin sParticipants(data)
 			+b.section-title
 				h2 Участники
 				p Участники фестиваля&nbsp;&mdash; это молодые деятели культуры и&nbsp;искусства, представители волонтерских движений, общественных организаций, проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;, медиаинфлюенсеры в&nbsp;возрасте от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет, а&nbsp;также участники проекта &laquo;Большая перемена&raquo; с&nbsp;детьми в&nbsp;возрасте от&nbsp;14&nbsp;до&nbsp;17&nbsp;лет, прошедшие конкурсный отбор.
-				p Зрителем фестиваля может стать любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию на&nbsp;сайте и&nbsp;получивший подтверждение в&nbsp;личном кабинете.
+				//- p Зрителем фестиваля может стать любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию на&nbsp;сайте и&nbsp;получивший подтверждение в&nbsp;личном кабинете.
 			+b.section-title.pb-0
 				h2 Направления участия
 			+e.gray-box
@@ -142,8 +142,19 @@ mixin sParticipants(data)
 					+participantDDItem('Семьи с детьми – участниками проекта «Большая перемена»', undefined, true, '#modal-serv-child', '#modal-art-child')
 						p Семьи с детьми – участниками проекта «Большая перемена». Дети в возрасте от 14 до 17 лет включительно
 						p Регистрация откроется в ближайшее время
+
 	// end sParticipants
 
+mixin sParticipants2(data)
+	// start sParticipants
+	+b.SECTION.sParticipants.section#sParticipants&attributes(attributes)
+		.container
+			+e.back-link
+				img(loading="lazy" src="img/svg/black-arrow-left.svg" alt="")
+			+b.section-title
+				h2 Зрители фестиваля
+				p Зрителем фестиваля может стать любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию на&nbsp;сайте и&nbsp;получивший подтверждение в&nbsp;личном кабинете.
+				
 mixin participantDDItem(headerTxt, activeClass='', hasBtns=true, a1, a2)
 	+e.dd-item(class=activeClass)
 		+e.header.dd-head-js
