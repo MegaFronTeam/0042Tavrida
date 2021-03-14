@@ -231,29 +231,35 @@ function eventHandler() {
 
 	//
 	let partnerSlider = new Swiper('.partners-slider-js', {
-		slidesPerColumnFill: 'row',
-		initialSlide: 1,
-
-		breakpoints: {
-			0:{
-				spaceBetween: 20,
-				slidesPerView: 2,
-				slidesPerColumn: 2,
-			},
-			768: {
-				spaceBetween: 20,
-				slidesPerView: 3,
-				slidesPerColumn: 2,
-			},
-			1200: {
-				spaceBetween: 38,
-				slidesPerView: 4,
-				slidesPerColumn: 2,
-			},
-		},
+		 
+		// initialSlide: 1,
+		spaceBetween: 30,
+		// slidesPerView: 2,
+		slidesPerColumn: 2,
+		slidesPerView: 'auto',
+		freeMode: true,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		// breakpoints: {
+		// 	0:{
+		// 	},
+		// 	768: {
+		// 		spaceBetween: 20,
+		// 		slidesPerView: 3,
+		// 		slidesPerColumn: 2,
+		// 	},
+		// 	1200: {
+		// 		spaceBetween: 38,
+		// 		slidesPerView: 4,
+		// 		slidesPerColumn: 2,
+		// 	},
+		// },
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 30,
+			loadPrevNextAmount: 10,
 		},
 		navigation: {
 			nextEl: '.partners-next-js',
@@ -272,11 +278,11 @@ function eventHandler() {
 		breakpoint = (l / 2) + 1;
 	}
 
-	for (let slide of allPatnerSlides){
-		if ($(slide).index() + 1 <= breakpoint){
-			$(slide).addClass('pushed');
-		}
-	}
+	// for (let slide of allPatnerSlides){
+	// 	if ($(slide).index() + 1 <= breakpoint){
+	// 		$(slide).addClass('pushed');
+	// 	}
+	// }
 	//mob-menu
 	$('.burger-js').click(function (){
 		$('.burger-js, .mm--js').toggleClass('active');

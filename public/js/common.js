@@ -229,28 +229,34 @@ function eventHandler() {
 	}); //
 
 	var partnerSlider = new Swiper('.partners-slider-js', {
-		slidesPerColumnFill: 'row',
-		initialSlide: 1,
-		breakpoints: {
-			0: {
-				spaceBetween: 20,
-				slidesPerView: 2,
-				slidesPerColumn: 2
-			},
-			768: {
-				spaceBetween: 20,
-				slidesPerView: 3,
-				slidesPerColumn: 2
-			},
-			1200: {
-				spaceBetween: 38,
-				slidesPerView: 4,
-				slidesPerColumn: 2
-			}
-		},
+		// initialSlide: 1,
+		spaceBetween: 30,
+		// slidesPerView: 2,
+		slidesPerColumn: 2,
+		slidesPerView: 'auto',
+		freeMode: true,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		// breakpoints: {
+		// 	0:{
+		// 	},
+		// 	768: {
+		// 		spaceBetween: 20,
+		// 		slidesPerView: 3,
+		// 		slidesPerColumn: 2,
+		// 	},
+		// 	1200: {
+		// 		spaceBetween: 38,
+		// 		slidesPerView: 4,
+		// 		slidesPerColumn: 2,
+		// 	},
+		// },
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 30
+			loadPrevNextAmount: 10
 		},
 		navigation: {
 			nextEl: '.partners-next-js',
@@ -265,25 +271,13 @@ function eventHandler() {
 		breakpoint = l / 2;
 	} else {
 		breakpoint = l / 2 + 1;
-	}
+	} // for (let slide of allPatnerSlides){
+	// 	if ($(slide).index() + 1 <= breakpoint){
+	// 		$(slide).addClass('pushed');
+	// 	}
+	// }
+	//mob-menu
 
-	var _iterator = _createForOfIteratorHelper(allPatnerSlides),
-			_step;
-
-	try {
-		for (_iterator.s(); !(_step = _iterator.n()).done;) {
-			var slide = _step.value;
-
-			if ($(slide).index() + 1 <= breakpoint) {
-				$(slide).addClass('pushed');
-			}
-		} //mob-menu
-
-	} catch (err) {
-		_iterator.e(err);
-	} finally {
-		_iterator.f();
-	}
 
 	$('.burger-js').click(function () {
 		$('.burger-js, .mm--js').toggleClass('active');
@@ -346,12 +340,12 @@ function eventHandler() {
 	});
 
 	function makeDDGroup(qSelecorts) {
-		var _iterator2 = _createForOfIteratorHelper(qSelecorts),
-				_step2;
+		var _iterator = _createForOfIteratorHelper(qSelecorts),
+				_step;
 
 		try {
-			for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-				var parentSelect = _step2.value;
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
+				var parentSelect = _step.value;
 				var parent = document.querySelector(parentSelect);
 
 				if (parent) {
@@ -378,9 +372,9 @@ function eventHandler() {
 				}
 			}
 		} catch (err) {
-			_iterator2.e(err);
+			_iterator.e(err);
 		} finally {
-			_iterator2.f();
+			_iterator.f();
 		}
 	}
 
