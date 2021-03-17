@@ -11,12 +11,21 @@
 
 	}
 	&__row{
-		@include roww(rem(36));
+		// @include roww(rem(36), m);
 		padding-bottom: rem(26);
+		column-gap: rem(36);
+			@include media-breakpoint-up(xl){ 
+				columns: 3;
+			}
+			@include media-breakpoint-up(sm){ 
+				columns: 2;
+			}
 	}
 	&__item{
+
 		@include mt();
-		display: block;
+		// display: block;
+		display: inline-block;
 		margin-bottom: rem(36px);
 		width: 100%;
 
