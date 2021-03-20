@@ -44,13 +44,14 @@ mixin directionSlide(hasbotStr=true)
 		+e.row.row
 			.col-4
 				+directionItem(1, 'Музыка')
-			.col-6
+			.col
 				+directionItem(2, 'Танцы')
-			.col-2
+			.col-auto
 				+directionItem('new', 'Медиа')(class="text-center")
-			.col-2
+			.w-100.m-0
+			.col-auto
 				+directionItem(3, 'АРТ')(class="text-center")
-			.col-6
+			.col
 				+directionItem(4)
 					| Россия –
 					br
@@ -59,9 +60,16 @@ mixin directionSlide(hasbotStr=true)
 					| возможностей
 			.col-4
 				+directionItem(5, 'Театр и кино')
+			.w-100.m-0
+			.col-4
+				+directionItem(7, '#МЫВМЕСТЕ')
+			.col
+				+directionItem(8, 'Резиденты Тавриды и ArtMasters ')
+			.col-auto
+				+directionItem('new', 'Большая <br> перемена')(class="text-center")
 			if hasbotStr
-				.col-12
-					+directionItem(6, '#Мывместе')(class="item-small")
+				//- .col-12
+				//- 	+directionItem(6, '#Мывместе')(class="item-small")
 
 
 mixin directionItem(imgName, txt)
@@ -69,7 +77,7 @@ mixin directionItem(imgName, txt)
 		+pic(`direction-${imgName}.jpg`, ``, 0)
 		//- img(src=`img/@2x/direction-${imgName}.jpg` alt="")
 		if txt
-			+e.txt=txt
+			+e.txt!=txt
 		else
 			+e.txt
 				block

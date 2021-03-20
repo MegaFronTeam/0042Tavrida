@@ -22,10 +22,15 @@ mixin sWay(data)
 						//- +e.sm-title Регистрация
 						+e.sm-content
 							span
-								| Регистрация открыта до
+								| Старт регистрации: 
+
 								|
-							strong 1 августа
-						+e.btn(href='04-participants.html') Подробнее
+							strong 15 марта
+						//- +e.sm-content
+						//- 	span
+						//- 		| Результаты отбора  
+						//- 	strong после 23 августа 2020 года
+						//- +e.btn(href='04-participants.html') Подробнее
 						//- +e.sm-title Результаты отбора
 						//- +e.sm-content
 						//- 	span
@@ -33,19 +38,20 @@ mixin sWay(data)
 						//- 		|
 						//- 	strong 23 августа 2020 года
 				+wayItem(2,'Зрители', 'color: #0A1124;')(style="background-color:#ffc107")
-					+e.bold Любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию и&nbsp;получивший подтверждение в&nbsp;личном кабинете
+					+e.bold Любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет, прошедший регистрацию и&nbsp;получивший подтверждение в&nbsp;личном кабинете
 					+e.sm-content
 						span
-							| Регистрация открыта до
+							| Старт регистрации:
+
 							|
-						strong 1 сентября
-					+e.btn(href='#') Подробнее
+						strong  15 марта
+					//- +e.btn(href='#') Подробнее
 
 				+wayItem2(3,'Волонтеры', 'color: #fff;')(style="background-color:#2247bf")
 					+e.txt--white
 						+e.long 
-						| Волонтеры ‒ граждане&nbsp;РФ, в&nbsp;возрасте от&nbsp;18&nbsp;до&nbsp;35, желающие стать соорганизаторами фестиваля фестивалей &laquo;Таврида.АРТ&raquo;
-					+e.btn(href='#') Подробнее
+						| Волонтеры ‒ целеустремленные, гибкие и&nbsp;творческие люди, которые способны реализовывать проекты со&nbsp;смыслом и&nbsp;менять будущее, желающие стать соорганизаторами фестиваля фестивалей &laquo;Таврида.АРТ&raquo;
+					//- +e.btn(href='#') Подробнее
 			//- .section-title: h3 Направления участия
 
 			//- +e.pills
@@ -69,6 +75,7 @@ mixin wayPill(imgNum, hideAge)
 		+e.p-row.row
 			.col-auto
 				+e.p-img
+					
 					img(loading="lazy" src=`img/svg/way-svg-${imgNum}.svg` alt="")
 			+e.p-coll--txt.col
 				+e.p-bold
@@ -78,13 +85,15 @@ mixin wayPill(imgNum, hideAge)
 mixin wayItem(imgNum,txt, txtStyle)
 	.col-12.col-lg-6
 		+e.item&attributes(attributes)
-			img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
+			+pic(`sWay-${imgNum}.png`,'',0)
+			//- img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
 			+e.big-txt(style=txtStyle)=txt
 			block
 
 mixin wayItem2(imgNum,txt, txtStyle)
 	.col-12
 		+e.item--wide&attributes(attributes)
-			img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
+			+pic(`sWay-${imgNum}.png`,'',0)
+			//- img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
 			+e.big-txt(style=txtStyle)=txt
 			block

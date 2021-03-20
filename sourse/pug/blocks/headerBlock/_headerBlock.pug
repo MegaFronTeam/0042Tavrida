@@ -1,49 +1,15 @@
-mixin headerBlock()
+mixin headerBlock(data)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.container.container
 			+b.section-title
-				h1
-					| Арт-кластер
-					br
-					| «Таврида»
+				h1!= data.title
+				if data.text
+					p!= data.text
 			.row
 				.col-12.col-sm-11.col-md-9.ms-auto
 					+e.video-bl
-						iframe(src='https://vk.com/video_ext.php?oid=-89840945&id=456240295&hash=a36e4f0d424f757c&hd=2' width='853' height='480' frameborder='0' allowfullscreen='')
+						if data.video
+							iframe(src=`${data.video}&autoplay=1&moot=1&loop=1` width='853' height='480' frameborder='0' allowfullscreen='')
 						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
 	// end headerBlock
-
-mixin headerBlock2()
-	// start headerBlock
-	+b.headerBlock--blue.section#headerBlock&attributes(attributes)
-		+e.container.container
-			+b.section-title
-				h1
-					| Фестиваль
-					br
-					| фестивалей
-					br
-					| «ТАВРИДА.АРТ»
-			.row
-				.col-12.col-sm-11.col-md-9.ms-auto
-					+e.video-bl
-						iframe(type="text/html" width="853" height="480" loading='lazy' src="https://www.youtube.com/embed/JN3p9Vzb_nI?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-						//- <iframe src="https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=2" loading='lazy' width="853" height="480" frameborder="0" allowfullscreen></iframe>
-
-mixin headerBlock3()
-	// start headerBlock
-	+b.headerBlock--forum.section#headerBlock&attributes(attributes)
-		+e.container.container
-			+b.section-title
-				h1 ФОРУМ
-				p
-					| Мир
-					br
-					| любовь
-					br
-					| искусство
-			.row
-				.col-12.col-sm-11.col-md-9.ms-auto
-					+e.video-bl
-						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)

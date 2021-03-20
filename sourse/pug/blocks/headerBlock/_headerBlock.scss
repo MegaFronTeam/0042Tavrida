@@ -47,6 +47,11 @@
     padding-top: (544/976) * 100%;
     background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(177, 217, 219, 0.8) 82.84%);
     backdrop-filter: blur(32px);
+     @include media-breakpoint-down(sm) {
+       margin-inline-start: calc(-1 * var(--bs-gutter-x,15px));
+       margin-inline-end: calc(-1 * var(--bs-gutter-x,15px));
+       width: calc(100% + 2 * var(--bs-gutter-x, 15px));
+     }
 
     border-radius: rem(25);
     @include media-breakpoint-up(md){
@@ -54,6 +59,10 @@
     }
     > * {
       @include a-cent1;
+      @include media-breakpoint-up(md){
+      }
+      width: 100% !important;
+      height: 100% !important;
       width: 125% !important;
       height: 125% !important;
       // top: 0;
@@ -67,9 +76,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    // object-fit: cover;
+
+      width: 100% !important;
+      height: 100% !important;
+      // object-fit: cover;
   }
 
   &__{}

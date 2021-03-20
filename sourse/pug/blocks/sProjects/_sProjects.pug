@@ -1,16 +1,19 @@
-mixin sProjects(data)
+mixin sProjectsbody(h2)
 	// start sProjects
 	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
 				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
-					h2 НАШИ проекты
+					h2!= h2
 				.col-12.col-lg-auto
 						+b.sl-contr
 							+e.prev.projects-prev-js
 								img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 							+e.next.projects-next-js
 								img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			block
+mixin sProjects(data)
+	+sProjectsbody('НАШИ проекты')
 			+e.sliders
 				+e.slider--js
 					.swiper-container.project-slider-js
@@ -68,29 +71,8 @@ mixin sProjects(data)
 								| «Таврида»
 	// end sProjects
 
-mixin projectSlide(itemClasses, itemStyle, i)
-	.swiper-slide(class=itemClasses)
-		+e.item(style=itemStyle )
-			+e.content
-				+e.title
-					block
-				+e.PICTURE.img
-					source.swiper-lazy( type="image/webp" srcset="#" data-srcset=`img/@2x/webp/projects-${i}.webp` )
-					img.swiper-lazy(src="#" data-src=`img/@2x/projects-${i}.jpg` alt="")
-
 mixin sProjects2(data)
-	// start sProjects
-	+b.SECTION.sProjects--key-ev.section#sProjects&attributes(attributes)
-		.container
-			+b.section-title.row.align-items-center
-				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
-					h2 Что тебя ждет в&nbsp;этом году?
-				.col-12.col-lg-auto
-						+b.sl-contr
-							+e.prev.projects-prev-js
-								img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
-							+e.next.projects-next-js
-								img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+	+sProjectsbody(`Что тебя ждет в&nbsp;этом году?`)
 			+e.sliders
 				+e.slider--js
 					.swiper-container.project-slider-js
@@ -101,6 +83,13 @@ mixin sProjects2(data)
 								| в&nbsp;коллаборации с&nbsp;резидентами
 								br
 								| арт-кластера &laquo;Таврида&raquo;
+							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680','fest-4')
+								| Мюзикл
+								br
+								| на холмах
+							+projectSlide('long', 'color: #fff; background-color: #FF8000; border-color: #FF8000','fest-5')
+								| Шоу <br> «Арт-шествие»
+
 							+projectSlide('medium', 'color: #fff; background-color: #0A1124; border-color: #0A1124','fest-2')
 								| Фестиваль
 								br
@@ -113,42 +102,45 @@ mixin sProjects2(data)
 								| вечера
 								br
 								| на костровой
-							+projectSlide('long', 'color: #fff; background-color: #d40cb6; border-color: #d40cb6','fest-11')
-								| Шоу-концерты открытия
-								br
-								| и&nbsp;закрытия Фестиваля
-								br
-							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3',`fest-3`)
-								| Шоу-показ молодых
-								br
-								| российских дизайнеров
-							+projectSlide('long', 'color: #fff; background-color: #2247bf; border-color: #2247bf','fest-13')
-								| Фестиваль уличного искусства <br> в&nbsp;городах Республики Крым
-							+projectSlide('medium', 'color: #fff; background-color: #c51f1f; border-color: #c51f1f','fest-9')
-								| Гастрономический <br> фестиваль
-				+e.slider--js
-					.swiper-container.project-slider-js
-						.swiper-wrapper
-							+projectSlide('long', 'color: #fff; background-color: #2247bf; border-color: #2247bf','fest-14')
-								| Более 100 кастингов
-							+projectSlide('medium', 'color: #fff; background-color: #6B1680; border-color: #6B1680','fest-4')
-								| Мюзикл
-								br
-								| на холмах
-							+projectSlide('long', 'color: #fff; background-color: #FF8000; border-color: #FF8000','fest-5')
-								| Шоу <br> «Арт-шествие»
-							+projectSlide('short', 'color: #fff; background-color: #c51f1f; border-color: #c51f1f','fest-12')
-								| Цирковое шоу
+
 							+projectSlide('medium', 'color: #000; background-color: #fff; border-color: #000','fest-6')
 								| Парад
 								br
 								| маломерных
 								br
 								| судов
+							//- 
+								
+							//- +projectSlide('long', 'color: #fff; background-color: #d40cb6; border-color: #d40cb6','fest-11')
+							//- 	| Шоу-концерты открытия
+							//- 	br
+							//- 	| и&nbsp;закрытия Фестиваля
+							//- 	br
+							//- +projectSlide('long', 'color: #fff; background-color: #2247bf; border-color: #2247bf','fest-13')
+							//- 	| Фестиваль уличного искусства <br> в&nbsp;городах Республики Крым
+				+e.slider--js
+					.swiper-container.project-slider-js
+						.swiper-wrapper
+							+projectSlide('short', 'color: #fff; background-color: #00BAC3; border-color: #00BAC3',`fest-3`)
+								| Шоу-показ молодых
+								br
+								| российских дизайнеров
 							+projectSlide('long', 'color: #fff; background-color: #d40cb6; border-color: #d40cb6','fest-7')
 								| Шоу <br> дронов
+							+projectSlide('short', 'color: #fff; background-color: #2247bf; border-color: #2247bf','fest-8')
+								| Шоу <br> на воде <br> «33 русалки»
+
+
+
+							+projectSlide('medium', 'color: #fff; background-color: #c51f1f; border-color: #c51f1f','fest-9')
+								| Гастрономический <br> фестиваль
 							+projectSlide('short', 'color: #fff; background-color: #166580; border-color: #166580','fest-10')
 								| Фестиваль <br> воздушных <br> шаров 
+								//- 
+							//- +projectSlide('long', 'color: #fff; background-color: #2247bf; border-color: #2247bf','fest-14')
+							//- 	| Более 100 кастингов
+							//- +projectSlide('short', 'color: #fff; background-color: #c51f1f; border-color: #c51f1f','fest-12')
+							//- 	| Цирковое шоу
 
 mixin hint()
 	//to copy pastel
@@ -165,3 +157,14 @@ mixin hint()
 	+projectSlide('', 'color: #fff; background-color: #284BA4; border-color: #284BA4')
 	//-dark-blue
 	+projectSlide('', 'color: #fff; background-color: #0A1124; border-color: #0A1124')
+
+mixin projectSlide(itemClasses, itemStyle, i)
+	.swiper-slide(class=itemClasses)
+		+e.item(style=itemStyle )
+			+e.content
+				+e.title
+					block
+				+e.PICTURE.img
+					source.swiper-lazy( type="image/webp" srcset="#" data-srcset=`img/@2x/webp/projects-${i}.webp` )
+					img.swiper-lazy(src="#" data-src=`img/@2x/projects-${i}.jpg` alt="")
+	// /.swiper-slide

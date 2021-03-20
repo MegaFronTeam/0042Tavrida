@@ -1,7 +1,7 @@
 // start .sProjects
 .sProjects {
 	width: 100vw;
-	overflow: hidden;
+	// overflow: hidden;
 	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(75)};
 		--sTPB: #{rem(63)};
@@ -46,6 +46,7 @@
 		.swiper-slide{
 			position: relative;
 			z-index: 0;
+			max-width: calc(100% - 40px);
 			&:hover{
 				z-index: 1;
 			}
