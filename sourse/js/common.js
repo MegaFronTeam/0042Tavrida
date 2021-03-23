@@ -469,6 +469,20 @@ function eventHandler() {
 		},
 	});
 	//end luckyone js
+
+
+	var grid = document.querySelector('.grid');
+	if (grid) { 
+		var msnry = new Masonry(grid, { 
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-item', 
+			percentPosition: true, 
+		});
+
+		imagesLoaded(grid).on('progress', () => msnry.layout() });
+
+		
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

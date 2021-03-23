@@ -9,6 +9,10 @@
 	&__bg{
 		position: absolute;
 		z-index: -1;
+		img{
+			object-fit: cover;
+			object-position: top;
+		}
 
 		top: 0;
 		@include media-breakpoint-up(md){

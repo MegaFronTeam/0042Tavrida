@@ -12,21 +12,35 @@
 	}
 	&__row{
 		// @include roww(rem(36), m);
-		padding-bottom: rem(26);
+			@include media-breakpoint-up(lg){
+				--columnCount: 3; 
+			}
+			@include media-breakpoint-up(sm){
+				--columnCount: 2; 
+			}
+			--columnCount: 1; 
+			padding-bottom: rem(26);
 		column-gap: rem(36);
-			@include media-breakpoint-up(xl){ 
-				columns: 3;
-			}
-			@include media-breakpoint-up(lg){ 
-				columns: 2;
-			}
+			// @include media-breakpoint-up(xl){ 
+			// 	columns: 3;
+			// }
+			// @include media-breakpoint-up(lg){ 
+			// 	columns: 2;
+			// }
+			// @include roww(var(--bs-gutter-x))
+	}
+	.grid-item{
+		width: calc(100% / var(--columnCount));
+		margin-bottom: 30px;
+		margin-top: 0;
+
 	}
 	&__item{
 
 		@include mt();
 		// display: block;
-		display: inline-block;
-		margin-bottom: rem(36px);
+		display:  block;
+		// margin-bottom: rem(36px);
 		width: 100%;
 
 		--txt-td: underline;

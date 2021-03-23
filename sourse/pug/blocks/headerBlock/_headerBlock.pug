@@ -10,6 +10,6 @@ mixin headerBlock(data)
 				.col-12.col-sm-11.col-md-9.ms-auto
 					+e.video-bl
 						if data.video
-							iframe(src=`${data.video}&autoplay=1&moot=1&loop=1` width='853' height='480' frameborder='0' allowfullscreen='')
+							iframe(src=`${data.video}&autoplay=1&moot=1&loop=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
 						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
 	// end headerBlock

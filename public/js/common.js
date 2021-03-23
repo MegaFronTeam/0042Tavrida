@@ -453,6 +453,23 @@ function eventHandler() {
 			clickable: true
 		}
 	}); //end luckyone js
+
+	var grid = document.querySelector('.grid');
+
+	if (grid) {
+		var msnry = new Masonry(grid, {
+			// options...
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-item',
+			// gutter: 30,
+			percentPosition: true // initLayout: false,
+
+		});
+		imagesLoaded(grid).on('progress', function () {
+			// layout Masonry after each image loads
+			msnry.layout();
+		});
+	}
 }
 
 ;

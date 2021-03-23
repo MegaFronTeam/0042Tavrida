@@ -1,74 +1,35 @@
-mixin sVantage(data)
+mixin sVantageBody(h2)
 	// start sVantage
 	+b.SECTION.sVantage.section#sVantage&attributes(attributes)
 		.container
 			+e.box
 				+b.section-title
-					h2 НАШИ преуимущества
+					h2= h2
 				+e.row.row
+					block
+	// end sVantage
+mixin sVantage(data)
+	+sVantageBody('Ценности')
 					+vantageItem(1)
-						| Современные
-						|
-						br.d-none.d-sm-block
-						| образовательные
-						|
-						br.d-none.d-sm-block
-						| форматы
+						| Современные образовательные форматы
+
 					+vantageItem(2)
-						| Лаборатория
-						|
-						br.d-none.d-sm-block
-						| прикладного
-						|
-						br.d-none.d-sm-block
-						| искусства
+						| Лаборатория прикладного <br> искусства
 					+vantageItem(3)
-						| Топовые эксперты в
-						|
-						br.d-none.d-sm-block
-						| области креативных
-						|
-						br.d-none.d-sm-block
-						| индустрий
+						| Топовые эксперты в&nbsp;области креативных индустрий
 					+vantageItem(4)
-						| Цифровые
-						|
-						br.d-none.d-sm-block
-						| технологии в
-						|
-						br.d-none.d-sm-block
-						| культуре и искусстве
+						| Цифровые технологии в&nbsp;культуре и&nbsp;искусстве
 					+vantageItem(5)
-						| Финансовая
-						|
-						br.d-none.d-sm-block
-						| поддержка
-						|
-						br.d-none.d-sm-block
-						| творческих проектов
+						|  Финансовая поддержка  творческих <br>  проектов
 					+vantageItem(6)
 						| Продюсерское сопровождение талантливых участников
 					+vantageItem(7)
 						| Рекрутинг творческих профессий
 					+vantageItem(8)
 						| Нетворкинг
-	// end sVantage
-
-mixin vantageItem(imgNum, imgClass="")
-	+e.col.col-12.col-sm-6.col-lg-3
-		+e.img(class=imgClass)
-			img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
-		+e.txt.text-center
-			block
 
 mixin sVantage2(data)
-	// start sVantage
-	+b.SECTION.sVantage--blue.section#sVantage&attributes(attributes)
-		.container
-			+e.box
-				+b.section-title
-					h2 Особенности Фестиваля
-				+e.row.row
+	+sVantageBody('Особенности Фестиваля').sVantage--blue 
 					+vantageItem('d1')
 						| 5&nbsp;дней
 						|
@@ -124,52 +85,53 @@ mixin sVantage2(data)
 						|
 
 mixin sVantage3(data)
-	// start sVantage
-	+b.SECTION.sVantage--forum.section#sVantage&attributes(attributes)
-		.container
-			+e.box
-				+b.section-title
-					h2 Преимущества форума
-				+e.row.row
-					+vantageItem('f1', 'bigger-img')
-						| Новый формат
-						|
-						br.d-none.d-sm-block
-						| образовательного
-						|
-						br.d-none.d-sm-block
-						| контента
-					+vantageItem('f2', 'bigger-img')
-						| Проектные
-						|
-						br.d-none.d-sm-block
-						| кейсы
-					+vantageItem('f3', 'bigger-img')
-						| Продюсерское
-						|
-						br.d-none.d-sm-block
-						| сопровождение
-						|
-						br.d-none.d-sm-block
-						| талантливых участников
-					+vantageItem('f4', 'bigger-img')
-						| Нетворкинг
-					+vantageItem('f5')
-						| Центр оценки
-						|
-						br.d-none.d-sm-block
-						| компетенций
-					+vantageItem('f6', 'bigger-img')
-						| Арт-рекрутинг
-					+vantageItem('f7', 'bigger-img')
-						| Грантовый конкурс
-						|
-						br.d-none.d-sm-block
-						| до 2 500 000 рублей на твой
-						|
-						br.d-none.d-sm-block
-						| проект
-					+vantageItem('f8', 'bigger-img')
-						| Программа
-						br.d-none.d-sm-block
-						| лояльности
+	+sVantageBody('Преимущества форума').sVantage--forum 
+		+vantageItem('f1', 'bigger-img')
+			| Новый формат
+			|
+			br.d-none.d-sm-block
+			| образовательного
+			|
+			br.d-none.d-sm-block
+			| контента
+		+vantageItem('f2', 'bigger-img')
+			| Проектные
+			|
+			br.d-none.d-sm-block
+			| кейсы
+		+vantageItem('f3', 'bigger-img')
+			| Продюсерское
+			|
+			br.d-none.d-sm-block
+			| сопровождение
+			|
+			br.d-none.d-sm-block
+			| талантливых участников
+		+vantageItem('f4', 'bigger-img')
+			| Нетворкинг
+		+vantageItem('f5')
+			| Центр оценки
+			|
+			br.d-none.d-sm-block
+			| компетенций
+		+vantageItem('f6', 'bigger-img')
+			| Арт-рекрутинг
+		+vantageItem('f7', 'bigger-img')
+			| Грантовый конкурс
+			|
+			br.d-none.d-sm-block
+			| до 2 500 000 рублей на твой
+			|
+			br.d-none.d-sm-block
+			| проект
+		+vantageItem('f8', 'bigger-img')
+			| Программа
+			br.d-none.d-sm-block
+			| лояльности
+
+mixin vantageItem(imgNum, imgClass="")
+	+e.col.col-12.col-sm-6.col-lg-3
+		+e.img(class=imgClass)
+			img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
+		+e.txt.text-center
+			block
