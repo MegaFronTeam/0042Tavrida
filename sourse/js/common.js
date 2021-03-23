@@ -87,7 +87,7 @@ const JSCCommon = {
 		InputTel.forEach(function (element) {
 			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}")
 		});
-		Inputmask("+9(999)999-99-99",{showMaskOnHover: false,}).mask(InputTel);
+		Inputmask("+9(999)999-99-99", { showMaskOnHover: false, }).mask(InputTel);
 	},
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -110,9 +110,9 @@ const JSCCommon = {
 	},
 
 	checkEmptyVal() {
-		(this.value !== ''  || this.type == "date")
-				? $(this).addClass('not-empty') 
-				: $(this).removeClass('not-empty') 
+		(this.value !== '' || this.type == "date")
+			? $(this).addClass('not-empty')
+			: $(this).removeClass('not-empty')
 	}
 };
 const $ = jQuery;
@@ -140,7 +140,7 @@ function eventHandler() {
 		slidesPerView: "auto",
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 20,
 			},
 			1200: {
@@ -160,13 +160,13 @@ function eventHandler() {
 		},
 	});
 
-	$('.sProjects__slider--js').each(function (){
+	$('.sProjects__slider--js').each(function () {
 		let projectSlider = new Swiper($(this).find('.project-slider-js'), {
 			slidesPerView: "auto",
 			loop: true,
 
 			breakpoints: {
-				0:{
+				0: {
 					spaceBetween: 20,
 				},
 				1200: {
@@ -213,7 +213,7 @@ function eventHandler() {
 		slidesPerView: "auto",
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 20,
 			},
 			768: {
@@ -242,7 +242,7 @@ function eventHandler() {
 
 	//
 	let partnerSlider = new Swiper('.partners-slider-js', {
-		 
+
 		// initialSlide: 1,
 		spaceBetween: 30,
 		// slidesPerView: 2,
@@ -282,10 +282,10 @@ function eventHandler() {
 	let allPatnerSlides = document.querySelectorAll('.partners-slider-js .swiper-slide');
 	let breakpoint;
 	let l = allPatnerSlides.length;
-	if (l % 2 === 0){
+	if (l % 2 === 0) {
 		breakpoint = l / 2;
 	}
-	else{
+	else {
 		breakpoint = (l / 2) + 1;
 	}
 
@@ -295,7 +295,7 @@ function eventHandler() {
 	// 	}
 	// }
 	//mob-menu
-	$('.burger-js').click(function (){
+	$('.burger-js').click(function () {
 		$('.burger-js, .mm--js').toggleClass('active');
 		$('body').toggleClass('fixed2');
 	});
@@ -320,7 +320,7 @@ function eventHandler() {
 		slidesPerView: "auto",
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 20,
 			},
 			1200: {
@@ -344,7 +344,7 @@ function eventHandler() {
 		loop: true,
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 30,
 			},
 			1200: {
@@ -363,27 +363,27 @@ function eventHandler() {
 		},
 	});
 
-	function makeDDGroup(qSelecorts){
-		for (let parentSelect of qSelecorts){
+	function makeDDGroup(qSelecorts) {
+		for (let parentSelect of qSelecorts) {
 			let parent = document.querySelector(parentSelect);
 
-			if (parent){
+			if (parent) {
 				// childHeads, kind of funny))
 				let ChildHeads = parent.querySelectorAll('.dd-head-js');
 
-				$(ChildHeads).click(function (){
+				$(ChildHeads).click(function () {
 					let clickedHead = this;
 
-					$(ChildHeads).each(function (){
-						if (this === clickedHead){
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
 							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
-						else{
+						else {
 							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function (){
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
 								$(this).removeClass('active');
 							});
 						}
@@ -402,7 +402,7 @@ function eventHandler() {
 		loop: true,
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 20,
 			},
 			1200: {
@@ -423,7 +423,7 @@ function eventHandler() {
 		loop: true,
 
 		breakpoints: {
-			0:{
+			0: {
 				spaceBetween: 30,
 			},
 			1200: {
@@ -474,17 +474,18 @@ function eventHandler() {
 
 
 	var grid = document.querySelector('.grid');
-	if (grid) { 
-		var msnry = new Masonry(grid, { 
+	if (grid) {
+		var msnry = new Masonry(grid, {
 			itemSelector: '.grid-item',
-			columnWidth: '.grid-item', 
-			percentPosition: true, 
+			columnWidth: '.grid-item',
+			percentPosition: true,
 		});
 
 		imagesLoaded(grid).on('progress', () => msnry.layout());
-
-		
 	}
+
+
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

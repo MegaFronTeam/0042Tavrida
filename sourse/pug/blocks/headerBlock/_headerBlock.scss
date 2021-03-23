@@ -44,7 +44,7 @@
   &__video-bl{
     @extend .accept-ratio-frame-nh;
 
-    padding-top: (544/976) * 100%;
+    padding-top: (544/966) * 100%;
     background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(177, 217, 219, 0.8) 82.84%);
     backdrop-filter: blur(32px);
      @include media-breakpoint-down(sm) {
@@ -63,8 +63,8 @@
       }
       width: 100% !important;
       height: 100% !important;
-      width: 110% !important;
-      height: 110% !important;
+      // width: 120% !important;
+      // height: 120% !important;
       // top: 0;
       // left: 0;
       // width: 100% !important;
