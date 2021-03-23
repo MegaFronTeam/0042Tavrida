@@ -115,6 +115,9 @@ var JSCCommon = {
 		}, {
 			passive: true
 		});
+	},
+	checkEmptyVal: function checkEmptyVal() {
+		this.value !== '' || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
 	}
 };
 var $ = jQuery;
@@ -124,7 +127,9 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
-	JSCCommon.heightwindow(); //remove on prod
+	JSCCommon.heightwindow();
+	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
+	$('.has-ph-js').each(JSCCommon.checkEmptyVal); //remove on prod
 
 	var x = window.location.host;
 	var screenName;
@@ -420,18 +425,7 @@ function eventHandler() {
 			prevEl: '.act-prev-js'
 		}
 	}); //custom ph
-
-	$('.has-ph-js').blur(checkEmptyVal);
-	$('.has-ph-js').each(checkEmptyVal);
-
-	function checkEmptyVal() {
-		if (this.value !== '') {
-			$(this).addClass('not-empty');
-		} else {
-			$(this).removeClass('not-empty');
-		}
-	} //
-
+	//
 
 	var festSlider = new Swiper('.fest-slider-js', {
 		slidesPerView: "auto",
@@ -458,16 +452,12 @@ function eventHandler() {
 
 	if (grid) {
 		var msnry = new Masonry(grid, {
-			// options...
 			itemSelector: '.grid-item',
 			columnWidth: '.grid-item',
-			// gutter: 30,
-			percentPosition: true // initLayout: false,
-
+			percentPosition: true
 		});
 		imagesLoaded(grid).on('progress', function () {
-			// layout Masonry after each image loads
-			msnry.layout();
+			return msnry.layout();
 		});
 	}
 }

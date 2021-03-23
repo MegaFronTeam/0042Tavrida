@@ -17,7 +17,7 @@ mixin sFormL(data)
 							.col-sm-6.col-lg-4
 								+inp3('ID', 'number', '566988633')
 							.col-sm-6.col-lg-4
-								+inp3('E-mail', 'email', 'sample@sample.com')
+								+inp3('E-mail', 'email','','', 'email')
 							.col-sm-6.col-lg-4
 								+inp3('Телефон', 'tel', '+79854458899')
 							//-2 line
@@ -395,8 +395,8 @@ mixin cSelect(placeholder)
 			option option 2
 			option option 3
 
-mixin inp3(ph, type, val='', labelClass)
+mixin inp3(ph, type, val='', labelClass, name="name")
 	label(class=labelClass)
-		+e.INPUT.input.form-control.has-ph-js(type=type name="name" value=val)&attributes(attributes)
+		+e.INPUT.input.form-control.has-ph-js(type=type name= name)&attributes(attributes)
 		+e.SPAN.title=ph
 		block

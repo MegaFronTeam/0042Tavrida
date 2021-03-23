@@ -108,6 +108,12 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
+
+	checkEmptyVal() {
+		(this.value !== ''  || this.type == "date")
+				? $(this).addClass('not-empty') 
+				: $(this).removeClass('not-empty') 
+	}
 };
 const $ = jQuery;
 
@@ -117,6 +123,11 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
+
+
+	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
+	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
+
 	//remove on prod
 	var x = window.location.host;
 	let screenName;
@@ -435,16 +446,7 @@ function eventHandler() {
 	});
 
 	//custom ph
-	$('.has-ph-js').blur(checkEmptyVal);
-	$('.has-ph-js').each(checkEmptyVal);
-	function checkEmptyVal() {
-		if (this.value !== ''){
-			$(this).addClass('not-empty');
-		}
-		else {
-			$(this).removeClass('not-empty');
-		}
-	}
+
 	//
 	let festSlider = new Swiper('.fest-slider-js', {
 		slidesPerView: "auto",
@@ -479,7 +481,7 @@ function eventHandler() {
 			percentPosition: true, 
 		});
 
-		imagesLoaded(grid).on('progress', () => msnry.layout() });
+		imagesLoaded(grid).on('progress', () => msnry.layout());
 
 		
 	}
