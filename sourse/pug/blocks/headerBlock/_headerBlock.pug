@@ -11,7 +11,7 @@ mixin headerBlock(data)
 					+e.video-bl
 						if data.video
 							if data.youtube
-								iframe(width="560" height="315" src=`${data.video}?autoplay=1&controls=0&disablekb=1&showinfo=0&loop=1&moot=1&rel=0&modestbranding=1` title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;modestbranding; picture-in-picture" allowfullscreen)
+								iframe(width="560" height="315" src=`${data.video}?mute=1&autoplay=1&controls=0&disablekb=1&showinfo=0&loop=1&mute=1&rel=0&modestbranding=1` title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;modestbranding; picture-in-picture" allowfullscreen)
 							else
 								iframe(src=`${data.video}&autoplay=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
 						//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
