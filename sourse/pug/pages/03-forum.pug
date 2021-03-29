@@ -24,6 +24,7 @@ include ../blocks/sDigits/_sDigits.pug
 include ../blocks/sActForm/_sActForm.pug
 include ../blocks/sDev/_sDev.pug
 include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
 
 block variables
 	- let  mainPage= null
@@ -52,6 +53,7 @@ block pagecontent
 	+sAlgorithm()
 	+sApply()
 	//-here
+	+sStream
 	+sFAQ()
 	+sNews()
 	+sForm()

@@ -407,10 +407,10 @@ iframe {
 
 
 .custom-scroll {
-	scrollbar-color: var(--bs-primary)  transparent;
+	scrollbar-color: #6B1680  #707070;
 
 	scrollbar-width: thin;
-	scrollbar-color: var(--bs-primary)  transparent;
+	scrollbar-color: #6B1680  #707070;
 
 	&::-webkit-scrollbar-thumb {
 		opacity: 1;
@@ -419,18 +419,18 @@ iframe {
 
 	&::-webkit-scrollbar-track {
 		border: none;
-		background-color: transparent;
-		border-color: transparent;
+		background-color: #707070;
+		border-color: #707070;
 		-webkit-box-shadow: none;
 	}
 
 	&::-webkit-scrollbar {
 		width: 4px;
 		height: 2px;
-		background-color: transparent;
+		background-color: #707070;
 		// border-right: 2px;
 		/* or add it to the track */
-		border-color: transparent;
+		border-color: #707070;
 		opacity: 0;
 		-webkit-box-shadow: none;
 
@@ -438,7 +438,7 @@ iframe {
 
 	/* Add a thumb */
 	&::-webkit-scrollbar-thumb {
-		background: var(--bs-primary) ;
+		background: #6B1680 ;
 		border-radius: 2.5px;
 	}
 
