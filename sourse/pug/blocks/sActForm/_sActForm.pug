@@ -1,10 +1,10 @@
-mixin sActForm(data)
+mixin sActForm(h2="Аудитория форума")
 	// start sActForm
 	+b.SECTION.sActForm.section#sActForm&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
 				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
-					h2 Аудитория форума
+					h2!= h2
 				.col-12.col-lg-auto
 					+b.sl-contr
 						+e.prev.act-prev-js
@@ -23,8 +23,8 @@ mixin sActForm(data)
 mixin sActSlide(imgNum, name, slideColor='#00BAC3')
 	.swiper-slide
 		+e.item
-			+e.bg(style=`background-color: ${slideColor}`)
-				img.swiper-lazy(src="#" data-src=`img/@2x/act-slide-${imgNum}.jpg` alt="")
+			+e.bg(style=`--color-bg: ${slideColor}`)
+				img(loading="lazy" src=`img/@2x/act-slide-${imgNum}.jpg` alt="")
 			+e.txt
 				if block
 					block

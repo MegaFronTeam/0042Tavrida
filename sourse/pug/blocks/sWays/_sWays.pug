@@ -1,0 +1,22 @@
+mixin color-card(data)
+	+e.col.col-12(class= data.col)
+		+b.color-card(class= data.cl style=`--color-bg: ${data.color}`)
+			+e.title!= data.title
+			p!= data.text
+			if data.count 
+				+e.count= data.count
+			if data.img
+				+pic(data.img)
+			
+
+
+mixin sWays(h2, ...datas)
+	// start sWays
+	+b.SECTION.sWays.section&attributes(attributes)
+		.container
+			+b.section-title
+				h2= h2
+			+e.row.row
+				each data in datas
+					+color-card(data)
+	// end sWays

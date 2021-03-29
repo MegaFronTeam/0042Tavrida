@@ -7,10 +7,15 @@ mixin sAbout(data)
 				//- img(loading="lazy" src="img/@2x/about-bg.jpg" alt="")
 		.container
 			.row
-				.col-12.col-lg-8.me-auto.ms-auto
-					+b.section-title
-						h2!= data.title
-						p!= data.text
+				if data.title || data.text
+					.col-12.col-lg-8.me-auto.ms-auto
+						+b.section-title
+							if data.title
+								h2!= data.title
+							if data.text
+								p!= data.text
+			if data.textSm
+				+e.text!= data.textSm
 		if data.bgAlt
 			+e.bg-alt
 				+pic(data.bgAlt)

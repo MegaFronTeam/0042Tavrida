@@ -12,7 +12,7 @@
 		--fontSizeBase: 14.5px;
 	}
 	@include media-breakpoint-up(lg){
-		// --fontSizeBase: 15px;
+		--fontSizeBase: $em-base;
 	}
 	@include media-breakpoint-up(xl){
 		// --fontSizeBase: 15.5px;

@@ -43,7 +43,7 @@
 			padding: rem(60) rem(70);
 		}
 		@include media-breakpoint-up(xxl){
-			padding: rem(73) rem(112);
+			// padding: rem(73) rem(112);
 		}
 	}
 	.section-title{
@@ -54,20 +54,21 @@
 
 		h1, h2{
 			letter-spacing: -0.06em;
-
+			@extend .h1;
+			color: #fff;
 			//font-size: rem(70);
-			@include media-breakpoint-up(md){
-				font-size: rem(55);
-			}
-			@include media-breakpoint-up(lg){
-				font-size: rem(60);
-			}
-			@include media-breakpoint-up(xl){
-				font-size: rem(70);
-			}
-			@include media-breakpoint-up(xxl){
-				line-height: (85/70);
-			}
+			// @include media-breakpoint-up(md){
+			// 	font-size: rem(55);
+			// }
+			// @include media-breakpoint-up(lg){
+			// 	font-size: rem(60);
+			// }
+			// @include media-breakpoint-up(xl){
+			// 	font-size: rem(70);
+			// }
+			// @include media-breakpoint-up(xxl){
+			// 	line-height: (85/70);
+			// }
 		}
 	}
 	.form-wrap{
@@ -101,8 +102,8 @@
 			background-color: transparent!important;
 
 			border: none!important;
-			border-bottom: 8px solid $white!important;
-			border-top: 8px solid transparent!important;
+			border-bottom: 4px solid $white!important;
+			border-top: 4px solid transparent!important;
 			padding: 27px 10px 27px 0;
 			color: $white;
 

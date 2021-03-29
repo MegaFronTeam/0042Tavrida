@@ -59,11 +59,11 @@
 		counter-reset: list 0;
 
 		& > *{
-			margin-bottom: rem(40);
+			// margin-bottom: rem(40);
 		}
-		margin-bottom: rem(-40);
+		// margin-bottom: rem(-40);
 
-		padding-bottom: rem(104px);
+		// padding-bottom: rem(104px);
 	}
 	&__col{
 		text-align: left;
@@ -166,15 +166,15 @@
 		}
 	}
 	&__txt{
-		font-weight: 600;
+		// font-weight: 600;
 		line-height: 1.8;
 
 		color: $dark;
 
-		font-size: rem(16.5px);
+		// font-size: rem(16.5px);
 		margin: 0 -12px;
 		@include media-breakpoint-up(xl){
-			font-size: rem(20px);
+			// font-size: rem(20px);
 			margin: 0 rem(-21px);
 		}
 	}

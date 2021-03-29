@@ -735,3 +735,18 @@ h2{
 	background-color: rgba(255, 255, 255, 0.8)!important;
 	backdrop-filter: blur(24px)!important;
 }
+
+.fw-900 {
+	font-weight: 900;
+}
+
+.link-back{
+
+	font-size: rem(14);
+	margin-bottom: rem(30);
+	display: inline-block;
+	.icon{
+		fill: transparent;
+		stroke: currentColor;
+	}
+}

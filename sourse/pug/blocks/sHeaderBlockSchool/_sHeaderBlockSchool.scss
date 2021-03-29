@@ -1,0 +1,60 @@
+
+	// start .sHeaderBlockSchool
+	.sHeaderBlockSchool {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		padding-top: 0;
+		&__inner{
+			background: #EBF1F2;
+			@include media-breakpoint-up(xl){ 
+				border-radius: 150px;
+			}
+			border-radius: 50px;
+			--top: #{rem(120)};
+			padding-top: var(--top);
+			margin-top: calc(-1 * var(--top));
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(140);
+			}
+			padding-bottom: rem(80);
+		}
+		h1{
+			text-transform: uppercase;
+			margin-bottom: 3rem;
+		}
+		
+		&__title{
+			@extend .h4;
+			font-weight: 900;
+			text-transform: uppercase;
+			margin-bottom: rem(39);
+		}
+		&__col{
+			display: flex;
+			flex-direction: column;
+		}
+		&__foot{
+			margin-top: auto;
+			
+		}
+		img{
+			border-radius: rem(120);
+
+		}
+		 
+	@include media-breakpoint-up(xl) {
+		&__row{
+			--bs-gutter-x: 113px;
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHeaderBlockSchool

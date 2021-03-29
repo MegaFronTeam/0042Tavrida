@@ -25,6 +25,9 @@ include ../blocks/sActForm/_sActForm.pug
 include ../blocks/sDev/_sDev.pug
 include ../blocks/sAlgorithm/_sAlgorithm.pug
 include ../blocks/sStream/_sStream.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sFormats/_sFormats.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
 
 block variables
 	- let  mainPage= null
@@ -45,6 +48,9 @@ block pagecontent
 		text: `Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.`
 	}).sAbout--forum
 	+sVantage3()
+	+sWays
+	+sFormats
+	+sOpportunities
 	+sDirection2()
 	+sDigits()
 	+sActForm()

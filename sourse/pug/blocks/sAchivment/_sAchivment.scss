@@ -12,6 +12,7 @@
 		display: flex;
 		flex-wrap: wrap;
 
+	
 		@include media-breakpoint-up(lg){
 			display: block;
 			background-image: url(../img/svg/achivments-grid.svg);
@@ -20,7 +21,7 @@
 			min-height: 580px;
 		}
 		@include media-breakpoint-up(xl){
-			background-image: url(../img/svg/achivments-grid.svg);
+			// background-image: url(../img/svg/achivments-grid.svg);
 			background-repeat: no-repeat;
 			background-size: cover;
 			min-height: 700px;
@@ -31,6 +32,14 @@
 			margin-left: -38px;
 		}
 	}
+
+		@include media-breakpoint-up(lg){
+			&--school &__row{
+				background-image: url(../img/svg/achivments-grid-2.svg);
+					background-size: 100% 100%;
+					margin-top: rem(100);
+			}
+		}
 	&__col{
 		@include media-breakpoint-up(lg){
 			position: absolute;
@@ -210,12 +219,14 @@
 			width: 100%;
 		}
 		@include media-breakpoint-down(lg){
-			--num-fs: #{rem(50)};
+			--num-fs: #{rem(60)};
+			// @include rfs(70px);
 			&:nth-child(odd){
-				--num-fs: #{rem(45)};
+				// --num-fs: #{rem(45)};
 			}
 
-			width: 50%;
+			// width: 50%;
+			width: 100%;
 			padding: rem(20);
 
 			br{
@@ -251,4 +262,50 @@
 	&__{}
 	&__{}
 	&__{}
+	&--school{
+			@include media-breakpoint-up(lg){
+
+				.sAchivment__col:nth-child(1){
+					--num-fs: #{rem(130)};
+					--num-padd: 0 0 5px 0;
+					top: 0px;
+					left: 0px;
+				}
+				.sAchivment__col:nth-child(2){
+					--num-fs: #{rem(88)};
+					--num-padd: 0 0 5px 0;
+					top: 0px;
+					// left: 0px;
+					left: auto;
+					right: 0;
+				}
+				.sAchivment__col:nth-child(4){
+					--num-fs: #{rem(100)};
+					--num-padd: 0 0 5px 0;
+					top: rem(200);
+					// left: 0px;
+					// left: auto;
+					// right: 0;
+				}
+				.sAchivment__col:nth-child(5){
+					--num-fs: #{rem(94)};
+					white-space: nowrap;
+					// left: 850px;
+					left: auto;
+					right: 0;
+				
+				}
+				.sAchivment__col:nth-child(6) {
+					top: 500px;
+					left: 0; 
+				}
+				.sAchivment__col:nth-child(7) {
+							top: 590px;
+							left: auto;
+							right: 0;
+							--num-padd: 0 43px 0 0;
+							--num-fs: 5.5625rem;
+					}
+			}
+	}
 } // end.sAchivment

@@ -128,19 +128,16 @@
 
         color: $dark;
       }
+      .sm,
       p{
         font-weight: 900;
-        font-size: rem(30);
-        @include media-breakpoint-up(md){
-          font-size: rem(44);
-        }
-        @include media-breakpoint-up(lg){
-          font-size: rem(70);
-        }
+        // @extend .h2;
+        @include rfs(50px);
         line-height: (85/70);
         letter-spacing: -0.06em;
         text-transform: uppercase;
         color: $dark;
+        max-width: rem(690);
       }
     }
 

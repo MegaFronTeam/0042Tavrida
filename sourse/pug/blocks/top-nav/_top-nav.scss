@@ -1,5 +1,7 @@
 .top-nav {
   padding: rem(32) 0 rem(38) 0;
+  position: relative;
+  z-index: 20;
 
   --burger-col: #{$black};
   --mail-col: #{$body-color};

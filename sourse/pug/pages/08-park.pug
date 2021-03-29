@@ -1,0 +1,215 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sTransfer/_sTransfer.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '08-park'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	//- title: `ФОРУМ`,
+	+headerBlock({
+		text : `Арт-парк  <br> «Таврида»`,
+		img: 'park.jpg'
+	}).headerBlock--forum
+		//- title: 'О форуме',
+	+sAbout({
+		bgAlt: 'about-bg-park.png',
+		textSm: `Образовательные программы воркшопов &laquo;От&nbsp;теории к&nbsp;практике&raquo; арт-парка &laquo;Таврида&raquo; ‒ это творческая лаборатория для смелых экспериментов и&nbsp;самореализации в&nbsp;современных видах искусства под руководством известных российских и&nbsp;международных художников`
+	}).sAbout--forum
+	+sVantageBase('Особенности антишкол',
+		{
+			img:`wsh-1`, 
+			text:`3&nbsp;тематических направления`
+		},
+		
+		{
+			img:`wsh-2`, 
+			text:`3&nbsp;000 часов практики прикладного искусства`
+		},
+		{
+			img:`wsh-3`, 
+			text:`Работа с&nbsp;известными художниками`
+		},
+		{
+			img:`anti-4`, 
+			text:`Профессиональные контакты`
+		},
+		{
+			img:`wsh-5`, 
+			text:`Участие  в&nbsp;партнерской программе стажировок`
+		},
+		{
+			img:`wsh-6`, 
+			text:`Гранты <br>  на&nbsp;строительство арт-объектов`
+		},
+		{
+			img:`wsh-7`, 
+			text:`Реальный кейс для портфолио`
+		},
+		{
+			img:`anti-8`, 
+			text:`Нетворкинг`
+		})
+	//- +sDirection2()
+	//- +sDigits()
+	+sWays(
+		'Тематические направления',
+		{
+			img: 'way-wsh-1.png',
+			cl: 'color-card--wsh',
+			col: 'col-xl-4 col-md-6', 
+			color: '#B2ECEF',
+			title:`Световой дизайн`, 
+			text:`с 3 по 21 июня`,
+			
+		},
+		{
+			img: 'way-wsh-2.png',
+			cl: 'color-card--wsh',
+			col: 'col-xl-4 col-md-6', 
+			color: '#CFF1C0',
+			title:`Устойчивый дизайн вторичного сырья`,
+			text:`с 20 сентября по 13 октября`,
+			
+		},
+		{
+			img: 'way-wsh-3.png',
+			cl: 'color-card--wsh',
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:`Медиадизайн`,
+			text:`с 19 июля по 6 августа`,
+			
+		})
+	+sAchivment7
+	+sActForm('Аудитория')
+	+sDevBody("Этапы развития проекта", 
+		{
+			img:`1`,
+			num:`1`,
+			title:`2015`,
+			text:`&laquo;Таврида&raquo; получила статус Всероссийского молодежного образовательного форума`,
+		},
+		{
+			img:`2`,
+			num:`2`,
+			title:`2016`,
+			text:`Президент РФ&nbsp;Владимир Путин впервые посетил Всероссийский молодежный образовательный форум &laquo;Таврида&raquo;`,
+		},
+		{
+			img:`3`,
+			num:`3`,
+			title:`2017`,
+			text:`Количество тематических направлений выросло, а&nbsp;участниками форума впервые стали свыше 3&nbsp;000 молодых деятелей культуры и&nbsp;искусств`,
+		},
+		{
+			img:`4`,
+			num:`6`,
+			title:`2018`,
+			text:`Первый заместитель Руководителя Администрации Президента РФ&nbsp;Сергей Кириенко предложил перевести &laquo;Тавриду&raquo; на&nbsp;круглогодичный формат работы и&nbsp;создать для этого новую площадку в&nbsp;Крыму`,
+		},
+		{
+			img:`5`,
+			num:`5`,
+			title:`2019`,
+			text:`Проект расширился до&nbsp;формата арт-кластера, включил в&nbsp;себя традиционный форум, а&nbsp;также новый фестиваль творческих сообществ &laquo;Таврида ‒ АРТ&raquo; и&nbsp;переехал в&nbsp;бухту Капсель под Судаком`,
+		},
+		{
+			img:`6`,
+			num:`4`,
+			title:`2018`,
+			text:`Образовательная программа форума переходит в&nbsp;формат антишкол, представляющих собой творческие мастерские в&nbsp;различных направлениях культуры и&nbsp;искусства`,
+		})
+	+sSteps7
+	
+
+	+sWays(
+		'Сервисы для участников',
+		{
+			img: 'serv-1.png',
+			col: 'col-xl-4 col-md-6',
+			color: '#B2ECEF',
+			title:`Бесплатное участие в образовательной программе антишкол`,
+			
+			
+		},
+		{
+			img: 'serv-2.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#8DBBFF', 
+			title:`Бесплатный мерч проекта для участников `,
+		
+		},
+		{
+			img: 'serv-3.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#B2ECEF',
+			title:`Наличие фудкортов  на территории арт-кластера`, 
+		},
+
+		{
+			img: 'serv-4.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#F1E1F5',
+			title: `Трёхразовое питание за счёт принимающей стороны `
+			
+		},
+		{
+			img: 'serv-5.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8B2E4',
+			title: `Наличие фудкортов на территории арт-кластера`
+			
+		},
+		{
+			img: 'serv-6.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8DEFF',
+			title: `Бесплатный организованный трансфер участников до места проведения мероприятия`
+			
+		})
+	//- +sAlgorithm()
+	+sTransfer7()
+	+sFeedBack7()
+	//- +sApply()
+	//-here
+	//- +sStream
+	+sFAQ()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()

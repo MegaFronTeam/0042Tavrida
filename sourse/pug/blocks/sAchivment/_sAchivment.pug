@@ -1,74 +1,113 @@
-mixin sAchivment(data)
+mixin sAchivmentBody(h2)
 	// start sAchivment
 	+b.SECTION.sAchivment.section#sAchivment&attributes(attributes)
 		.container
 			+b.section-title
-				h2 ДОСТИЖЕНИЯ
-
+				h2= h2
 			+e.row
-				//-1
-				+e.col
-					+e.number(style="color: #FF8000;") 50&nbsp;000
-					+e.txt
-						| участников
-						|
-						br
-						| всех проектов
-				//-2
-				+e.col.flex
-					+e.number(style="color: #284BA4;") 3000
-					+e.txt--common
-						| Спикеров
-						|
-						br
-						| образовательных
-						|
-						br
-						| программ
-				//-3
-				+e.col.flex
-					+e.number(style="color: #6B1680;") 78
-					+e.txt--common
-						| новых
-						|
-						br
-						| резидентов 
-				//-4
-				+e.col.flex
-					+e.number(style="color: #FF8000;") 109
-					+e.txt
-						| кастингов,
-						|
-						br
-						| питчингов
-						|
-						br
-						| и отборов
-				//-5
-				+e.col
-					+e.number(style="color: #00BAC3;") 45,5
-					//-achivments-grid
-					+e.txt
-						| миллионов
-						|
-						br
-						| просмотров
-						|
-						br
-						| прямых
-						|
-						br
-						| эфиров
-				//- 6
-				+e.col
-					+e.number(style="color: #284BA4;") 350 885 300
-					+e.txt рублей грантовой поддержки
-				//- 7
-				+e.col.flex
-					+e.number(style="color: #FF8000;") 6
-					+e.txt--common
-						| лет вклада в развитие
-						|
-						br
-						| творческих сообществ
+				block
 	// end sAchivment
+mixin sAchivment(data)
+	+sAchivmentBody('ДОСТИЖЕНИЯ')
+		//-1
+		+e.col
+			+e.number(style="color: #FF8000;") 50&nbsp;000
+			+e.txt
+				| участников
+				|
+				br
+				| всех проектов
+		//-2
+		+e.col.flex
+			+e.number(style="color: #284BA4;") 3000
+			+e.txt--common
+				| Спикеров
+				|
+				br
+				| образовательных
+				|
+				br
+				| программ
+		//-3
+		+e.col.flex
+			+e.number(style="color: #6B1680;") 78
+			+e.txt--common
+				| новых
+				|
+				br
+				| резидентов 
+		//-4
+		+e.col.flex
+			+e.number(style="color: #FF8000;") 109
+			+e.txt
+				| кастингов,
+				|
+				br
+				| питчингов
+				|
+				br
+				| и отборов
+		//-5
+		+e.col
+			+e.number(style="color: #00BAC3;") 45,5
+			//-achivments-grid
+			+e.txt
+				| миллионов
+				|
+				br
+				| просмотров
+				|
+				br
+				| прямых
+				|
+				br
+				| эфиров
+		//- 6
+		+e.col
+			+e.number(style="color: #284BA4;") 350 885 300
+			+e.txt рублей грантовой поддержки
+		//- 7
+		+e.col.flex
+			+e.number(style="color: #FF8000;") 6
+			+e.txt--common
+				| лет вклада в развитие
+				|
+				br
+				| творческих сообществ 
+
+mixin sAchivment7(data)
+	+sAchivmentBody('Антишколы в цифрах').sAchivment--school
+		//-1
+		+e.col
+			+e.number(style="color: #FF8000;") 20 000
+			+e.txt участников
+		//-2
+		+e.col
+			+e.number(style="color: #284BA4;") 3000
+			+e.txt--common Экспертов
+		//-3
+		+e.col.flex.d-none
+		//- 	+e.number(style="color: #6B1680;") 78
+		//- 	+e.txt--common
+		//- 		| новых
+		//- 		|
+		//- 		br
+		//- 		| резидентов 
+		//-4
+		+e.col
+			+e.number(style="color: #FF8000;") 6 600 000
+			+e.txt Просмотров онлайн-трансляций
+		//-5
+		+e.col
+			+e.number(style="color: #00BAC3;") 25 000
+			//-achivments-grid
+			+e.txt Упоминаний в СМИ
+		//- 6
+		+e.col
+			+e.number(style="color: #284BA4;") 250 148 300
+			+e.txt  Рублей грантовой поддержки
+		//- 7
+		+e.col.flex
+			+e.number(style="color: #FF8000;") 6
+			+e.txt--common
+				| лет работы проекта

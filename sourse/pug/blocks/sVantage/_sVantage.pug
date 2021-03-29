@@ -128,10 +128,34 @@ mixin sVantage3(data)
 			| Программа
 			br.d-none.d-sm-block
 			| лояльности
+			
 
-mixin vantageItem(imgNum, imgClass="")
-	+e.col.col-12.col-sm-6.col-lg-3
+mixin sVantage6(data)
+	+sVantageBody('Особенности заезда').sVantage--forum 
+		+vantageItem('sch-1', 'bigger-img' , 'col-lg-4')
+			| Современные образовательные форматы
+		+vantageItem('sch-2', 'bigger-img' , 'col-lg-4')
+			| Творческие коллаборации
+		+vantageItem('sch-3', 'bigger-img' , 'col-lg-4')
+			| Практический опыт
+		+vantageItem('sch-4', 'bigger-img' , 'col-lg-4')
+			| Финансовая поддержка творческих проектов
+		+vantageItem('sch-5',  'bigger-img' , 'col-lg-4')
+			| Сообщество профессионалов
+		+vantageItem('sch-6', 'bigger-img' , 'col-lg-4')
+			| Нетворкинг
+
+mixin sVantageBase(title, ...datas)
+	+sVantageBody(title)
+			each item in datas
+				+vantageItem(item.img, item.imgClass, item.col)
+					!= item.text
+
+mixin vantageItem(imgNum, imgClass="", col="col-lg-3")
+	+e.col.col-12.col-sm-6(class= col)
 		+e.img(class=imgClass)
 			img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
 		+e.txt.text-center
 			block
+
+

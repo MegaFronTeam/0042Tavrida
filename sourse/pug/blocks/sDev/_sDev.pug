@@ -33,3 +33,25 @@ mixin devStep(num)
 					|
 					br.d-none.d-lg-block
 					| отображения информации
+
+
+mixin sDevBody(h2="Этапы развития проекта", ...datas)
+	// start sDev
+	+b.SECTION.sDev.section#sDev&attributes(attributes)
+		.container
+			+b.section-title
+				h2!= h2
+			+e.row.row
+				each data in datas
+					+devStepItem(data)
+	// end sDev
+mixin devStepItem(data)
+	+e.col.col-sm-6.col-lg-4
+		+e.inner-row.row
+			.col-auto.col-sm-12
+				+e.img
+					+e.num=data.num
+					img(loading="lazy" src=`img/@2x/webp/step-${data.img}.webp` alt="")
+			.col.col-sm-12
+				+e.headline!= data.title
+				+e.txt!= data.text

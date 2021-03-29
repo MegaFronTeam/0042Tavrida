@@ -2,9 +2,9 @@
 .sFAQ {
 	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(30px)};
-		--sTPB: #{rem(73px)};
-		--sPB: #{rem(55px)};
+		// --sTPB: #{rem(73px)};
 	}
+	--sPB: #{rem(35px)};
 
 	.section-title{
 		h2{
@@ -33,10 +33,10 @@
 			padding: rem(25) rem(30) rem(25) rem(40);
 		}
 		@include media-breakpoint-up(xl){
-			padding: rem(30) rem(40) rem(30) rem(50);
+			padding: rem(20) rem(40) rem(20) rem(50);
 		}
 		@include media-breakpoint-up(xxl){
-			padding: rem(31.5) rem(44) rem(31.5) rem(58);
+			// padding: rem(31.5) rem(44) rem(31.5) rem(58);
 		}
 
 		--pl-aft-o: 1;
@@ -57,13 +57,14 @@
 	&__txt{
 		@include mt();
 		font-weight: 900;
+		padding-top: em(6);
 		color: var(--head-txt-col);
 
-		font-size: rem(24);
-		line-height: 1.2;
+		@extend .h4;
+		margin-bottom: 0;
 		@include media-breakpoint-up(lg){
-			font-size: rem(30);
-			line-height: (37/30);
+			// font-size: rem(30);
+			// line-height: (37/30);
 		}
 
 		text-transform: uppercase;
