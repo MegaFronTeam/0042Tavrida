@@ -308,4 +308,57 @@
 					}
 			}
 	}
+
+	
+	&--school{
+			@include media-breakpoint-up(lg){
+
+				// .sAchivment__col:nth-child(1){
+				// 	--num-fs: #{rem(130)};
+				// 	--num-padd: 0 0 5px 0;
+				// 	top: 0px;
+				// 	left: 0px;
+				// }
+				.sAchivment__col:nth-child(2){
+					--num-fs: #{rem(130)};
+					--num-padd: 0 10px 0 0;
+					top: 0px;
+					// left: 0px;
+					left: auto;
+					right: 0;
+				}
+				.sAchivment__col:nth-child(4){
+					--num-fs: #{rem(100)};
+					--num-padd: 0 0 5px 0;
+					top: rem(200);
+					// left: 0px;
+					// left: auto;
+					// right: 0;
+				}
+				.sAchivment__col:nth-child(5){
+					--num-fs: #{rem(172)};
+					white-space: nowrap;
+					// left: 850px;
+					top: 420px;
+					left: rem(300);
+					right: 0;
+				
+				}
+				.sAchivment__col:nth-child(6) {
+					--num-fs: #{rem(195)};
+					top: 400px;
+					left: 0; 
+				}
+				.sAchivment__col:nth-child(7) {
+					text-align: center;
+							top: 220px;
+							left: auto;
+							right: 0;
+							--num-padd: 0 0 0 0;
+							--num-fs: #{rem(240)};
+					}
+			}
+	}
+
+
 } // end.sAchivment

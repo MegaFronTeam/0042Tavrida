@@ -1,0 +1,15 @@
+mixin slider(data)
+	+b.slider-wrapper
+		+b.sl-contr
+			+e.prev.act-prev-js
+				img(src="img/svg/arrow-left.svg" alt="" loading="lazy")
+			+e.next.act-next-js
+				img(src="img/svg/arrow-right.svg" alt="" loading="lazy")
+		// start slider
+		+b.slider--js.swiper-container&attributes(attributes)
+			.swiper-wrapper 
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide.bg-wrap
+						h2 Заголовок <br> для слайдера
+						+pic(`about-bg2`,'bg').picure-bg
+		// end slider

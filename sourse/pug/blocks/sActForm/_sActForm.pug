@@ -14,22 +14,30 @@ mixin sActForm(h2="Аудитория форума")
 			+e.slider
 				.swiper-container.act-slider-js
 					.swiper-wrapper
-						+sActSlide(1, 'Актеры')
-						+sActSlide(2, 'Художники')
-						+sActSlide(3, 'Режисеры')
-						+sActSlide(4, 'фотографы')
+						+sActSlide(`full-1`,  `Архитекторы `)
+						+sActSlide(`full-2`, `Промышленные  дизайнеры`)
+						+sActSlide(`full-3`, `Интерьерные  дизайнеры`)
+						+sActSlide(`full-4`, `Инженеры`)
+						+sActSlide(`full-5`, `Градостроители`)
+						+sActSlide(`full-6`, `Урбанисты`)
+						+sActSlide(`full-7`, `Художники  паблик арта`)
+						+sActSlide(`full-8`, `Скульпторы`)
+						+sActSlide(`full-9`, `Начинающие  и&nbsp;практикующие  художники`)
+						+sActSlide(`full-10`, `Проектировщики`)
+						+sActSlide(`full-11`, `Креаторы  и&nbsp;визионеры`)
+						+sActSlide(`full-12`, `Резиденты  арт-кластера`)
 	// end sActForm
 
 mixin sActSlide(imgNum, name, slideColor='#00BAC3')
 	.swiper-slide
 		+e.item
 			+e.bg(style=`--color-bg: ${slideColor}`)
-				img(loading="lazy" src=`img/@2x/act-slide-${imgNum}.jpg` alt="")
+				+pic(`act-slide-${imgNum}.jpg`)
 			+e.txt
 				if block
 					block
 				else
-					| Представители театара
+					| Представители театра
 					|
 					br
 					| и кино с разлиными
@@ -39,5 +47,5 @@ mixin sActSlide(imgNum, name, slideColor='#00BAC3')
 					|
 					br
 					| и послужным списком
-			+e.name=name
+			+e.name!=name
 		//-act-slide-

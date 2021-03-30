@@ -1,27 +1,33 @@
-mixin sAlgorithm(data)
+mixin sAlgorithmBody(data)
 	// start sAlgorithm
 	+b.SECTION.sAlgorithm.section#sAlgorithm&attributes(attributes)
 		.container
 			+b.section-title
 				h2 Алгоритм регистрации
 			+e.row.row
-				+algorithmItem(1)
-				+algorithmItem(2)
-				+algorithmItem(3)
-				+algorithmItem(4)
-				//-bend-arrow-top
-
+				block
 	// end sAlgorithm
+mixin sAlgorithm(data)
+	+sAlgorithmBody('Алгоритм регистрации')
+				+algorithmItem
+				+algorithmItem
+				+algorithmItem
+				+algorithmItem
 
-mixin algorithmItem(num)
-	+e.col.col-sm-6.col-lg-3
+mixin sAlgorithm8(data)
+	+sAlgorithmBody('Алгоритм регистрации')
+				+algorithmItem('job-interview 1.svg',`Онлайн- воркшопы`,`С 22 марта по 14 апреля`,`col-lg-4 text-md-center`)
+				+algorithmItem('presentation1.svg',`Презентация проектов`,`16 апреля`,`col-lg-4 text-md-center`)
+				+algorithmItem('book1.svg',`Образовательная программа  воркшопов`,`С 3 июня по 30 октября`,`col-lg-4 text-md-center`)
+
+mixin algorithmItem(i='step-img.svg',t= ` Заголовок для этапа <br>  развития`,p,cl="col-lg-3")
+	+e.col.col-sm-6(class= cl)&attributes(attributes)
 		+e.inner-row.row
 			.col-auto.col-sm-12
 				+e.img
-					+e.num=num
-					img(loading="lazy" src="img/svg/step-img.svg" alt="")
+					//- +e.num=num
+					img(loading="lazy" src=`img/svg/${i}` alt="")
 			.col.col-sm-12
-				+e.headline
-					| Заголовок для этапа
-					br
-					| развития
+				+e.headline!= t
+				if p
+					p!= p

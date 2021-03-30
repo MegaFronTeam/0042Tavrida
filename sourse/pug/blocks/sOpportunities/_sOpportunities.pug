@@ -1,9 +1,12 @@
-mixin sOpportunities(data)
+mixin sOpportunities(h2='Возможности антишкол', ...datas)
 	// start sOpportunities
 	+b.SECTION.sOpportunities.section#sOpportunities&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sOpportunities
+			+b.section-title
+				h2= h2
 				
-			.row
+			ol
+				each data in datas 
+					li!= data
+
 	// end sOpportunities

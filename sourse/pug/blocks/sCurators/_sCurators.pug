@@ -1,0 +1,89 @@
+mixin itemCur(data)
+	+e.col(class= data.cl)
+		+pic(data.img,'',0)
+		if data.prof
+			p!= data.prof
+		h4!= data.title
+		if data.p
+			p!= data.p
+mixin sCuratorsBody(h2='Кураторы воркшопов',sl)
+	// start sCurators
+	+b.SECTION.sCurators.section#sCurators&attributes(attributes)
+		.container
+			if sl 
+				+b.section-title.row.align-items-center
+					.col-12.col-lg.mb-3.mb-lg-0
+						h2= h2
+					.col-12.col-lg-auto
+						+b.sl-contr
+							+e.prev.feedback-prev-js
+								img(src="img/svg/arrow-left.svg" alt="" loading="lazy")
+							+e.next.feedback-next-js
+								img(src="img/svg/arrow-right.svg" alt="" loading="lazy")
+			else
+				+b.section-title
+					h2= h2
+			block
+	// end sCurators
+mixin sCurators()
+	+sCuratorsBody('Спикеры антишколы')
+		.row
+			+itemCur({
+				cl: 'col-lg-4 col-sm-6',
+				img:'curator-1.jpg', 
+				title:`Буляш  <br> Тодаева`,
+				p:`Промышленный дизайнер, инженер в&nbsp;области устойчивого развития, сооснователь студии дизайна Birzha.studio, автор проекта zerowaste.lab`,
+			})
+			+itemCur({
+				cl: 'col-lg-4 col-sm-6',
+				img:'curator-2.jpg', 
+				title:`Анастасия <br> Приходько`,
+				p:'Светодизайнер, кандидат архитектуры, доцент Московского архитектурного института, основатель образовательного и&nbsp;исследовательского проекта по&nbsp;светодизайну &laquo;Лаборатория света&raquo; laboratoriasveta.ru',
+			})
+			+itemCur({
+				cl: 'col-lg-4 col-sm-6',
+				img:'curator-3.jpg', 
+				title:`Наталья  <br> Ермакова`,
+				p:'Заслуженая артистка России, вокалистка ансамбля Рури',
+			})
+mixin sCurators9()
+	+sCuratorsBody('Кураторы воркшопов','sl')
+		.row
+			+e.slider--js.swiper-container 
+				.swiper-wrapper
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-1.jpg', 
+						title:`Буляш  <br> Тодаева`,
+						p:`Промышленный дизайнер, инженер в&nbsp;области устойчивого развития, сооснователь студии дизайна Birzha.studio, автор проекта zerowaste.lab`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-2.jpg', 
+						title:`Анастасия <br> Приходько`,
+						p:'Светодизайнер, кандидат архитектуры, доцент Московского архитектурного института, основатель образовательного и&nbsp;исследовательского проекта по&nbsp;светодизайну &laquo;Лаборатория света&raquo; laboratoriasveta.ru',
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-3.jpg', 
+						title:`Наталья  <br> Ермакова`,
+						p:'Заслуженая артистка России, вокалистка ансамбля Рури',
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-1.jpg', 
+						title:`Буляш  <br> Тодаева`,
+						p:`Промышленный дизайнер, инженер в&nbsp;области устойчивого развития, сооснователь студии дизайна Birzha.studio, автор проекта zerowaste.lab`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-2.jpg', 
+						title:`Анастасия <br> Приходько`,
+						p:'Светодизайнер, кандидат архитектуры, доцент Московского архитектурного института, основатель образовательного и&nbsp;исследовательского проекта по&nbsp;светодизайну &laquo;Лаборатория света&raquo; laboratoriasveta.ru',
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-3.jpg', 
+						title:`Наталья  <br> Ермакова`,
+						p:'Заслуженая артистка России, вокалистка ансамбля Рури',
+					})

@@ -1,0 +1,53 @@
+
+	// start .sCurators
+	.sCurators {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__col{
+			margin-bottom: rem(40);
+			text-align: center;
+			img{
+				border-radius: 20px;
+				width: rem(250);
+				height: rem(250);
+				object-fit: cover;
+				margin-bottom: rem(13);
+			}
+			p {
+				margin-bottom: rem(8);
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(300);
+			}
+			h4{
+				text-transform: uppercase;
+				font-weight: 900;
+			}
+		}
+		&__slider{}
+		&__col.swiper-slide{
+				@include media-breakpoint-up(xl){
+					--count: 4;
+				}
+				@include media-breakpoint-up(lg){ 
+					--count: 3;
+				}
+				max-width: calc(100% / var(--count));
+		}
+		 
+	@include media-breakpoint-up(xl) {
+		.row{
+			--bs-gutter-x: #{rem(60)};
+		}
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sCurators

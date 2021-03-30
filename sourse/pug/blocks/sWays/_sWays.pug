@@ -2,7 +2,8 @@ mixin color-card(data)
 	+e.col.col-12(class= data.col)
 		+b.color-card(class= data.cl style=`--color-bg: ${data.color}`)
 			+e.title!= data.title
-			p!= data.text
+			if data.text
+				p!= data.text
 			if data.count 
 				+e.count= data.count
 			if data.img

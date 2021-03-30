@@ -143,6 +143,12 @@
 
 
   }
+  .section-title__data{
+    @extend .h4;
+    font-weight: 900;
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+  }
 }
 
 // end.headerBlock

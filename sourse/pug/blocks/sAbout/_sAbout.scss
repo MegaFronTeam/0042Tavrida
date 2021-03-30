@@ -148,9 +148,9 @@
 		@include media-breakpoint-up(xl){
 			top: rem(-30);
 		}
-		@include media-breakpoint-up(xxl){
-			top: rem(-93);
-		}
+		// @include media-breakpoint-up(xxl){
+		// 	top: rem(-93);
+		// }
 		right: 0;
 
 		img{
@@ -158,6 +158,14 @@
 			height: auto;
 			max-width: 100%;
 			max-height: 100%;
+		}
+	}
+	&--2032 &__bg-alt{
+			@include media-breakpoint-up(xl){
+			top: rem(70);
+			// right: 0;
+			// margin-left: rem(-100);
+			right: 10%;
 		}
 	}
 	&__{}

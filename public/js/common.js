@@ -459,7 +459,37 @@ function eventHandler() {
 		imagesLoaded(grid).on('progress', function () {
 			return msnry.layout();
 		});
-	}
+	} //
+
+
+	$(".slider-wrapper").each(function () {
+		var festSlider = new Swiper($(this).find('.slider--js'), {
+			slidesPerView: 1,
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 3
+			},
+			//
+			navigation: {
+				nextEl: $(this).find('.act-next-js'),
+				prevEl: $(this).find('.act-prev-js')
+			}
+		});
+	});
+	$(".sCurators").each(function () {
+		var slider = new Swiper($(this).find('.sCurators__slider--js'), {
+			slidesPerView: "auto",
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 3
+			},
+			//
+			navigation: {
+				nextEl: $(this).find('.feedback-next-js'),
+				prevEl: $(this).find('.feedback-prev-js')
+			}
+		});
+	});
 }
 
 ;

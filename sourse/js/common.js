@@ -470,6 +470,7 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
 	//end luckyone js
 
 
@@ -485,10 +486,44 @@ function eventHandler() {
 	}
 
 
-	
-};
-if (document.readyState !== 'loading') {
-	eventHandler();
+	//
+	$(".slider-wrapper").each(function(){
+
+		let festSlider = new Swiper($(this).find('.slider--js'), {
+			slidesPerView: 1, 
+			
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 3,
+			},
+			//
+			navigation: {
+				nextEl: $(this).find('.act-next-js'),
+				prevEl: $(this).find('.act-prev-js'),
+			},
+
+		});
+	})
+	$(".sCurators").each(function(){
+
+		let slider = new Swiper($(this).find('.sCurators__slider--js'), {
+			slidesPerView: "auto",
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 3,
+			},
+			//
+			navigation: {
+				nextEl: $(this).find('.feedback-next-js'),
+				prevEl: $(this).find('.feedback-prev-js'),
+			},
+
+		});
+	})
+		
+	};
+	if (document.readyState !== 'loading') {
+		eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }

@@ -111,3 +111,41 @@ mixin sAchivment7(data)
 			+e.number(style="color: #FF8000;") 6
 			+e.txt--common
 				| лет работы проекта
+
+mixin sAchivment8(data)
+	+sAchivmentBody('Антишколы в цифрах').sAchivment--school.sAchivment--wsh
+		//-1
+		+e.col
+			+e.number(style="color: #FF8000;") 2 000
+			+e.txt листов фанеры
+		//-2
+		+e.col.flex
+			+e.number(style="color: #284BA4;") 27
+			+e.txt--common Арт-объектов
+		//-3
+		+e.col.flex.d-none
+		//- 	+e.number(style="color: #6B1680;") 78
+		//- 	+e.txt--common
+		//- 		| новых
+		//- 		|
+		//- 		br
+		//- 		| резидентов 
+		//-4
+		+e.col
+			+e.number(style="color: #FF8000;") 3 000
+			+e.txt саморезов
+		//-5
+		+e.col
+			+e.number(style="color: #00BAC3;") 100
+			//-achivments-grid
+			+e.txt листов клея
+		//- 6
+		+e.col
+			+e.number(style="color: #284BA4;") 17
+			+e.txt  тонн металла
+		//- 7
+		+e.col
+			+e.number(style="color: #FF8000;") 6
+			+e.txt--common
+				| тонн дерева
+

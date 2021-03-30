@@ -30,6 +30,9 @@ include ../blocks/sWays/_sWays.pug
 include ../blocks/sNumbers/_sNumbers.pug
 include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/slider/_slider.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sBanners/_sBanners.pug
 
 block variables
 	- let  mainPage= null
@@ -86,6 +89,9 @@ block pagecontent
 		})
 	//- +sDirection2()
 	//- +sDigits()
+	.section 
+		.container
+			+slider
 	+sWays(
 		'Тематические направления',
 		{
@@ -115,45 +121,12 @@ block pagecontent
 			text:`с 19 июля по 6 августа`,
 			
 		})
-	+sAchivment7
+	+sAchivment8
 	+sActForm('Аудитория')
-	+sDevBody("Этапы развития проекта", 
-		{
-			img:`1`,
-			num:`1`,
-			title:`2015`,
-			text:`&laquo;Таврида&raquo; получила статус Всероссийского молодежного образовательного форума`,
-		},
-		{
-			img:`2`,
-			num:`2`,
-			title:`2016`,
-			text:`Президент РФ&nbsp;Владимир Путин впервые посетил Всероссийский молодежный образовательный форум &laquo;Таврида&raquo;`,
-		},
-		{
-			img:`3`,
-			num:`3`,
-			title:`2017`,
-			text:`Количество тематических направлений выросло, а&nbsp;участниками форума впервые стали свыше 3&nbsp;000 молодых деятелей культуры и&nbsp;искусств`,
-		},
-		{
-			img:`4`,
-			num:`6`,
-			title:`2018`,
-			text:`Первый заместитель Руководителя Администрации Президента РФ&nbsp;Сергей Кириенко предложил перевести &laquo;Тавриду&raquo; на&nbsp;круглогодичный формат работы и&nbsp;создать для этого новую площадку в&nbsp;Крыму`,
-		},
-		{
-			img:`5`,
-			num:`5`,
-			title:`2019`,
-			text:`Проект расширился до&nbsp;формата арт-кластера, включил в&nbsp;себя традиционный форум, а&nbsp;также новый фестиваль творческих сообществ &laquo;Таврида ‒ АРТ&raquo; и&nbsp;переехал в&nbsp;бухту Капсель под Судаком`,
-		},
-		{
-			img:`6`,
-			num:`4`,
-			title:`2018`,
-			text:`Образовательная программа форума переходит в&nbsp;формат антишкол, представляющих собой творческие мастерские в&nbsp;различных направлениях культуры и&nbsp;искусства`,
-		})
+	+sAlgorithm8()
+	+sCurators
+	+sBanners
+ 
 	+sSteps7
 	
 
@@ -202,7 +175,7 @@ block pagecontent
 			title: `Бесплатный организованный трансфер участников до места проведения мероприятия`
 			
 		})
-	//- +sAlgorithm()
+	
 	+sTransfer7()
 	+sFeedBack7()
 	//- +sApply()

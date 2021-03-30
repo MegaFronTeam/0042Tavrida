@@ -73,7 +73,7 @@
 
 	}
 	&__dd-item{
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 
 		--pl-aft-o: 1;
 		&.active{
@@ -103,14 +103,13 @@
 	&__plus{
 		@include mt();
 		flex-shrink: 0;
-		color: $black;
-
-		width: rem(24);
-		height: rem(24);
-		margin-left: rem(24);
+		color:  #284BA4;
+		width: rem(20);
+		height: rem(20);
+		margin-left: rem(20);
 		@include media-breakpoint-up(sm){
-			width: rem(40);
-			height: rem(40);
+			// width: rem(40);
+			// height: rem(40);
 			margin-left: rem(40);
 		}
 		@include media-breakpoint-up(xl){

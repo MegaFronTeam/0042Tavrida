@@ -1,3 +1,27 @@
+mixin gray-box(h2)
+	+e.gray-box
+		if h2 
+			.section-title
+				h2= h2
+		+e.dd-items.participants-items-js
+			if block
+				block
+			else
+				+participantDDItem('Резиденты «Тавриды» и участники чемпионата ArtMasters', '', true, '#modal-serv-resident', '#modal-art-resident')
+					p Резиденты &laquo;Тавриды&raquo; (те, кто был на&nbsp;мероприятиях арт-кластера не&nbsp;менее 2&nbsp;раз), участники проектов арт-кластера &laquo;Таврида&raquo;, участники Национального открытого чемпионата в&nbsp;сфере творческих компетенций ArtMasters и&nbsp;молодые деятели культуры и&nbsp;искусства.
+				+participantDDItem('Медиа', undefined, true, '#modal-serv-media', '#modal-art-media')
+					p Блогеры, инфлюенсеры молодежных пабликов и&nbsp;аккаунтов в&nbsp;социальных сетях, представители студенческих СМИ. 
+					p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
+				+participantDDItem('Полуфиналисты и финалисты проектов платформы «Россия ‒ страна возможностей»', undefined, true, '#modal-serv-country', '#modal-art-country')
+					p Полуфиналисты и&nbsp;финалисты проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;.
+					p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
+				+participantDDItem('#МыВместе', undefined, true, '#modal-serv-together', '#modal-art-together')
+					p Волонтеры движения МыВместе, представители НКО, актив общественных организаций.
+					p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно
+				+participantDDItem('Семьи с детьми – участниками проекта «Большая перемена»', undefined, true, '#modal-serv-child', '#modal-art-child')
+					p Семьи с&nbsp;детьми&nbsp;&mdash; участниками проекта &laquo;Большая перемена&raquo;.
+					p Дети в&nbsp;возрасте от&nbsp;14&nbsp;до&nbsp;17&nbsp;лет включительно.
+
 mixin sParticipants(data)
 	// start sParticipants
 	+b.SECTION.sParticipants.section#sParticipants&attributes(attributes)
@@ -10,22 +34,7 @@ mixin sParticipants(data)
 				//- p Зрителем фестиваля может стать любой желающий в&nbsp;возрасте от&nbsp;18&nbsp;лет включительно, прошедший регистрацию на&nbsp;сайте и&nbsp;получивший подтверждение в&nbsp;личном кабинете.
 			+b.section-title.pb-0
 				h2 Направления участия
-			+e.gray-box
-				+e.dd-items.participants-items-js
-					+participantDDItem('Резиденты «Тавриды» и участники чемпионата ArtMasters', '', true, '#modal-serv-resident', '#modal-art-resident')
-						p Резиденты &laquo;Тавриды&raquo; (те, кто был на&nbsp;мероприятиях арт-кластера не&nbsp;менее 2&nbsp;раз), участники проектов арт-кластера &laquo;Таврида&raquo;, участники Национального открытого чемпионата в&nbsp;сфере творческих компетенций ArtMasters и&nbsp;молодые деятели культуры и&nbsp;искусства.
-					+participantDDItem('Медиа', undefined, true, '#modal-serv-media', '#modal-art-media')
-						p Блогеры, инфлюенсеры молодежных пабликов и&nbsp;аккаунтов в&nbsp;социальных сетях, представители студенческих СМИ. 
-						p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
-					+participantDDItem('Полуфиналисты и финалисты проектов платформы «Россия ‒ страна возможностей»', undefined, true, '#modal-serv-country', '#modal-art-country')
-						p Полуфиналисты и&nbsp;финалисты проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;.
-						p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
-					+participantDDItem('#МыВместе', undefined, true, '#modal-serv-together', '#modal-art-together')
-						p Волонтеры движения МыВместе, представители НКО, актив общественных организаций.
-						p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно
-					+participantDDItem('Семьи с детьми – участниками проекта «Большая перемена»', undefined, true, '#modal-serv-child', '#modal-art-child')
-						p Семьи с&nbsp;детьми&nbsp;&mdash; участниками проекта &laquo;Большая перемена&raquo;.
-						p Дети в&nbsp;возрасте от&nbsp;14&nbsp;до&nbsp;17&nbsp;лет включительно.
+			+gray-box()
 
 	// end sParticipants
 

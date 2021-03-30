@@ -3,6 +3,8 @@ mixin headerBlock(data)
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.container.container
 			+b.section-title
+				if data.date 
+					+e.data!= data.date
 				if data.title
 					h1!= data.title
 					if data.text

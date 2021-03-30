@@ -1,0 +1,23 @@
+mixin sBanners(data)
+	// start sBanners
+	+b.SECTION.sBanners#sBanners&attributes(attributes)
+		.container
+			.section
+				+b.section-title
+					h2 Галерея арт-объектов
+				+b.banner-item--lg.bg-wrap
+					+pic("projects-fest-4.jpg",'bg').picture-bg
+					.h2 Интерактивная <br> карта
+			.section
+				+b.section-title
+					h2 Экскурсии
+				.row
+					.col-lg-6
+						+b.banner-item.bg-wrap
+							+pic("projects-fest-2.jpg",'bg').picture-bg
+							.h2 Название экскурсии
+					.col-lg-6
+						+b.banner-item.bg-wrap
+							+pic("projects-fest-3.jpg",'bg').picture-bg
+							.h2 Название экскурсии
+	// end sBanners
