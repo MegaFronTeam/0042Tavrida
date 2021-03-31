@@ -24,10 +24,10 @@
 			// background-image: url(../img/svg/achivments-grid.svg);
 			background-repeat: no-repeat;
 			background-size: cover;
-			min-height: 700px;
+			// min-height: 700px;
+			min-height: 873.31px;
 		}
 		@include media-breakpoint-up(xxl){
-			min-height: 873.31px;
 			margin-top: -60px;
 			margin-left: -38px;
 		}
@@ -303,14 +303,14 @@
 							top: 590px;
 							left: auto;
 							right: 0;
-							--num-padd: 0 43px 0 0;
+							--num-padd: 0 23px 0 0;
 							--num-fs: 5.5625rem;
 					}
 			}
 	}
 
 	
-	&--school{
+	&--wsh{
 			@include media-breakpoint-up(lg){
 
 				// .sAchivment__col:nth-child(1){

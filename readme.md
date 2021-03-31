@@ -8,5 +8,5 @@
 1. <https://luckyone1221.github.io/0042Tavrida/public/03-forum.html>
 <!-- 1. <https://luckyone1221.github.io/0042Tavrida/public/06-muz-ways.html> -->
 1. <https://luckyone1221.github.io/0042Tavrida/public/07-2030.html>
-2. <https://luckyone1221.github.io/0042Tavrida/public/08-park.html>
-3. <https://luckyone1221.github.io/0042Tavrida/public/09-2032.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/08-park.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/09-2032.html>
