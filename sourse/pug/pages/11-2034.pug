@@ -1,0 +1,294 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/slider/_slider.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sParticipants/_sParticipants.pug
+include ../blocks/sMainStep/_sMainStep.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '10-2033'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	//- title: `ФОРУМ`,
+	+headerBlock({ 
+		text : `Координатор  <br> образовательных <br>  антишкол`,
+		video: `https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=4`
+	}).headerBlock--forum
+		//- title: 'О форуме',
+	+sAbout({
+		bgAlt: 'about-bg-2034.png',
+		textSm: `Координатор ‒ это связующее звено между программной дирекцией образовательных антишкол, службами сервиса, логистики, протокола почетных гостей и&nbsp;участниками образовательных проектов арт-кластера &laquo;Таврида&raquo;`
+	}).sAbout--forum.sAbout--2032
+	+sVantageBase('Преимущества программы координаторов',
+		{
+			col: 'col-lg-4',
+			img:`2034-1`, 
+			text:`Реальный кейс  <br> для ивент-индустрии`
+		},
+		
+		{
+			col: 'col-lg-4',
+			img:`2034-2`, 
+			text:`Команда <br> единомышленников`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2034-3`, 
+			text:`Обмен идеями  <br> с&nbsp;профессионалами событийного маркетинга`
+		},
+		{
+			col: 'col-lg-4',
+			img:`anti-4`, 
+			text:`Прокачка soft skills <br>  в&nbsp;области менеджмента событий`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2034-5`, 
+			text:`Выход на&nbsp;новый  <br> уровень публичных выступлений`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2033-6`, 
+			text:`Нетворкинг`
+		})
+	//- +sDirection2()
+	//- +sDigits()
+	//- .section 
+	//- 	.container
+	//- 		+slider
+	//- +sWays(
+	//- 	'Направление регистрации',
+	//- 	{
+	//- 		img: 'ways-reg-2033-1.png',
+	//- 		cl:"color-card--count color-card--img-w-100",
+	//- 		col: 'col-xl-4 col-md-6', 
+	//- 		color: '#C6BAF9',
+	//- 		title:`Антишкола современного  искусства`,  
+			
+	//- 	},
+	//- 	{
+	//- 		img: 'ways-reg-2033-2.png',
+	//- 		cl:"color-card--count color-card--img-w-100",
+	//- 		col: 'col-xl-4 col-md-6', 
+	//- 		color: '#C8B2E4',
+	//- 		title:`Антишкола <br> сайнс-арта `, 
+			
+	//- 	},
+	//- 	{
+	//- 		img: 'ways-reg-2033-3.png',
+	//- 		cl:"color-card--count color-card--img-w-100",
+	//- 		col: 'col-xl-4 col-md-6', 
+	//- 		color: '#C8DEFF',
+	//- 		title:` Антишкола арт-менеджмента <br> и кураторства`,
+			
+	//- 	})
+
+		
+	+sWays(
+		'Направления работы',
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#8DBBFF',
+			title:`Атташе`,  
+			text: `Путеводная звезда для групп участников. На&nbsp;время каждой антишколы ты&nbsp;ежедневно будешь находиться со&nbsp;своей командой, на&nbsp;тебе будет решение возникающих бытовых и&nbsp;организационных проблем. Каждый вечер ты&nbsp;будешь проводить встречи со&nbsp;своими участниками, обсуждать итоги дня, а&nbsp;по&nbsp;итогам смены ‒ составлять обратную связь`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#F1E1F5',
+			title:`Сервисное сопровождение`, 
+			text: `Ты&nbsp;будешь тем самым ценным человеком, без которого площадка форума просто перестанет работать. Поддержание в&nbsp;рабочем состоянии объектов инфраструктуры, арт-оформления, сопровождение всех ключевых процессов форума, работа на&nbsp;информационных стойках и&nbsp;в&nbsp;бюро находок ‒ супергерой форума!`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#59D6DC',
+			title:`Служба заботы  об&nbsp;участниках`,
+			text: `Одна из&nbsp;наиболее многозадачных служб форума &laquo;Таврида&raquo;. В&nbsp;твои обязанности будет входить весь процесс посещения участниками территории форума ‒ от&nbsp;логистики, аккредитации и&nbsp;размещения до&nbsp;ведения баз данных участников`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#B2ECEF',
+			title:`Администрация форума`,
+			text: `Попробуй свои навыки в&nbsp;управлении персоналом, организовывая взаимодействие работы Центра практики и&nbsp;всех направлений и&nbsp;служб форума. Следить за&nbsp;тем, чтобы все службы были обеспечены необходимым и&nbsp;соответствующим количеством координаторов ‒ вот что станет твоей работой`
+			
+		},
+		
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#F1AD98',
+			title:`Работа образовательной программы`,
+			text: `В&nbsp;твоих руках будет полный цикл работы образовательных площадок, от&nbsp;составления расписания и&nbsp;модерации занятий до&nbsp;обеспечения образовательных зон необходимым оборудованием`
+		},
+		
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#D0F1C0',
+			title:`Протокол`,
+			text: `Это служба, которая занимается сопровождением наших гостей. Политики, мэтры творческих индустрий, художники, режиссеры и&nbsp;руководители театров ‒ твоей задачей будет сделать посещение ими форума ярким и&nbsp;запоминающимся событием, как для спикера, так и&nbsp;для участников`
+		},
+		
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#C8DEFF',
+			title:`СМИ`,
+			text: `Попробуй свои навыки в&nbsp;управлении персоналом, организовывая взаимодействие работы Центра практики и&nbsp;всех направлений и&nbsp;служб форума. Следить за&nbsp;тем, чтобы все службы были обеспечены необходимым и&nbsp;соответствующим количеством координаторов ‒ вот что станет твоей работой`
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#C8B2E4',
+			title:`Арт-Парк`,
+			text: `В&nbsp;твоих руках будет полный цикл работы образовательных площадок, от&nbsp;составления расписания и&nbsp;модерации занятий до&nbsp;обеспечения образовательных зон необходимым оборудованием`
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#F1E1F5',
+			title:`Event-сопровождение`,
+			text: `Это служба, которая занимается сопровождением наших гостей. Политики, мэтры творческих индустрий, художники, режиссеры и&nbsp;руководители театров ‒ твоей задачей будет сделать посещение ими форума ярким и&nbsp;запоминающимся событием, как для спикера, так и&nbsp;для участников`
+		}
+
+		)
+	+sMainStep
+	+sOpportunities('Возможности  ', 
+	`Ежемесячная стипендия: в&nbsp;рамках работы координатора предусмотрена ежемесячная оплата`, 
+	`Участие в&nbsp;программе кадрового резерва: каждый координатор сможет подать заявку на&nbsp;участие в&nbsp;кадровом резерве`, 
+	`Участие в&nbsp;образовательной программе антишкол: возможность посещения образовательной программы и&nbsp;участие в&nbsp;творческих сессиях`,
+	`Знакомство со&nbsp;звездами <br> российского шоубизнеса`).ul-column
+	//- +sAchivment8
+	+sActFormBase("Аудитория форума",
+		{
+			name: `Ивент- <br> менеджеры`,
+			imgNum: `aidio-img-2034-1.png`
+		},
+		{
+			name: `Студенты <br> или выпускники`,
+			imgNum: `aidio-img-2034-2.png`
+		},
+		{
+			name: `Деятели  региональной  молодежной  политики`,
+			imgNum: `aidio-img-2034-3.png`
+		},
+		{
+			name: `Волонтеры`,
+			imgNum: `aidio-img-2034-4.png`
+		},
+		{
+			name: `Молодые  <br> педагоги`,
+			imgNum: `aidio-img-2034-5.png`
+		}
+
+	)
+	//- +sActForm('Аудитория')
+
+	+sSteps7
+	+sWays(
+		'Сервисы для координаторов',
+		{
+			img: 'ways-coord-1.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C6BAF9',
+			title:`Проживание  на территории арт-кластера`,  
+			
+		},
+		{
+			img: 'ways-coord-2.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#FFB3C3',
+			title:`Трехразовое <br> питание `, 
+			
+		},
+		{
+			img: 'ways-coord-3.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:`бесплатный <br> трансфер из Симферополя <br> до арт-кластера`,
+		},
+		
+		{
+			img: 'ways-coord-4.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:`Средства индивидуальной <br> защиты и гигиены`,
+		},
+		{
+			img: 'ways-coord-5.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:`Брендированная экипировка`,
+		},
+		{
+			img: 'ways-coord-6.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:`Корпоративные <br>выезды <br>и мероприятия`,
+		}
+
+		)
+	
+	+sTransfer7()
+	//- +sCurators9
+	+sFeedBack7('Отзывы участников')
+	
+ 
+	
+	//- +sApply()
+	//-here
+	//- +sStream
+	+sFAQ()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()

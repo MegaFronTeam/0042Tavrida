@@ -1,0 +1,57 @@
+
+	// start .sMainStep
+	.sMainStep {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	counter-reset: num;
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sMainStep
+
+
+	.main-step-item{
+		position: relative; 
+		display: flex;
+		align-items: center;
+		min-height: calc(100% - var(--bs-gutter-x));
+		margin-bottom: var(--bs-gutter-x);
+		background-color: var(--bg);
+		border-radius: 10px;
+		justify-content: space-between;
+		padding-right: rem(15);
+
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			font-weight: 900;
+				@include media-breakpoint-up(xxl) {
+					font-size: rem(230);
+				}
+			@include rfs(160px);
+			color: #fff;
+			line-height: 1;
+			min-width: em(11)
+		}
+		&__title{
+			// font-weight: bold;
+			@extend .h5;
+			font-weight: 600;
+			margin-bottom: em(30);
+		}
+		&__btn{
+			@extend .btn;
+			padding: rem(14) rem(19) ;
+			// @extend .btn-sm;
+			@extend .btn-warning;
+			text-transform: uppercase;
+		}
+	}

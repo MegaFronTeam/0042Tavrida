@@ -83,6 +83,9 @@
 			object-fit: cover;
 		}
 	}
+	&--without-img{
+		padding-right: rem(17);
+	}
 }
 
 .col-serv{

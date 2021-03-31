@@ -1,3 +1,29 @@
+mixin sActFormBase(h2="Аудитория форума", ...datas)
+	// start sActForm
+	+b.SECTION.sActForm.section#sActForm&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2!= h2
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.act-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.act-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider
+				.swiper-container.act-slider-js
+					.swiper-wrapper
+						each data in datas
+							.swiper-slide
+								+e.item
+									+e.bg(style=`--color-bg: ${data.slideColor}`)
+										+pic(`${data.imgNum}`)
+									if data.text
+										+e.txt!= data.text
+									+e.name!=data.name
+								//- .swiper-slide
+	// end sActForm
 mixin sActForm(h2="Аудитория форума")
 	// start sActForm
 	+b.SECTION.sActForm.section#sActForm&attributes(attributes)

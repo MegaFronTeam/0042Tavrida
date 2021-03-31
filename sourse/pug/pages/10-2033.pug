@@ -1,0 +1,285 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/slider/_slider.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sParticipants/_sParticipants.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '10-2033'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	//- title: `ФОРУМ`,
+	+headerBlock({
+		date: `<div class="text-warning">2 заезд</div> с 10 по 16 июня  <br> 2021 года`,
+		text : `Мир,  <br> любовь  <br> и роботы`,
+		video: `https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=4`
+	}).headerBlock--forum
+		//- title: 'О форуме',
+	+sAbout({
+		bgAlt: 'about-bg-2033-b.png',
+		textSm: `Мир, любовь и&nbsp;роботы ‒ это пространство для молодых художников, где люди учатся у&nbsp;людей, прокачивают свои soft- и&nbsp;communication skills, а&nbsp;также ставят творческие эксперименты и&nbsp;налаживают профессиональные связи`
+	}).sAbout--forum.sAbout--2032
+	+sVantageBase('Особенности заезда',
+		{
+			col: 'col-lg-4',
+			img:`2033-1`, 
+			text:`40 часов прикладного искусства`
+		},
+		
+		{
+			col: 'col-lg-4',
+			img:`2033-2`, 
+			text:` Современные образовательные <br> форматы`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2033-3`, 
+			text:`Графические и мультимедийные  <br> технологии в искусстве`
+		},
+		{
+			col: 'col-lg-4',
+			img:`anti-4`, 
+			text:`Творческие <br>  коллаборации`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2033-5`, 
+			text:`Оценка <br>  компетенций`
+		},
+		{
+			col: 'col-lg-4',
+			img:`2033-6`, 
+			text:`Мощный <br> Нетворкинг`
+		})
+	//- +sDirection2()
+	//- +sDigits()
+	//- .section 
+	//- 	.container
+	//- 		+slider
+	+sWays(
+		'Направление регистрации',
+		{
+			img: 'ways-reg-2033-1.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C6BAF9',
+			title:`Антишкола современного  искусства`,  
+			
+		},
+		{
+			img: 'ways-reg-2033-2.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8B2E4',
+			title:`Антишкола <br> сайнс-арта `, 
+			
+		},
+		{
+			img: 'ways-reg-2033-3.png',
+			cl:"color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6', 
+			color: '#C8DEFF',
+			title:` Антишкола арт-менеджмента <br> и кураторства`,
+			
+		})
+		
+	+sWays(
+		'Образовательные форматы',
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#8DBBFF',
+			title:`Портфолио-ревю `,  
+			text: `презентация авторских форматов, творческих номеров, продуктов и идей для широкой публики, созданных в коллаборации с различными представителями сообществ`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#F1E1F5',
+			title:`Воркшопы`, 
+			text: `творческая мастерская для освоения профессиональных навыков в различных областях креативных индустрий`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#59D6DC',
+			title:`Мастер-классы`,
+			text: `мастерские, где эксперты из&nbsp;различных областей креативных индустрий на&nbsp;примере собственных кейсов обучают творческим профессиям`
+			
+		},
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#B2ECEF',
+			title:`Мотивационный сторитейлинг`,
+			text: `сессия мотивационного сторителлинга от&nbsp;российских и&nbsp;зарубежных селебрити`
+			
+		},
+		
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#F1AD98',
+			title:`Public talk`,
+			text: `создание и отработка творческих номеров для шоу резидентов, которое пройдет на фестиваля фестивалей «Таврида.АРТ» <br>  8 ‒ 12 сентября 2021 года`
+			
+		},
+		
+		{  
+			col: 'col-xl-4 col-md-6', 
+			cl:"color-card--without-img",
+			color: '#D0F1C0',
+			title:`Кейс-стади`,
+			text: `антишкола эффективного управления, продюсирования. Вахтанговский фестиваль театральных менеджеров`
+			
+		})
+	+sOpportunities('Возможности антишкол', `Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий`, 
+	`Интеграция в&nbsp;шоу резидентов: возможность попасть в&nbsp;шорт-лист артистов шоу резидентов арт-кластера &laquo;Таврида&raquo;, которое состоится на&nbsp;фестивале фестивалей &laquo;Таврида.АРТ&raquo; 8 ‒ 12&nbsp;сентября 2021 года`, 
+	`Участие в&nbsp;реалити-шоу &laquo;Битва творцов&raquo;: возможность пройти отбор и&nbsp;стать главным героем пилота реалити-шоу &laquo;Битва творцов&raquo; на&nbsp;одном из&nbsp;федеральных телеканалов. Жди подробности`)
+	//- +sAchivment8
+	+sActFormBase("Аудитория антишкол",
+		{
+			name: `концептуальные  художники`,
+			text: `Представители театара и&nbsp;кино с&nbsp;разлиными регалиями и&nbsp;послужным списком`,
+			imgNum: `aidio-img-2033-1.png`
+		},
+		{
+			name: `Авторы <br> инсталляций <br> и&nbsp;арт-объектов`,
+			text: `Представители театара и&nbsp;кино с&nbsp;разлиными регалиями и&nbsp;послужным списком`,
+			imgNum: `aidio-img-2033-2.png`
+		},
+		{
+			name: `Кураторы`,
+			text: `Представители театара и&nbsp;кино с&nbsp;разлиными регалиями и&nbsp;послужным списком`,
+			imgNum: `aidio-img-2033-3.png`
+		}
+	)
+	+sCurators9
+	section.section.container 
+		.section-title 
+			h2 Образовательная программа антишкол
+		.row 
+			.col-lg-4.col-sm-6 
+				+pic("pic-1.png",'',0).picture-top
+				p Мотивационные спикеры и мастер-классы по направлению «медиа»: продвижение своего бренда в сети, блогинг (от инклюзивных экспертов), лайфхаки по раскрутке TikTok.
+			.col-lg-4.col-sm-6 
+				+pic("pic-2.png",'',0).picture-top
+				p Творческие мастерские по направлению «театральное искусство». Пластическая лаборатория и перформанс с участниками смены на итоговом концерте.
+			.col-lg-4.col-sm-6 
+				+pic("pic-3.png",'',0).picture-top
+				p Творческая мастерская по направлению «кино» о создании инклюзивных медиапроектов: как снять классный документальный фильм на смартфон и как создать комедию на серьезную тему
+
+	+sSteps7
+	+b.SECTION.sParticipants.section.container
+		+gray-box('Творческие задания')
+			+participantDDItem('Антишкола 1. Название творческого задания', '', true )
+				p Резиденты &laquo;Тавриды&raquo; (те, кто был на&nbsp;мероприятиях арт-кластера не&nbsp;менее 2&nbsp;раз), участники проектов арт-кластера &laquo;Таврида&raquo;, участники Национального открытого чемпионата в&nbsp;сфере творческих компетенций ArtMasters и&nbsp;молодые деятели культуры и&nbsp;искусства.
+			+participantDDItem('Антишкола 2. Медиа', undefined, true )
+				p Блогеры, инфлюенсеры молодежных пабликов и&nbsp;аккаунтов в&nbsp;социальных сетях, представители студенческих СМИ. 
+				p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
+			+participantDDItem('Антишкола 3. Семья и дети', undefined, true)
+				p Полуфиналисты и&nbsp;финалисты проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;.
+				p Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно.
+			+participantDDItem('Антишкола 4. Название творческого задания', undefined, true)
+				p Семьи с&nbsp;детьми&nbsp;&mdash; участниками проекта &laquo;Большая перемена&raquo;.
+				p Дети в&nbsp;возрасте от&nbsp;14&nbsp;до&nbsp;17&nbsp;лет включительно.
+	//- +sAlgorithm8()
+	//- +sBanners
+ 
+	
+	+sFeedBack7('Отзывы')
+	+sWays(
+		'Сервисы для участников',
+		{
+			img: 'serv-1.png',
+			col: 'col-xl-4 col-md-6',
+			color: '#B2ECEF',
+			title:`Бесплатное участие в образовательной программе антишкол`,
+			
+			
+		},
+		{
+			img: 'serv-2.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#8DBBFF', 
+			title:`Бесплатный мерч проекта для участников `,
+		
+		},
+		{
+			img: 'serv-3.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#B2ECEF',
+			title:`Наличие фудкортов  на территории арт-кластера`, 
+		},
+
+		{
+			img: 'serv-4.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#F1E1F5',
+			title: `Трёхразовое питание за счёт принимающей стороны `
+			
+		},
+		{
+			img: 'serv-5.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8B2E4',
+			title: `Наличие фудкортов на территории арт-кластера`
+			
+		},
+		{
+			img: 'serv-6.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8DEFF',
+			title: `Бесплатный организованный трансфер участников до места проведения мероприятия`
+			
+		})
+	
+	+sTransfer7()
+	
+	//- +sApply()
+	//-here
+	//- +sStream
+	+sFAQ()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()

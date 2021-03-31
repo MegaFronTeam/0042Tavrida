@@ -1,0 +1,34 @@
+mixin sMainStepBody(h2, p)
+	// start sMainStep
+	+b.SECTION.sMainStep.section#sMainStep&attributes(attributes)
+		.container
+			+b.section-title
+				h2= h2
+				if p 
+					.h5.fw-600= p
+				
+			.row
+				block
+	// end sMainStep
+mixin sMainStep(data)
+	+sMainStepBody('Ключевые этапы программы','Программа состоит из 3 заездов по 1,5 месяца')
+		+mainstep({
+			title:`1 июня -  <br>15 июля`,
+			bg: `#B2ECEF`
+		})
+		
+		+mainstep({
+			title:`1 июня -  <br>15 июля`,
+			bg: `#CFF1C0`
+		})
+		+mainstep({
+			title:`1 июня -  <br>15 июля`,
+			bg: `#C8DEFF`
+		})
+
+mixin mainstep(data)
+	+e.col.col-lg-4.col-sm-6
+		+b.main-step-item(style=`--bg: ${data.bg} `)
+			div.py-4
+				+e.title!= data.title
+				+e.btn(href="#")  подробнее

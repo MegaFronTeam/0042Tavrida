@@ -45,6 +45,20 @@
 		&::marker {
 		}
 	}
+
+	@include media-breakpoint-up(lg) {
+		&.ul-column{
+			ol{
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+			li{
+				// width: 50%;
+				padding-right: rem(50);
+
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

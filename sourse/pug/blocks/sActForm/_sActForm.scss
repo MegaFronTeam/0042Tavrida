@@ -96,7 +96,11 @@
 			border-radius: rem(50);
 		}
 		overflow: hidden;
-
+		picture{
+			height: 100%;
+			width: 100%;
+			display: block;
+		}
 		img{
 			max-width:calc(100% + 6px);
 			width: calc(100% + 6px);
@@ -122,6 +126,7 @@
 	&__txt{
 		line-height: 1.85;
 		color: $dark;
+		max-width: rem(250);
 	}
 	&__{}
 	&__{}
