@@ -1,161 +1,160 @@
 mixin sVantageBody(h2)
-	// start sVantage
-	+b.SECTION.sVantage.section#sVantage&attributes(attributes)
-		.container
-			+e.box
-				+b.section-title
-					h2= h2
-				+e.row.row
-					block
-	// end sVantage
+  // start sVantage
+  +b.SECTION.sVantage.section#sVantage&attributes(attributes)
+    .container
+      +e.box
+        +b.section-title
+          h2= h2
+        +e.row.row
+          block
+  // end sVantage
 mixin sVantage(data)
-	+sVantageBody('Ценности')
-					+vantageItem(1)
-						| Современные образовательные форматы
-
-					+vantageItem(2)
-						| Лаборатория прикладного <br> искусства
-					+vantageItem(3)
-						| Топовые эксперты в&nbsp;области креативных индустрий
-					+vantageItem(4)
-						| Цифровые технологии в&nbsp;культуре и&nbsp;искусстве
-					+vantageItem(5)
-						|  Финансовая поддержка  творческих <br>  проектов
-					+vantageItem(6)
-						| Продюсерское сопровождение талантливых участников
-					+vantageItem(7)
-						| Рекрутинг творческих профессий
-					+vantageItem(8)
-						| Нетворкинг
+  +sVantageBody('Ценности')
+    +vantageItem(1)
+      | Современные образовательные форматы
+    +vantageItem(2)
+      | Лаборатория прикладного <br> искусства
+    +vantageItem(3)
+      | Топовые эксперты в&nbsp;области креативных индустрий
+    +vantageItem(4)
+      | Цифровые технологии в&nbsp;культуре и&nbsp;искусстве
+    +vantageItem(5)
+      |  Финансовая поддержка  творческих <br>  проектов
+    +vantageItem(6)
+      | Продюсерское сопровождение талантливых участников
+    +vantageItem(7)
+      | Рекрутинг творческих профессий
+    +vantageItem(8)
+      | Нетворкинг
 
 mixin sVantage2(data)
-	+sVantageBody('Особенности Фестиваля').sVantage--blue 
-					+vantageItem('d1')
-						| 5&nbsp;дней
-						|
-						br.d-none.d-sm-block
-						| сплошного
-						|
-						br.d-none.d-sm-block
-						| искусства
-					+vantageItem('d2')
-						| 3&nbsp;тематических сцены
-						|
-						br.d-none.d-sm-block
-						| для творческих
-						|
-						br.d-none.d-sm-block
-						| экспериментов
-					+vantageItem('d3')
-						| Образовательная программа от&nbsp;лидеров креативных индустрий
-					+vantageItem('d4')
-						| Крупнейшая
-						|
-						br.d-none.d-sm-block
-						| в России кастинг-платформа
-					+vantageItem('d5')
-						| Акселератор
-						|
-						br.d-none.d-sm-block
-						| творческих
-						|
-						br.d-none.d-sm-block
-						| стартапов
-					+vantageItem('d6')
-						| Насыщенный
-						|
-						br.d-none.d-sm-block
-						| лайн-ап
-						|
-						br.d-none.d-sm-block
-						| фестиваля
-					+vantageItem('d7')
-						| Звёзды
-						|
-						br.d-none.d-sm-block
-						| отечественной
-						|
-						br.d-none.d-sm-block
-						| и зарубежной эстрады
-					+vantageItem('d8')
-						| Бесплатный вход
-						|
-						br.d-none.d-sm-block
-						| для зрителей
-						|
+  +sVantageBody('Особенности Фестиваля').sVantage--blue
+    +vantageItem('d1')
+      | 5&nbsp;дней
+      |
+      br.d-none.d-sm-block
+      | сплошного
+      |
+      br.d-none.d-sm-block
+      | искусства
+    +vantageItem('d2')
+      | 3&nbsp;тематических сцены
+      |
+      br.d-none.d-sm-block
+      | для творческих
+      |
+      br.d-none.d-sm-block
+      | экспериментов
+    +vantageItem('d3')
+      | Образовательная программа от&nbsp;лидеров креативных индустрий
+    +vantageItem('d4')
+      | Крупнейшая
+      |
+      br.d-none.d-sm-block
+      | в России кастинг-платформа
+    +vantageItem('d5')
+      | Акселератор
+      |
+      br.d-none.d-sm-block
+      | творческих
+      |
+      br.d-none.d-sm-block
+      | стартапов
+    +vantageItem('d6')
+      | Насыщенный
+      |
+      br.d-none.d-sm-block
+      | лайн-ап
+      |
+      br.d-none.d-sm-block
+      | фестиваля
+    +vantageItem('d7')
+      | Звёзды
+      |
+      br.d-none.d-sm-block
+      | отечественной
+      |
+      br.d-none.d-sm-block
+      | и зарубежной эстрады
+    +vantageItem('d8')
+      | Бесплатный вход
+      |
+      br.d-none.d-sm-block
+      | для зрителей
+      |
 
 mixin sVantage3(data)
-	+sVantageBody('Преимущества форума').sVantage--forum 
-		+vantageItem('f1', 'bigger-img')
-			| Новый формат
-			|
-			br.d-none.d-sm-block
-			| образовательного
-			|
-			br.d-none.d-sm-block
-			| контента
-		+vantageItem('f2', 'bigger-img')
-			| Проектные
-			|
-			br.d-none.d-sm-block
-			| кейсы
-		+vantageItem('f3', 'bigger-img')
-			| Продюсерское
-			|
-			br.d-none.d-sm-block
-			| сопровождение
-			|
-			br.d-none.d-sm-block
-			| талантливых участников
-		+vantageItem('f4', 'bigger-img')
-			| Нетворкинг
-		+vantageItem('f5')
-			| Центр оценки
-			|
-			br.d-none.d-sm-block
-			| компетенций
-		+vantageItem('f6', 'bigger-img')
-			| Арт-рекрутинг
-		+vantageItem('f7', 'bigger-img')
-			| Грантовый конкурс
-			|
-			br.d-none.d-sm-block
-			| до 2 500 000 рублей на твой
-			|
-			br.d-none.d-sm-block
-			| проект
-		+vantageItem('f8', 'bigger-img')
-			| Программа
-			br.d-none.d-sm-block
-			| лояльности
-			
+  +sVantageBody('Преимущества форума').sVantage--forum
+    +vantageItem('f1', 'bigger-img')
+      | Новый формат
+      |
+      br.d-none.d-sm-block
+      | образовательного
+      |
+      br.d-none.d-sm-block
+      | контента
+    +vantageItem('f2', 'bigger-img')
+      | Проектные
+      |
+      br.d-none.d-sm-block
+      | кейсы
+    +vantageItem('f3', 'bigger-img')
+      | Продюсерское
+      |
+      br.d-none.d-sm-block
+      | сопровождение
+      |
+      br.d-none.d-sm-block
+      | талантливых участников
+    +vantageItem('f4', 'bigger-img')
+      | Нетворкинг
+    +vantageItem('f5')
+      | Центр оценки
+      |
+      br.d-none.d-sm-block
+      | компетенций
+    +vantageItem('f6', 'bigger-img')
+      | Арт-рекрутинг
+    +vantageItem('f7', 'bigger-img')
+      | Грантовый конкурс
+      |
+      br.d-none.d-sm-block
+      | до 2 500 000 рублей на твой
+      |
+      br.d-none.d-sm-block
+      | проект
+    +vantageItem('f8', 'bigger-img')
+      | Программа
+      br.d-none.d-sm-block
+      | лояльности
+
 
 mixin sVantage6(data)
-	+sVantageBody('Особенности заезда').sVantage--forum 
-		+vantageItem('sch-1', 'bigger-img' , 'col-lg-4')
-			| Современные образовательные форматы
-		+vantageItem('sch-2', 'bigger-img' , 'col-lg-4')
-			| Творческие коллаборации
-		+vantageItem('sch-3', 'bigger-img' , 'col-lg-4')
-			| Практический опыт
-		+vantageItem('sch-4', 'bigger-img' , 'col-lg-4')
-			| Финансовая поддержка творческих проектов
-		+vantageItem('sch-5',  'bigger-img' , 'col-lg-4')
-			| Сообщество профессионалов
-		+vantageItem('sch-6', 'bigger-img' , 'col-lg-4')
-			| Нетворкинг
+  +sVantageBody('Особенности заезда').sVantage--forum
+    +vantageItem('sch-1', 'bigger-img' , 'col-lg-4')
+      | Современные образовательные форматы
+    +vantageItem('sch-2', 'bigger-img' , 'col-lg-4')
+      | Творческие коллаборации
+    +vantageItem('sch-3', 'bigger-img' , 'col-lg-4')
+      | Практический опыт
+    +vantageItem('sch-4', 'bigger-img' , 'col-lg-4')
+      | Финансовая поддержка творческих проектов
+    +vantageItem('sch-5',  'bigger-img' , 'col-lg-4')
+      | Сообщество профессионалов
+    +vantageItem('sch-6', 'bigger-img' , 'col-lg-4')
+      | Нетворкинг
 
 mixin sVantageBase(title, ...datas)
-	+sVantageBody(title)
-			each item in datas
-				+vantageItem(item.img, item.imgClass, item.col)
-					!= item.text
+  +sVantageBody(title)
+    each item in datas
+      +vantageItem(item.img, item.imgClass, item.col)
+        != item.text
 
 mixin vantageItem(imgNum, imgClass="", col="col-lg-3")
-	+e.col.col-12.col-sm-6(class= col)
-		+e.img(class=imgClass)
-			img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
-		+e.txt.text-center
-			block
+  +e.col.col-12.col-sm-6(class= col)
+    +e.img(class=imgClass)
+      img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
+    +e.txt.text-center
+      block
 
 

@@ -168,8 +168,38 @@
 			right: 10%;
 		}
 	}
-	&__{}
-	&__{}
+
+	&--2036 &__bg-alt{
+		//width: rem(350*2/3);
+		//height: rem(830*2/3);
+		display: none;
+
+		margin: 0;
+		@include media-breakpoint-up(sm){
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: -20px;
+			width: rem(350*2/3);
+			height: rem(830*2/3);
+			right: -1%;
+		}
+		@include media-breakpoint-up(md){
+			right: 10%;
+			top: 10px;
+		}
+		@include media-breakpoint-up(lg){
+			width: rem(350);
+			height: rem(830);
+			top: -300px;
+			right: 12%;
+		}
+		@include media-breakpoint-up(xl){
+			top: -327px;
+			right: 18%;
+		}
+	}
+
 	&__{}
 	//
 	&__{}
