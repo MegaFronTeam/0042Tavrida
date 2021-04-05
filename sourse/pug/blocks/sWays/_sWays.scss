@@ -12,7 +12,6 @@
 
 // end.sWays
 
-
 .color-card {
   @include mt;
   display: block;
@@ -27,6 +26,8 @@
   padding-right: rem(120);
   position: relative;
   z-index: 2;
+  text-decoration: none;
+  color: $body-color;
 
   &:hover {
     box-shadow: 0px 0px 20px 5px var(--color-bg);
@@ -66,10 +67,9 @@
 
   &__title {
     @extend .h5;
-    color: #333333;
+    display: block;
+    color: $body-color;
     font-weight: 600;
-
-
   }
 
   p {
@@ -77,7 +77,6 @@
   }
 
   &__count {
-
   }
 
   &--img-w-100 {
