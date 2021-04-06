@@ -11,7 +11,7 @@
 		z-index: -1;
 		img{
 			object-fit: cover;
-			object-position: bottom;
+			object-position: top;
 		}
 
 		top: 0;
@@ -19,7 +19,7 @@
 			top: 0;
 		}
 		@include media-breakpoint-up(lg){
-			top: rem(-405px);
+			top: rem(-155px);
 		}
 		left: 0;
 
