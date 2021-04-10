@@ -12,8 +12,9 @@
 
 // end.sWays
 
-
 .color-card {
+  @include mt;
+  display: block;
   padding: rem(17) rem(23);
   background-color: var(--color-bg, #{$primary});
   min-height: rem(168);
@@ -25,6 +26,12 @@
   padding-right: rem(120);
   position: relative;
   z-index: 2;
+  text-decoration: none;
+  color: $body-color;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 5px var(--color-bg);
+  }
 
   &--wsh {
     min-height: rem(256);
@@ -60,10 +67,9 @@
 
   &__title {
     @extend .h5;
-    color: #333333;
+    display: block;
+    color: $body-color;
     font-weight: 600;
-
-
   }
 
   p {
@@ -71,7 +77,6 @@
   }
 
   &__count {
-
   }
 
   &--img-w-100 {

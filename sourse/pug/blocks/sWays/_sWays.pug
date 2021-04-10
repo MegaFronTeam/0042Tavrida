@@ -1,6 +1,6 @@
 mixin color-card(data)
 	+e.col.col-12(class= data.col)
-		+b.color-card(class= data.cl style=`--color-bg: ${data.color}`)
+		+b.color-card(href="#" class= data.cl style=`--color-bg: ${data.color}`)
 			+e.title!= data.title
 			if data.text
 				p!= data.text
