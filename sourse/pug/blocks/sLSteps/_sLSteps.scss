@@ -1,0 +1,74 @@
+// start .sLSteps
+.sLSteps {
+  --sPT: 30px;
+  --sPB: 30px;
+  --sTPB: 35px;
+
+  .section-title{
+    h2{
+      margin-bottom: 12px;
+    }
+    p{
+      font-weight: 600;
+      font-size: rem(20px);
+      line-height: 1.8;
+      color: $gray-650;
+    }
+  }
+
+  &__row{
+    @include roww(rem(32));
+
+    & > *{
+      margin-bottom: rem(32);
+    }
+    margin-bottom: rem(-32);
+
+    counter-reset: list 0;
+  }
+  &__item{
+    border-radius: rem(10);
+
+    padding: rem(20) rem(30) rem(20) rem(50);
+    @include media-breakpoint-up(sm){
+      padding: rem(40) rem(55) rem(65);
+    }
+    min-height: rem(130);
+    @include media-breakpoint-up(lg){
+      min-height: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    list-style-type: none;
+    &:before{
+      counter-increment: list;
+      content: counter(list);
+
+      position: absolute;
+      z-index: -1;
+
+      left: rem(15);
+      font-size: rem(120px);
+      @include media-breakpoint-up(sm){
+        //left: rem(20);
+        //font-size: rem(120px);
+      }
+      @include media-breakpoint-up(lg){
+        font-size: rem(229px);
+      }
+
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+
+      color: rgba($white, .2);
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+} // end.sLSteps

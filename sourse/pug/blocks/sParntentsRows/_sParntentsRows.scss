@@ -1,0 +1,54 @@
+// start .sParntentsRows
+.sParntentsRows {
+	@include media-breakpoint-up(md){
+		--sPT: 30px;
+		--sPB: 30px;
+	}
+	--sTPB: #{rem(56)};
+
+	//pr-logo-
+
+	&__sub-title{
+		text-transform: uppercase;
+
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(56);
+		}
+	}
+	&__row{
+		@include roww(40px);
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(70);
+		}
+	}
+	&__img{
+		width: 100%;
+		height: rem(150);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		margin-bottom: rem(24);
+	}
+	&__name{
+		line-height: 1.8;
+		color: $dark;
+	}
+	&__{}
+} // end.sParntentsRows

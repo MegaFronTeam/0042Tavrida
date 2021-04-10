@@ -1,0 +1,15 @@
+mixin sLSteps(data)
+	// start sLSteps
+	+b.SECTION.sLSteps.section#sLSteps&attributes(attributes)
+		.container
+			+b.section-title
+				h2=data.title
+				p=data.descr
+			+e.row.row
+				block
+	// end sLSteps
+
+mixin lStepItem(data)
+	.col-lg-4
+		+e.item(style=`background-color: ${data.bgColor}`)=data.txt
+

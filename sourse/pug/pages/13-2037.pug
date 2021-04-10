@@ -1,0 +1,274 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/slider/_slider.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sParticipants/_sParticipants.pug
+include ../blocks/sMainStep/_sMainStep.pug
+include ../blocks/sLSteps/_sLSteps.pug
+include ../blocks/sParntentsRows/_sParntentsRows.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '13-2037'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock({
+		text: `Воркшоп <br> «Световой <br> дизайн»`,
+		video: `https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=4`
+	}).headerBlock--forum
+	+sAbout({
+		bgAlt: 'about-bg-2037.png',
+		textSm: `В рамках воркшопа участники пройдут весь путь создания подсветки арт-объектов для стационарного и праздничного (фестивального) режимов освещения. Под руководством экспертов участники разработают концепт освещения двух объектов: «Парус» и «Стоун-Хендж», а также изучат современные подходы к проектированию света, технологию и методы их применения.`
+	}).sAbout--forum.sAbout--2037
+	+sVantageBase('Преимущества программы координаторов',
+		{
+			col: 'col-lg-4',
+			img:`2037-1`,
+			text:`3 месяца практики и актуальных знаний`
+		},
+		{
+			col: 'col-lg-4',
+			img: `2037-2`,
+			text: `работа со специалистами из сферы светового дизайна`
+		},
+		{
+			col: 'col-lg-4',
+			img: `2037-3`,
+			text: `собственный проект освещения арт-объектов`
+		},
+		{
+			col: 'col-lg-4',
+			img: `2037-4`,
+			text: `коллаборация с художниками – создателями арт-объектов`
+		},
+		{
+			col: 'col-lg-4',
+			img: `2037-5`,
+			text: `профессиональные контакты`
+		},
+		{
+			col: 'col-lg-4',
+			img: `2037-6`,
+			text: `Нетворкинг`
+		}
+	)
+	//-Образовательные форматы
+	+sWays(
+		'Образовательные форматы',
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#8DBBFF',
+			title:`Лекции`,
+			text: `подборка ключевых теоретических материалов воркшопов`
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl: "color-card--without-img",
+			color: '#F1E1F5',
+			title: `Воркшопы`,
+			text: `творческая мастерская для освоения профессиональных навыков в различных областях креативных индустрий`
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl: "color-card--without-img",
+			color: '#59D6DC',
+			title: `Мастер-классы`,
+			text: `мастерские, где эксперты из различных областей креативных индустрий на примере собственных кейсов обучают творческим профессиям`
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl: "color-card--without-img",
+			color: '#B2ECEF',
+			title: `Портфолио-ревью`,
+			text: `презентации проектов`
+		}
+	)
+	//-Возможности
+	+sOpportunities(
+		'Возможности',
+		`Участие в программе стажировок: возможность пройти стажировку в компаниях-партнерах образовательной программы воркшопов с последующим трудоустройством`,
+		`Подготовка портфолио: реальный кейс для портфолио в области светового дизайна`,
+		`Финансовая поддержка творческих проектов: участие в программе грантового конкурса, подготовка заявки и ее сопровождения`
+	)(class="sOpportunities--2037")
+	//-Аудитория воркшопа
+	+sActFormBase("Аудитория воркшопа",
+		{
+			name: `строители`,
+			imgNum: `workshop-sl-1.png`
+		},{
+			name: `Художники <br/> паблик арта`,
+			imgNum: `workshop-sl-2.png`
+		},{
+			name: `Промышленные <br/> дизайнеры`,
+			imgNum: `workshop-sl-3.png`
+		},{
+			name: `современные <br/> художники <br/> и скульпторы`,
+			imgNum: `workshop-sl-4.png`
+		},{
+			name: `Интерьерные <br/> дизайнеры`,
+			imgNum: `workshop-sl-5.png`
+		},{
+			name: `Предметные <br/> дизайнеры`,
+			imgNum: `workshop-sl-6.png`
+		},{
+			name: `инженеры <br/> конструкторы`,
+			imgNum: `workshop-sl-7.png`
+		},{
+			name: `архитекторы`,
+			imgNum: `workshop-sl-8.png`
+		},{
+			name: `Градостроители`,
+			imgNum: `workshop-sl-9.png`
+		},{
+			name: `инженеры материаловеды`,
+			imgNum: `workshop-sl-10.png`
+		},{
+			name: `Урбанисты`,
+			imgNum: `workshop-sl-11.png`
+		}
+	)
+	//-Спикеры антишколы
+	+sCurators9()
+	//-Этапы работы воркшопа
+	+sLSteps({
+		title: 'Этапы работы воркшопа',
+		descr: 'Программа состоит из 3 заездов по 1,5 месяца',
+	})
+		+lStepItem({
+			txt: 'Онлайн-воркшопы. Теоретическая образовательная программа с экспертами и спикерами по созданию концепции проекта',
+			bgColor: '#B2ECEF'
+		})
+		+lStepItem({
+			txt: 'Презентация и отбор созданных проектов',
+			bgColor: '#CFF1C0'
+		})
+		+lStepItem({
+			txt: 'Офлайн-воркшопы. Поездка всей командой на площадку арт-кластера «Таврида» и реализация проекта на территории арт-парка',
+			bgColor: '#C8DEFF'
+		})
+	//-Образовательная программа воркшопа
+	section.section.container
+		.section-title
+			h2 Образовательная программа воркшопа
+		.row
+			.col-lg-4.col-sm-6
+				+pic("anti-sc-1.png",'',0).picture-top
+				p Новые технологии для создания, распространения и монетизации контента: от балета до музыки, от живописи, архитектуры до дизайна и цифрового искусства
+			.col-lg-4.col-sm-6
+				+pic("anti-sc-2.png",'',0).picture-top
+				p Поиск новых возможностей по созданию, продвижению и коммерциализации творческого контента в интересах всего общества
+			.col-lg-4.col-sm-6
+				+pic("anti-sc-3.png",'',0).picture-top
+				p Защита интеллектуальных прав в цифровом и реальном мире, на старых и новых рынках
+			.col-lg-4.col-sm-6
+				+pic("anti-sc-4.png",'',0).picture-top
+				p Знакомство с эффективными инструментами продвижения творческих проектов на примере успешных кейсов представителей различных областей креативных индустрий
+			.col-lg-4.col-sm-6
+				+pic("anti-sc-5.png",'',0).picture-top
+				p Репетиции под руководством именитых представителей творческих индустрий
+	//-Партнёры воркшопа
+	+sParntentsRows({
+		title: 'Партнёры воркшопа'
+	})
+		+sParntentsRow('Технический партнер')
+			+sPRowItem('1', `Светотехническая компания «Радуга»`)
+		+sParntentsRow('ИНФОРМАЦИОННЫЙ ПАРТНЕРЫ')
+			+sPRowItem('2', `Современная <br/> светотехника`)
+			+sPRowItem('3', `Lumen`)
+			+sPRowItem('4', `Длина Волны`)
+	//-Этапы отбора
+	+sSteps7
+	//-Сервисы для координаторов
+	+sWays(
+		'Сервисы для координаторов',
+		{
+			img: 'ways-coord-1.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#C6BAF9',
+			title: `Проживание  на территории арт-кластера`,
+
+		},
+		{
+			img: 'ways-coord-2.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#FFB3C3',
+			title: `Трехразовое <br> питание `,
+
+		},
+		{
+			img: 'ways-coord-3-alt.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8DEFF',
+			title: `бесплатный <br> трансфер из Симферополя <br> до арт-кластера`,
+		},
+
+		{
+			img: 'ways-coord-4.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8DEFF',
+			title: `Средства индивидуальной <br> защиты и гигиены`,
+		},
+		{
+			img: 'ways-coord-5.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8DEFF',
+			title: `Брендированная экипировка`,
+		},
+		{
+			img: 'ways-coord-6.png',
+			cl: "color-card--count color-card--img-w-100",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8DEFF',
+			title: `Корпоративные <br>выезды <br>и мероприятия`,
+		}
+	)
+	//-
+	//-
+	+sTransfer7()
+	+sFeedBack7('Отзывы')
+	+sFAQ()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()
