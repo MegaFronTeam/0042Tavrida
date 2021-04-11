@@ -13,9 +13,10 @@
     z-index: 1;
 
     position: relative;
-    margin-bottom: -20px;
+    // margin-bottom: -20px;
+    margin-bottom: 1rem;
     @include media-breakpoint-up(md){
-      margin-bottom: 0;
+      // margin-bottom: 0;
       padding-top: rem(48);
       position: absolute;
       top: 0;
