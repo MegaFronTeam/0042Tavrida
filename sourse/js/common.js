@@ -363,13 +363,12 @@ function eventHandler() {
 		},
 	});
 
-	function makeDDGroup(qSelecorts) {
-		for (let parentSelect of qSelecorts) {
-			let parent = document.querySelector(parentSelect);
-
-			if (parent) {
+	function makeDDGroup(parentSelect) { 
+			let parent = document.querySelectorAll(parentSelect); 
+			if (!parent) return;
+				parent.forEach(el => {
 				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js');
+				let ChildHeads = el.querySelectorAll('.dd-head-js');
 
 				$(ChildHeads).click(function () {
 					let clickedHead = this;
@@ -390,11 +389,9 @@ function eventHandler() {
 					});
 				});
 
-			}
-
-		}
+			})  
 	}
-	makeDDGroup(['.faq-items-js', '.participants-items-js']);
+	makeDDGroup('.faq-items-js, .participants-items-js');
 
 	//
 	let usefullSlider = new Swiper('.useful-slider-js', {
