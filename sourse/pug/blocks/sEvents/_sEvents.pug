@@ -1,0 +1,19 @@
+//- mixin event-item()
+mixin sEvents(data)
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		.container
+			+b.section-title
+				h2= data.h2
+			.row
+				if data.items
+					each item in data.items
+						+e.col.col-lg-4.col-md-6 
+							+e.item(href="#" style=`--bg-color: ${item.color}`)
+								+e.DIV.img-wrap: img(src=`img/@2x/${item.img}` loading="lazy", alt="")
+								+e.DIV.date!= item.date
+								+e.DIV.title!= item.title
+								+e.DIV.text!= item.text
+								+e.DIV.footer 
+									+e.link()!= item.link
+	// end sEvents

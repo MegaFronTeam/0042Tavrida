@@ -31,6 +31,7 @@ include ../blocks/sNumbers/_sNumbers.pug
 include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sTransfer/_sTransfer.pug
 include ../blocks/slider/_slider.pug
+include ../blocks/sEvents/_sEvents.pug
 
 block variables
 	- let  mainPage= null
@@ -88,6 +89,90 @@ block pagecontent
 	
 	//- +sDirection2()
 	//- +sDigits()
+	+sEvents({
+		h2:"ТЕМАТИЧЕСКИЕ ЗАЕЗДЫ"
+		,items: [
+			{
+				color: `linear-gradient(0deg, #4285ec, #0bbafb)`
+				,img:`photoshop-1.png`
+				,date:`1.06 – 6.06`
+				,title:`Антишкола «МЫВМЕСТЕ»` 
+				,link:`Регистрация открыта до 26 апреля`
+			}
+			,{
+				color: `linear-gradient(0deg, #ec8b6b, #ed6e9f)`
+				,img:`photoshop-2.png`
+				,date:`10.06 – 16.06`
+				,title:`МИР, ЛЮБОВЬ И РОБОТЫ`
+				,text:`Антишкола современного искусства <br> Антишкола сайнс-арта <br> Антишкола арт-менеджмента и кураторства `
+				,link:`Регистрация открыта до 5 мая`
+			}
+			,{
+				color: `linear-gradient(0deg, #60e4de, #b193cb)`
+				,img:`photoshop-3.png`
+				,date:`20.06 – 20.06`
+				,title:`НОВЫЕ РУССКИЕ СЕЗОНЫ`
+				,text:`Антишкола классичкеской музыки<br> Антишкола балета<br> Антишкола академического искусства <br> Антишкола цифровизации искусства`
+				,link:`Регистрация открыта до 15 мая`
+			}
+			,{
+				color: ` linear-gradient(0deg, #18a86b, #2fb383)`
+				,img:`photoshop-4.png`
+				,date:`5.07 – 13.07`
+				,title:`АРТПЛЕЙС`
+				,text:`Антишкола театрального и концертного управления`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #fba980, #f7cb6b)`
+				,img:`photoshop-5.png`
+				,date:`17.07 – 24.07`
+				,title:`СТУДИЯ`
+				,text:`Антишкола индустрии моды <br> Антишкола современной хореографии <br> Антишкола современной музыки и клипмейкинга`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #c82270, #d09292)`
+				,img:`photoshop-6.png`
+				,date:`27.07 – 03.08`
+				,title:`Видеохостинг и диджитал-сервисы`
+				,text:`Антишкола анимации<br> Антишкола диджитал-дизайна<br> Антишкола онлайн-кинотеатров и веб-сериалов <br> Антишкола диджитал издательства`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #f86f64, #fd5392)`
+				,img:`photoshop-7.png`
+				,date:`7.08 – 14.08`
+				,title:`ВКУСНЫЙ ДЖАЗ`
+				,text:`Антишкола джазовой музыки <br> Антишкола гастрономии <br> Антишкола фото- и видеоконтента`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #bac8e0, #93a5cf)`
+				,img:`photoshop-8.png`
+				,date:`17.08 – 22.08`
+				,title:`Улица КАК новая сцена`
+				,text:`Антишкола циркового искусства <br> Антишкола уличного театра <br> Антишкола бардовской песни <br> Антишкола event- продюсирования и режиссуры`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #ffb1bd, #ffc2a1)`
+				,img:`photoshop-9.png`
+				,date:`31.08 – 5.09`
+				,title:`ШОУ-кейс фестиваля ФЕСТИВАЛЕЙ`
+				,text:`Подготовка контента для фестиваля фестивалей «Таврида.АРТ»`
+				,link:`Регистрация: скоро`
+			}
+			,{
+				color: `linear-gradient(0deg, #5b6366, #838c93)`
+				,img:`photoshop-10.png`
+				,date:`30.09 – 6.10`
+				,title:`ГОРОД. ТОЧКА РОСТА`
+				,text:`Антишкола региональных арт-резиденций <br>  Антишкола гостеприимства <br> Антишкола архитектуры и дизайна`
+				,link:`Регистрация: скоро`
+			}
+		]
+	})
 	+sWays(
 		'Направления',
 		{

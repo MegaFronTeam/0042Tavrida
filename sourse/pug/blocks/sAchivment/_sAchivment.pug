@@ -149,3 +149,44 @@ mixin sAchivment8(data)
 			+e.txt--common
 				| тонн дерева
 
+
+
+mixin sAchivment2035(data)
+	+sAchivmentBody('Антишколы в цифрах').sAchivment--school.sAchivment--wsh.sAchivment--2035
+		//-1
+		+e.col
+			+e.number(style="color: #FF8000;") 957 
+			+e.txt человек получили <br> поддержку
+		//-2
+		+e.col.flex.align-items-end
+			+e.txt Проводится
+			+e.number(style="color: #284BA4;") 2015
+			+e.txt года
+		//-3
+		+e.col.flex.d-none
+		//- 	+e.number(style="color: #6B1680;") 78
+		//- 	+e.txt
+		//- 		| новых
+		//- 		|
+		//- 		br
+		//- 		| резидентов 
+		//-4
+		+e.col.d-none
+			+e.number(style="color: #FF8000;") 3 000
+			+e.txt саморезов
+		//-5
+		+e.col.d-none
+			+e.number(style="color: #00BAC3;") 100
+			//-achivments-grid
+			+e.txt листов клея
+		//- 6
+		+e.col
+			+e.number(style="color: #284BA4;") 350 000 000
+			+e.txt  рублей выделено на поддержку проектов
+		//- 7
+		+e.col.d-block.text-start
+			+e.number(style="color: #FF8000;") 3
+			+e.txt
+				| эксперта  <br> в одной комиссии
+
+

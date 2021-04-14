@@ -6,6 +6,11 @@ mixin sStepsBody(data)
         h2= data
       block
   // end sSteps
+mixin sStepsItem(bootClasses)
+  +e.col.col-12.col-md-4(class=bootClasses)
+    +e.txt
+      block
+
 mixin sSteps()
   +sStepsBody('Этапы отбора')
     +b.tabs
@@ -105,7 +110,11 @@ mixin sSteps7()
           | рассмотрения заявки в личном кабинете
 
 
-mixin sStepsItem(bootClasses)
-  +e.col.col-12.col-md-4(class=bootClasses)
-    +e.txt
-      block
+mixin sStepsBase(data)
+  +sStepsBody(data.title)
+    +b.steps
+      +e.row.row
+        each item in data.items
+          +sStepsItem(item.class)
+            != item.text
+            

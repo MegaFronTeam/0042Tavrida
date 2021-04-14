@@ -1,0 +1,26 @@
+mixin sSuccessStories(data)
+	// start sSuccessStories
+	+b.SECTION.sSuccessStories.section#sSuccessStories&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-md.mb-3.mb-md-0
+					h2!= data.h2
+				.col-12.col-md-auto
+					+b.sl-contr
+						+e.prev.act-prev-js
+							img(src="img/svg/arrow-left.svg" alt="" loading="lazy")
+						+e.next.act-next-js
+							img(src="img/svg/arrow-right.svg" alt="" loading="lazy")
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					each slide in data.slides
+						+e.slide.swiper-slide
+							+e.item
+								+e.wrap
+									iframe.swiper-lazy(src="#" data-src=`https://www.youtube.com/embed/${slide.video}` title='YouTube video player' width='560' height='315' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+								+e.title!= slide.title
+								+e.name!= slide.name
+								p!= slide.addr
+
+						
+	// end sSuccessStories

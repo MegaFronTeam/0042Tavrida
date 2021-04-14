@@ -1,0 +1,61 @@
+
+	// start .sMaterials
+	.sMaterials {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+
+		&__slider{
+			overflow: inherit !important;
+		}
+		&__slide{
+			max-width: rem(350);
+			height: auto !important;
+		}
+		&__item{
+			background: #FFFFFF; 
+			box-shadow: 0px 4px 80px rgba(147, 169, 174, 0.62);
+			border-radius: 50px;
+			display: flex;
+			flex-direction: column;
+			// text-decoration: none;
+			min-height: 100%;
+			padding: rem(30) rem(35);
+		}
+		&__wrap{
+			height: rem(230);
+			vertical-align: middle;
+			line-height: rem(230);
+			text-align: center;
+			margin-bottom: rem(40);
+		}
+		&__title{
+			display: block;
+			font-weight: 900;
+			text-transform: uppercase;
+			@include rfs(20px);
+			margin-bottom: rem(30);
+			flex-grow: 1;
+		}
+		&__watch{
+			display: flex;
+			align-items: center;
+			color: #0A1124;
+			.icon{
+				margin-right: 1rem;
+				font-size: 1rem;
+				color: #707070;
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sMaterials

@@ -470,6 +470,48 @@ function eventHandler() {
 			}
 		});
 	});
+	var sSuccessStories = new Swiper('.sSuccessStories__slider--js', {
+		slidesPerView: 1,
+		//loop: true,
+		spaceBetween: 30,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		//
+		navigation: {
+			nextEl: '.sSuccessStories .act-next-js',
+			prevEl: '.sSuccessStories .act-prev-js'
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 2
+			}
+		}
+	});
+	var sMaterials = new Swiper('.sMaterials__slider--js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		spaceBetween: 30,
+		watchOverflow: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		//
+		navigation: {
+			nextEl: '.sMaterials .act-next-js',
+			prevEl: '.sMaterials .act-prev-js'
+		} // breakpoints: { 
+		// 	480: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 	},
+		// },
+
+	});
 }
 
 ;

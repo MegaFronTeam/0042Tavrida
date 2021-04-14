@@ -1,0 +1,300 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sTransfer/_sTransfer.pug
+include ../blocks/slider/_slider.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sParticipants/_sParticipants.pug
+include ../blocks/sMainStep/_sMainStep.pug
+include ../blocks/sLSteps/_sLSteps.pug
+include ../blocks/sParntentsRows/_sParntentsRows.pug
+include ../blocks/sLgNumbers/_sLgNumbers.pug
+include ../blocks/sAudience/_sAudience.pug
+include ../blocks/sSuccessStories/_sSuccessStories.pug
+include ../blocks/sMaterials/_sMaterials.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '2035'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock({
+		text: `Грантовый <br> конкурс`,
+		video: `https://vk.com/video_ext.php?oid=-89840945&id=456240410&hash=fece856eef05f5ea&hd=4`
+	}).headerBlock--forum
+	//- +sAbout({
+	//- 	bgAlt: 'about-bg-2037.png',
+	//- 	textSm: `В рамках воркшопа участники пройдут весь путь создания подсветки арт-объектов для стационарного и праздничного (фестивального) режимов освещения. Под руководством экспертов участники разработают концепт освещения двух объектов: «Парус» и «Стоун-Хендж», а также изучат современные подходы к проектированию света, технологию и методы их применения.`
+	//- }).sAbout--forum.sAbout--2037
+	.section
+		.container 
+			.row.gx-5
+				.col-lg
+					p С 2015 года на площадке «Тавриды» проводится конкурс грантовой поддержки молодежных инициатив. За это время его победителями стали 957 человек, на реализацию проектов которых было выделено более 350 миллионов рублей. Конкурс проводится Федеральным агентством по делам молодежи и входит в платформу «Россия – страна возможностей»
+				.col-auto.align-self-center
+					img(src="img/svg/grant-logo-1.svg", width="135" height="32" loading="lazy" alt="")
+				.col-auto.align-self-center
+					img(src="img/svg/grant-logo-2.svg", width="161" height="161"  loading="lazy" alt="")
+	+sVantageBase('Преимущества конкурса',
+		{
+			col: 'col-lg-3',
+			img:`2035-1`,
+			text:`Грантовая поддержка для физических лиц`
+		},
+		{
+			col: 'col-lg-3',
+			img: `2035-2`,
+			text: `Индивидуальные консультации с экспертами`
+		},
+		{
+			col: 'col-lg-3',
+			img: `2035-3`,
+			text: `Обратная связь по итогам конкурса`
+		},
+		{
+			col: 'col-lg-3',
+			img: `2035-4`,
+			text: `Номинации конкурса`
+		} 
+	)
+
+	+sWays2(
+		'В каждом заезде определены свои номинации конкурса',
+		{
+			img: 'namintation-1.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#8DBBFF',
+			title: `Социальное <br>  реалити-шоу <br> «МЫВМЕСТЕ»`,
+			caption: [
+				"Инициативы творческой молодежи",
+				"Добровольчество",
+				"Укрепление семейных ценностей",
+				"Развитие социальных лифтов",
+				"Молодежные медиа",
+				"Патриотическое воспитание",
+			]
+		}
+		,{
+			img: 'namintation-2.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#59D6DC',
+			title: `Новые <br> русские <br> сезоны`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Развитие социальных лифтов'
+			]
+
+		}
+		,{
+			img: 'namintation-3.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8B2E4',
+			title: `Улица <br> как новая <br> сцена`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Спорт, ЗОЖ, туризм'
+				,' Развитие социальных лифтов'
+			]
+		}
+
+		,{
+			img: 'namintation-4.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#C8DEFF',
+			title: `Вкусный <br> джаз`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Молодежные медиа'
+				,' Спорт, ЗОЖ, туризм'
+			]
+		}
+		,{
+			img: 'namintation-5.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#B2ECEF',
+			title: `Студия 360`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Молодежные медиа'
+				,' Развитие социальных лифтов'
+				,' Студенческие инициативы'
+			]
+		}
+		,{
+			img: 'namintation-6.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#D0F1C0',
+			title: `Арт-плейс`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Студенческие инициативы'
+				,' Патриотическое воспитание'
+			]
+		}
+		,{
+			img: 'namintation-7.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#F1AD98',
+			title: `Видеохостинг  <br>и диджитал- <br>сервисы`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Молодежные медиа'
+				,' Развитие социальных лифтов'
+			]
+		}
+		,{
+			img: 'namintation-8.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#F1E1F5',
+			title: `Мир, <br> любовь <br> и роботы`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Развитие социальных лифтов'
+			]
+		}
+		,{
+			img: 'namintation-9.png',
+			cl: " color-card--caption",
+			col: 'col-xl-4 col-md-6',
+			color: '#B2ECEF',
+			title: `Город ‒ <br> точка <br> роста`,
+			caption: [
+				' Инициативы творческой молодежи'
+				,' Спорт, ЗОЖ, туризм'
+				,' Развитие социальных лифтов'
+			]
+		}
+	)
+	
+	+sLgNumbers
+
+	+sAudience
+
+	+sAchivment2035
+
+		//-Этапы отбора
+	+sStepsBase({
+		title: 'Как принять участие в конкурсе?',
+		items: [
+			{
+				class: 'col-lg',
+				text: `Зарегистрироваться на Форум или Фестиваль`,
+			}
+			,{
+				class: 'col-lg',
+				text: `Верифицировать аккаунт в&nbsp;АИС &laquo;Молодежь России&raquo; через единую систему Госуслуги`,
+			}
+			,{
+				class: 'col-lg',
+				text: `Сформировать проект и&nbsp;подать заявку на&nbsp;конкурс через АИС &laquo;Молодежь России&raquo;`,
+			}
+			
+			,{
+				class: 'col-lg',
+				text: `Пройти отбор и&nbsp;стать участником мероприятий арт-кластера`,
+			}
+			,{
+				class: 'col-lg',
+				text: `Защитить свой проект за  3&nbsp;минуты`,
+			}
+			,{
+				class: 'col-lg',
+				text: `Получить грант на&nbsp;реализацию проекта`,
+			}
+
+		]
+	})
+
+	+sSuccessStories({
+		h2:"Истории успеха",
+		slides: [
+			{
+				video:'QAgr6ji2RhE',
+				title:'Кинопроект Каст',
+				name:'Никита Ткалич',
+				addr:'Тамбовская область',
+			}
+			,{
+				video:'QAgr6ji2RhE',
+				title:'Кинопроект Каст',
+				name:'Никита Ткалич',
+				addr:'Тамбовская область',
+			}
+			,{
+				video:'QAgr6ji2RhE',
+				title:'Кинопроект Каст',
+				name:'Никита Ткалич',
+				addr:'Тамбовская область',
+			}
+		]
+	})
+
+	+sFAQ()
+
+	+sMaterials({
+		h2:"Полезные материалы",
+		slides: [
+			{
+				img:'material-1.png',
+				title:`ВОзможности наших медиа для ваших проектов`,
+			}
+			,{
+				img:'material-2.png',
+				title:`Как найти друзей на&nbsp;фествале`,
+			}
+			,{
+				img:'material-3.png',
+				title:`Что одеть и&nbsp;что с&nbsp;собой принести`
+			}
+			,{
+				img:'material-3.png',
+				title:`Что одеть и&nbsp;что с&nbsp;собой принести`
+			}
+		]
+	})
+	
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()

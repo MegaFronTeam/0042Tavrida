@@ -1,6 +1,6 @@
 mixin color-card(data)
 	+e.col.col-12(class= data.col)
-		+b.color-card(href="#" class= data.cl style=`--color-bg: ${data.color}`)
+		+b.color-card(href="#" class= data.cl, style=`--color-bg: ${data.color}`) 
 			+e.title!= data.title
 			if data.text
 				p!= data.text
@@ -8,6 +8,23 @@ mixin color-card(data)
 				+e.count= data.count
 			if data.img
 				+pic(data.img)
+				
+mixin color-card2(data)
+	+e.col.col-12(class= data.col)
+		+b.color-card(class= data.cl, style=`--color-bg: ${data.color}`)
+			+e.head(href="#" )
+				+e.title!= data.title
+				if data.text
+					p!= data.text
+				if data.count 
+					+e.count= data.count
+				if data.img
+					+pic(data.img)
+			if data.caption
+				+e.body
+					ul
+						each li in data.caption
+							li= li
 
 mixin sWays(h2, ...datas)
 	// start sWays
@@ -18,4 +35,14 @@ mixin sWays(h2, ...datas)
 			+e.row.row
 				each data in datas
 					+color-card(data)
+	// end sWays
+mixin sWays2(h2, ...datas)
+	// start sWays
+	+b.SECTION.sWays.section&attributes(attributes)
+		.container
+			+b.section-title
+				h2= h2
+			+e.row.row
+				each data in datas
+					+color-card2(data)
 	// end sWays
