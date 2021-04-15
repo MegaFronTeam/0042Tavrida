@@ -1,6 +1,6 @@
 :root {
 	--animate-delay: 1.2s;
-
+	
 	--fontSizeBase: 12.5px;
 	@media (min-width: 400px) {
 		--fontSizeBase: 13.2px;
@@ -12,7 +12,8 @@
 		--fontSizeBase: 14.5px;
 	}
 	@include media-breakpoint-up(lg){
-		--fontSizeBase: $em-base;
+		--fontSizeBase: #{$em-base};
+		--test-var: 10;
 	}
 	@include media-breakpoint-up(xl){
 		// --fontSizeBase: 15.5px;
@@ -39,4 +40,5 @@
 	--swiperBorderColorDefHover: var(--bs-primary);
 	--swiperColorDefHover: var(--bs-primary);
 	--swiperBgDefHover: #ffffff;
+
 }
