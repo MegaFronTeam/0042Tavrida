@@ -512,6 +512,7 @@ function eventHandler() {
 		// },
 
 	});
+	$('.select-custom--js').select2();
 }
 
 ;

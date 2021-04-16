@@ -567,7 +567,7 @@ function eventHandler() {
  
 	});
 
-		
+	$('.select-custom--js').select2();
 	};
 	if (document.readyState !== 'loading') {
 		eventHandler();

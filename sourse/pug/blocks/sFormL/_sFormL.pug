@@ -8,6 +8,12 @@ mixin sFormL(data)
 				.row
 					.col-12
 						.row
+							.col-12
+								+cSelect('placeholder').select-custom--js
+							.col-12
+								+inp3('ID', 'text', 'адрес')#address(name="address")
+								//- <input id="address" name="address" type="text" />
+								
 							//-texarea example !!!delete this .col-12
 							.col-12
 								label
@@ -383,10 +389,10 @@ mixin sFormL2(data)
 
 mixin cSelect(placeholder)
 	+e.select
-		select.form-select
+		select.form-select&attributes(attributes)
 			if placeholder
-				option(selected disabled class="d-none")=placeholder
-				option option 1
+				option(selected disabled value="placeholder")=placeholder
+				option(value="option 1") option 1
 			else
 				if val
 					option=val
