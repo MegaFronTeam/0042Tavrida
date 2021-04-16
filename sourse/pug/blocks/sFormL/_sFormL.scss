@@ -36,10 +36,10 @@
 				//border: 1px solid $input-border-color;
 			}
 
-			input.not-empty + span,
-			input:focus + span,
-			textarea.not-empty + span,
-			textarea:focus + span {
+			input.not-empty ~ .form-wrap__title,
+			input:focus ~ .form-wrap__title,
+			textarea.not-empty ~ .form-wrap__title,
+			textarea:focus ~ .form-wrap__title {
 				top: rem(6px) !important;
 				@include media-breakpoint-up(xxl) {
 					top: rem(9px) !important;
@@ -143,3 +143,8 @@
 		}
 	}
 } // end.sFormL
+
+
+.form-wrap__select{
+	
+}
