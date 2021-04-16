@@ -129,6 +129,7 @@
     z-index: -1;
   }
 
+  color: $body-color;
   &__title {
     @extend .h5;
     display: block;
@@ -144,6 +145,20 @@
   }
 
   &__count {
+     @extend .h5;
+    position: absolute;
+    right: rem(8);
+    top: rem(8);
+    background-color: #fff;
+    font-weight: normal;
+    border-radius: 8px;
+    width: rem(32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(32);
+    z-index: 4;
+    font-weight: 600;
   }
 
   &--img-w-100 {

@@ -20,11 +20,10 @@ mixin input(placeholder,  t='text', label, name= t)
 		else
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)
 	+e.input-wrap.form-group
-		if label
-			label
-				+e.SPAN.input-title= label
-				+t(t,placeholder, name)&attributes(attributes)
-				block
+		if label 
+			+e.SPAN.input-title= label
+			+t(t,placeholder, name)&attributes(attributes)
+			block
 		else
 			+t(t,placeholder, name)&attributes(attributes)
 		block

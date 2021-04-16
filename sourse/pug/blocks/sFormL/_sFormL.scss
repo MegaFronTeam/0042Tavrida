@@ -27,6 +27,7 @@
 			}
 		}
 
+		.label,
 		label {
 			position: relative;
 
@@ -50,6 +51,7 @@
 		&__title {
 			@include mt();
 			position: absolute;
+			pointer-events: none;
 
 			top: calc(#{$input-padding-y} + 2px);
 			left: calc(#{$input-padding-x} + #{$input-border-width});

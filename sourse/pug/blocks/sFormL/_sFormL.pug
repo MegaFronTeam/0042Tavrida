@@ -396,7 +396,7 @@ mixin cSelect(placeholder)
 			option option 3
 
 mixin inp3(ph, type, val='', labelClass, name="name")
-	label(class=labelClass)
+	.label(class=labelClass)
 		+e.INPUT.input.form-control.has-ph-js(type=type name= name)&attributes(attributes)
-		+e.SPAN.title=ph
+		+e.SPAN.title= ph
 		block
