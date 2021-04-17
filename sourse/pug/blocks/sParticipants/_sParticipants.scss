@@ -1,9 +1,9 @@
 // start .sParticipants
 .sParticipants {
-	--sPT: #{rem(26px)};
+	// --sPT: #{rem(26px)};
 
 	@include media-breakpoint-up(lg){
-		--sTPB: #{rem(62px)};
+		--sTPB: #{rem(22px)};
 		// --sPB: #{rem(25px)};
 	}
 	&__back-link{

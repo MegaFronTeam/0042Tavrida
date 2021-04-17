@@ -1,9 +1,9 @@
 // start .sSteps
 .sSteps {
-	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(34px)};
-		--sTPB: #{rem(51px)};
-		--sPB: #{rem(28px)};
+	@include media-breakpoint-up(xl){
+		// --sPT: #{rem(34px)};
+		--sTPB: #{rem(81px)};
+		// --sPB: #{rem(28px)};
 	}
 
 	.tabs{
