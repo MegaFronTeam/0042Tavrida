@@ -24,6 +24,36 @@ mixin sActFormBase(h2="Аудитория форума", ...datas)
 									+e.name!=data.name
 								//- .swiper-slide
 	// end sActForm
+mixin sActFormBaseProg(h2="Программа антишколы", ...datas)
+	// start sActForm
+	+b.SECTION.sActForm.section#sActForm&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0
+					h2!= h2
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.act-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.act-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider 
+				.swiper-container.act-slider-js
+					.swiper-wrapper
+						- for (var x = 0; x < 3; x++)
+							+e.slide.swiper-slide
+								+e.item-block
+									+e.head
+										.row 
+											.col
+												+e.day  День 1
+											.col-auto
+												+e.date 18.08.2021
+									ul 
+										li Получить опыт организации крупных мероприятий и реальный кейс для ивент-индустрии, найти команду единомышленников и обменяться идеями с профессионалами событийного маркетинга, 
+										li прокачать свои soft skills в области менеджмента событий и вывести на новый уровень навыки публичных выступлений – всё это возможно с арт-кластером #Таврида.
+										li прокачать свои soft skills в области менеджмента событий и вывести на новый уровень навыки публичных выступлений
+	// end sActForm
 mixin sActForm(h2="Аудитория форума")
 	// start sActForm
 	+b.SECTION.sActForm.section#sActForm&attributes(attributes)

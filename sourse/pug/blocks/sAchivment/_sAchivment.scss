@@ -1,8 +1,8 @@
 // start .sAchivment
 .sAchivment {
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(96)};
-		--sTPB: #{rem(30)};
+		--sPT: #{rem(70)};
+		// --sTPB: #{rem(30)};
 		--sPB: #{rem(82px)};
 	}
 
@@ -25,19 +25,24 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			// min-height: 700px;
-			min-height: 873.31px;
+			min-height: rem(873.31px);
 		}
 		@include media-breakpoint-up(xxl){
 			margin-top: -60px;
 			margin-left: -38px;
 		}
 	}
-
-		@include media-breakpoint-up(lg){
-			&--school &__row{
-				background-image: url(../img/svg/achivments-grid-2.svg);
-					background-size: 100% 100%;
-					margin-top: rem(100);
+	
+	@include media-breakpoint-up(lg){
+		&--school &__row{
+			background-image: url(../img/svg/achivments-grid-2.svg);
+			background-size: 100% 100%;
+			margin-top: rem(10);
+			min-height: rem(773.31px);
+			}
+		&--wsh &__row{
+		
+			min-height: rem(843.31px);
 			}
 		}
 	&__col{
@@ -52,19 +57,17 @@
 				--num-fs: #{rem(70)};
 				--num-padd: 0 0 5px 0;
 				top: 70px;
-				left: 30px;
+				left: 0px;
 			}
 			@include media-breakpoint-up(xl){
 				--num-fs: #{rem(80)};
 				--num-padd: 0 0 5px 0;
-				top: 116px;
-				left: 24px;
+				top: 116px; 
 			}
 			@include media-breakpoint-up(xxl){
 				--num-fs: #{rem(100)};
 				--num-padd: 0 0 5px 0;
-				top: 158px;
-				left: 84px;
+				top: 158px; 
 			}
 		}
 		//-2
@@ -143,23 +146,25 @@
 			--num-padd: 0 0 #{rem(15)} 0;
 			@include media-breakpoint-up(lg){
 				top: 240px;
-				left: 680px;
+				// left: 680px;
+				right: 0;
+				text-align: right;
 				--num-padd: 0 0 #{rem(15px)} 0;
 				--num-fs: #{rem(105)};
+				text-align: right;
 			}
 			@include media-breakpoint-up(xl){
 				top: 325px;
-				left: 860px;
+				// left: 860px;
 				--num-padd: 0 0 20px 0;
 				--num-fs: #{rem(115)};
-				text-align: right;
 			}
 			@include media-breakpoint-up(xxl){
 				top: 378px;
-				left: 975px;
+				// left: 975px;
 				--num-padd: 0 0 25px 0;
-				--num-fs: #{rem(159)};
-				text-align: left;
+				--num-fs: #{rem(140)};
+				// text-align: left;
 			}
 		}
 
@@ -172,19 +177,17 @@
 			--num-padd: 0 0 #{rem(15)} 0;
 			@include media-breakpoint-up(lg){
 				top: 420px;
-				left: 30px;
+				left: 0;
 				--num-padd: 0 0 20px 0;
 				--num-fs: #{rem(90)};
 			}
 			@include media-breakpoint-up(xl){
-				top: 586px;
-				left: 30px;
+				top: 586px; 
 				--num-padd: 0 0 20px 0;
 				--num-fs: #{rem(110)};
 			}
 			@include media-breakpoint-up(xxl){
-				top: 600px;
-				left: 88px;
+				top: 600px; 
 				--num-padd: 0 0 25px 0;
 				--num-fs: #{rem(128)};
 			}
@@ -346,7 +349,7 @@
 					--num-fs: #{rem(172)};
 					white-space: nowrap;
 					// left: 850px;
-					top: 420px;
+					top: 570px;
 					left: rem(300);
 					right: 0;
 				

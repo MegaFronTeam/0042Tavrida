@@ -5,7 +5,7 @@
   }
 
   // --sPT: ;
-  // --sPB: ;
+  --sPB: #{rem(30)};
   // --sTPB: ;
   counter-reset: num;
   &__col{

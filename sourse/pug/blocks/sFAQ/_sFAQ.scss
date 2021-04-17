@@ -1,10 +1,10 @@
 // start .sFAQ
 .sFAQ {
 	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(30px)};
+		// --sPT: #{rem(30px)};
 		// --sTPB: #{rem(73px)};
 	}
-	--sPB: #{rem(35px)};
+	// --sPB: #{rem(35px)};
 
 	.section-title{
 		h2{

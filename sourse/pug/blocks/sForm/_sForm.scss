@@ -3,9 +3,9 @@
 	position: relative;
 	z-index: 2;
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(68px)};
 		--sTPB: #{rem(47px)};
-		--sPB: #{rem(55px)};
+		// --sPT: #{rem(68px)};
+		--sPB: #{rem(70px)};
 	}
 
 	&__box{

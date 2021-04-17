@@ -6,6 +6,8 @@
 		--sTPB: #{rem(58px)}
 	}
 
+	margin-bottom: calc(var(--sPB) * 0.7);
+
 	position: relative;
 	z-index: 1;
 	&:before{
@@ -59,6 +61,21 @@
 			@include media-breakpoint-up(xxl){
 				width: calc((100% / 2) - (48px * 1 / 2));
 			}
+		}
+	}
+	&__slide.swiper-slide{
+		maxw: 100%;
+		width: 100%;
+		@include media-breakpoint-up(md){
+			width: rem(930);
+		}
+		@include media-breakpoint-up(xl){
+			width: rem(930);
+			// width: calc((100% / 2) - (40px * 1 / 2));
+		}
+		@include media-breakpoint-up(xxl){
+			width: rem(930);
+			// width: calc((100% / 2) - (48px * 1 / 2));
 		}
 	}
 	&__item{
@@ -130,4 +147,40 @@
 	}
 	&__{}
 	&__{}
+
+
+
+	&__item-block{
+		background-color: #fff;
+		box-shadow: 0px 4px 80px rgba(147, 169, 174, 0.62);
+		border-radius: 50px;
+		@include media-breakpoint-up(lg){
+		padding: rem(50) rem(60);
+	}
+	padding: rem(30) rem(40);
+		li{
+			margin-bottom: rem(10);
+			font-weight: 500;
+				@include media-breakpoint-up(lg){
+
+					font-size: rem(20px);
+				}
+			&::marker{
+				color: $primary;
+			}
+		}
+	}
+	&__day{
+		color: #284BA4;
+		font-size: rem(24);
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+	&__date{
+		font-size: rem(20);
+		font-weight: 600;
+	}
+	&__head{
+		margin-bottom: rem(40);
+	}
 } // end.sActForm

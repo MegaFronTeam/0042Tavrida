@@ -3,7 +3,7 @@
 	width: 100vw;
 	overflow: hidden;
 	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(131px)};
+		// --sPT: #{rem(131px)};
 		--sTPB: #{rem(91px)};
 		--sPB: #{rem(80px)};
 	}

@@ -1,7 +1,7 @@
 // start .sParntentsRows
 .sParntentsRows {
 	@include media-breakpoint-up(md){
-		--sPT: 30px;
+		// --sPT: 30px;
 		--sPB: 30px;
 	}
 	--sTPB: #{rem(56)};

@@ -1,8 +1,8 @@
 // start .sAlgorithm
 .sAlgorithm {
 	@include media-breakpoint-up(lg){
-		margin-top: -5px;
-		--sPT: #{rem(0px)};
+		// margin-top: -5px;
+		// --sPT: #{rem(0px)};
 		--sTPB: #{rem(158px)};
 		--sPB: #{rem(39px)};
 	}

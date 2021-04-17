@@ -2,10 +2,11 @@
 .sOpportunities {
 	// --sPT: ;
 	// --sPB: ;
-
-
+	
+	
 	@include media-breakpoint-up(sm) {
 		--sTPB: #{rem(94)};
+		--sPB: #{rem(70)};
 	}
 	counter-reset: num;
 	li {
