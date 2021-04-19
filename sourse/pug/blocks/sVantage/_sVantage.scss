@@ -126,11 +126,11 @@
 		}
 
 		.sVantage__row{
-			@include media-breakpoint-up(xxl){
-				margin-left: -129px;
-				margin-right: -129px;
-				margin-bottom: -117px;
-			}
+			// @include media-breakpoint-up(xxl){
+			// 	margin-left: -129px;
+			// 	margin-right: -129px;
+			// 	margin-bottom: -117px;
+			// }
 		}
 	}
 	&__{}

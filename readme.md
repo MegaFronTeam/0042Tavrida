@@ -14,3 +14,4 @@
 1.  <https://luckyone1221.github.io/0042Tavrida/public/2035.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/07-2030.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/08-park.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/06-muz-ways.html>
