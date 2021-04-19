@@ -11,6 +11,8 @@ mixin sFormL(data)
 							.col-12
 								+cSelect('placeholder').select-custom--js
 							.col-12
+								+cSelect('placeholder')
+							.col-12
 								+inp3('ID', 'text', 'адрес')#address(name="address")
 								//- <input id="address" name="address" type="text" />
 								
@@ -389,17 +391,19 @@ mixin sFormL2(data)
 
 mixin cSelect(placeholder)
 	+e.select
-		select.form-select&attributes(attributes)
-			if placeholder
-				option(selected disabled value="placeholder")=placeholder
-				option(value="option 1") option 1
-			else
-				if val
-					option=val
+		.label(class=labelClass)
+			select.form-select.has-ph-js&attributes(attributes)
+				if placeholder
+					//- option(selected disabled value="placeholder")=placeholder
+					option() 
 				else
-					option option 1
-			option option 2
-			option option 3
+					if val
+						option(value="option 1")=val
+					else
+						option( ) 
+				option(value="option 1") option 2
+				option(value="option 1") option 3
+			+e.SPAN.title текст
 
 mixin inp3(ph, type, val='', labelClass, name="name")
 	.label(class=labelClass)

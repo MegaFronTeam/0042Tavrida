@@ -229,16 +229,27 @@ input::-webkit-inner-spin-button {
 
 
 
+.select2-container{
+	max-width: 100%;
+}
 .select2-container--default{
 	display: block;
 	outline: 0 !important; 
-	.select2-selection--single{
+	.select2-selection{
 		@extend .form-select;
 		border-radius: 1.875rem !important;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(20);
+		}
 		
-		padding-top: 1.125rem;
-    padding-bottom: .3125rem;
-		height: rem(65);
+			padding-top: rem(18);
+			padding-bottom: rem(5);
+			@include media-breakpoint-up(xxl) {
+				padding-top: rem(20);
+				padding-bottom: rem(2);
+				height: rem(65);
+			}
+			height: rem(57);
 		.select2-selection__arrow b{
 			border-color: $success transparent transparent transparent;
 			border-style: solid;

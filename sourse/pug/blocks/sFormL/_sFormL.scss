@@ -36,6 +36,8 @@
 				//border: 1px solid $input-border-color;
 			}
 
+			select.not-empty ~ .form-wrap__title,
+			select:focus ~ .form-wrap__title,
 			input.not-empty ~ .form-wrap__title,
 			input:focus ~ .form-wrap__title,
 			textarea.not-empty ~ .form-wrap__title,
@@ -65,7 +67,7 @@
 			line-height: $input-line-height;
 			color: $gray-650;
 		}
-
+		.form-select,
 		&__input.form-control {
 			padding-top: rem(18);
 			padding-bottom: rem(5);

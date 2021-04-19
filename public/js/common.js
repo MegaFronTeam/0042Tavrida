@@ -123,7 +123,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
-	$('.has-ph-js').each(JSCCommon.checkEmptyVal); //remove on prod
+	$('.has-ph-js').each(JSCCommon.checkEmptyVal);
+	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); //remove on prod
 
 	var x = window.location.host;
 	var screenName;
