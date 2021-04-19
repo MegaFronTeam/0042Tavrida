@@ -568,6 +568,31 @@ function eventHandler() {
 	});
 
 	$('.select-custom--js').select2();
+
+
+
+	function setFixedBtn() {
+		let btnTop = document.querySelector('.btn-top--js');
+		if (!btnTop) return;
+		window.scrollY > window.innerHeight
+			? btnTop.classList.add('show')
+			: btnTop.classList.remove('show');
+	}
+
+	function whenResize() {
+		setFixedBtn();
+	}
+
+	window.addEventListener('scroll', () => {
+		setFixedBtn();
+
+	}, { passive: true })
+
+
+	whenResize();
+
+
+	$(document).on('click', " .btn-top--js", () => $('html, body').animate({ scrollTop: 0 },0));
 	};
 	if (document.readyState !== 'loading') {
 		eventHandler();
