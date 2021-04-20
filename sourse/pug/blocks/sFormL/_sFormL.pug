@@ -11,6 +11,8 @@ mixin sFormL(data)
 							.col-12
 								+cSelect('placeholder').select-custom--js
 							.col-12
+								+cSelect('placeholder','el')
+							.col-12
 								+cSelect('placeholder')
 							.col-12
 								+inp3('ID', 'text', 'адрес')#address(name="address")
@@ -389,16 +391,16 @@ mixin sFormL2(data)
 								+e.BUTTON.btn(type="submit") Отправить заявку
 	// end sFormL
 
-mixin cSelect(placeholder)
+mixin cSelect(placeholder, el)
 	+e.select
 		.label(class=labelClass)
 			select.form-select.has-ph-js&attributes(attributes)
 				if placeholder
 					//- option(selected disabled value="placeholder")=placeholder
-					option() 
+					option(value="")= el
 				else
 					if val
-						option(value="option 1")=val
+						option()=val
 					else
 						option( ) 
 				option(value="option 1") option 2

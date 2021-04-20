@@ -4,6 +4,6 @@ mixin breadcrumb(...items)
 		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
-					a(href=(i == 0 ? "/" : '#') itemprop="item" )
-						span( itemprop="name")= items[i]
+					a(href=(i == 0 ? "/" : items[i].link) itemprop="item" )
+						span( itemprop="name")= items[i].title
 						meta(itemprop="position" content= (i + 1) )

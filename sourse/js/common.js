@@ -110,7 +110,7 @@ const JSCCommon = {
 	},
 
 	checkEmptyVal() {
-		(this.value !== '' || this.type == "date")
+		((this.value !== '' || (this.tagName == "SELECT" && (this.querySelector('option').value !== null && this.querySelector('option').text) )) || this.type == "date")
 			? $(this).addClass('not-empty')
 			: $(this).removeClass('not-empty')
 	}
