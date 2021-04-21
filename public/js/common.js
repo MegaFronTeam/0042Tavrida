@@ -111,7 +111,7 @@ var JSCCommon = {
 		});
 	},
 	checkEmptyVal: function checkEmptyVal() {
-		this.value !== '' || this.tagName == "SELECT" && this.querySelector('option').value !== null && this.querySelector('option').text || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
+		this.value !== '' || this.tagName == "SELECT" && this.querySelector('option') != null && this.querySelector('option').value !== null && this.querySelector('option').text || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
 	}
 };
 var $ = jQuery;
