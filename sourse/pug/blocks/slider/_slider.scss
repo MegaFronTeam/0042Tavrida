@@ -9,12 +9,11 @@
 		// --sTPB: ;
 		&__slide{
 			color: #fff;
-			min-height: rem(464);
-			// @include block(1120, 464);
-			background-color: $body-color;
+			// min-height: rem(464);
+			@include block(1120, 464);
+			// background-color: $body-color;
 			border-radius: 20px;
 			overflow: hidden;
-			padding: rem(32);
 			text-transform: uppercase;
 			picture{
 				position: absolute;
@@ -26,6 +25,10 @@
 			}
 			h2{
 				color: #fff;
+				position: absolute;
+				padding: rem(32);
+				left: 0;
+				top: 0;
 			}
 		}
 	@include media-breakpoint-up(xl) {}
