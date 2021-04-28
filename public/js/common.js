@@ -446,6 +446,9 @@ function eventHandler() {
 	$(".slider-wrapper").each(function () {
 		var festSlider = new Swiper($(this).find('.slider--js'), {
 			slidesPerView: 1,
+			autoplay: {
+				delay: 5000
+			},
 			lazy: {
 				loadPrevNext: true,
 				loadPrevNextAmount: 3

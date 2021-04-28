@@ -46,6 +46,7 @@
 			@extend .h5;
 			font-weight: 600;
 			margin-bottom: em(30);
+			text-align: right;
 		}
 		&__btn{
 			@extend .btn;

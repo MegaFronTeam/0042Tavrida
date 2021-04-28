@@ -490,7 +490,9 @@ function eventHandler() {
 
 		let festSlider = new Swiper($(this).find('.slider--js'), {
 			slidesPerView: 1, 
-			
+			autoplay: {
+				delay: 5000,
+			},
 			lazy: {
 				loadPrevNext: true,
 				loadPrevNextAmount: 3,
