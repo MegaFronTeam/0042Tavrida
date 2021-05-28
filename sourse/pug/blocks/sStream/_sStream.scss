@@ -149,6 +149,10 @@
 		max-width: rem(1343);
 	}
 
+	&__main-row{
+		//@include roww(30px);
+		--bs-gutter-y: 30px;
+	}
 	&__data { 
 	}
 
