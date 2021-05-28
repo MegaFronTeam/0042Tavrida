@@ -1,0 +1,33 @@
+mixin sDlForm(data)
+	// start sDlForm
+	+b.SECTION.sFormL.section#sDlForm&attributes(attributes)
+		.container
+			+e.top-txt-bl
+				h2 Требования к анкете
+				p Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера. Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.
+			+e.bot-txt-bl
+				h2 Форма заявки
+				+form-wrap()
+					+e.row.row
+						.col-xl-8
+							+e.sub-row.row.align-items-center
+								.col-sm-6
+									.row.align-items-center
+										.col-3.me-xl-3
+											+e.radio-txt Пол
+										.col-4
+											+in-c("radio", "Муж.", 'male')(checked)
+										.col-4
+											+in-c("radio", "Жен.", 'male')
+								.col-sm-6
+									+inp3('Дата рождения', 'date', '2005-08-18')(min="1940-01-01" max="2018-12-31")
+								.col-sm-6
+									+inp3('Национальность', 'text', '')
+								.col-sm-6
+									+cSelect('placeholder')
+								.col-12
+									+inp3('Физические отклонения', 'text', '')
+										+e.sm В целях защиты здоровья ФЗ №152, ст. 10, п. 2, пп.3
+								.col-sm-auto
+									+e.btn-alt(type="submit") ОТправить заявку
+	// end sDlForm

@@ -1,0 +1,137 @@
+// start .sCherCards
+.sCherCards {
+	padding-top: 0;
+
+	--sPB: #{rem(40)};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(50)};
+	}
+
+	&__cards-row{
+		margin-top: rem(-63);
+
+		@include roww(rem(24));
+		@include media-breakpoint-up(xl){
+			@include roww(rem(32));
+		}
+		margin-bottom: rem(28);
+		& > *{
+			margin-bottom: rem(28);
+		}
+
+		&--top{
+			padding-bottom: rem(65);
+		}
+		&--bot{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__col{
+		@media (min-width: 500px) {
+			width: 50%;
+		}
+	}
+	&__card{
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		padding: rem(24) rem(20);
+		border-radius: rem(30);
+		@include media-breakpoint-up(xl){
+			padding: rem(24);
+			border-radius: rem(50);
+		}
+
+		background: $white;
+		box-shadow: 0 rem(4) rem(80) rgba(147, 169, 174, 0.62);
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (187.13/301.81) * 100%;
+		border-radius: rem(30);
+		margin-bottom: rem(20.5);
+	}
+	&__title{
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 1.6;
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+		margin-bottom: rem(16);
+	}
+	&__descr{
+		line-height: 1.625;
+		margin-bottom: rem(25.5);
+	}
+	&__date{
+		font-weight: bold;
+		line-height: 1.8;
+		color: $dark;
+		margin-top: auto;
+		margin-bottom: rem(20.5);
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-warning;
+
+		font-weight: 900;
+		font-size: rem(16);
+		line-height: (20/16);
+		text-transform: uppercase;
+		padding: rem(14) rem(20);
+	}
+
+	//represent
+	&__represent{
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: calc(-1 * (100vw - 100%) / 2);
+			width: 100vw;
+      background: $dim;
+
+			top: 0;
+			height: 100%;
+			@include media-breakpoint-up(xl){
+				top: rem(48);
+				height: calc(100% - #{rem(48)});
+			}
+
+			border-radius: 50px;
+      @include media-breakpoint-up(xl){
+				border-radius: rem(150px);
+			}
+		}
+
+		padding: rem(40) 0 rem(110);
+		@include media-breakpoint-up(xl){
+			padding: 0 0 rem(110);
+		}
+	}
+	&__r-row{}
+	&__title-bl{
+		h4{
+			margin-bottom: rem(28);
+			text-transform: uppercase;
+		}
+		p{
+			@include media-breakpoint-up(xl){
+				max-width: rem(644px);
+			}
+		}
+	}
+	.choreography__img{
+
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sCherCards
