@@ -109,6 +109,32 @@
 		line-height: 1.8;
 		color: $dark;
 	}
+
+	&--art{
+		width: 100%;
+		border-radius: 0;
+		background-color: transparent;
+		border-radius:  0 !important;
+		min-height: 100%;
+		margin: 0;
+		&::before{
+			content: '';
+			@include a-cent;
+			backdrop-filter: blur(24px);
+			z-index: -1;
+		}
+		picture{
+			@include block(740, 490);
+			max-width: rem(740);
+			margin-bottom: 52px;
+			img{
+				position: absolute;
+				left: 0;
+				top: 0; 
+				border-radius: 10px;
+			}
+		}
+	}
 }
 
 .art{
