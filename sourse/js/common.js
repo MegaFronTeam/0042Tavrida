@@ -1,4 +1,3 @@
-
 const JSCCommon = {
 	modalCall() {
 
@@ -124,7 +123,6 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
-
 
 	$('.has-ph-js').blur(JSCCommon.checkEmptyVal);
 	$('.has-ph-js').each(JSCCommon.checkEmptyVal);

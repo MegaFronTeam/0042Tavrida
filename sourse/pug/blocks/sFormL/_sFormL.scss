@@ -141,9 +141,55 @@
 
 			text-transform: uppercase;
 		}
-		&__ {
+
+		&__btn-alt{
+			@extend .btn;
+			@extend .btn-warning;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: rem(16);
+			line-height: (20/16);
+			padding: rem(14) rem(20);
+
+			width: 100%;
+			@include media-breakpoint-up(sm){
+				width: rem(304);
+			}
 		}
 	}
+	//sDlForm
+	&__top-txt-bl{
+		h2{
+			text-transform: uppercase;
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(49);
+			}
+		}
+		p{
+
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xl) {
+			padding-bottom: rem(50);
+		}
+	}
+	&__bot-txt-bl{
+		h2{
+			text-transform: uppercase;
+
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(80);
+			}
+		}
+	}
+
+
 } // end.sFormL
 
 

@@ -1,0 +1,57 @@
+mixin sCherCards(data)
+	// start sCherCards
+	+b.sCherCards.section#sCherCards&attributes(attributes)
+		.container
+			+e.cards-row--top.row
+				+sCherCardsItem({
+					imgNum: 1,
+					titleTxt: 'Название не длинное в две строки'
+				})
+				+sCherCardsItem({
+					imgNum: 2,
+					titleTxt: 'Название в одну или несколько строк для наглядности'
+				})
+				+sCherCardsItem({
+					imgNum: 3,
+					titleTxt: 'Короткое название'
+				})
+			+e.represent
+				+e.r-row.row.align-items-center
+					.col-md-8
+						+e.title-bl
+							h4 CITI dancers
+							p Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.
+					.col-md-4
+						+pic('chor-img.png')(class="choreography__img")
+			+e.cards-row--bot.row
+				+sCherCardsItem({
+					imgNum: 1,
+					titleTxt: 'Название не длинное в две строки'
+				})
+				+sCherCardsItem({
+					imgNum: 2,
+					titleTxt: 'Название в одну или несколько строк для наглядности'
+				})
+				+sCherCardsItem({
+					imgNum: 3,
+					titleTxt: 'Короткое название'
+				})
+				+sCherCardsItem({
+					imgNum: 1,
+					titleTxt: 'Название не длинное в две строки'
+				})
+				+sCherCardsItem({
+					imgNum: 2,
+					titleTxt: 'Название в одну или несколько строк для наглядности'
+				})
+	// end sCherCards
+
+mixin sCherCardsItem(data)
+	+e.col.col-sm-6.col-lg-4
+		+e.card
+			+e.img(href='#')
+				img(loading="lazy" src=`img/@2x/sCherCards-${data.imgNum}.png` alt="")
+			+e.title(href='#')=data.titleTxt
+			+e.descr В рамках воркшопа участники пройдут весь путь создания подсветки арт-объектов для стационарного и праздничного (фестивального) режимов....
+			+e.date до 14 января 2020
+			+e.btn(href='#') Подать заявку

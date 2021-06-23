@@ -2,23 +2,24 @@ mixin sHeaderBlockSchool(data)
 	// start sHeaderBlockSchool
 	+b.sHeaderBlockSchool.section#sHeaderBlockSchool&attributes(attributes)
 		+e.inner
-			.container
-				+e.row.row
-					+e.col.col
-						div.pb-3
-							+b.link-back(href="#")
-								+icon('arrow-left')
-						.row.pb-3.ttu
-							.col-auto
-								+e.title творческая школа
-							.col-auto
-								+e.title 18 – 24 ИЮЛЯ 2020
-						h1 Современных музыкальных направлений
-						+e.foot
-							
-							+e.title об антишколе
-							p Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.
-
-					.col-md-4.d-none.d-md-block
-						+pic(`head-img.jpg`)
+			if block
+				block
+			else
+				.container
+					+e.row.row
+						+e.col.col
+							div.pb-3
+								+b.link-back(href="#")
+									+icon('arrow-left')
+							.row.pb-3.ttu
+								.col-auto
+									+e.title творческая школа
+								.col-auto
+									+e.title 18 – 24 ИЮЛЯ 2020
+							h1 Современных музыкальных направлений
+							+e.foot
+								+e.title об антишколе
+								p Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.
+						.col-md-4.d-none.d-md-block
+							+pic(`head-img.jpg`)
 	// end sHeaderBlockSchool

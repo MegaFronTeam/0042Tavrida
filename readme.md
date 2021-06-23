@@ -11,7 +11,10 @@
 1. <https://luckyone1221.github.io/0042Tavrida/public/11-2034.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/12-2036.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/13-2037.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/013-2037.html>
 1.  <https://luckyone1221.github.io/0042Tavrida/public/2035.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/07-2030.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/08-park.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/06-muz-ways.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/014-2039.html>
+1. <https://luckyone1221.github.io/0042Tavrida/public/015-2040.html>
