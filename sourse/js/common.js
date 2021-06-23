@@ -568,6 +568,39 @@ function eventHandler() {
 		// },
  
 	});
+	let ssObjects = new Swiper('.sObjects__slider--js', {
+		slidesPerView: 1,
+		//loop: true,
+		spaceBetween: 30,
+		watchOverflow: true, 
+		slidesPerColumn: 2,
+		slidesPerColumnFill: 'row',
+		//
+		navigation: {
+			nextEl: '.sObjects .sl-contr__next-js',
+			prevEl: '.sObjects .sl-contr__prev-js',
+		},
+		breakpoints: {
+			768: {
+				slidesPerColumn: 2,
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+			},
+		},
+
+		// breakpoints: { 
+		// 	480: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 	},
+		// },
+ 
+	});
 
 	$('.select-custom--js').select2();
 

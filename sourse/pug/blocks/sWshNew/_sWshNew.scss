@@ -1,0 +1,38 @@
+
+	// start .sWshNew
+	.sWshNew {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+	.card-item{
+		&__img-wrap{
+			@include block(546, 256);
+		}
+		&__content{
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			p{
+				font-size: 12px;
+			}
+		}
+		&__title{
+			position: relative;
+			position: static;
+			text-transform: none;
+			display: block;
+			padding-bottom: 1rem;
+		}
+	}
+} // end.sWshNew

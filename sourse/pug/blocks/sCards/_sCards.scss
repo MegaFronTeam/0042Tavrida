@@ -1,0 +1,51 @@
+
+	// start .sCards
+	.sCards {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		 
+			
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sCards
+
+.card-item{
+	font-size: 20px;
+		&__img-wrap {
+			border-radius: 10px;
+			margin-bottom: rem(24);
+			color: #fff !important;
+			background-color: $primary;
+			display: block;
+			
+
+			@include block(352, 256);
+			overflow: hidden;
+			@include mt;
+
+			img {
+				width: 101%;
+				height: 101%;
+			}
+		}
+
+		&__title {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: #fff;
+			@include rfs(20px);
+
+		}
+}

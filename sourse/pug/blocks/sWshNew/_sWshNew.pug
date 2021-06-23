@@ -1,0 +1,19 @@
+mixin sWshNew(data)
+	// start sWshNew
+	+b.SECTION.sWshNew.section#sWshNew&attributes(attributes)
+		.container
+			+b.section-title.text-primary
+				h2 ВОРКШОПЫ 2021
+				
+			.row
+				mixin card(x,t,p)
+					+e.col.col-sm-6
+						+b.card-item
+							+e.img-wrap.bg-wrap(href="#")
+								+pic(`${x}`,'bg').picture-bg
+								+e.content
+									+e.title!= t
+									p!= p
+				+card(`wshn-1.jpg`, `Световой  <br> дизайн`,`с 3 по 21 июня`)
+				+card(`wshn-2.jpg`,`Устойчивый дизайн <br>  вторичного сырья`,`с 20 сентября по 13 октября`)
+	// end sWshNew

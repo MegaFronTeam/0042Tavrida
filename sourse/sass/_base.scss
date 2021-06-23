@@ -805,3 +805,11 @@ h2{
 			stroke-width: 3px;
 		}
 }
+
+.radius-20{
+	border-radius: 20px;
+	> img{
+		border-radius: 20px;
+
+	}
+}

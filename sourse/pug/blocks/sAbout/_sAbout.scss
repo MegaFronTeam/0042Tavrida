@@ -248,4 +248,15 @@
 		color: #0A1124;
 		max-width: rem(410);
 	}
+	&--park &__bg-alt{
+		top: rem(0);
+		display: block;
+	}
+	&--park &__text{
+		max-width: rem(550);
+		p{
+			margin-bottom: 2rem;
+		}
+
+	}
 } // end.sAbout

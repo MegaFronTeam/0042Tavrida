@@ -3,7 +3,7 @@ extends layout/main.pug
 
 //- include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sContact/_sContact.pug
-//- include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAbout/_sAbout.pug
 //- include ../blocks/sVantage/_sVantage.pug
 //- include ../blocks/sProjects/_sProjects.pug
 //- include ../blocks/sResidents/_sResidents.pug
@@ -20,6 +20,11 @@ include ../blocks/sPartners/_sPartners.pug
 //- include ../blocks/sApply/_sApply.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sObjects/_sObjects.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWshNew/_sWshNew.pug
+include ../blocks/sPlaces/_sPlaces.pug
 //- include ../blocks/sUsefull/_sUsefull.pug
 //- include ../blocks/sDigits/_sDigits.pug
 //- include ../blocks/sActForm/_sActForm.pug
@@ -45,15 +50,49 @@ block pagecontent
 	+header()
 		+top-nav()
 	//- title: `ФОРУМ`,
-	//- +headerBlock({
-	//- 	text : `Арт-парк  <br> «Таврида»`,
-	//- 	img: 'park.jpg'
-	//- }).headerBlock--forum
+	+headerBlock({
+		text : `Арт-парк  <br> «Таврида»`,
+		img: 'park.jpg'
+	}).headerBlock--forum
 		//- title: 'О форуме',
-	//- +sAbout({
-	//- 	bgAlt: 'about-bg-park.png',
-	//- 	textSm: `Образовательные программы воркшопов &laquo;От&nbsp;теории к&nbsp;практике&raquo; арт-парка &laquo;Таврида&raquo; ‒ это творческая лаборатория для смелых экспериментов и&nbsp;самореализации в&nbsp;современных видах искусства под руководством известных российских и&nbsp;международных художников`
-	//- }).sAbout--forum
+	+sAbout({
+		bgAlt: 'park-bg.png',
+		textSm: `<p class="strong"> Арт-парк является частью арт-кластера «Таврида», 
+располагается в бухте Капсель.</p>
+
+<p>Арт-парк появился в 2019 году: в рамках форума «Таврида» молодыми архитекторами и
+дизайнерами со всей России под кураторством представителей современной
+отечественной архитектуры и искусства были спроектированы и возведены первые арт-
+объекты.</p>
+
+<p>Территория арт-парка стала настоящей творческой лабораторией,  где объекты творчества
+гармонично сочетаются с уникальным ландшафтом и природой Крыма.</p>
+
+<p>Сегодня арт-парк «Таврида» – это 27 арт-объектов, 30 га земли 
+для экспериментов и
+безграничного творчества.</p>`
+	}).sAbout--park
+	+sObjects
+	+sBanner
+	.sContent.section.container
+		.section-title
+			h2 Воркшопы парка
+		p #[strong В&nbsp;2020 году стартовал новый проект для &laquo;Тавриды&raquo;, направленный на&nbsp;развитие молодых художников через практику создания инсталляций совместно с&nbsp;популярными художниками-экспертами. Впервые арт-объекты полностью создавались командами:] от идеи до&nbsp;застройки, без подрядчиков. В&nbsp;результате воркшопов участники совместно с экспертами возвели арт-объекты, спроектированные на&nbsp;онлайн-сессии и&nbsp;ставшие выставочными экспонатами арт-парка на&nbsp;территории арт-кластера &laquo;Таврида&raquo;.
+
+		p Образовательные программы воркшопов &laquo;От&nbsp;теории к&nbsp;практике&raquo; арт-парка &laquo;Таврида&raquo; &mdash; это творческая лаборатория для смелых экспериментов и&nbsp;самореализации в&nbsp;современных видах искусства под руководством известных российских и&nbsp;международных художников.
+	+sCards
+	+sWshNew
+	.sContent.section.container
+		.section-title
+			h2 КОНКУРСЫ
+		p #[strong Конкурс&nbsp;&mdash; возможность реализовать свой арт-объект на&nbsp;территории арт-парка &laquo;Таврида&raquo;, лично контролируя все этапы строительства, а&nbsp;также принять участие в&nbsp;фестивале &laquo;Таврида.АРТ&raquo;.  Мы&nbsp;организуем трансфер и&nbsp;проживание победителей.]
+
+		p В&nbsp;декабре 2019 года был запущен конкурс &laquo;Новые идеи арт-объектов для арт-парка &bdquo;Таврида&ldquo; среди независимых художников&raquo;. Победителями стали архитектор Наталия Тиняева и&nbsp;дизайнер Виктория Погосян, архитектурная студия &laquo;Меандр&raquo;.
+	+sPlaces
+	.sContent.section.container
+		.section-title
+			h2 Галерея арт-объектов
+		+pic("map.png").radius-20
 	//- +sVantageBase('Особенности антишкол',
 	//- 	{
 	//- 		img:`wsh-1`, 

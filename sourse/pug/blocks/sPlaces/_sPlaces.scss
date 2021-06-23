@@ -1,0 +1,64 @@
+
+	// start .sPlaces
+	.sPlaces {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__inner{
+			@include media-breakpoint-up(xl) {
+				margin-left: auto;
+				margin-right: auto;
+
+			}
+			max-width: rem(1352);
+			@include media-breakpoint-up(lg) {
+
+				padding-top: rem(100);
+				padding-left: 30px;
+				padding-right: 30px;
+				border-radius: 150px;
+			}
+			border-radius: 50px;
+			// padding-left: 15px;
+			// padding-right: 15px;
+			padding-top: rem(50);
+			// padding-bottom: rem(100);
+			background: #EBF1F2;
+
+		}
+		h2{
+			color: $primary;
+			margin-bottom: 1em;
+		}
+		&__item{
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(90);
+				&:nth-child(even){
+					.row{
+						flex-direction: row-reverse;
+					}
+				}
+			}
+			padding-bottom: rem(50);
+			// padding-bottom: 1px;
+		}
+		img{
+			border-radius: 20px;
+			margin-bottom: 20px;
+		}
+		.row{
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: 96px;
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sPlaces

@@ -1,0 +1,25 @@
+mixin sObjects(data)
+	// start sObjects
+	+b.SECTION.sObjects.section#sObjects&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col.mb-3.mb-lg-0
+					h2 Арт объекты
+				.col-auto
+					+b.sl-contr
+						+e.prev.feedback-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.feedback-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider--js.swiper-container 
+				.swiper-wrapper
+					mixin slide(x, t="Стоунхендж")
+						+e.slide.swiper-slide
+							+e.img-wrap.bg-wrap(href="#")
+								+pic(`art-${x}.jpg`,'bg').picture-bg
+								+e.title= t
+					- for (var x = 1; x < 26; x++)
+						+slide(x)
+
+
+	// end sObjects

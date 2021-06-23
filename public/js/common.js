@@ -1,7 +1,7 @@
 "use strict";
 
-var JSCCommon = {
-	modalCall: function modalCall() {
+const JSCCommon = {
+	modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -22,10 +22,10 @@ var JSCCommon = {
 
 				}
 			},
-			beforeLoad: function beforeLoad() {
+			beforeLoad: function () {
 				document.querySelector("html").classList.add("fixed");
 			},
-			afterClose: function afterClose() {
+			afterClose: function () {
 				document.querySelector("html").classList.remove("fixed");
 			}
 		});
@@ -33,17 +33,17 @@ var JSCCommon = {
 			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
+		const linkModal = document.querySelectorAll('.link-modal');
 
 		function addData() {
-			linkModal.forEach(function (element) {
-				element.addEventListener('click', function () {
-					var modal = document.querySelector(element.getAttribute("href"));
-					var data = element.dataset;
+			linkModal.forEach(element => {
+				element.addEventListener('click', () => {
+					let modal = document.querySelector(element.getAttribute("href"));
+					const data = element.dataset;
 
 					function setValue(val, elem) {
 						if (elem && val) {
-							var el = modal.querySelector(elem);
+							const el = modal.querySelector(elem);
 							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
 						}
 					}
@@ -58,18 +58,19 @@ var JSCCommon = {
 
 		if (linkModal) addData();
 	},
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
+
+	tabscostume(tab) {
+		let tabs = {
 			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
 			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
 			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
 		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
+		tabs.Btn.forEach((element, index) => {
+			element.addEventListener('click', () => {
 				if (!element.classList.contains('active')) {
 					//turn off old
-					var oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
-					var oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
+					let oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
+					let oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
 					oldActiveEl.classList.remove('active');
 					oldActiveContent.classList.remove('active'); //turn on new(cklicked el)
 
@@ -79,9 +80,10 @@ var JSCCommon = {
 			});
 		});
 	},
-	inputMask: function inputMask() {
+
+	inputMask() {
 		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(function (element) {
 			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 		});
@@ -89,32 +91,36 @@ var JSCCommon = {
 			showMaskOnHover: false
 		}).mask(InputTel);
 	},
-	ifie: function ifie() {
+
+	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	heightwindow: function heightwindow() {
+
+	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
 
 		document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
 
-		window.addEventListener('resize', function () {
+		window.addEventListener('resize', () => {
 			// We execute the same script as before
-			var vh = window.innerHeight * 0.01;
+			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 		}, {
 			passive: true
 		});
 	},
-	checkEmptyVal: function checkEmptyVal() {
+
+	checkEmptyVal() {
 		this.value !== '' || this.tagName == "SELECT" && this.querySelector('option') != null && this.querySelector('option').value !== null && this.querySelector('option').text || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
 	}
+
 };
-var $ = jQuery;
+const $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.ifie();
@@ -127,7 +133,7 @@ function eventHandler() {
 	$('.has-ph-js.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); //remove on prod
 
 	var x = window.location.host;
-	var screenName;
+	let screenName;
 	screenName = '04.png';
 
 	if (screenName && x.includes("localhost:30")) {
@@ -135,7 +141,7 @@ function eventHandler() {
 	} //luckyone js
 
 
-	var residentSlider = new Swiper('.resident-slider-js', {
+	let residentSlider = new Swiper('.resident-slider-js', {
 		slidesPerView: "auto",
 		breakpoints: {
 			0: {
@@ -156,7 +162,7 @@ function eventHandler() {
 		}
 	});
 	$('.sProjects__slider--js').each(function () {
-		var projectSlider = new Swiper($(this).find('.project-slider-js'), {
+		let projectSlider = new Swiper($(this).find('.project-slider-js'), {
 			slidesPerView: "auto",
 			loop: true,
 			breakpoints: {
@@ -178,7 +184,7 @@ function eventHandler() {
 		});
 	}); //
 
-	var storySlider = new Swiper('.story-slider-js', {
+	let storySlider = new Swiper('.story-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		spaceBetween: 0,
@@ -200,7 +206,7 @@ function eventHandler() {
 		}
 	}); //
 
-	var famousSlider = new Swiper('.famous-slider-js', {
+	let famousSlider = new Swiper('.famous-slider-js', {
 		slidesPerView: "auto",
 		breakpoints: {
 			0: {
@@ -228,7 +234,7 @@ function eventHandler() {
 		}
 	}); //
 
-	var partnerSlider = new Swiper('.partners-slider-js', {
+	let partnerSlider = new Swiper('.partners-slider-js', {
 		// initialSlide: 1,
 		spaceBetween: 30,
 		// slidesPerView: 2,
@@ -263,9 +269,9 @@ function eventHandler() {
 			prevEl: '.partners-prev-js'
 		}
 	});
-	var allPatnerSlides = document.querySelectorAll('.partners-slider-js .swiper-slide');
-	var breakpoint;
-	var l = allPatnerSlides.length;
+	let allPatnerSlides = document.querySelectorAll('.partners-slider-js .swiper-slide');
+	let breakpoint;
+	let l = allPatnerSlides.length;
 
 	if (l % 2 === 0) {
 		breakpoint = l / 2;
@@ -284,7 +290,7 @@ function eventHandler() {
 		$('body').toggleClass('fixed2');
 	}); //
 
-	var directionSlider = new Swiper('.direction-slider-js', {
+	let directionSlider = new Swiper('.direction-slider-js', {
 		spaceBetween: 20,
 		slidesPerView: 'auto',
 		//loop: true,
@@ -298,7 +304,7 @@ function eventHandler() {
 			prevEl: '.direction-prev-js'
 		}
 	});
-	var artistSlider = new Swiper('.artist-slider-js', {
+	let artistSlider = new Swiper('.artist-slider-js', {
 		slidesPerView: "auto",
 		breakpoints: {
 			0: {
@@ -318,7 +324,7 @@ function eventHandler() {
 		}
 	}); //
 
-	var feedbackSlider = new Swiper('.feedback-slider-js', {
+	let feedbackSlider = new Swiper('.feedback-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		breakpoints: {
@@ -340,13 +346,13 @@ function eventHandler() {
 	});
 
 	function makeDDGroup(parentSelect) {
-		var parent = document.querySelectorAll(parentSelect);
+		let parent = document.querySelectorAll(parentSelect);
 		if (!parent) return;
-		parent.forEach(function (el) {
+		parent.forEach(el => {
 			// childHeads, kind of funny))
-			var ChildHeads = el.querySelectorAll('.dd-head-js');
+			let ChildHeads = el.querySelectorAll('.dd-head-js');
 			$(ChildHeads).click(function () {
-				var clickedHead = this;
+				let clickedHead = this;
 				$(ChildHeads).each(function () {
 					if (this === clickedHead) {
 						$(this.parentElement).toggleClass('active');
@@ -366,7 +372,7 @@ function eventHandler() {
 
 	makeDDGroup('.faq-items-js, .participants-items-js'); //
 
-	var usefullSlider = new Swiper('.useful-slider-js', {
+	let usefullSlider = new Swiper('.useful-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		breakpoints: {
@@ -383,7 +389,7 @@ function eventHandler() {
 		}
 	}); //
 
-	var actSlider = new Swiper('.act-slider-js', {
+	let actSlider = new Swiper('.act-slider-js', {
 		slidesPerView: "auto",
 		loop: true,
 		breakpoints: {
@@ -408,7 +414,7 @@ function eventHandler() {
 	}); //custom ph
 	//
 
-	var festSlider = new Swiper('.fest-slider-js', {
+	let festSlider = new Swiper('.fest-slider-js', {
 		slidesPerView: "auto",
 		//loop: true,
 		spaceBetween: 30,
@@ -437,14 +443,12 @@ function eventHandler() {
 			columnWidth: '.grid-item',
 			percentPosition: true
 		});
-		imagesLoaded(grid).on('progress', function () {
-			return msnry.layout();
-		});
+		imagesLoaded(grid).on('progress', () => msnry.layout());
 	} //
 
 
 	$(".slider-wrapper").each(function () {
-		var festSlider = new Swiper($(this).find('.slider--js'), {
+		let festSlider = new Swiper($(this).find('.slider--js'), {
 			slidesPerView: 1,
 			autoplay: {
 				delay: 5000
@@ -461,7 +465,7 @@ function eventHandler() {
 		});
 	});
 	$(".sCurators").each(function () {
-		var slider = new Swiper($(this).find('.sCurators__slider--js'), {
+		let slider = new Swiper($(this).find('.sCurators__slider--js'), {
 			slidesPerView: "auto",
 			lazy: {
 				loadPrevNext: true,
@@ -474,7 +478,7 @@ function eventHandler() {
 			}
 		});
 	});
-	var sSuccessStories = new Swiper('.sSuccessStories__slider--js', {
+	let sSuccessStories = new Swiper('.sSuccessStories__slider--js', {
 		slidesPerView: 1,
 		//loop: true,
 		spaceBetween: 30,
@@ -493,7 +497,7 @@ function eventHandler() {
 			}
 		}
 	});
-	var sMaterials = new Swiper('.sMaterials__slider--js', {
+	let sMaterials = new Swiper('.sMaterials__slider--js', {
 		slidesPerView: 'auto',
 		//loop: true,
 		spaceBetween: 30,
@@ -516,10 +520,41 @@ function eventHandler() {
 		// },
 
 	});
+	let ssObjects = new Swiper('.sObjects__slider--js', {
+		slidesPerView: 1,
+		//loop: true,
+		spaceBetween: 30,
+		watchOverflow: true,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: 'row',
+		//
+		navigation: {
+			nextEl: '.sObjects .sl-contr__next-js',
+			prevEl: '.sObjects .sl-contr__prev-js'
+		},
+		breakpoints: {
+			768: {
+				slidesPerColumn: 2,
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3,
+				slidesPerColumn: 2
+			}
+		} // breakpoints: { 
+		// 	480: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 	},
+		// },
+
+	});
 	$('.select-custom--js').select2();
 
 	function setFixedBtn() {
-		var btnTop = document.querySelector('.btn-top--js');
+		let btnTop = document.querySelector('.btn-top--js');
 		if (!btnTop) return;
 		window.scrollY > window.innerHeight ? btnTop.classList.add('show') : btnTop.classList.remove('show');
 	}
@@ -528,17 +563,15 @@ function eventHandler() {
 		setFixedBtn();
 	}
 
-	window.addEventListener('scroll', function () {
+	window.addEventListener('scroll', () => {
 		setFixedBtn();
 	}, {
 		passive: true
 	});
 	whenResize();
-	$(document).on('click', " .btn-top--js", function () {
-		return $('html, body').animate({
-			scrollTop: 0
-		}, 0);
-	});
+	$(document).on('click', " .btn-top--js", () => $('html, body').animate({
+		scrollTop: 0
+	}, 0));
 }
 
 ;
