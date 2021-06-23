@@ -577,17 +577,17 @@ function eventHandler() {
 		slidesPerColumnFill: 'row',
 		//
 		navigation: {
-			nextEl: '.sObjects .sl-contr__next-js',
-			prevEl: '.sObjects .sl-contr__prev-js',
+			nextEl: '.sObjects .sl-contr__next',
+			prevEl: '.sObjects .sl-contr__prev',
 		},
 		breakpoints: {
 			768: {
 				slidesPerColumn: 2,
-				slidesPerView: 2
+				slidesPerView: 3
 			},
 			992: {
 				slidesPerView: 3,
-				slidesPerColumn: 2,
+				slidesPerColumn: 3,
 			},
 		},
 

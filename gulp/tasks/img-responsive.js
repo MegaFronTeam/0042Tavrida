@@ -39,7 +39,7 @@ module.exports = function () {
 
 	$.gulp.task('img1x', function () {
 		return $.gulp.src(src)
-			.pipe($.resizer({ width: "50%" }))
+			// .pipe($.resizer({ width: "50%" }))
 			.pipe($.responsive({
 				'*': [
 					{
