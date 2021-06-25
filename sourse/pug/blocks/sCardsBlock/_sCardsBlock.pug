@@ -1,0 +1,24 @@
+mixin sCardsBlock(data)
+	// start sCardsBlock
+	+b.SECTION.sCardsBlock.section#sCardsBlock&attributes(attributes)
+		.container
+			.row
+				mixin item(i, t, i2= i)
+					+e.col.col-xl-4.col-md-6 
+						+e.item.bg-wrap
+							span!= t
+							+pic(`card-bg-${i}.png`,'bg',0).picture-bg
+							img(src=`img/svg/card-i-${i2}.svg`, alt="").img-icon
+				+item(`1`,`ЮМОР`)
+				+item(`2`,`ТЕАТР И КИНО`)
+				+item(`3`,`МУЗЫКА`)
+				+item(`4`,`ЛИТЕРАТУРА <br> И&nbsp;МЕДИА`)
+				+item(`5`,`АРТ`)
+				+item(`6`,`ИВЕНТ`,'9')
+				+item(`7`,`ХОРЕОГРАФИЯ`,'8')
+				+item(`8`,`СТАЖИРОВКИ В&nbsp;ПРОГРАММНОЙ ДИРЕКЦИИ АРТ-КЛАСТЕРА «ТАВРИДА» `,' ')
+				+item(`9`,`СПОРТ`,'7')
+				+item(`10`,`БИЗНЕС И РАЗВИТИЕ`,'6')
+				+item(`11`,`ОБЩЕСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ`)
+				+item(`12`,`ДО 18 ЛЕТ. СОВМЕСТНО С&nbsp;«БОЛЬШАЯ ПЕРЕМЕНА»`,'10')
+	// end sCardsBlock
