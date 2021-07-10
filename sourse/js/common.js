@@ -369,7 +369,19 @@ function eventHandler() {
 				parent.forEach(el => {
 				// childHeads, kind of funny))
 				let ChildHeads = el.querySelectorAll('.dd-head-js');
-
+				
+				var hash = window.location.hash;
+				$(ChildHeads).each(function () {
+					// console.log($(this).parent().attr("id"));
+					let id = '#' + $(this).parent().attr("id");
+					if (id == hash) {
+						$(this.parentElement).addClass('active');
+						$(this.parentElement).find('.dd-content-js').slideDown(function () {
+							$(this).addClass('active');
+						});
+				}
+			})
+				
 				$(ChildHeads).click(function () {
 					let clickedHead = this;
 
@@ -389,8 +401,13 @@ function eventHandler() {
 					});
 				});
 
+
+
 			})  
 	}
+
+
+
 	makeDDGroup('.faq-items-js, .participants-items-js');
 
 	//
