@@ -1,0 +1,15 @@
+mixin sSerts(data)
+	// start sSerts
+	+b.SECTION.sSerts.section#sSerts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сертфикаты
+				
+			.row.gy-4
+				- for (var x = 0; x < 3; x++)
+					+e.col.col-lg-4.col-sm-6
+						+e.item
+							img.res-i(src="img/@2x/sert.jpg", alt="")
+							p Сертификат участника Тавриды 2015
+			
+	// end sSerts

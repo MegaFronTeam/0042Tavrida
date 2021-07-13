@@ -1,0 +1,25 @@
+mixin sProgress(data)
+	// start sProgress
+	+b.SECTION.sProgress.section#sProgress&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Достижения
+				
+			.row
+				mixin item(i,color)
+					+e.col.col-xl-2.col-auto
+						+e.item
+							+e.img-wrap(style=`--bg-color:${color}`) 
+								img(src=`img/svg/cab-progress-${i}.svg`, alt="")
+							p Название ачивки
+							+e.toggle-content Описание ачивки и за что она получена в несколько строк для наглядности отображения контента во всплывающем окне без сокращений
+				+item(`1`,`rgba(255, 128, 0, .1)`)
+				+item(`2`,`#C8DEFF`)
+				+item(`3`,`#B2ECEF`)
+				+item(`4`,`#F1E1F5`)
+				+item(`5`,`#C8B2E4`)
+				+item(`6`,`rgba(255, 128, 0, .1)`)
+				+item(`7`,`#B2ECEF`)
+				+item(`8`,`#F1E1F5`)
+				+item(`1`,`#C8B2E4`)
+	// end sProgress

@@ -643,6 +643,21 @@ function eventHandler() {
 
 	whenResize();
 
+	let sActvieOrderSlider = new Swiper('.sActvieOrder__slider--js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		spaceBetween: 30,
+		watchOverflow: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+		//
+		navigation: {
+			nextEl: '.sActvieOrder .act-next-js',
+			prevEl: '.sActvieOrder .act-prev-js',
+		}, 
+	});
 
 	$(document).on('click', " .btn-top--js", () => $('html, body').animate({ scrollTop: 0 },0));
 	};

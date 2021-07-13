@@ -1,0 +1,32 @@
+mixin sActvieOrder(data)
+	// start sActvieOrder
+	+b.SECTION.sActvieOrder.section#sActvieOrder&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-auto
+						h2 Активные заявки
+					.col.pt-1
+						a(href="#").h5.text-warning.fw-500 Все заявки 
+					.col-auto
+						+b.sl-contr
+							+e.prev.act-prev-js
+								img(src="img/svg/arrow-left.svg" alt="" loading="lazy")
+							+e.next.act-next-js
+								img(src="img/svg/arrow-right.svg" alt="" loading="lazy")
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					- for (var x = 0; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item
+								+e.title Название  мероприятия  в несколько строк
+								p Часть мероприятия и описание направления если длинное сокращать троеточием...
+								div.mb-3
+									+e.label(style="--bg-color:#00BAC3") Амбасадор
+								.row.mb-3
+									.col.fw-500 Баллы  <br> от экспертов:
+									.col-auto.fw-900.text-info.h5 450
+								+e.btns
+									+e.btn.btn-outline-black(href="#") Редактировать
+									+e.btn.btn-warning(href="#") Отозвать
+	// end sActvieOrder

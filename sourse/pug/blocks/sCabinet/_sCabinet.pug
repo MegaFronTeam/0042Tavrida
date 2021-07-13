@@ -1,0 +1,30 @@
+mixin sCabinet(data)
+	// start sCabinet
+	+b.sCabinet.section#sCabinet&attributes(attributes)
+		.container
+			+b.NAV.cabinet-nav
+				ul
+					li: a(href="#").active Личный кабинет
+					li: a(href="#") Все заявки
+					li: a(href="#") Профиль
+					li: a(href="#") Опросы
+					li: a(href="#") Портфолио
+					li: a(href="#") Мероприятия
+			+b.cabinet-head
+				.row
+					.col-lg-4
+						+b.avatar-block
+							div
+								+e.id ID 15566988
+								br
+								+e.img-wrap
+									img(src="img/@2x/feedback-img-1.jpg", alt="")
+							div
+								+e.title Игорь Смактуновский
+								p Краснодарский край
+								+e.label(style="--bg-color:#00BAC3") Амбасадор
+					.col-lg-8.order-lg-first
+						+e.panel
+							h1 Активное мероприятие
+							+e.btn(href="#") Подать заявку
+	// end sCabinet

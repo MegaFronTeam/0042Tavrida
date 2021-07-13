@@ -1,0 +1,84 @@
+
+	// start .sProgress
+	.sProgress {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		.row{
+			justify-content: center;
+		}
+		&__item{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(128- 30 + 66);
+			font-size: 12px;
+			text-align: center;
+			margin-bottom: rem(48);
+			position: relative;
+		}
+		p{
+			margin-bottom: 0;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		&__img-wrap{
+			margin-left: auto;
+			margin-right: auto;
+			width: rem(128);
+			height: rem(128);
+			line-height: rem(128);
+			vertical-align: middle;
+			background-color: var(--bg-color);
+			border-radius: 50%;
+			margin-bottom: 1rem;
+		}
+
+		&__toggle-content{
+			position: absolute;
+			background: #FFFFFF;
+			font-size: 16px;
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+			/* 1 */
+
+			box-shadow: 0px 4px 80px rgba(147, 169, 174, 0.62);
+			border-radius: 20px;
+			position: absolute;
+			width: rem(410);
+			max-width: 100vw;
+			bottom: 90%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-weight: 500;
+			padding: rem(25);
+			@include mt;
+			min-height: 143px;
+			z-index: 100;
+			opacity: var(--hover, 0);
+			visibility: var(--hover, hidden);
+
+			&::before{
+				content: url(../img/svg/hvost.svg);
+				@include a-cent(x);
+				bottom: -17px;
+				z-index: -1;
+
+			}
+		}
+		&__item:hover &__toggle-content{
+				--hover: ' ';
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sProgress
