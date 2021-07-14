@@ -50,13 +50,20 @@
 }
 
 .cabinet-head{
-	&__panel{
-		@include media-breakpoint-up(sm) {
+	&__slider{
 
-			padding: rem(60);
+		@include media-breakpoint-up(sm) { 
 			border-radius: 50px;
 		}
 		border-radius: 30px;
+	}
+	&__item{
+		overflow: hidden;
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(60); 
+		}
+ 
 		padding: rem(20);
 		background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(177, 217, 219, 0.8) 82.84%); 
 		// max-width: rem(736);

@@ -24,7 +24,12 @@ mixin sCabinet(data)
 								p Краснодарский край
 								+e.label(style="--bg-color:#00BAC3") Амбасадор
 					.col-lg-8.order-lg-first
-						+e.panel
-							h1 Активное мероприятие
-							+e.btn(href="#") Подать заявку
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									+e.slide.swiper-slide 
+										+e.item.bg-wrap
+											+pic(`art-1.jpg`,'bg',0).picture-bg
+											h1 Активное мероприятие
+											+e.btn(href="#") Подать заявку
 	// end sCabinet

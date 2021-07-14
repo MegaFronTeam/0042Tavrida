@@ -596,6 +596,12 @@ function eventHandler() {
 			prevEl: '.sActvieOrder .act-prev-js'
 		}
 	});
+	let sCabinetSlider = new Swiper('.cabinet-head__slider--js', {
+		slidesPerView: 1,
+		autoplay: {
+			delay: 5000
+		}
+	});
 	$(document).on('click', " .btn-top--js", () => $('html, body').animate({
 		scrollTop: 0
 	}, 0));
