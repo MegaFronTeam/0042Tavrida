@@ -61,7 +61,11 @@
 				justify-content: center;
 				align-items: center;
 				min-height: rem(151);
+				text-align: center;
 				height: calc(100% - #{rem(33)});
+				img{
+					max-width: 90%;
+				}
 		 }
 
 	@include media-breakpoint-up(xl) {}
