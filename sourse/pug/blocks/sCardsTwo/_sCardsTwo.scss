@@ -4,6 +4,9 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
 		 &__item{
 			 min-height: 100%;
 			 padding: rem(35) rem(40) rem(20);
