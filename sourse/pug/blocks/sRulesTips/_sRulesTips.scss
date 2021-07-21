@@ -31,12 +31,13 @@
 
 		 &__block{
 			 background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(0, 186, 195, 0.8) 82.84%); 
-			 border-radius: 50px;
 			 @include media-breakpoint-up(lg) {
+				 border-radius: 50px;
 
 				 padding: rem(45) rem(60);
 				}
-				padding: rem(20) rem(20);
+				border-radius: 1.5625rem; 
+				padding: 2.5rem 1.25rem;
 			 color: #fff;
 			.h5 {
 				color: #fff;
