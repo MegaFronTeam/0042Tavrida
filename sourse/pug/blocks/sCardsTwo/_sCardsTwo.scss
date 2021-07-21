@@ -1,0 +1,44 @@
+
+	// start .sCardsTwo
+	.sCardsTwo {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		 &__item{
+			 min-height: 100%;
+			 padding: rem(35) rem(40) rem(20);
+			 background: #F1F1F1; 
+			 border-radius: 50px;
+			 &.text-white{
+				 background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(0, 186, 195, 0.8) 82.84%);
+				 color: #fff;
+				 *>{
+					 color: #fff;
+				 }
+			 }
+		 }
+		 h2{
+			 margin-bottom: 1rem;
+		 }
+		 .h5{
+			 font-weight: 600;
+			 line-height: (36 / 20);
+		 }
+		 .small{
+			 line-height: 127.5%;
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sCardsTwo
+
+.fw-400{
+	font-weight: 400;
+}

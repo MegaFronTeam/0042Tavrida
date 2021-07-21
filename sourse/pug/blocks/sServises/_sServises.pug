@@ -1,0 +1,19 @@
+mixin sServises(data)
+	// start sServises
+	+b.SECTION.sServises.section#sServises&attributes(attributes)
+		.container
+			+b.section-title
+				h2 СЕРВИСЫ
+				
+			.row
+				mixin item(i,t)
+					+e.col.col-sm-4
+						+e.item
+							img(src=`img/svg/servises-${i}.svg`, alt="")
+							p!= t
+				+item(`1`,`Рядом с&nbsp;входом <br> в&nbsp;арт-парк расположена парковка`)
+
+				+item(`2`,`Кафе и&nbsp;магазин принимают оплату картами, но&nbsp;лучше брать с&nbsp;собой и&nbsp;наличные`)
+
+				+item(`3`,`В&nbsp;инфоцентре вы&nbsp;можете воспользоваться бесплатной камерой хранения`)
+	// end sServises

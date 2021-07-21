@@ -1,0 +1,44 @@
+mixin sRulesTips(data)
+	// start sRulesTips
+	+b.SECTION.sRulesTips.section#sRulesTips&attributes(attributes)
+		.container
+			+b.section-title
+				h2 ПРАВИЛА И СОВЕТЫ
+			.row
+				mixin item(t,i)
+					.col-lg-4 
+						+e.item
+							if i
+								img(src=`img/svg/${i}.svg`, alt="")
+							
+								p!= t
+							else
+								.h5!= t
+
+				+item(`Внимательно ознакомьтесь  с&nbsp;<a href="#">правилами пребывания</a>посетителей экскурсии и&nbsp;светового шоу на&nbsp;территории арт-парка &laquo;Таврида&raquo;.`)
+				+item(`Не&nbsp;забывайте про средства индивидуальной защиты.`,`mask`)
+				+item(`Не&nbsp;забудьте надеть удобную обувь и&nbsp;взять с&nbsp;собой головной убор, питьевую воду, крем от&nbsp;загара, репеллент и&nbsp;хорошее настроение`,`sneakers`)
+			+e.block
+				+e.title КАК ДОБРАТЬСЯ
+				.row
+					.col-lg
+						.h5 Проще всего добраться до арт-парка на собственном или арендованном автомобиле.
+						p 
+							strong Дорога: 
+							br
+							| от Симферополя составляет <strong>~110км</strong>
+							br
+							| от Судака <strong>~5км</strong>
+					.col
+						.small.strong Арт-парк «Таврида» на картах:
+						.row
+							.col
+								+e.logo 
+									+pic("ya.png",'',0)
+
+							.col
+								+e.logo 
+									+pic("google.png",'',0)
+
+
+	// end sRulesTips

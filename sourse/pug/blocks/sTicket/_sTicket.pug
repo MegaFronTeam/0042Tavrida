@@ -1,0 +1,36 @@
+mixin sTicket(data)
+	// start sTicket
+	+b.SECTION.sTicket.section#sTicket&attributes(attributes)
+		.container
+			+b.section-title
+				h2 ВХОДНОЙ БИЛЕТ
+				
+			+e.row.row
+				
+				mixin item(i,t)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							img(src=`img/svg/ticket-i-${i}.svg`, alt="")
+							p!= t
+				+item(`1`,`Экскурсия и&nbsp;аудиогид бесплатны`)
+				+item(`2`,`Обязательна онлайн-регистрация`)
+				+item(`3`,`Дети до&nbsp;18&nbsp;лет  в&nbsp;сопровождении взрослых`)
+				+item(`4`,`С&nbsp;домашними животными к&nbsp;нам нельзя`)
+			+e.block 
+				.row
+					.col-md.pb-2
+						.strong  Регистрация закрывается за&nbsp;30&nbsp;минут до&nbsp;начала сеанса. <br> Проход осуществляется с&nbsp;момента начала сеанса  и&nbsp;в&nbsp;течение последующих 5&nbsp;минут
+					.col-auto
+						.strong На 
+							br
+							| каждый 
+							br
+							| сеанс
+					.col-auto
+						+e.number 20
+						.ttu мест
+			ul
+				li Вы&nbsp;можете посетить экскурсию  по&nbsp;арт-парку в&nbsp;выбранный вами  день и&nbsp;сеанс.
+				li Просьба приходить не&nbsp;позднее, чем за&nbsp;15&nbsp;минут до&nbsp;начала сеанса, чтобы пройти аккредитацию, получить аудиогид и&nbsp;пройти досмотр службой безопасности арт-кластера &laquo;Таврида&raquo;
+				li Экскурсия начинается и&nbsp;заканчивается  у&nbsp;Инфоцентра Арт-Парка
+	// end sTicket
