@@ -625,6 +625,7 @@ function eventHandler() {
 					'left': markOffset.left
 				});
 			} else {
+				markWrap.innerHTML = '';
 				let mark = document.createElement('div');
 				mark.classList.add("map-div", "map-div--".concat(index));
 				$(markWrap).append(mark);
@@ -657,9 +658,7 @@ function eventHandler() {
 			title: elem.dataset.title,
 			street: elem.dataset.street,
 			link: elem.dataset.link
-		}; //
-		//
-
+		};
 		let popoverInner = "\n\t\t<div class=\"sMap__popover\">\n\t\t  <div class=\"sMap__title\">".concat(popoverContent.title, "</div>\n\t\t  <div class=\"sMap__city\">").concat(popoverContent.street, "</div>\n\t\t\t<a class=\"sMap__link\" target=\"_blank\" href=\"").concat(popoverContent.link, "\" data-main-title=\"\u0417\u0430\u043F\u0438\u0441\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\">\u0417\u0430\u043F\u0438\u0441\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440</a>\n\t\t</div>");
 		let index = $(popoverTriggerList).index(elem);
 		let popover = new bootstrap.Popover(elem, {
@@ -672,7 +671,7 @@ function eventHandler() {
 		elem.addEventListener('click', popOverElemClick);
 	}
 
-	function popOverElemClick(elem) {
+	function popOverElemClick() {
 		document.removeEventListener('click', popoverMissClick);
 		$(popoverMarks).removeClass('active');
 		$(popoverTriggerList).removeClass('active');

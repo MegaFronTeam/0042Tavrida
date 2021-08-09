@@ -687,6 +687,7 @@ function eventHandler() {
         });
       }
 	    else{
+        markWrap.innerHTML = '';
         let mark = document.createElement('div');
         mark.classList.add(`map-div`, `map-div--${index}`);
         $(markWrap).append(mark);
@@ -718,9 +719,6 @@ function eventHandler() {
       street: elem.dataset.street,
       link: elem.dataset.link,
     }
-    //
-
-    //
 
     let popoverInner= `
 		<div class="sMap__popover">
@@ -742,7 +740,7 @@ function eventHandler() {
 
     elem.addEventListener('click', popOverElemClick);
   }
-  function popOverElemClick(elem){
+  function popOverElemClick(){
     document.removeEventListener('click', popoverMissClick);
     $(popoverMarks).removeClass('active');
     $(popoverTriggerList).removeClass('active');
