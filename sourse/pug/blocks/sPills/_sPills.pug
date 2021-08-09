@@ -1,0 +1,24 @@
+mixin sPills(data)
+	// start sPills
+	+b.SECTION.sPills.section#sPills&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Возможности программы
+			+e.row.row
+				+sPillsItem('sm')
+					| Бесплатное
+					br
+					|
+					| обучение
+				+sPillsItem()
+					| Участие во Всероссийском конкурсе молодежных проектов Федерального агентства по делам молодежи с целью получения гранта
+				+sPillsItem('sm')
+					| Получение рекомендаций от организаторов проекта (по запросу)
+
+	// end sPills
+
+mixin sPillsItem(addClasses)
+	+e.col.col-md-4.text-md-center
+		+e.square
+		+e.txt(class=addClasses)
+			block

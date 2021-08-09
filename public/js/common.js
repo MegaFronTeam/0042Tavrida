@@ -134,7 +134,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '04.png';
+	screenName = '2033.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -522,7 +522,7 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sMaterials .act-next-js',
 			prevEl: '.sMaterials .act-prev-js'
-		} // breakpoints: { 
+		} // breakpoints: {
 		// 	480: {
 		// 		slidesPerView: 2,
 		// 	},
@@ -553,7 +553,7 @@ function eventHandler() {
 				slidesPerView: 3,
 				slidesPerColumn: 3
 			}
-		} // breakpoints: { 
+		} // breakpoints: {
 		// 	480: {
 		// 		slidesPerView: 2,
 		// 	},
@@ -600,6 +600,137 @@ function eventHandler() {
 		slidesPerView: 1,
 		autoplay: {
 			delay: 5000
+		}
+	}); //
+
+	let popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+	let markWrap = document.querySelector('.mark-wrap-js');
+	let popoverMarks = [];
+	let popoverMarksClientRects = [];
+	let popovers = [];
+
+	function putPopoverMarks() {
+		for (let [index, elem] of Object.entries(popoverTriggerList)) {
+			let childPos = elem.getBoundingClientRect();
+			let parentPos = markWrap.getBoundingClientRect();
+			popoverMarksClientRects.push(elem.getBoundingClientRect());
+			let markOffset = {
+				top: childPos.top - parentPos.top + childPos.height / 2,
+				left: childPos.left - parentPos.left + childPos.width / 2
+			};
+
+			if (popoverTriggerList.length === markWrap.children.length) {
+				$(markWrap.children[index]).css({
+					'top': markOffset.top,
+					'left': markOffset.left
+				});
+			} else {
+				let mark = document.createElement('div');
+				mark.classList.add("map-div", "map-div--".concat(index));
+				$(markWrap).append(mark);
+				popoverMarks.push(mark);
+				$(mark).css({
+					'top': markOffset.top,
+					'left': markOffset.left
+				});
+			}
+		}
+	}
+
+	putPopoverMarks();
+	window.addEventListener('resize', putPopoverMarks, {
+		passive: true
+	});
+
+	let popoverMissClick = function () {
+		if (!event.target.closest('.popover')) {
+			$(popovers).each(function () {
+				this.hide();
+			});
+			$(popoverMarks).removeClass('active');
+			$(popoverTriggerList).removeClass('active');
+		}
+	};
+
+	for (let elem of popoverTriggerList) {
+		let popoverContent = {
+			title: elem.dataset.title,
+			street: elem.dataset.street,
+			link: elem.dataset.link
+		}; //
+		//
+
+		let popoverInner = "\n\t\t<div class=\"sMap__popover\">\n\t\t  <div class=\"sMap__title\">".concat(popoverContent.title, "</div>\n\t\t  <div class=\"sMap__city\">").concat(popoverContent.street, "</div>\n\t\t\t<a class=\"sMap__link\" target=\"_blank\" href=\"").concat(popoverContent.link, "\" data-main-title=\"\u0417\u0430\u043F\u0438\u0441\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\">\u0417\u0430\u043F\u0438\u0441\u0430\u0442\u044C\u0441\u044F \u043D\u0430 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440</a>\n\t\t</div>");
+		let index = $(popoverTriggerList).index(elem);
+		let popover = new bootstrap.Popover(elem, {
+			template: "<div class=\"popover\" role=\"tooltip\">\n\t\t\t".concat(popoverInner),
+			container: '#sMap',
+			trigger: 'manual',
+			placement: 'top'
+		});
+		popovers.push(popover);
+		elem.addEventListener('click', popOverElemClick);
+	}
+
+	function popOverElemClick(elem) {
+		document.removeEventListener('click', popoverMissClick);
+		$(popoverMarks).removeClass('active');
+		$(popoverTriggerList).removeClass('active');
+		let index = $(popoverTriggerList).index(this);
+		$(popovers).each(function () {
+			this.hide();
+		});
+		popovers[index].show();
+		$(popoverMarks[index]).addClass('active');
+		$(this).addClass('active');
+		window.setTimeout(function () {
+			document.addEventListener('click', popoverMissClick);
+		}, 10);
+	} //links call
+
+
+	$('.sMap-table-js a').click(function () {
+		event.preventDefault();
+		window.scrollTo({
+			top: getCoords(document.querySelector('.sMap--js')).top,
+			behavior: "smooth"
+		}); //
+
+		let thisHref = this.getAttribute('href');
+		let thisPopOver = document.querySelector("[data-list-id=\"".concat(thisHref, "\"]"));
+		popOverElemClick.call(thisPopOver);
+	});
+
+	function getCoords(elem) {
+		// crossbrowser version
+		var box = elem.getBoundingClientRect();
+		var body = document.body;
+		var docEl = document.documentElement;
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+		var top = box.top + scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+		return {
+			top: Math.round(top),
+			left: Math.round(left)
+		};
+	} //
+
+
+	let sNewsSlider = new Swiper('.sNews-slider-js', {
+		slidesPerView: "auto",
+		loop: true,
+		spaceBetween: 32,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		//
+		navigation: {
+			nextEl: '.sNews-next-js',
+			prevEl: '.sNews-prev-js'
 		}
 	});
 	$(document).on('click', " .btn-top--js", () => $('html, body').animate({

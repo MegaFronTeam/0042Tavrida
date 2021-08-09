@@ -1,0 +1,273 @@
+// start .sMap
+.sMap {
+	position: relative;
+	--sPT: #{rem(81)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(10)};
+
+	&__map-wrap{
+		@include media-breakpoint-up(xxl){
+			margin-right: rem(-32);
+		}
+		position: relative;
+		z-index: 1;
+
+		padding-bottom: rem(60);
+	}
+
+	.section-title{
+		h2{
+			font-size: rem(24);
+			line-height: calc(29/24);
+			text-transform: uppercase;
+		}
+	}
+
+	*[data-bs-toggle]{
+		@include mt();
+		cursor: pointer;
+
+		&:hover, &.active{
+			fill: $orange!important;
+		}
+	}
+	&__mark-wrap{
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__map{
+		position: relative;
+		z-index: 1;
+
+		& > *{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.map-div{
+		pointer-events: none;
+		width: rem(12);
+		height: rem(12);
+		transform: translateX(-50%) translateY(-50%);
+		border-radius: 50%;
+
+		background: $orange;
+		border: 1px solid $white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+	}
+	.popover{
+		width: rem(240);
+		@include media-breakpoint-up(xxl){
+			margin-left: rem(120)!important;
+		}
+		//margin-top: -120px!important;
+
+		z-index: 100;
+		background-color: $white;
+		border-radius: rem(10);
+		padding: rem(12);
+		box-shadow: 0px 4px 80px rgba(147, 169, 174, 0.62);
+
+		&:after{
+			@include media-breakpoint-up(xxl){
+				content: '';
+			}
+			position: absolute;
+			top: calc(100% - 10px);
+			left: 0;
+			clip-path: polygon(100% 0, 0 0, 0 100%);
+			width: 20px;
+			height: 20px;
+			background-color: $white;
+		}
+	}
+	&__title{
+		font-weight: 800;
+		font-size: rem(12);
+		line-height: 1.45;
+		margin-bottom: rem(6);
+
+		text-transform: uppercase;
+		color: $dark;
+	}
+	&__city{
+		font-size: 12px;
+		line-height: 1.56;
+		margin-bottom: 10px;
+	}
+	&__link{
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 1.56;
+
+		color: $orange;
+		&:hover{
+			color: darken($orange, 5);
+		}
+	}
+
+	//
+	&__input-cont{}
+	&__input-wrap{}
+	&__input{}
+	&__btn{
+		img{
+
+		}
+	}
+	&__table{
+		width: 100%;
+		@include media-breakpoint-down(lg){
+			display: block!important;
+		}
+
+		thead{
+			padding-bottom: rem(13);
+			@include media-breakpoint-down(lg){
+				display: none!important;
+			}
+
+			td{
+				@include media-breakpoint-up(lg){
+					padding: rem(13) 0;
+				}
+
+				font-weight: bold!important;
+				font-size: rem(12);
+				line-height: 1.56;
+			}
+		}
+
+
+		tr{
+			border-bottom: 1px solid $gray-510;
+			@include media-breakpoint-down(lg){
+				display: flex!important;
+				flex-wrap: wrap;
+				width: 100%;
+				padding: rem(12) 0;
+			}
+		}
+		td{
+			@include media-breakpoint-down(sm){
+				width: 100%;
+				margin-bottom: rem(4);
+			}
+			@include media-breakpoint-down(md){
+				width: calc(100%/3);
+			}
+			@include media-breakpoint-down(lg){
+				width: calc(100%/3 - 100px/3);
+				margin-bottom: rem(8);
+			}
+		}
+		td:first-child{
+			font-weight: 600;
+			width: 100% !important;
+			@include media-breakpoint-up(lg){
+				font-weight: 400;
+				width: 43% !important;
+			}
+		}
+		td:last-child{
+			@include media-breakpoint-down(md){
+				width: 100%;
+				text-align: left;
+			}
+			@include media-breakpoint-down(lg){
+				width: 100px;
+				text-align: right;
+			}
+		}
+
+		tbody{
+			td{
+				@include media-breakpoint-up(lg){
+					padding: rem(20) 0;
+				}
+
+				font-size: rem(14);
+				line-height: 1.8;
+
+				&:first-child{
+					font-size: rem(16);
+				}
+			}
+		}
+
+		a{
+			display: inline-block;
+			font-weight: 600;
+			font-size: rem(14);
+			line-height: 1.8;
+			color: $orange;
+			&:hover{
+				color: darken($orange, 5);
+			}
+		}
+	}
+
+	&__input-tr{
+		border-bottom: none!important;
+	}
+	&__input-td{
+		position: relative;
+		padding: rem(15) 0 rem(6)!important;
+		width: 100%;
+		border-bottom: none;
+	}
+	&__input-cont{
+		position: relative;
+		width: 100%;
+	}
+	&__btn{
+		@extend .btn;
+		border: none!important;
+		box-shadow: none!important;
+		outline: none!important;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 5px;
+		height: 100%;
+		width: rem(46);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		@include mt();
+		&:hover{
+			transform: scale(1.2);
+		}
+	}
+	&__input{
+		width: 100%;
+		padding: rem(8) rem(20) rem(8.5) rem(45);
+
+		font-size: 12px;
+		line-height: 1.56;
+	}
+	&__{}
+} // end.sMap

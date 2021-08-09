@@ -1,0 +1,60 @@
+mixin sFamiliar(data)
+	// start sFamiliar
+	+b.SECTION.sFamiliar.section#sFamiliar&attributes(attributes)
+		.container
+			+b.section-title
+				h2 положение и материалы
+			+e.row.row
+				+sFamiliarItem()
+					| Положение
+					br
+					| о вступлении
+					br
+					| в Сеть
+				+sFamiliarItem()
+					| Методические материалы от университета креативных индустрий Universal University
+				+sFamiliarItem()
+					| Новости федеральной повестки арт-кластера Таврида/новости арт-резиденций
+			+e.lower-row.row
+				.col-lg-4
+					+e.sub-title Организатор
+					+e.l-img
+						img(loading="lazy" src=`img/svg/sFamiliar-1.svg` alt="")
+					+e.l-txt Экосистема проектов для реализации творческого и профессионального потенциала
+				.col-lg-8
+					+e.sub-title Партнеры образовательной программы
+					+e.sub-row.row
+						+sFamiliarSubItem(2)
+							| Университет креативных
+							br
+							| индустрий
+						+sFamiliarSubItem(3)
+							| Университет креативных
+							br
+							| индустрий
+			+e.foot-txt
+				| Программу «Сеть арт-резиденций»  реализует автономная некоммерческая организация
+				|
+				a(href="#") «Центр развития культурных инициатив»,
+				|
+				| партнер программы – Университет креативных индустрий
+				a(href="#") Universal University
+	// end sFamiliar
+
+mixin sFamiliarSubItem(imgNum)
+	+e.sub-col.col-md-6
+		+e.l-img
+			img(loading="lazy" src=`img/svg/sFamiliar-${imgNum}.svg` alt="")
+		+e.l-txt
+			block
+
+
+mixin sFamiliarItem()
+	.col-lg-4
+		+e.item(href="#")
+			+e.i-row.row.d-flex.align-items-center
+				.col-auto.d-block
+					+e.img
+						img(loading="lazy" src='img/svg/file-stab.svg' alt="")
+				+e.txt-col.col.d-block
+					block

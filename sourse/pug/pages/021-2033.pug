@@ -1,0 +1,56 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sCherCards/_sCherCards.pug
+include ../blocks/sFormL/_sFormL.pug
+include ../blocks/sDlForm/_sDlForm.pug
+include ../blocks/sFederal/_sFederal.pug
+include ../blocks/sResident/_sResident.pug
+include ../blocks/sPills/_sPills.pug
+include ../blocks/sMap/_sMap.pug
+include ../blocks/sFamiliar/_sFamiliar.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '015-2040'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+sFederal()
+	+sResident()
+	+sPills()
+	+sMap()
+	+sNewsSlider()
+	+sFamiliar()
+	+sForm()
+	+sPartners()
+	+footer()

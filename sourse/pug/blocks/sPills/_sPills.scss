@@ -1,0 +1,92 @@
+// start .sPills
+.sPills {
+	--sPT: #{rem(33)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(59)};
+
+	.section-title{
+		h2{
+			font-size: rem(24);
+			line-height: calc(29/24);
+			text-transform: uppercase;
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+
+		counter-reset: list 0;
+	}
+	&__col{
+		display: flex;
+		@include media-breakpoint-up(md){
+			display: block;
+		}
+
+		&:nth-child(3n + 1){
+			--square-color: #{$light-purple};
+		}
+		&:nth-child(3n + 2){
+			--square-color: #{$light-blue};
+		}
+		&:nth-child(3n + 3){
+			--square-color: #{$light-pink};
+		}
+
+		font-weight: bold;
+		font-size: 14px;
+		line-height: (22/14);
+	}
+	&__square{
+		flex-shrink: 0;
+		list-style-type: none;
+		position: relative;
+
+		&:after{
+			position: absolute;
+			top: rem(-13);
+			left: 50%;
+			transform: translateX(calc(-50% - 20px));
+			counter-increment: list;
+			content: counter(list);
+
+			padding: rem(5.5);
+			border-radius: rem(53);
+			font-weight: 900;
+			font-size: rem(25.5);
+			line-height: (31/25.5);
+
+			text-transform: uppercase;
+			color: $dark;
+			background-color: $white;
+		}
+
+		display: block;
+		width: rem(49);
+		height: rem(49);
+		border-radius: rem(18);
+		background-color: var(--square-color, #{$light-blue});
+
+		margin: 0 rem(24) 0 0;
+		@include media-breakpoint-up(md){
+			margin: 0 auto rem(30) auto;
+		}
+		@include media-breakpoint-up(xl){
+			margin: 0 auto rem(40) auto;
+		}
+	}
+	&__txt{
+
+		&--sm{
+			@include media-breakpoint-up(xxl){
+				max-width: 204px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+  //
+	&__{}
+	&__{}
+	&__{}
+} // end.sPills
