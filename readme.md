@@ -25,8 +25,3 @@
 1. <https://luckyone1221.github.io/0042Tavrida/public/cabinet.html>
 2. <https://luckyone1221.github.io/0042Tavrida/public/20-visit.html>
 2. <https://luckyone1221.github.io/0042Tavrida/public/021-2033.html>
-
-//
-data-title="" data-street="" data-link=""
-
-Название арт-резидженции

@@ -52,7 +52,8 @@
 	}
 
 	.map-div{
-		pointer-events: none;
+		@include mt();
+		pointer-events: none;//??
 		width: rem(12);
 		height: rem(12);
 		transform: translateX(-50%) translateY(-50%);
@@ -67,6 +68,11 @@
 		z-index: 10;
 		top: 0;
 		left: 0;
+
+		&.active{
+			background: $white;
+			border: 2px solid $blue3;
+		}
 	}
 	.popover{
 		width: rem(240);
@@ -118,6 +124,76 @@
 			color: darken($orange, 5);
 		}
 	}
+	//dd
+	&__dd-items{
+
+	}
+	&__dd-item{
+		margin-bottom: rem(10);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&.active{
+			--dd-head-bg: #{$orange};
+			--dd-head-col: #{$white};
+			--dd-head-chevron-rot: 180deg;
+			--dd-head-aft-o: 1;
+			--dd-head-bef-o: 0;
+		}
+	}
+	&__dd-head{
+		@include mt();
+		cursor: pointer;
+
+		padding: rem(4) rem(32) rem(4) rem(8);
+		border-radius: rem(8);
+		border: 1px solid $orange;
+		background: var(--dd-head-bg, #{transparent});
+
+		font-weight: 800;
+		font-size: rem(12);
+		line-height: 1.25;
+		color: var(--dd-head-col, #{$dark});
+
+		//
+		position: relative;
+		&:before,
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			right: rem(8);
+			top: 50%;
+			transform: translateY(-50%) rotateX(var(--dd-head-chevron-rot, 0deg));
+
+			width: rem(12);
+			height: rem(12);
+
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&:before{
+			background-image: url(../img/svg/chevron-down-orange.svg);
+			opacity: var(--dd-head-bef-o, 1);
+		}
+		&:after{
+			background-image: url(../img/svg/chevron-down-white.svg);
+			opacity: var(--dd-head-aft-o, 0);
+		}
+	}
+	&__dd-content{
+		padding: rem(15) 0 0 0;
+
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__{}
+	&__{}
 
 	//
 	&__input-cont{}
@@ -162,6 +238,9 @@
 			}
 		}
 		td{
+			padding-left: 5px!important;
+			padding-right: 10px!important;
+
 			@include media-breakpoint-down(sm){
 				width: 100%;
 				margin-bottom: rem(4);
@@ -269,5 +348,6 @@
 		font-size: 12px;
 		line-height: 1.56;
 	}
+
 	&__{}
 } // end.sMap

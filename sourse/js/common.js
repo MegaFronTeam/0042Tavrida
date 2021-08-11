@@ -365,50 +365,6 @@ function eventHandler() {
     },
   });
 
-  function makeDDGroup(parentSelect) {
-    let parent = document.querySelectorAll(parentSelect);
-    if (!parent) return;
-    parent.forEach(el => {
-      // childHeads, kind of funny))
-      let ChildHeads = el.querySelectorAll('.dd-head-js');
-
-      var hash = window.location.hash;
-      $(ChildHeads).each(function () {
-        // console.log($(this).parent().attr("id"));
-        let id = '#' + $(this).parent().attr("id");
-        if (id == hash) {
-          $(this.parentElement).addClass('active');
-          $(this.parentElement).find('.dd-content-js').slideDown(function () {
-            $(this).addClass('active');
-          });
-        }
-      })
-
-      $(ChildHeads).click(function () {
-        let clickedHead = this;
-
-        $(ChildHeads).each(function () {
-          if (this === clickedHead) {
-            $(this.parentElement).toggleClass('active');
-            $(this.parentElement).find('.dd-content-js').slideToggle(function () {
-              $(this).toggleClass('active');
-            });
-          } else {
-            $(this.parentElement).removeClass('active');
-            $(this.parentElement).find('.dd-content-js').slideUp(function () {
-              $(this).removeClass('active');
-            });
-          }
-        });
-      });
-
-
-    })
-  }
-
-
-  makeDDGroup('.faq-items-js, .participants-items-js');
-
   //
   let usefullSlider = new Swiper('.useful-slider-js', {
     slidesPerView: "auto",
@@ -687,7 +643,6 @@ function eventHandler() {
         });
       }
 	    else{
-        markWrap.innerHTML = '';
         let mark = document.createElement('div');
         mark.classList.add(`map-div`, `map-div--${index}`);
         $(markWrap).append(mark);
@@ -714,18 +669,62 @@ function eventHandler() {
     }
   };
   for(let elem of popoverTriggerList){
-    let popoverContent= {
-      title: elem.dataset.title,
-      street: elem.dataset.street,
-      link: elem.dataset.link,
+    let popoverContent = [
+      {
+        title: elem.dataset.title,
+        street: elem.dataset.street,
+        link: elem.dataset.link,
+      },
+    ];
+    let hasMultipleContetnt = elem.getAttribute('data-title2');
+    //
+    if (hasMultipleContetnt){
+      let index = 2;
+      while (elem.getAttribute(`data-title${index}`)){
+        popoverContent.push({
+          title: elem.getAttribute(`data-title${index}`),
+          street: elem.getAttribute(`data-street${index}`),
+          link: elem.getAttribute(`data-link${index}`),
+        })
+        index++;
+      }
     }
 
-    let popoverInner= `
-		<div class="sMap__popover">
-		  <div class="sMap__title">${popoverContent.title}</div>
-		  <div class="sMap__city">${popoverContent.street}</div>
-			<a class="sMap__link" target="_blank" href="${popoverContent.link}" data-main-title="Записаться на просмотр">Записаться на просмотр</a>
-		</div>`;
+    let popoverInner;
+
+    if (hasMultipleContetnt){
+      let popOverDDItems = [];
+      for (let item of popoverContent){
+        popOverDDItems.push(`
+          <div class="sMap__dd-item">  
+            <div class="sMap__dd-head dd-head-js">
+              ${item.title}
+            </div>
+            <div class="sMap__dd-content dd-content-js">
+              <div class="sMap__title">${item.title}</div>
+              <div class="sMap__city">${item.street}</div>
+              <a class="sMap__link" target="_blank" href="${item.link}">Перейти на страницу</a>
+            </div>
+          </div>
+        `);
+      }
+      popOverDDItems = popOverDDItems.join('');
+
+      popoverInner= `
+      <div class="sMap__popover">
+        <div class="sMap__dd-items sMap-dd-group-js">
+            ${popOverDDItems}
+        </div>
+      </div>`;
+    }
+    else{
+      popoverInner= `
+      <div class="sMap__popover">
+        <div class="sMap__title">${popoverContent[0].title}</div>
+        <div class="sMap__city">${popoverContent[0].street}</div>
+        <a class="sMap__link" target="_blank" href="${popoverContent[0].link}">Перейти на страницу</a>
+      </div>`;
+    }
 
     let index = $(popoverTriggerList).index(elem);
 
@@ -751,6 +750,7 @@ function eventHandler() {
       this.hide();
     })
     popovers[index].show();
+    makeDDGroup(['.sMap-dd-group-js']);
 
     $(popoverMarks[index]).addClass('active');
     $(this).addClass('active');
@@ -808,6 +808,43 @@ function eventHandler() {
       prevEl: '.sNews-prev-js',
     },
   });
+
+  function makeDDGroup(ArrSelectors){
+    for (let parentSelect of ArrSelectors){
+      let parents = document.querySelectorAll(parentSelect);
+      for(let parent of parents){
+        if (!$(parent).hasClass('working')){
+          $(parent).addClass('working');
+          let ChildHeads = parent.querySelectorAll('.dd-head-js');
+          $(ChildHeads).click(function (){
+            let clickedHead = this;
+
+            $(ChildHeads).each(function (){
+              if (this === clickedHead){
+                //parent element gain toggle class, style head change via parent
+                $(this.parentElement).toggleClass('active');
+                $(this.parentElement).find('.dd-content-js').slideToggle(function (){
+                  $(this).toggleClass('active');
+                });
+              }
+              else{
+                $(this.parentElement).removeClass('active');
+                $(this.parentElement).find('.dd-content-js').slideUp(function (){
+                  $(this).removeClass('active');
+                });
+              }
+            });
+
+          });
+        }
+      }
+    }
+  }
+  makeDDGroup([
+    '.faq-items-js',
+    '.participants-items-js',
+    //'.sMap-dd-group-js',
+  ]);
 
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));
 };
