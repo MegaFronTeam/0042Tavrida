@@ -492,31 +492,34 @@ function eventHandler() {
     });
   })
 
+  let sSuccessStories = document.querySelectorAll(".sSuccessStories");
+  sSuccessStories.forEach(el => {
 
-  let sSuccessStories = new Swiper('.sSuccessStories__slider--js', {
-    slidesPerView: 1,
-    //loop: true,
-    spaceBetween: 30,
-
-    lazy: {
-      loadPrevNext: true,
-      loadPrevNextAmount: 3,
-    },
-    //
-    navigation: {
-      nextEl: '.sSuccessStories .act-next-js',
-      prevEl: '.sSuccessStories .act-prev-js',
-    },
-
-    breakpoints: {
-      992: {
-        slidesPerView: 2,
+    let sSuccessStories = new Swiper(el.querySelector('.sSuccessStories__slider--js'), {
+      slidesPerView: 1,
+      //loop: true,
+      spaceBetween: 30,
+      
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 3,
       },
-    },
-
-  });
-  let sMaterials = new Swiper('.sMaterials__slider--js', {
-    slidesPerView: 'auto',
+      //
+      navigation: {
+        nextEl: el.querySelector(' .act-next-js'),
+        prevEl: el.querySelector(' .act-prev-js'),
+      },
+      
+      breakpoints: {
+        992: {
+          slidesPerView: 2,
+        },
+      },
+      
+    });
+  })
+    let sMaterials = new Swiper('.sMaterials__slider--js', {
+      slidesPerView: 'auto',
     //loop: true,
     spaceBetween: 30,
     watchOverflow: true,
