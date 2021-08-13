@@ -85,11 +85,11 @@ mixin wayPill(imgNum, hideAge)
 					block
 				if !hideAge
 					+e.age Возраст от 18 до 35 лет включительно
+
 mixin wayItem(imgNum,txt, txtStyle)
 	.col-12.col-lg-6
 		+e.item&attributes(attributes)
 			+pic(`sWay-${imgNum}.png`,'',0)
-			//- img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
 			+e.big-txt(style=txtStyle)=txt
 			block
 
@@ -98,5 +98,57 @@ mixin wayItem2(imgNum,txt, txtStyle)
 		+e.item--wide&attributes(attributes)
 			+pic(`sWay-${imgNum}.png`,'',0)
 			//- img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
+			+e.big-txt(style=txtStyle)=txt
+			block
+
+mixin sWay2(data)
+	// start sWay
+	+b.SECTION.sWay.section#sWay&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Форматы участия в фестивале
+			+e.row.row
+				+wayItem(4,'УЧАСТНИКИ', 'color: #fff; text-align: right')(style="background-color: #AE80B2;" class="item-long")
+					+e.txt--alt
+						+e.long--alt
+							| Участники фестиваля&nbsp;&mdash; это:
+							br
+							| –&nbsp;Молодые деятели культуры
+							br.d-none.d-lg-block
+							| и&nbsp;искусства, резиденты арт-кластера &laquo;Таврида&raquo;
+							br
+							| –&nbsp;Участники проектов
+							|
+							br.d-none.d-lg-block
+							| наших партнеров
+							|
+							br.d-none.d-lg-block
+							| -&nbsp;Представители
+							|
+							br.d-none.d-lg-block
+							| медиасферы,
+							|
+							br.d-none.d-lg-block
+							| писатели и
+							|
+							br.d-none.d-lg-block
+							| поэты.
+					+e.btn--black(href='#') Подробнее
+				+wayItem(5,'ЗРИТЕЛИ', 'color: #fff; text-align: right')(style="background-color: #6C7795;" class="item-long")
+					+e.txt--alt
+						+e.long--alt
+							| Для зрителей будет доступен online-фестиваль
+					+e.btn--black(href='#') Подробнее
+				//-
+				+wayItem3(7, 'Волонтеры', 'color: #fff;')(style="background-color:#60C5D5;" class="item-wide")
+					+e.txt--alt
+						+e.long--alt
+							| Целеустремленные, гибкие и творческие люди, которые способны реализовывать проекты со смыслом и менять будущее, желающие стать соорганизаторами фестиваля фестивалей «Таврида.АРТ»
+						+e.btn--black(href='#') Подробнее
+
+mixin wayItem3(imgNum,txt, txtStyle)
+	.col-12
+		+e.item--wide2&attributes(attributes)
+			+pic(`sWay-${imgNum}.png`,'',0)
 			+e.big-txt(style=txtStyle)=txt
 			block
