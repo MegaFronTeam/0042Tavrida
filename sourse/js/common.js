@@ -849,6 +849,31 @@ function eventHandler() {
     //'.sMap-dd-group-js',
   ]);
 
+  //
+  $('.sMap-table-js').DataTable({
+    "paging": false,
+    "bSort" : false,
+
+    //
+    language: {
+      searchPlaceholder: "поиск по городу, региону, названию"
+    }
+  });
+  //
+
+  window.setTimeout(function (){
+    let sMapThead = document.querySelector(".sMap-table-js thead");
+    function calcHeaderHeight() {
+      document.documentElement.style.setProperty('--map-th-height', `${sMapThead.offsetHeight}px`);
+    }
+    if (sMapThead){
+      window.addEventListener('resize', calcHeaderHeight, { passive: true });
+      window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+      calcHeaderHeight();
+    }
+  }, 30);
+
+
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));
 };
 if (document.readyState !== 'loading') {

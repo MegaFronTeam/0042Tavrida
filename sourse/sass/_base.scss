@@ -446,6 +446,46 @@ iframe {
 		display: none
 	}
 }
+.custom-scroll2 {
+	scrollbar-color: #00BAC3  #B2ECEF;
+
+	scrollbar-width: thin;
+	scrollbar-color: #00BAC3  #B2ECEF;
+
+	&::-webkit-scrollbar-thumb {
+		opacity: 1;
+		display: block
+	}
+
+	&::-webkit-scrollbar-track {
+		border: none;
+		background-color: #B2ECEF;
+		border-color: #B2ECEF;
+		-webkit-box-shadow: none;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 2px;
+		background-color: #B2ECEF;
+		// border-right: 2px;
+		/* or add it to the track */
+		border-color: #B2ECEF;
+		opacity: 0;
+		-webkit-box-shadow: none;
+		border-radius: 2.5px;
+	}
+
+	/* Add a thumb */
+	&::-webkit-scrollbar-thumb {
+		background: #00BAC3 ;
+		border-radius: 2.5px;
+	}
+
+	&::-webkit-scrollbar-button {
+		display: none
+	}
+}
 
 
 //
@@ -819,4 +859,8 @@ h2{
 	p{
 		font-size: rem(20);
 	}
+}
+//
+.dataTables_info{
+	display: none!important;
 }

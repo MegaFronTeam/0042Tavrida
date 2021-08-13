@@ -20,7 +20,6 @@
 1. <https://luckyone1221.github.io/0042Tavrida/public/015-2040.html>
 
 ======
-
 1. <https://luckyone1221.github.io/0042Tavrida/public/016-2031-park.html>
 1. <https://luckyone1221.github.io/0042Tavrida/public/cabinet.html>
 2. <https://luckyone1221.github.io/0042Tavrida/public/20-visit.html>
