@@ -207,25 +207,21 @@
 
 	//
 	&__table-wrap{
-		@extend .custom-scroll2;
-		max-height: 500px;
-		overflow-y: auto;
-		//overflow-x: visible;
+		//@extend .custom-scroll2;
+		//max-height: 500px;
+		//overflow-y: auto;
 		margin: 0 rem(-30);
 		padding: 0 rem(30);
-		//position: relative;
-
 		position: relative;
-		//padding-top: var(--map-inp-height);
 
 		.dataTables_filter{
-			position: absolute;
-			top: calc(var(--map-th-height));
+			//position: absolute;
+			//top: calc(var(--map-th-height));
 
 			//change firs row pt!!!!
 			padding: rem(16) 0 rem(26);
-			left: rem(30);
-			width: calc(100% - #{rem(60)}) !important;
+			//left: rem(30);
+			//width: calc(100% - #{rem(60)}) !important;
 
 			float: none;
 			font-size: 0;
@@ -254,7 +250,8 @@
 	&__table{
 		border: none!important;
 
-		width: calc(100% - 30px) !important;
+		//width: calc(100% - 30px) !important;
+		width: 100% !important;
 		@include media-breakpoint-down(lg){
 			display: block!important;
 		}
@@ -326,7 +323,7 @@
 		tbody{
 			tr:first-child{
 				td{
-					padding-top: calc(#{rem(40)} + #{rem(26)} + #{rem(16)}) !important;
+					//padding-top: calc(#{rem(40)} + #{rem(26)} + #{rem(16)}) !important;
 				}
 			}
 
@@ -406,5 +403,153 @@
 		line-height: 1.56;
 	}
 
+	//select
+	.dataTables_length{
+		width: 100%;
+		label{
+			display: flex;
+			align-items: center;
+			width: 100%;
+
+			font-weight: 600;
+			font-size: rem(16);
+
+
+			select{
+				margin-left: auto;
+				//@include media-breakpoint-up(md){
+				//	margin-left: rem(20);
+				//}
+				@extend .form-control;
+				@extend .form-select;
+				box-shadow: none!important;
+				width: rem(140);
+
+				color: $black!important;
+				font-size: rem(16) !important;
+				line-height: (18/16);
+
+				padding: rem(8) rem(45) rem(8.5) rem(20);
+				cursor: pointer;
+			}
+		}
+	}
+
+	//
+	.dataTables_paginate{
+		padding: rem(20) 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	//
+	.paginate_button,
+	.ellipsis{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+
+		margin: 0 rem(3);
+		min-width: rem(32);
+		height: rem(32);
+		padding: rem(4);
+		font-size: rem(14);
+		@include media-breakpoint-up(sm){
+			font-size: rem(16);
+			margin: 0 rem(3);
+			min-width: rem(44);
+			height: rem(44);
+			padding: rem(10);
+		}
+		@include media-breakpoint-up(lg){
+			margin: 0 rem(5);
+		}
+	}
+
+	.paginate_button{
+		@extend .btn;
+		@extend .btn-warning;
+
+		&.next,
+		&.previous{
+			margin: 0;
+
+			@include media-breakpoint-down(md){
+				font-size: 0;
+			}
+
+			&:after{
+				content: '';
+				@include media-breakpoint-up(md){
+					content: none;
+				}
+
+				width: rem(16);
+				height: rem(16);
+				display: inline-block;
+
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+
+
+		//
+		&.next{
+			&:after{
+				background-image: url(../img/svg/chevron-right.svg);
+			}
+		}
+		&.previous{
+			&:after{
+				background-image: url(../img/svg/chevron-left.svg);
+			}
+		}
+	}
+
+	.ellipsis{
+		@extend .btn;
+		@extend .btn-outline-warning;
+		pointer-events: none;
+		//border-width: 1px;
+		color:  $orange!important;
+
+	}
+	//
+	.sorting{
+		cursor: pointer;
+		position: relative;
+		padding-right: rem(40);
+
+		&:after{
+			@include mt();
+			content: '';
+			position: absolute;
+			display: block;
+			width: rem(40);
+			height: 100%;
+			right: 0;
+			top: 0;
+
+			background-image: url(../img/svg/arrow-down.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: rem(8);
+		}
+
+		&.sorting_asc{
+			&:after{
+				transform: rotateX(180deg);
+			}
+		}
+	}
+
+
+	&__{}
+	&__{}
 	&__{}
 } // end.sMap

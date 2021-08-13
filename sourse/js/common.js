@@ -851,12 +851,20 @@ function eventHandler() {
 
   //
   $('.sMap-table-js').DataTable({
-    "paging": false,
-    "bSort" : false,
+    //"paging": false,
+    //"bSort" : false,
+    lengthMenu: [4, 8, 12, 16],
 
     //
     language: {
-      searchPlaceholder: "поиск по городу, региону, названию"
+      searchPlaceholder: "поиск по городу, региону, названию",
+      lengthMenu: "Показывать Записей: _MENU_",
+      paginate: {
+        "first":      "Первый",
+        "last":       "Последний",
+        "next":       "Следующий",
+        "previous":   "Предыдущий"
+      },
     }
   });
   //
