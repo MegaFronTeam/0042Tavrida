@@ -86,8 +86,8 @@ mixin wayPill(imgNum, hideAge)
 				if !hideAge
 					+e.age Возраст от 18 до 35 лет включительно
 
-mixin wayItem(imgNum,txt, txtStyle)
-	.col-12.col-lg-6
+mixin wayItem(imgNum,txt, txtStyle, bootClasses='col-12 col-lg-6')
+	div(class=bootClasses)
 		+e.item&attributes(attributes)
 			+pic(`sWay-${imgNum}.png`,'',0)
 			+e.big-txt(style=txtStyle)=txt
@@ -97,18 +97,17 @@ mixin wayItem2(imgNum,txt, txtStyle)
 	.col-12
 		+e.item--wide&attributes(attributes)
 			+pic(`sWay-${imgNum}.png`,'',0)
-			//- img(loading="lazy" src=`img/@2x/sWay-${imgNum}.png` alt="")
 			+e.big-txt(style=txtStyle)=txt
 			block
 
 mixin sWay2(data)
 	// start sWay
 	+b.SECTION.sWay.section#sWay&attributes(attributes)
-		.container
-			+b.section-title
+		+e.container--alt.container
+			+b.section-title--alt
 				h2 Форматы участия в фестивале
-			+e.row.row
-				+wayItem(4,'УЧАСТНИКИ', 'color: #fff; text-align: right')(style="background-color: #AE80B2;" class="item-long")
+			+e.row--alt.row
+				+wayItem(4,'УЧАСТНИКИ', 'color: #fff; text-align: right', 'col-md-6')(style="background-color: #AE80B2;" class="item-long")
 					+e.txt--alt
 						+e.long--alt
 							| Участники фестиваля&nbsp;&mdash; это:
@@ -134,12 +133,11 @@ mixin sWay2(data)
 							br.d-none.d-lg-block
 							| поэты.
 					+e.btn--black(href='#') Подробнее
-				+wayItem(5,'ЗРИТЕЛИ', 'color: #fff; text-align: right')(style="background-color: #6C7795;" class="item-long")
+				+wayItem(5,'ЗРИТЕЛИ', 'color: #fff; text-align: right', 'col-md-6')(style="background-color: #6C7795;" class="item-long")
 					+e.txt--alt
 						+e.long--alt
 							| Для зрителей будет доступен online-фестиваль
 					+e.btn--black(href='#') Подробнее
-				//-
 				+wayItem3(7, 'Волонтеры', 'color: #fff;')(style="background-color:#60C5D5;" class="item-wide")
 					+e.txt--alt
 						+e.long--alt
