@@ -671,6 +671,8 @@ function eventHandler() {
       $(popoverTriggerList).removeClass('active');
     }
   };
+
+  //
   for(let elem of popoverTriggerList){
     let popoverContent = [
       {
@@ -880,6 +882,29 @@ function eventHandler() {
       calcHeaderHeight();
     }
   }, 30);
+
+  //
+  let sParnersAltSliderObj = {
+    slidesPerView: 'auto',
+    freeModeMomentum: true,
+    spaceBetween: 30,
+
+    speed: 10000,
+    loop: true,
+  };
+
+  let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
+  for(let [index,slider] of Object.entries(sParnersAltSliders)){
+    let sParnersAltSlider = new Swiper(slider, {
+      ...sParnersAltSliderObj,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: index % 2 === 0,
+      },
+    });
+  }
+
 
 
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));

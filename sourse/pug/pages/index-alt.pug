@@ -1,0 +1,51 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sCardsBlock/_sCardsBlock.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock({
+		title: `Арт-кластер <br> «Таврида»`,
+		video: `https://www.youtube.com/embed/JN3p9Vzb_nI`,
+		youtube: true,
+	})
+	+sAbout({
+		bg: 'about-bg.jpg',
+		title: 'Об арт-кластере',
+		text: `Арт-кластер &laquo;Таврида&raquo; ‒ это экосистема проектов для реализации творческого и&nbsp;профессионального потенциала молодых деятелей культуры и&nbsp;искусств`
+	})
+
+	+sVantage()
+	+sCardsBlock
+	+sProjects()
+	+sFestival()
+	+sAchivment()
+	+sResidents()
+	+sStory()
+	+sFaumos()
+	+sNews()
+	+sForm()
+	//-+sPartners()
+	+sParnersAlt()
+	+footer()
