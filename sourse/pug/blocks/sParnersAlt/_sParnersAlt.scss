@@ -59,19 +59,20 @@
 		}
 		.swiper-slide{
 			@include media-breakpoint-down(lg){
-				margin: 0 var(--bs-gutter-x) var(--bs-gutter-y) var(--bs-gutter-x) !important;
+				margin: 0!important;
+				padding: 0 var(--bs-gutter-x) var(--bs-gutter-y) var(--bs-gutter-x) !important;
 				&.swiper-slide-duplicate{
 					display: none!important;
 				}
 			}
-			width: auto;
+			//-width: auto;
 
-			max-width: 25%;
+			width: 33.3%;
 			@include media-breakpoint-up(md){
-				max-width: 33%;
+				width: 25%;
 			}
 			@include media-breakpoint-up(lg){
-				max-width: 50%;
+				width: 20%;
 			}
 		}
 	}

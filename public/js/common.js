@@ -811,11 +811,19 @@ function eventHandler() {
 	let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
 
 	for (let [index, slider] of Object.entries(sParnersAltSliders)) {
+		let reverseDir;
+
+		if (index % 2 === 0) {
+			reverseDir = true;
+		} else {
+			reverseDir = false;
+		}
+
 		let sParnersAltSlider = new Swiper(slider, _objectSpread(_objectSpread({}, sParnersAltSliderObj), {}, {
 			autoplay: {
 				delay: 0,
 				disableOnInteraction: false,
-				reverseDirection: index % 2 === 0
+				reverseDirection: reverseDir
 			}
 		}));
 	}
