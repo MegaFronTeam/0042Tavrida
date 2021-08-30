@@ -801,25 +801,23 @@ function eventHandler() {
 		}
 	}, 30); //
 
-	let sParnersAltSliderObj = {
-		slidesPerView: 'auto',
+	let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
+	let sParnersAltSliderParams = {
+		slidesPerView: "auto",
 		freeModeMomentum: true,
 		spaceBetween: 30,
 		speed: 10000,
 		loop: true
 	};
-	let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
 
 	for (let [index, slider] of Object.entries(sParnersAltSliders)) {
-		let reverseDir;
+		let reverseDir = false;
 
 		if (index % 2 === 0) {
 			reverseDir = true;
-		} else {
-			reverseDir = false;
 		}
 
-		let sParnersAltSlider = new Swiper(slider, _objectSpread(_objectSpread({}, sParnersAltSliderObj), {}, {
+		let sParnersAltSlider = new Swiper(slider, _objectSpread(_objectSpread({}, sParnersAltSliderParams), {}, {
 			autoplay: {
 				delay: 0,
 				disableOnInteraction: false,

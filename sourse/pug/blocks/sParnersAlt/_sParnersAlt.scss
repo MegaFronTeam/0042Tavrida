@@ -51,38 +51,61 @@
 				transition: all 0s ease-in-out!important;
 				transform: none!important;
 				flex-wrap: wrap!important;
-				justify-content: center!important;
+				//justify-content: center!important;
 				width: calc(100% + #{rem(30)});
-				margin-left: calc(var(--bs-gutter-x) * -1);
-				margin-right: calc(var(--bs-gutter-x) * -1);
+				margin-left: calc(var(--bs-gutter-x) / -2);
+				margin-right: calc(var(--bs-gutter-x) / -2);
 			}
 		}
 		.swiper-slide{
 			@include media-breakpoint-down(lg){
-				margin: 0!important;
-				padding: 0 var(--bs-gutter-x) var(--bs-gutter-y) var(--bs-gutter-x) !important;
+				margin: 0 calc(var(--bs-gutter-x) / 2) var(--bs-gutter-y) calc(var(--bs-gutter-x) / 2) !important;
 				&.swiper-slide-duplicate{
 					display: none!important;
 				}
 			}
-			//-width: auto;
 
-			width: 33.3%;
+			//
+			width: calc(100%/3 - var(--bs-gutter-x));
 			@include media-breakpoint-up(md){
-				width: 25%;
+				width: calc(25% - var(--bs-gutter-x));
 			}
 			@include media-breakpoint-up(lg){
-				width: 20%;
+				//width: 20%;
+				width: auto;
 			}
 		}
+
 	}
+
 	&__img{
-		height: rem(80);
+		width: 100%;
 		@include media-breakpoint-up(lg){
-			height: rem(120);
+			width: rem(200);
 		}
-		@include media-breakpoint-up(xxl){
-			height: rem(160);
+		height: rem(120);
+		background-color: $white;
+
+		box-shadow: 0px 4px rem(30) rgba(147, 169, 174, 0.62);
+		&:hover{
+			box-shadow: 0px 4px rem(30) rgba(147, 169, 174, 0.4);
+		}
+		@include media-breakpoint-up(md){
+			box-shadow: 0px 4px rem(40) rgba(147, 169, 174, 0.62);
+			&:hover{
+				box-shadow: 0px 4px rem(40) rgba(147, 169, 174, 0.4);
+			}
+		}
+		@include media-breakpoint-up(xl){
+			box-shadow: 0px 4px rem(80) rgba(147, 169, 174, 0.62);
+			&:hover{
+				box-shadow: 0px 4px rem(80) rgba(147, 169, 174, 0.4);
+			}
+		}
+
+		border-radius: rem(25);
+		@include media-breakpoint-up(lg){
+			border-radius: rem(50);
 		}
 
 		display: flex;
@@ -92,9 +115,29 @@
 		img{
 			width: auto;
 			height: auto;
-			max-width: 100%;
-			max-height: 100%;
+			max-height: 80%;
+			max-width: 80%;
 		}
 	}
+	//&__img{
+	//	height: rem(80);
+	//	@include media-breakpoint-up(lg){
+	//		height: rem(120);
+	//	}
+	//	@include media-breakpoint-up(xxl){
+	//		height: rem(160);
+	//	}
+	//
+	//	display: flex;
+	//	align-items: center;
+	//	justify-content: center;
+	//
+	//	img{
+	//		width: auto;
+	//		height: auto;
+	//		max-width: 100%;
+	//		max-height: 100%;
+	//	}
+	//}
 	&__{}
 } // end.sParnersAlt
