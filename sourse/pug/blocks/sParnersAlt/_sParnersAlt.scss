@@ -82,8 +82,12 @@
 		width: 100%;
 		@include media-breakpoint-up(lg){
 			width: rem(200);
+			height: rem(120);
 		}
-		height: rem(120);
+		@include media-breakpoint-up(xl){
+			width: rem(250);
+			height: rem(160);
+		}
 		background-color: $white;
 
 		box-shadow: 0px 4px rem(30) rgba(147, 169, 174, 0.62);
