@@ -41,6 +41,9 @@
 		.swiper-wrapper{
 			--bs-gutter-x: #{rem(16)};
 			--bs-gutter-y: #{rem(24)};
+			@include media-breakpoint-down(lg){
+				justify-content: center;
+			}
 			@include media-breakpoint-up(md){
 				--bs-gutter-x: #{rem(20)};
 				--bs-gutter-y: #{rem(36)};
@@ -52,7 +55,7 @@
 				transform: none!important;
 				flex-wrap: wrap!important;
 				//justify-content: center!important;
-				width: calc(100% + #{rem(30)});
+				width: calc(100% + var(--bs-gutter-x));
 				margin-left: calc(var(--bs-gutter-x) / -2);
 				margin-right: calc(var(--bs-gutter-x) / -2);
 			}
@@ -66,9 +69,13 @@
 			}
 
 			//
-			width: calc(100%/3 - var(--bs-gutter-x));
+			width: calc(100%/var(--counter, 2) - var(--bs-gutter-x));
 			@include media-breakpoint-up(md){
-				width: calc(25% - var(--bs-gutter-x));
+			--counter: 3;
+		}
+		@include media-breakpoint-up(md){
+				--counter: 4;
+				// width: calc(25% - var(--bs-gutter-x));
 			}
 			@include media-breakpoint-up(lg){
 				//width: 20%;

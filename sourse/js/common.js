@@ -884,15 +884,10 @@ function eventHandler() {
   }, 30);
 
   //
-  let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
   let sParnersAltSliderParams = {
-    slidesPerView: "auto",
-    freeModeMomentum: true,
-    spaceBetween: 30,
-
-    speed: 10000,
-    loop: true,
+    
   };
+  let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
 
   for(let [index,slider] of Object.entries(sParnersAltSliders)){
     let reverseDir = false;
@@ -900,18 +895,33 @@ function eventHandler() {
       reverseDir = true;
     }
 
-    let sParnersAltSlider = new Swiper(slider, {
-      ...sParnersAltSliderParams,
-
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        reverseDirection: reverseDir,
-      },
-    });
   }
+  
+  let sParnersAltSlider = new Swiper(' .sParnersAlt-slider-js', { 
+    slidesPerView: "auto",
+    // freeModeMomentum: true,
+    spaceBetween: 30,
+    speed: 10000,
+    loop: true,
+    autoplay: {
+      reverseDirection: true,
+      delay: 0,
+      disableOnInteraction: false,
+    }
+  });
+  let sParnersAltSliderRewers = new Swiper('.sParnersAlt-slider-revers-js', {
+    slidesPerView: "auto",
+    // freeModeMomentum: true,
+    spaceBetween: 30,
 
-
+    speed: 10000,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+  
 
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));
 };
