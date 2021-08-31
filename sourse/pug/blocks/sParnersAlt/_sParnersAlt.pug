@@ -2,8 +2,8 @@ mixin sParnersAlt(data)
 	// start sParnersAlt
 	+b.SECTION.sParnersAlt--js.section#sParnersAlt&attributes(attributes)
 		.container
-			+sParnersAltSlider('Партнеры')
-			+sParnersAltSlider('Партнеры2')
+			+sParnersAltSlider('Партнеры').sParnersAlt-slider-js
+			+sParnersAltSlider('Партнеры2').sParnersAlt-slider-revers-js
 	// end sParnersAlt
 
 mixin sParnersAltSlider(title)
@@ -11,7 +11,7 @@ mixin sParnersAltSlider(title)
 		+b.section-title
 			h2=title
 		+e.slider-wrap
-			.swiper-container.sParnersAlt-slider-js
+			.swiper-container&attributes(attributes)
 				.swiper-wrapper
 					+sParnersAltSlide('img/npr.png')
 					+sParnersAltSlide('img/partner-1.png')

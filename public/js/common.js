@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 const JSCCommon = {
 	modalCall() {
 		$(".link-modal").fancybox({
@@ -801,14 +795,8 @@ function eventHandler() {
 		}
 	}, 30); //
 
+	let sParnersAltSliderParams = {};
 	let sParnersAltSliders = document.querySelectorAll('.sParnersAlt--js .sParnersAlt-slider-js');
-	let sParnersAltSliderParams = {
-		slidesPerView: "auto",
-		freeModeMomentum: true,
-		spaceBetween: 30,
-		speed: 10000,
-		loop: true
-	};
 
 	for (let [index, slider] of Object.entries(sParnersAltSliders)) {
 		let reverseDir = false;
@@ -816,16 +804,31 @@ function eventHandler() {
 		if (index % 2 === 0) {
 			reverseDir = true;
 		}
-
-		let sParnersAltSlider = new Swiper(slider, _objectSpread(_objectSpread({}, sParnersAltSliderParams), {}, {
-			autoplay: {
-				delay: 0,
-				disableOnInteraction: false,
-				reverseDirection: reverseDir
-			}
-		}));
 	}
 
+	let sParnersAltSlider = new Swiper(' .sParnersAlt-slider-js', {
+		slidesPerView: "auto",
+		// freeModeMomentum: true,
+		spaceBetween: 30,
+		speed: 10000,
+		loop: true,
+		autoplay: {
+			reverseDirection: true,
+			delay: 0,
+			disableOnInteraction: false
+		}
+	});
+	let sParnersAltSliderRewers = new Swiper('.sParnersAlt-slider-revers-js', {
+		slidesPerView: "auto",
+		// freeModeMomentum: true,
+		spaceBetween: 30,
+		speed: 10000,
+		loop: true,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false
+		}
+	});
 	$(document).on('click', " .btn-top--js", () => $('html, body').animate({
 		scrollTop: 0
 	}, 0));
