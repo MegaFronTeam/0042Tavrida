@@ -2,6 +2,19 @@
 .sForm {
 	position: relative;
 	z-index: 2;
+	&:before {
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		z-index: -1;
+		width: 100%;
+		left: 0;
+		bottom: -1px;
+		height: 70%;
+		//background: linear-gradient(0deg, rgba($dim, 1) 0%, rgba($body-bg, 1) 80%);
+		background: $dim;
+	}
+
 	@include media-breakpoint-up(lg){
 		--sTPB: #{rem(47px)};
 		// --sPT: #{rem(68px)};
