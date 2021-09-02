@@ -1,7 +1,7 @@
 // start .sParnersAlt
 .sParnersAlt {
-  width: 100vw;
-  overflow: hidden;
+  //width: 100vw;
+  //overflow: hidden;
 
   position: relative;
   z-index: 1;
@@ -14,8 +14,10 @@
     width: 100%;
     left: 0;
     bottom: -1px;
-    height: 100%;
-    background: linear-gradient(0deg, rgba($dim, 1) 0%, rgba($body-bg, 1) 80%);
+    height: calc(100% + #{rem(440)});
+    //background: linear-gradient(0deg, rgba($dim, 1) 0%, rgba($body-bg, 1) 80%);
+    background: $dim;
+
   }
 
   @include media-breakpoint-up(xl) {

@@ -10,7 +10,8 @@
 		width: 100%;
 		left: 0;
 		bottom: -1px;
-		height: rem(1080);
+		//height: rem(1080);
+		height: calc(100% + #{rem(440)});
 		background-color: $dim;
 	}
 
