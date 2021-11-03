@@ -21,8 +21,11 @@
 
 ======
 1. <https://luckyone1221.github.io/0042Tavrida/public/016-2031-park.html>
-1. <https://luckyone1221.github.io/0042Tavrida/public/cabinet.html>
-2. <https://luckyone1221.github.io/0042Tavrida/public/20-visit.html>
-2. <https://luckyone1221.github.io/0042Tavrida/public/021-2033.html>
-2. <https://luckyone1221.github.io/0042Tavrida/public/022-formats.html>
-1. <https://luckyone1221.github.io/0042Tavrida/public/index-alt.html>
+2. <https://luckyone1221.github.io/0042Tavrida/public/cabinet.html>
+3. <https://luckyone1221.github.io/0042Tavrida/public/20-visit.html>
+4. <https://luckyone1221.github.io/0042Tavrida/public/021-2033.html>
+5. <https://luckyone1221.github.io/0042Tavrida/public/022-formats.html>
+6. <https://luckyone1221.github.io/0042Tavrida/public/index-alt.html>
+7. // 03.11.2021 personal cab
+8. <https://luckyone1221.github.io/0042Tavrida/public/023-personal-cab.html>
+9. <https://luckyone1221.github.io/0042Tavrida/public/024-pc--events.html>

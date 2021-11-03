@@ -1,0 +1,191 @@
+// start .sOrders
+.sOrders {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(32)};
+		--sPB: #{rem(20)};
+		--sTPB: #{rem(50)};
+	}
+	//-
+	&__row{
+		--bs-gutter-x: #{rem(48)};
+		margin-bottom: rem(43);
+	}
+	&__col{
+		&--arrow{
+			display: flex;
+			align-items: center;
+		}
+	}
+	.section-title{
+		h2{
+			line-height: calc(37/30);
+		}
+	}
+	&__all{
+		white-space: nowrap;
+		display: inline-block;
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 1.6;
+
+		color: $orange;
+	}
+
+	//-
+	.swiper-prev,
+	.swiper-next{
+		width: rem(40);
+		height: rem(16);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 20px;
+			color: transparent;
+			stroke: $primary;
+			stroke-width: rem(2);
+		}
+
+	}
+	.swiper-prev{
+		margin-right: var(--bs-gutter-x);
+		@include media-breakpoint-up(xl){
+			margin-right: rem(72);
+		}
+	}
+	.swiper-next{
+
+	}
+	//
+
+	&__slider-wrap{
+		.swiper-container{
+			@include media-breakpoint-down(xl){
+				overflow: visible!important;
+			}
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+
+			width: rem(354);
+			max-width: 100%;
+			@include media-breakpoint-up(xl){
+				width: calc(100%/3 - 29px*2/3);
+			}
+		}
+	}
+	&__item{
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		border: 3px solid $black;
+		border-radius: rem(50);
+
+		padding: rem(30);
+		@include media-breakpoint-up(lg){
+			padding: rem(32) rem(24);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(30);
+		}
+	}
+	&__time{
+		font-weight: 500;
+		line-height: calc(20/16);
+		margin-bottom: rem(18);
+	}
+	&__title{
+		font-weight: 900;
+		font-size: rem(22);
+		@include media-breakpoint-up(xl){
+			font-size: rem(24);
+		}
+		line-height: calc(29/24);
+		text-transform: uppercase;
+		margin-bottom: rem(14);
+	}
+	&__descr{
+		font-weight: 500;
+		line-height: calc(20/16);
+		margin-bottom: rem(16);
+	}
+	&__status-row{
+		margin-bottom: rem(29);
+	}
+	&__status{
+		display: inline-block;
+		border-radius: rem(50);
+		padding: rem(6) rem(8);
+		color: $white;
+
+		font-weight: bold;
+		line-height: calc(20/16);
+		text-transform: uppercase;
+	}
+	&__mark-row{
+		margin-top: auto;
+		margin-bottom: rem(24);
+	}
+	&__m-col{
+		max-width: calc(var(--bs-gutter-x) + #{rem(150)});
+
+		&--txt{
+			font-weight: 500;
+			line-height: calc(20/16);
+		}
+		&--val{
+			font-weight: 900;
+			font-size: rem(24);
+			line-height: calc(29/24);
+			text-transform: uppercase;
+			color: $blue3;
+		}
+	}
+	&__actions{
+		min-height: calc(#{rem(48)}*2 + #{rem(16)});
+
+		display: flex;
+		flex-direction: column;
+	}
+	&__btn{
+		margin-top: auto;
+		@extend .btn;
+		width: 100%;
+		margin-bottom: rem(16);
+		&:last-child{
+			margin-bottom: 0;
+		}
+		padding: rem(10) rem(20);
+		height: rem(48);//!!!!!!! need this in actions mh
+		line-height: 1;
+		text-transform: uppercase;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&--outline-black{
+			border-width: 3px;
+			@extend .btn-outline-dark;
+
+			@include media-breakpoint-up(xl){
+				font-size: rem(20);
+			}
+		}
+		&--orange{
+			@extend .btn-warning;
+		}
+	}
+
+	//-
+	&__{}
+	&__{}
+} // end.sOrders

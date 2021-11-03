@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sCardsBlock/_sCardsBlock.pug
+include ../blocks/sActive/_sActive.pug
+include ../blocks/sOrders/_sOrders.pug
+include ../blocks/sCerts/_sCerts.pug
+include ../blocks/sEvent/_sEvent.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '023-personal-cab'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+b.links-header
+		.container
+			+e.slider-wrap
+				.swiper-container.lh-slider-js
+					ul.swiper-wrapper
+						li.swiper-slide: a(href="#") Личный кабинет
+						li.swiper-slide: a(href="#") Все заявки
+						li.swiper-slide: a(href="#") Профиль
+						li.swiper-slide: a.active(href="#") Мероприятия
+						//-li.swiper-slide: a(href="#") Билеты
+	+sEvent()
+	//+sActive()
+	//+sOrders()
+	//+sCerts()
+	+footer()

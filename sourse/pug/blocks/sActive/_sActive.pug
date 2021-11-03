@@ -1,0 +1,22 @@
+mixin sActive(data)
+	// start sActive
+	+b.SECTION.sActive.section#sActive&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col--left.col-md-7.col-lg-7.col-xl-8.order-last.order-md-0
+					+e.box
+						+b.section-title
+							h1 Активное мероприятие
+						+e.btn(href="#") Подать заявку
+				+e.col--mob-img.col-5.d-md-none
+					+e.portrait
+						img(loading="lazy" src="img/@2x/sActive-port.png" alt="")
+				+e.col--right.col-7.col-md-5.col-lg-5.col-xl-4.text-md-end
+					+e.edit(href="#") Редактировать профиль
+					+e.portrait-wrap.d-none.d-md-block
+						+e.portrait
+							img(loading="lazy" src="img/@2x/sActive-port.png" alt="")
+					+e.name Игорь Смактуновский
+					+e.location Краснодарский край
+					+e.id ID 15566988
+	// end sActive

@@ -1,0 +1,17 @@
+mixin sCerts(data)
+	// start sCerts
+	+b.SECTION.sCerts.section#sCerts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сертфикаты
+			+e.row.row
+				-for(let i = 0; i < 3; i++)
+					+sCertsItem()
+	// end sCerts
+
+mixin sCertsItem()
+	.col-sm-6.col-lg-4
+		+e.item(href="#")
+			+e.img
+				img(loading="lazy" src=`img/@2x/sCertsItem.png` alt="")
+			+e.txt Сертификат участника Тавриды 2015

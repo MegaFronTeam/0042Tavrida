@@ -1,0 +1,59 @@
+mixin sOrders(data)
+	// start sOrders
+	+b.SECTION.sOrders--js.section#sOrders&attributes(attributes)
+		.container
+			+e.row.row.align-items-end.gy-4
+				.col-auto
+					+b.section-title.pb-0
+						h2 Активные заявки
+				.col
+					+e.all Все заявки
+				+e.col--arrow.col-auto.align-self-center
+					.swiper-prev
+						+icon('arrow-left')
+					.swiper-next
+						+icon('arrow-right')
+			+e.slider-wrap
+				.swiper-container.sOrders-slider-js
+					.swiper-wrapper
+						-for(var i = 0; i < 3; i++)
+							+sOrdersSlide({
+								descr: 'Часть мероприятия и описание направления если длинное ',
+								statusBg: '#00BAC3',
+								status: 'На рассмотрении',
+								outlineBtn: 'Редактировать',
+								orangeBtn: 'Отозвать',
+							})
+							+sOrdersSlide({
+								descr: 'Часть мероприятия и описание направления если длинное сокращать троеточием...',
+								statusBg: '#FF1F00',
+								status: 'Отклонена',
+								outlineBtn: false,
+								orangeBtn: 'Удалить',
+							})
+							+sOrdersSlide({
+								descr: 'Часть мероприятия и описание направления если длинное сокращать троеточием...',
+								statusBg: '#6B1680',
+								status: 'Одобрена',
+								outlineBtn: 'Отозвать',
+								orangeBtn: 'Подтвердить участие',
+							})
+	// end sOrders
+
+mixin sOrdersSlide(data)
+	.swiper-slide
+		+e.item
+			+e.time 17.06.2022 в 14:00
+			+e.title Название мероприятия в&#160;несколько строк
+			+e.descr=data.descr
+			+e.status-row.row.gx-3.gy-2
+				.col-auto
+					+e.status(style=`background-color: ${data.statusBg};`)=data.status
+			+e.mark-row.row.align-items-center
+				+e.m-col--txt.col Баллы от&#160;экспертов:
+				+e.m-col--val.col-auto.ms-auto 450
+			+e.actions
+				if data.outlineBtn
+					+e.btn--outline-black(href="#")=data.outlineBtn
+				+e.btn--orange(href="#")=data.orangeBtn
+

@@ -1,0 +1,63 @@
+// start .sCerts
+.sCerts {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(10)};
+	--sTPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(7)};
+		--sPB: #{rem(0)};
+		margin-bottom: -25px;
+		--sTPB: #{rem(50)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(33.46)};
+			--bs-gutter-y: #{rem(33.46)};
+		}
+	}
+	&__item{
+		text-align: center;
+		display: block;
+		min-height: 100%;
+
+		background: $dim;
+
+		padding: rem(24) rem(20) rem(32);
+		@include media-breakpoint-up(sm){
+			padding: rem(32) rem(24) rem(40);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(32) rem(32) rem(40);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 26px 36px 40px 33.5px;
+		}
+	}
+	&__img{
+		display: block;
+		width: 100%;
+		margin-bottom: rem(35);
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__txt{
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: calc(15/12);
+	}
+	//-
+	&__{}
+	&__{}
+	&__{}
+} // end.sCerts

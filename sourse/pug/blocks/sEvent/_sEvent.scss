@@ -1,0 +1,118 @@
+// start .sEvent
+.sEvent {
+	--sPT: #{rem(55)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(57)};
+		--sPB: #{rem(20)};
+		--sTPB: #{rem(50)};
+	}
+
+	&__items{
+
+	}
+	&__item{
+		position: relative;
+		z-index: 1;
+		border-radius: rem(26);
+		overflow: hidden;
+
+		margin-bottom: rem(24);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: 0;
+			background-color: rgba($black, .6);
+			@include media-breakpoint-up(sm){
+				background: linear-gradient(-90deg, rgba(0, 0, 0, 0.79) 44.12%, rgba(0, 0, 0, 0) 69.58%);
+			}
+			width: rem(711);
+			height: 100%;
+		}
+
+		min-height: rem(349);
+		display: flex;
+		flex-direction: column;
+
+
+		padding: rem(32) rem(20) rem(24);
+		@include media-breakpoint-up(sm){
+			padding: rem(40) rem(24) rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(38) rem(28) rem(33);
+		}
+	}
+	&__bg{
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__txt-box{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		width: 100%;
+		@include media-breakpoint-up(sm){
+			width: rem(324);
+			max-width: 100%;
+		}
+		margin-left: auto;
+		color: $white;
+	}
+	&__title{
+		max-width: 97%;
+		font-weight: 800;
+		font-size: rem(20);
+		line-height: 1.4;
+
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(7);
+		}
+
+		display: flex;
+		align-items: flex-end;
+		text-transform: uppercase;
+	}
+	&__txt{
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 1.45;
+	}
+	&__btn{
+		margin-top: auto;
+		@extend .btn;
+		@extend .btn-warning;
+		padding: rem(10) rem(24);
+		min-width: rem(251);
+
+		font-weight: 800;
+		font-size: rem(20);
+		line-height: 1.4;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+	}
+	//-
+	&__{}
+	&__{}
+} // end.sEvent

@@ -134,7 +134,7 @@ function eventHandler() {
   //remove on prod
   var x = window.location.host;
   let screenName;
-  screenName = '022-crop.png';
+  screenName = '024.png';
   if (screenName && x.includes("localhost:30")) {
     document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
   }
@@ -733,6 +733,8 @@ function eventHandler() {
 
     let index = $(popoverTriggerList).index(elem);
 
+    let someItem = document.querySelector('.some-item-js');
+
     let popover =  new bootstrap.Popover(elem, {
       template: `<div class="popover" role="tooltip">
 			${popoverInner}`,
@@ -921,6 +923,41 @@ function eventHandler() {
       disableOnInteraction: false,
     },
   });
+  //-
+  let lhSlider = new Swiper('.lh-slider-js', {
+    slidesPerView: "auto",
+    freeMode: true,
+    loopFillGroupWithBlank: true,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    freeModeMomentum: true,
+    // freeModeMomentum: true,
+
+    // breakpoints: {
+    //   319: {
+    //     spaceBetween: 30,
+    //   },
+    //   768: {
+    //     spaceBetween: 40,
+    //   },
+    //   1200: {
+    //     spaceBetween: 71,
+    //   },
+    // },
+  });
+  window.setTimeout(lhSlider.update, 200);
+  //
+  let sOrdersSlider = new Swiper('.sOrders-slider-js', {
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 29,
+
+    navigation: {
+      nextEl: '.sOrders--js .swiper-next',
+      prevEl: '.sOrders--js .swiper-prev',
+    },
+  });
+
   
 
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));
