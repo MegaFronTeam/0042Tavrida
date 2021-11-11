@@ -134,7 +134,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '024.png';
+	screenName = '024-4.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -861,6 +861,23 @@ function eventHandler() {
 			nextEl: '.sOrders--js .swiper-next',
 			prevEl: '.sOrders--js .swiper-prev'
 		}
+	}); //
+
+	let sTableSlider = new Swiper('.sTable-slider-js', {
+		slidesPerView: "auto",
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
+	}); //
+
+	let lcMenuSlider = new Swiper('.lc-menu-slider-js', {
+		slidesPerView: "auto",
+		spaceBetween: 8,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
 	});
 	$(document).on('click', " .btn-top--js", () => $('html, body').animate({
 		scrollTop: 0

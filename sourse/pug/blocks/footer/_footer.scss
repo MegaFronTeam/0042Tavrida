@@ -1,4 +1,6 @@
 .footer {
+	margin-top: auto;
+
 	padding: rem(70) 0;
 	@include media-breakpoint-up(lg){
 		padding: rem(88) 0;

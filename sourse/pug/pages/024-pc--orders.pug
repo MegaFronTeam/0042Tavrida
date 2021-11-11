@@ -18,11 +18,13 @@ include ../blocks/sActive/_sActive.pug
 include ../blocks/sOrders/_sOrders.pug
 include ../blocks/sCerts/_sCerts.pug
 include ../blocks/sEvent/_sEvent.pug
+include ../blocks/sTickets/_sTickets.pug
+include ../blocks/sTable/_sTable.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '023-personal-cab'
+	- let  title= '024-pc--orders'
 	title= title
 block pagecontent
 	+mMenu()
@@ -38,8 +40,5 @@ block pagecontent
 						li.swiper-slide: a(href="#") Профиль
 						li.swiper-slide: a.active(href="#") Мероприятия
 						li.swiper-slide: a(href="#") Билеты
-	+sEvent()
-	//+sActive()
-	//+sOrders()
-	//+sCerts()
+	+sTable()
 	+footer()

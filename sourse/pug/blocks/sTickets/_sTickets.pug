@@ -1,0 +1,22 @@
+mixin sTickets(data)
+	// start sTickets
+	+b.sTickets.section#sTickets&attributes(attributes)
+		.container
+			+e.row.row
+				+sTicketsItem()
+				+sTicketsItem()
+				+sTicketsItem()
+				+sTicketsItem()
+	// end sTickets
+
+mixin sTicketsItem()
+	.col-lg-6
+		+e.item
+			+e.item-row.row.align-items-center
+				+e.col--left.col
+					+e.title Фестиваль Таврида.арт
+					+e.date 10 — 14 февраля
+					+e.copy скопировать ссылку на QR-код
+				+e.col--right.col-auto
+					+e.qr(href="#")
+						img(loading="lazy" src="img/@2x/qr.png" alt="")

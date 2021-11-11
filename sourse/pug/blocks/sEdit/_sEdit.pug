@@ -1,0 +1,62 @@
+mixin sEdit(data)
+	// start sEdit
+	+b.SECTION.sEdit.section#sEdit&attributes(attributes)
+		.container
+			+e.top-row.row.align-items-center.gy-3
+				.col-auto
+					+e.back(href="#")
+						+icon('arrow-left')
+				.col
+					+b.section-title
+						h1 Редактирование профиля
+			+e.menu-slider
+				.swiper-container.lc-menu-slider-js
+					ul.swiper-wrapper
+						li.swiper-slide: a.active(href='#') Общее
+						li.swiper-slide: a(href='#') здоровье
+						li.swiper-slide: a(href='#') Паспорт
+						li.swiper-slide: a(href='#') проживание
+						li.swiper-slide: a(href='#') Работа
+						li.swiper-slide: a(href='#') Образование
+						li.swiper-slide: a(href='#') Языки
+			+e.sub-title
+				h2 Общее
+			+form-wrap
+				.row
+					.col-lg-8
+						.row
+							.col-md-6.top-col
+								+input('Введите', 'text', 'Фамилия')
+								+input('Введите', 'text', 'Отчество')
+							.col-md-6.top-col
+								+input('Введите', 'text', 'Имя')
+								+input('Краснодарский край', 'select', 'Регион')
+							.col-md-6
+								+input('Введите', 'text', 'Ссылка на Вконтакте')
+								+input('Введите', 'text', 'Ссылка на Facebook')
+								+input('Введите', 'text', 'Ссылка на Инстаграм')
+								+input('Введите', 'text', 'Ссылка на ТикТок')
+							.col-md-6
+								+input('Выберите', 'select', 'Размер одежды')
+								+input('Выберите', 'select', 'Тип питания')
+								+input('Введите', 'text', 'Участие в общественной деятельности')
+							.col-lg-6
+								+e.sm-title Контактное лицо
+								+input('Введите', 'text', 'ФИО')
+								+input('Введите', 'tel', 'Номер телефона')
+					.col-lg-4.col-xl-3.ms-auto
+						label.dropzone-wrapper.d-block
+							.dz-gray.text-center Фото участника
+							+b.dropzone(action='/file-upload')
+								#dropzone
+									+e.prev-wrap
+										+icon('dz-plus')
+										| Выбрать
+										br
+										| фото
+									.fallback
+										input(name='file', type='file', multiple='')
+						//-+input('Введите', 'text', '')
+					.col-md-6.col-lg-4
+						+e.btn(type="submit") Сохранить
+	// end sEdit

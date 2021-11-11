@@ -1,0 +1,131 @@
+// start .sTable
+.sTable {
+	--sPT: #{rem(55)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(62)};
+		--sPB: #{rem(20)};
+		--sTPB: #{rem(50)};
+	}
+
+	//-
+	&__slider-wrap{
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{}
+		.swiper-slide{
+			width: rem(1120);
+		}
+	}
+	&__table{
+		@include media-breakpoint-down(lg){
+			width: rem(1120);
+		}
+	}
+	&__tr{
+		padding: rem(17.5) 0;
+		border-bottom: 1px solid rgba($gray-650, .5);
+
+		&--head{
+			padding: 0 0 rem(16);
+			margin-bottom: 3px;
+			border-bottom: 2px solid $black;
+		}
+	}
+	&__row{
+
+	}
+	&__col{
+		flex-grow: 1;
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: calc(15/12);
+
+		&--date{
+			width: 8.5%!important;
+		}
+		&--time{
+			//text-align: center;
+			width: 7.5% !important;
+		}
+		&--event{
+			width: 31% !important;
+		}
+		&--status{
+			width: 16%!important;
+		}
+		&--mark{
+			//text-align: center;
+			width: 5.5%!important;
+		}
+		&--orange{
+			width: 15%!important;
+			padding-right: 0;
+		}
+		&--black{
+			width: calc(var(--bs-gutter-x)/2 + #{rem(96)}) !important;
+			padding-left: 0;
+		}
+	}
+	&__tr{
+		font-size: rem(16);
+	}
+	&__row{}
+	&__date{
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: calc(20/16);
+	}
+	&__time{
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: calc(20/16);
+	}
+	&__event{
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: calc(20/16);
+	}
+	&__status{
+		text-align: center;
+		padding: rem(8.5) rem(10);
+		border-radius: rem(150);
+
+		font-weight: bold;
+		font-size: rem(12);
+		line-height: calc(15/12);
+		text-transform: uppercase;
+		color: $white;
+	}
+	&__mark{
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 1.8;
+		color: $blue3;
+	}
+	&__btn{
+		@extend .btn;
+		border-width: 3px;
+		padding: rem(5.5) rem(5);
+
+		font-weight: 900;
+		font-size: rem(12);
+		line-height: calc(15/12);
+		text-transform: uppercase;
+
+		&--orange{
+			min-width: rem(148);
+			@extend .btn-warning;
+		}
+		&--out-black{
+			min-width: rem(96) !important;
+			@extend .btn-outline-black;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sTable

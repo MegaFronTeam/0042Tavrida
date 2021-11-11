@@ -29,3 +29,6 @@
 7. // 03.11.2021 personal cab
 8. <https://luckyone1221.github.io/0042Tavrida/public/023-personal-cab.html>
 9. <https://luckyone1221.github.io/0042Tavrida/public/024-pc--events.html>
+9. <https://luckyone1221.github.io/0042Tavrida/public/024-pc--tickets.html>
+9. <https://luckyone1221.github.io/0042Tavrida/public/024-pc--orders.html>
+9. <https://luckyone1221.github.io/0042Tavrida/public/024-pc--profile-edit.html>

@@ -1,0 +1,80 @@
+mixin sTable(data)
+	// start sTable
+	+b.SECTION.sTable.section#sTable&attributes(attributes)
+		.container
+			+e.slider-wrap
+				.swiper-container.sTable-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+e.table
+								+e.tr--head
+									+e.row.row
+										+e.col--date.col-auto Дата
+										+e.col--time.col-auto Время
+										+e.col--event.col-auto Мероприятие
+										+e.col--status.col-auto Статус
+										+e.col--mark.col-auto Баллы
+										+e.col--orange.col-auto
+										+e.col--black.col-auto
+								+sTableRow({
+									event: 'Название мероприятия в несколько строк для наглядности отображения',
+									status: 'На рассмотрении',
+									statusBg: '#00BAC3',
+									orangeBtn: 'Редактировать',
+									blackBtn: 'отозвать',
+								})
+								+sTableRow({
+									event: 'Название мероприятия в несколько строк для ',
+									status: 'Отклонена',
+									statusBg: '#FF1F00',
+									orangeBtn: false,
+									blackBtn: 'Удалить',
+								})
+								+sTableRow({
+									event: 'Название мероприятия в несколько',
+									status: 'Одобрена',
+									statusBg: '#6B1680',
+									orangeBtn: 'Подтвердить',
+									blackBtn: 'отозвать',
+								})
+								+sTableRow({
+									event: 'Название мероприятия в несколько строк для наглядности отображения',
+									status: 'На рассмотрении',
+									statusBg: '#00BAC3',
+									orangeBtn: 'Редактировать',
+									blackBtn: 'отозвать',
+								})
+								+sTableRow({
+									event: 'Название мероприятия в несколько строк для ',
+									status: 'Отклонена',
+									statusBg: '#FF1F00',
+									orangeBtn: false,
+									blackBtn: 'Удалить',
+								})
+								+sTableRow({
+									event: 'Название мероприятия в несколько',
+									status: 'Одобрена',
+									statusBg: '#6B1680',
+									orangeBtn: 'Подтвердить',
+									blackBtn: 'отозвать',
+								})
+	// end sTable
+
+mixin sTableRow(data)
+	+e.tr
+		+e.row.row.align-items-center
+			+e.col--date.col-auto
+				+e.date 17.06.2022
+			+e.col--time.col-auto
+				+e.time 14:00
+			+e.col--event.col-auto
+				+e.event=data.event
+			+e.col--status.col-auto
+				+e.status(style=`background-color: ${data.statusBg}`)=data.status
+			+e.col--mark.col-auto
+				+e.mark 450
+			+e.col--orange.col-auto.text-end
+				if data.orangeBtn
+					+e.btn--orange(href="#")=data.orangeBtn
+			+e.col--black.col-auto.text-end
+				+e.btn--out-black(href="#")=data.blackBtn
