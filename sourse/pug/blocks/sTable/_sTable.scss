@@ -25,70 +25,33 @@
 			width: rem(1120);
 		}
 	}
-	&__tr{
+	td{
 		padding: rem(17.5) 0;
-		border-bottom: 1px solid rgba($gray-650, .5);
-
-		&--head{
-			padding: 0 0 rem(16);
-			margin-bottom: 3px;
-			border-bottom: 2px solid $black;
-		}
+		border-bottom: 1px solid rgba($gray-650, .5); 
 	}
-	&__row{
-
+	th{
+		padding: 0 0 rem(16);
+		margin-bottom: 3px;
+		border-bottom: 2px solid $black;
+		
 	}
-	&__col{
-		flex-grow: 1;
-		font-weight: 500;
-		font-size: rem(12);
-		line-height: calc(15/12);
-
-		&--date{
-			width: 8.5%!important;
+	td,
+	th{
+		padding-right: rem(20px);
+		&:nth-child(3) {
+			width: rem(350px);
 		}
-		&--time{
-			//text-align: center;
-			width: 7.5% !important;
-		}
-		&--event{
-			width: 31% !important;
-		}
-		&--status{
-			width: 16%!important;
-		}
-		&--mark{
-			//text-align: center;
-			width: 5.5%!important;
-		}
-		&--orange{
-			width: 15%!important;
+		&:last-child{
 			padding-right: 0;
 		}
-		&--black{
-			width: calc(var(--bs-gutter-x)/2 + #{rem(96)}) !important;
-			padding-left: 0;
+		&:nth-child(5){
+			text-align: center;
 		}
 	}
 	&__tr{
 		font-size: rem(16);
 	}
-	&__row{}
-	&__date{
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: calc(20/16);
-	}
-	&__time{
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: calc(20/16);
-	}
-	&__event{
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: calc(20/16);
-	}
+	 
 	&__status{
 		text-align: center;
 		padding: rem(8.5) rem(10);
@@ -99,6 +62,8 @@
 		line-height: calc(15/12);
 		text-transform: uppercase;
 		color: $white;
+		white-space: nowrap;
+		background:var(--bg);
 	}
 	&__mark{
 		font-weight: bold;
@@ -110,7 +75,7 @@
 		@extend .btn;
 		border-width: 3px;
 		padding: rem(5.5) rem(5);
-
+		white-space: nowrap;
 		font-weight: 900;
 		font-size: rem(12);
 		line-height: calc(15/12);
