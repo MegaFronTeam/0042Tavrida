@@ -855,7 +855,7 @@ function eventHandler() {
 
 	let sOrdersSlider = new Swiper('.sOrders-slider-js', {
 		slidesPerView: "auto",
-		loop: true,
+		loop: false,
 		spaceBetween: 29,
 		navigation: {
 			nextEl: '.sOrders--js .swiper-next',
