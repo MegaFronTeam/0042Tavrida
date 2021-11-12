@@ -55,5 +55,6 @@ mixin sOrdersSlide(data)
 			+e.actions
 				if data.outlineBtn
 					+e.btn--outline-black(href="#")=data.outlineBtn
-				+e.btn--orange(href="#")=data.orangeBtn
+				+e.btn--orange(href="#modal-serv").link-modal=data.orangeBtn
+				a(href="#modal-serv").link-modal test
 
