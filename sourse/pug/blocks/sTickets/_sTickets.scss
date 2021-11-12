@@ -90,6 +90,10 @@
 
 		// width: rem(150);
 		// height: rem(150);
+		background: #fff;
+		padding: 20px;
+		border-radius: rem(20);
+		display: inline-block;
 		@include media-breakpoint-up(sm){
 			width: rem(167);
 			height: rem(167);
@@ -98,7 +102,6 @@
 		// position: relative;
 		
 		img{
-			border-radius: rem(20);
 			max-width: 100%;
 			// width: 100%;
 			// height: 100%;
