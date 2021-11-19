@@ -17,17 +17,20 @@
 		}
 		.swiper-wrapper{}
 		.swiper-slide{
-			width: rem(1120);
+			width: 100%;
 		}
 	}
 	&__table{
 		@include media-breakpoint-down(lg){
-			width: rem(1120);
+			width: 100%;
 		}
 	}
 	td{
 		padding: rem(17.5) 0;
-		border-bottom: 1px solid rgba($gray-650, .5); 
+		@include media-breakpoint-up(lg) {
+			
+			border-bottom: 1px solid rgba($gray-650, .5); 
+		} 
 	}
 	th{
 		padding: 0 0 rem(16);
@@ -40,6 +43,7 @@
 	td,
 	th{
 		padding-right: rem(20px);
+			@include media-breakpoint-up(lg) {
 		&:nth-child(3) {
 			width: rem(350px);
 		}
@@ -48,6 +52,7 @@
 		}
 		&:nth-child(5){
 			text-align: center;
+		}
 		}
 	}
 	&__tr{
@@ -95,4 +100,51 @@
 	//
 	&__{}
 	&__{}
+
+		@include media-breakpoint-down(lg) {
+			thead{
+				display: none;
+			}
+			table,
+			td,
+			tbody{
+				display: block;
+			}
+			tr{
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 1px solid rgba($gray-650, .5); 
+				@include roww(20px);
+			}
+			td{
+				&:nth-child(3){
+					width: 100%;
+					// order: -1;
+					padding-top: 0;
+				}
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(4)
+				{
+					order: -1;
+				}
+				&:nth-child(2){
+					flex-grow: 1;
+				}
+				&:nth-child(5) {
+						display: flex;
+						align-items: center;
+						width: 100%;
+						padding-top: 0;
+						padding-bottom: 0;
+						&::before{
+							content: 'Баллы';
+							margin-right: rem(10);
+						}
+				}
+				&:nth-child(6){
+					flex-grow: 1;
+				}
+			}
+		}
 } // end.sTable
