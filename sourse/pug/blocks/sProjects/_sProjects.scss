@@ -1,4 +1,6 @@
 // start .sProjects
+@use "sass:math";
+
 .sProjects {
 	width: 100vw;
 	// overflow: hidden;
@@ -139,7 +141,7 @@
 
 		font-weight: 900;
 		font-size: rem(27);
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 		text-transform: uppercase;
 		color: var(--title-col);
 		text-shadow: var(--txt-shdw);

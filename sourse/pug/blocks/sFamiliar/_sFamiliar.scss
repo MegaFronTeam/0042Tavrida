@@ -1,4 +1,6 @@
 // start .sFamiliar
+@use "sass:math";
+
 .sFamiliar {
 	--sPT: #{rem(45)};
 	--sPB: #{rem(3)};
@@ -7,7 +9,7 @@
 	.section-title{
 		h2{
 			font-size: rem(24);
-			line-height: (29/24);
+			line-height: math.div(29, 24);
 			text-transform: uppercase;
 		}
 	}
@@ -72,7 +74,7 @@
 	&__sub-title{
 		font-weight: 900;
 		font-size: rem(24);
-		line-height: (29/24);
+		line-height: math.div(29, 24);
 		text-transform: uppercase;
 
 		color: $dark;

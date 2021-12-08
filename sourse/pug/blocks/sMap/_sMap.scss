@@ -1,4 +1,6 @@
 // start .sMap
+@use "sass:math";
+
 .sMap {
 	position: relative;
 	--sPT: #{rem(81)};
@@ -427,7 +429,7 @@
 
 				color: $black!important;
 				font-size: rem(16) !important;
-				line-height: (18/16);
+				line-height: math.div(18, 16);
 
 				padding: rem(8) rem(45) rem(8.5) rem(20);
 				cursor: pointer;

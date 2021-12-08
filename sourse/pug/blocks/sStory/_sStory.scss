@@ -1,4 +1,6 @@
 // start .sStory
+@use "sass:math";
+
 .sStory {
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(101px)};
@@ -41,7 +43,7 @@
 			&.swiper-slide-active{
 				--dot-bef-o: 1;
 				--head-fs: #{rem(30)};
-				--head-lh: #{(37/30)};
+				--head-lh: #{math.div(37, 30)};
 
 				--img-bot: calc(100% + #{rem(69)});
 				--img-w: #{rem(240)};

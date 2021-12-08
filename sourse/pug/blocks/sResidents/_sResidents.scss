@@ -1,4 +1,6 @@
 // start .sResidents
+@use "sass:math";
+
 .sResidents {
 	width: 100vw;
 	overflow: hidden;
@@ -142,7 +144,7 @@
 		font-weight: 900;
 		text-transform: uppercase;
 		font-size: rem(30);
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 
 		margin-bottom: rem(7);
 	}

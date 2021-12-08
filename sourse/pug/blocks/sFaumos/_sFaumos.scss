@@ -1,4 +1,6 @@
 // start .sFaumos
+@use "sass:math";
+
 .sFaumos {
 	width: 100vw;
 	overflow: hidden;
@@ -147,7 +149,7 @@
 			font-size: rem(30);
 		}
 
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 		text-transform: uppercase;
 		color: $blue;
 		margin-bottom: rem(5);

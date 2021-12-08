@@ -1,4 +1,6 @@
 // start .sDigits
+@use "sass:math";
+
 .sDigits {
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(87px)};
@@ -46,7 +48,7 @@
 			font-size: rem(159);
 		}
 
-		line-height: (194/160);
+		line-height: math.div(194, 160);
 		letter-spacing: -0.06em;
 		text-transform: uppercase;
 		color: $orange;

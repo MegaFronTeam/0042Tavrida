@@ -1,4 +1,6 @@
 // start .sAlgorithm
+@use "sass:math";
+
 .sAlgorithm {
 	@include media-breakpoint-up(lg){
 		// margin-top: -5px;
@@ -89,7 +91,7 @@ counter-reset: num;
 			left: -14px;
 			top: -39px;
 		}
-		line-height: (85/70);
+		line-height: math.div(85, 70);
 		letter-spacing: -0.06em;
 		text-transform: uppercase;
 		color: $dark;

@@ -1,4 +1,6 @@
 // start .sArtist
+@use "sass:math";
+
 .sArtist {
 	@include media-breakpoint-up(lg){
 		--sPT: #{rem(126px)};
@@ -29,7 +31,7 @@
 
 	&__img{
 		@extend .accept-ratio-frame-nh;
-		padding-top: (400/408) * 100%;
+		padding-top: math.div(400, 408) * 100%;
 
 		border-radius: rem(25);
 		margin-bottom: rem(20);
@@ -48,7 +50,7 @@
 		line-height: 1.2;
 		@include media-breakpoint-up(sm){
 			font-size: rem(30);
-			line-height: (37/30);
+			line-height: math.div(37, 30);
 		}
 
 		text-transform: uppercase;

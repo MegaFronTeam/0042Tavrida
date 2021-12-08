@@ -1,4 +1,6 @@
 // start .headerBlock
+@use "sass:math";
+
 .headerBlock {
   --sPT: 0;
   --sTPB: 0;
@@ -46,7 +48,7 @@
   &__video-bl{
     @extend .accept-ratio-frame-nh;
 
-    padding-top: (544/966) * 100%;
+    padding-top: math.div(544, 966) * 100%;
     background: linear-gradient(250.72deg, rgba(107, 22, 128, 0.8) 3.46%, rgba(177, 217, 219, 0.8) 82.84%);
     backdrop-filter: blur(32px);
      @include media-breakpoint-down(sm) {
@@ -124,7 +126,7 @@
         @include media-breakpoint-up(xl){
           margin-bottom: rem(15px);
           font-size: rem(170);
-          line-height: (207/170);
+          line-height: math.div(207, 170);
           letter-spacing: -0.06em;
         }
 
@@ -135,7 +137,7 @@
         font-weight: 900;
         // @extend .h2;
         @include rfs(50px);
-        line-height: (85/70);
+        line-height: math.div(85, 70);
         letter-spacing: -0.06em;
         text-transform: uppercase;
         color: $dark;

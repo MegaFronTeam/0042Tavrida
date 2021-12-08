@@ -1,4 +1,6 @@
 // start .sNews
+@use "sass:math";
+
 .sNews {
   &--slider{
     overflow: hidden;
@@ -119,7 +121,7 @@
 
   &__img {
     @extend .accept-ratio-frame;
-    padding-top: (218.81/327.89) * 100%;
+    padding-top: math.div(218.81, 327.89) * 100%;
     margin-bottom: rem(20.5);
 
     border-radius: rem(20);
@@ -149,7 +151,7 @@
 		h2{
 			margin-bottom: 0;
       font-size: rem(24);
-      line-height: (29/24);
+      line-height: math.div(29, 24);
       text-transform: uppercase;
     }
 

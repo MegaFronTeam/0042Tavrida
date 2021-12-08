@@ -1,4 +1,6 @@
 // start .sPartners
+@use "sass:math";
+
 .sPartners {
 	position: relative;
 	z-index: 1;
@@ -11,7 +13,7 @@
 		left: 0;
 		bottom: -1px;
 		//height: rem(1080);
-		height: calc(100% + 0);
+		height: calc(100%);
 		background-color: $dim;
 	}
 
@@ -52,7 +54,7 @@
 		display: block;
 		position: relative;
 		height: 0;
-		padding-top: (157/296) * 100%;
+		padding-top: math.div(157, 296) * 100%;
 	}
 	&__img{
 		position: absolute;

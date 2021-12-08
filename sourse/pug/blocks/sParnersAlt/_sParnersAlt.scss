@@ -14,7 +14,7 @@
     width: 100%;
     left: 0;
     bottom: -1px;
-    height: calc(100% + 0);
+    height: calc(100);
     //background: linear-gradient(0deg, rgba($dim, 1) 0%, rgba($body-bg, 1) 80%);
     background: $dim;
 
@@ -93,7 +93,7 @@
 
   &__col {
     @include media-breakpoint-up(xxl) {
-      width: calc(100% / 7) !important;
+      width: calc(100% / var(--count-desctop, 7)) !important;
     }
   }
 

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .footer {
 	margin-top: auto;
 
@@ -21,7 +23,7 @@
 		text-transform: uppercase;
 		font-weight: 900;
 		font-size: rem(30);
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 
 		margin-bottom: rem(30);
 	}

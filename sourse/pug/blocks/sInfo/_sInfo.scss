@@ -102,7 +102,7 @@
 		font-weight: 900;
 		@include rfs(50px);
 		// font-size: rem(50px);
-		line-height: (61/50);
+		line-height: (61*0.02);
 		@include media-breakpoint-up(xxl){
 			font-size: rem(50px);
 		}

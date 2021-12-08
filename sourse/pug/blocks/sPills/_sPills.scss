@@ -1,4 +1,6 @@
 // start .sPills
+@use "sass:math";
+
 .sPills {
 	--sPT: #{rem(33)};
 	--sPB: #{rem(30)};
@@ -35,7 +37,7 @@
 
 		font-weight: bold;
 		font-size: 14px;
-		line-height: (22/14);
+		line-height: math.div(22, 14);
 	}
 	&__square{
 		flex-shrink: 0;
@@ -54,7 +56,7 @@
 			border-radius: rem(53);
 			font-weight: 900;
 			font-size: rem(25.5);
-			line-height: (31/25.5);
+			line-height: math.div(31, 25.5);
 
 			text-transform: uppercase;
 			color: $dark;

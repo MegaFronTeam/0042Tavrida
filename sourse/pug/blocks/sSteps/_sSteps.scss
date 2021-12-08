@@ -1,4 +1,6 @@
 // start .sSteps
+@use "sass:math";
+
 .sSteps {
 	@include media-breakpoint-up(xl){
 		// --sPT: #{rem(34px)};
@@ -31,7 +33,7 @@
 			@include media-breakpoint-up(sm){
 				font-size: rem(30);
 			}
-			line-height: (37/30);
+			line-height: math.div(37, 30);
 
 			text-transform: uppercase;
 			color: $purple;
@@ -98,7 +100,7 @@
 			content: counter(list);
 
 			font-weight: 900;
-			line-height: (11/9);
+			line-height: math.div(11, 9);
 			letter-spacing: -0.06em;
 			text-transform: uppercase;
 

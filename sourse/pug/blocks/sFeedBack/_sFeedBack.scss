@@ -1,4 +1,6 @@
 // start .sFeedBack
+@use "sass:math";
+
 .sFeedBack {
 	@include media-breakpoint-up(xxl){
 		--sPT: #{rem(70px)};
@@ -91,7 +93,7 @@
 		@extend .h4;
 		margin-bottom: rem(14);
 
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 		text-transform: uppercase;
 		color: $blue;
 	}

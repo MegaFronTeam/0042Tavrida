@@ -1,4 +1,6 @@
 // start .sWay
+@use "sass:math";
+
 .sWay {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(55px)};
@@ -149,7 +151,7 @@
 			@include media-breakpoint-up(md) {
 				min-height: 300px;
 				font-size: rem(54.5);
-				line-height: (66/54.5);
+				line-height: math.div(66, 54.5);
 				letter-spacing: rem(-1);
 
 				padding:29px 33px 22px!important;
@@ -249,7 +251,7 @@
 				}
 				@include media-breakpoint-up(md) {
 					font-size: rem(54.5);
-					line-height: (66/54.5);
+					line-height: math.div(66, 54.5);
 					letter-spacing: rem(-1);
 					bottom: unset;
 					right: 24px;
@@ -320,7 +322,7 @@
 		&--alt{
 			font-weight: 600;
 			font-size: rem(16);
-			line-height: (20/16);
+			line-height: math.div(20, 16);
 			letter-spacing: rem(-0.5);
 			color: $white;
 		}
@@ -367,7 +369,7 @@
 		&--black{
 			font-weight: 600;
 			font-size: rem(16);
-			line-height: (20/16);
+			line-height: math.div(20, 16);
 			letter-spacing: rem(-0.5);
 			color: $black!important;
 			text-transform: none;

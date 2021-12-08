@@ -1,4 +1,6 @@
 // start .sCherCards
+@use "sass:math";
+
 .sCherCards {
 	padding-top: 0;
 
@@ -49,7 +51,7 @@
 	}
 	&__img{
 		@extend .accept-ratio-frame;
-		padding-top: (187.13/301.81) * 100%;
+		padding-top: math.div(187.13, 301.81) * 100%;
 		border-radius: rem(30);
 		margin-bottom: rem(20.5);
 	}
@@ -81,7 +83,7 @@
 
 		font-weight: 900;
 		font-size: rem(16);
-		line-height: (20/16);
+		line-height: math.div(20, 16);
 		text-transform: uppercase;
 		padding: rem(14) rem(20);
 	}

@@ -1,4 +1,6 @@
 // start .sApply
+@use "sass:math";
+
 .sApply {
 	--sTPB: #{0};
 
@@ -69,7 +71,7 @@
 				font-size: rem(70);
 			}
 			@include media-breakpoint-up(xxl){
-				line-height: (85/70);
+				line-height: math.div(85, 70);
 			}
 		}
 	}

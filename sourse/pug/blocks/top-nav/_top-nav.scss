@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .top-nav {
   padding: rem(32) 0 rem(38) 0;
   position: relative;
@@ -235,7 +237,7 @@
       @include media-breakpoint-up(sm){
         font-size: rem(30);
       }
-      line-height: (37/30);
+      line-height: math.div(37, 30);
       text-transform: uppercase;
 
       color: $body-color;

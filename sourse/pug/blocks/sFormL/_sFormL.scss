@@ -1,4 +1,6 @@
 // start .sFormL
+@use "sass:math";
+
 .sFormL {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(53px)};
@@ -127,7 +129,7 @@
 		&__sub-title {
 			font-weight: 900;
 			font-size: rem(30);
-			line-height: (37/30);
+			line-height: math.div(37, 30);
 
 			text-transform: uppercase;
 			color: $dark;
@@ -148,7 +150,7 @@
 			text-transform: uppercase;
 			font-weight: 900;
 			font-size: rem(16);
-			line-height: (20/16);
+			line-height: math.div(20, 16);
 			padding: rem(14) rem(20);
 
 			width: 100%;

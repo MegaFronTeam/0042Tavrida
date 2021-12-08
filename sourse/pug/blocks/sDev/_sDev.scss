@@ -1,4 +1,6 @@
 // start .sDev
+@use "sass:math";
+
 .sDev {
 	@include media-breakpoint-up(lg){
 		// --sPT: #{rem(170px)};
@@ -146,7 +148,7 @@
 			left: -14px;
 			top: -39px;
 		}
-		line-height: (85/70);
+		line-height: math.div(85, 70);
 		letter-spacing: -0.06em;
 		text-transform: uppercase;
 		color: $dark;

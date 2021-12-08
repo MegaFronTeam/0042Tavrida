@@ -1,4 +1,6 @@
 // start .sDirection
+@use "sass:math";
+
 .sDirection {
 	@include media-breakpoint-up(xxl) {
 		--sPT: #{rem(16px)};
@@ -87,7 +89,7 @@
 	&__txt {
 		font-weight: 900;
 		font-size: rem(30);
-		line-height: (37/30);
+		line-height: math.div(37, 30);
 		text-transform: uppercase;
 		color: $white;
 	}
