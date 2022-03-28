@@ -1,0 +1,144 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '2024'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock2022({
+		back: true,
+		date: '25 мая — 1 июня',
+		text: `Арт-школа цифрового&nbspискусства и&nbsp;IT-технологий`,
+		btn:"подать заявку",
+		img:"head-2022.png",
+		bg: "#B2ECEF"
+	})
+		+e.foot
+			.strong Подать заявку на участие можно до <span class="text-warning">20 апреля</span>
+	.section.container
+		p.h5.fw-400 Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от практикующих специалистов, дать возможности для старта и показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендом
+	.section.container
+		.section-title
+			h2 эта школа для тебя, если ты
+		.row
+			mixin item(t)
+				.col-auto
+					+b.hash-item= t
+			+item(`#музыкант`)
+			+item(`#исполнитель`)
+			+item(`#вокалист`)
+			+item(`#автор песен`)
+			+item(`#бард`)
+	.section.container
+		.section-title
+			h2 эта школа для тебя, если ты
+		.row
+			mixin item(t, p)
+				.col-xl-4.col-md-6
+					+b.do-item
+						.mb-3.strong= t
+						p!= p
+			+item(`Ключевая задача заезда – соединить `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Ключевая задача заезда – соединить `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Задача заезда – соединить самые `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Ключевая задача заезда – соединить `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Ключевая задача заезда – соединить `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Задача заезда – соединить самые `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			
+		//- video: `https://www.youtube.com/embed/JN3p9Vzb_nI`,
+		//- youtube: true,
+	//- +sProjects()
+	//- +sProjects2022
+	//- +sAbout({
+	//- 	bg: 'about-bg.jpg',
+	//- 	title: 'Об арт-кластере',
+	//- 	text: `Арт-кластер &laquo;Таврида&raquo; ‒ это экосистема проектов для реализации творческого и&nbsp;профессионального потенциала молодых деятелей культуры и&nbsp;искусств`
+	//- //- })
+	//- +sVantage2023()
+	//- +sAchivment2023()
+	//- //- +sCardsBlock
+	//- //- +sFestival()
+	//- +sResidents(`НАШИ ГОСТИ И&nbsp;ЭКСПЕРТЫ`)
+	//- +sStory()
+	//- +sNews()
+	//- +sForm()
+	+sArrivals
+	+sCurators2024
+
+	+sWays(
+		'Сервисы для участников',
+		{
+			img: 'serv-1.png',
+			col: 'col-xl-4 col-md-6',
+			color: '#B2ECEF',
+			title:`Бесплатное участие в образовательной программе антишкол`,
+			
+			
+		},
+		{
+			img: 'serv-2.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#8DBBFF', 
+			title:`Бесплатный мерч проекта для участников `,
+		
+		},
+		{
+			img: 'serv-3.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#B2ECEF',
+			title:`Наличие фудкортов  на территории арт-кластера`, 
+		},
+
+		{
+			img: 'serv-4.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#F1E1F5',
+			title: `Трёхразовое питание за счёт принимающей стороны `
+			
+		},
+		{
+			img: 'serv-5.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8B2E4',
+			title: `Наличие фудкортов на территории арт-кластера`
+			
+		},
+		{
+			img: 'serv-6.png',
+			col: 'col-xl-4 col-md-6 col-serv',
+			color: '#C8DEFF',
+			title: `Бесплатный организованный трансфер участников до места проведения мероприятия`
+			
+		})
+
+	+sFAQ2024()
+	//- +sFAQ2024
+	+sFAQ
+	+sForm2023()
+	+sParnersAlt()
+	+footer()

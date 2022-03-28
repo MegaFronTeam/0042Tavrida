@@ -1,0 +1,31 @@
+mixin prslide(i,t, color, btn="Подробнее")
+	+e.slide.swiper-slide
+		+e.item(style=`--sl-bg:${color}`)&attributes(attributes)
+			if i 
+			+e.body
+				img(src=`img/svg/tick-${i}.svg`, alt="")
+				.h5.strong!= t
+				p площадка, где эксперты из разных областей творческих индустрий и креативной экономики делятся своими знаниями и опытом в режиме нон-стоп
+			+e.footer
+				+e.btn(href="#").btn.btn-warning= btn
+mixin sProjects2022(data)
+	// start sProjects2022
+	+b.SECTION.sProjects2022.section#sProjects2022&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2 Проекты
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.projects-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.projects-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					+prslide('1','Образовательные заезды',  `#C8DEFF`)
+					+prslide('2','Кастинг-платформа', '#B2ECEF')
+					+prslide('3','Амбассадоры', '#F1E1F5')
+					+prslide('',`Фестиваль <br> «Таврида.АРТ»`, '#F1F1F1', "Скоро").disabled
+
+	// end sProjects2022

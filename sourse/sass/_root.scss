@@ -11,12 +11,15 @@
 	@include media-breakpoint-up(md){
 		--fontSizeBase: 14.5px;
 	}
+	--bdras: 20px;
 	@include media-breakpoint-up(lg){
 		--fontSizeBase: #{$em-base};
 		--test-var: 10;
+		--bdras: 40px;
 	}
 	@include media-breakpoint-up(xl){
 		// --fontSizeBase: 15.5px;
+		--bdras: 50px;
 	}
 	@include media-breakpoint-up(xxl){
 		// --fontSizeBase: #{$em-base};

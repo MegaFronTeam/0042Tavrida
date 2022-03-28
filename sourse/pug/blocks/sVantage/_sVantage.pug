@@ -144,6 +144,25 @@ mixin sVantage6(data)
     +vantageItem('sch-6', 'bigger-img' , 'col-lg-4')
       | Нетворкинг
 
+mixin sVantage2023(data)
+  +sVantageBody('Особенности заезда').sVantage--forum
+    +vantageItem('2023-1')
+      | Современные образовательные <br> форматы
+    +vantageItem('2023-2')
+      | Проектные <br>  кейсы
+    +vantageItem('2023-3')
+      | Лаборатория <br>  прикладного искусства
+    +vantageItem('2023-4')
+      | Топовые эксперты  в&nbsp;области креативных индустрий
+    +vantageItem('2023-5' )
+      | Финансовая  поддержка&nbsp;творческих    проектов
+    +vantageItem('2023-6')
+      | Продюсерское сопровождение талантливых участников
+    +vantageItem('2023-7')
+      | Нетворкинг
+    +vantageItem('2023-8')
+      | Рекрутинг <br> творческих профессий
+
 mixin sVantageBase(title, ...datas)
   +sVantageBody(title)
     each item in datas

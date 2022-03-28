@@ -6,6 +6,12 @@
   --sTPB: 0;
   --sPB: #{rem(37)};
 
+  .btn{
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 18px 35px;
+  }
+
   position: relative;
   z-index: 2;
   &__container{
@@ -131,6 +137,9 @@
         }
 
         color: $dark;
+        &.sm{
+          
+        }
       }
       .sm,
       p{
@@ -153,6 +162,62 @@
     margin-bottom: rem(10);
     text-transform: uppercase;
   }
+
+  &__inner{
+    background-color: var(--bg-color);
+    @include media-breakpoint-up(xl) {
+
+      border-radius: rem(50px);
+      padding: 80px 0px;
+    }
+    border-radius: rem(30px);
+    padding: 60px 0px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    .section-title {
+      position: static !important;
+      padding-top: 0;
+    }
+  }
+  .section-title {
+  &__footer{
+    @include rfs(22px);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 90px;
+  }
+}
+.sm{
+  @include media-breakpoint-up(xl) {
+  font-size: rem(40) !important;
+}
+font-size: rem(30) !important;
+  max-width: 572px;
+  line-height: 1.4;
+}
+.pic-sq{
+  @include block();
+  img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.section-title__back{
+  color: $body-color;
+  display: inline-block;
+  margin-bottom: 55px;
+  font-weight: bold;
+  .icon{
+    stroke: currentColor;
+    font-size: 0.9em;
+    margin-right: 1em;
+    
+  }
+}
 }
 
 // end.headerBlock

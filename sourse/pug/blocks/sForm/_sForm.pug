@@ -4,14 +4,17 @@ mixin sForm()
 		.container
 			+e.box
 				+b.section-title
-					h2
-						| Хотите быть
-						|
-						br.d-none.d-xl-block
-						| в курсе всех последних
-						br.d-none.d-xl-block
-						|
-						| новостей и событий?
+					if block
+						block 
+					else
+						h2
+							| Хотите быть
+							|
+							br.d-none.d-xl-block
+							| в курсе всех последних
+							br.d-none.d-xl-block
+							|
+							| новостей и событий?
 				+form-wrap
 					+e.row.row.align-items-end
 						+e.col--inp.col-lg-7
@@ -20,3 +23,9 @@ mixin sForm()
 							+e.BUTTON.btn(type="submit") Подписаться на рассылку
 
 	// end sForm
+
+mixin sForm2023()
+	+sForm()
+		+e.small
+			h2 Оставь свой email, чтобы не&nbsp;пропустить ни&nbsp;одной новости!
+			p Будем писать о&nbsp;запуске новых заездов, воркшопов и&nbsp;других проектов. Направлять полезные материалы и&nbsp;закрытые трансляции.

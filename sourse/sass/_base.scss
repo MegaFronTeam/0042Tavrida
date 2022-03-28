@@ -100,7 +100,9 @@ body {
 	h1,h2{
 		text-transform: uppercase;
 	}
-
+	h2{
+		@include rfs(40px);
+	}
 	& > *:last-child{
 		margin-bottom: 0;
 	}
@@ -929,4 +931,29 @@ h2{
 	&__{}
 	&__{}
 	&__{}
+}
+
+p.h5{
+	line-height: 1.6;
+}
+
+.hash-item{
+	border: 1px solid #C8DEFF; 
+	border-radius: 30px;
+	padding: rem(14) rem(27);	
+	margin-bottom: 1rem;
+	font-weight: 500;
+	font-size: rem(24);
+}
+
+.do-item{
+	&::before{
+		content: url(../img/svg/check-color.svg);
+		display: block;
+		margin-bottom: 24px;
+	}
+	margin-bottom: 24px;
+	p{
+		color: #707070;
+	}
 }

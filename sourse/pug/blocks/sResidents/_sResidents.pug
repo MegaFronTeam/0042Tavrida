@@ -1,10 +1,10 @@
-mixin sResidents(data)
+mixin sResidents(h2="РЕЗИДЕНТЫ")
 	// start sResidents
 	+b.SECTION.sResidents.section#sResidents&attributes(attributes)
 		.container
 			+b.section-title.row.align-items-center
 				.col-12.col-md.mb-3.mb-md-0.order-md-2
-					h2 РЕЗИДЕНТЫ
+					h2!= h2
 				.col-12.col-md-auto
 					+b.sl-contr
 						+e.prev.resident-prev-js

@@ -152,11 +152,11 @@ mixin sAchivment8(data)
 
 
 mixin sAchivment2035(data)
-	+sAchivmentBody('Антишколы в цифрах').sAchivment--school.sAchivment--wsh.sAchivment--2035
+	+sAchivmentBody('Антишколы в цифрах').sAchivment--2035
 		//-1
 		+e.col
-			+e.number(style="color: #FF8000;") 957 
-			+e.txt человек получили <br> поддержку
+			+e.number(style="color: #FF8000;") 63 <br>000
+			+e.txt участников всех проектов
 		//-2
 		+e.col.flex.align-items-end
 			+e.txt Проводится
@@ -188,5 +188,43 @@ mixin sAchivment2035(data)
 			+e.number(style="color: #FF8000;") 3
 			+e.txt
 				| эксперта  <br> в одной комиссии
+
+
+mixin sAchivment2023(data)
+	+b.SECTION.sAchivment2022--1.section#sAchivment&attributes(attributes)
+		.container
+			+b.section-title
+				h2 НАШИ достижения
+			+e.row
+				+e.col
+					+e.number()  63 000
+					+e.txt участников всех проектов
+				//-2
+				+e.col
+					.row
+						+e.col.col-sm.d-sm-flex.align-items-center.mb-sm-0.mb-2
+							+e.number(style="color: #284BA4;") 3 400
+							+e.txt  Спикеров образовательных программ
+						+e.col.col-sm-auto.d-sm-flex.align-items-center
+							+e.number(style="color: #6B1680;") 391
+							+e.txt Новых <br> резидентов
+
+
+				+e.col.d-flex.align-items-center
+					+e.number() 266
+					+e.txt кастингов, питчингов  и&nbsp;отборов
+				//-5
+				+e.col
+					+e.number(style="color: #00BAC3;") 89
+					//-achivments-grid
+					+e.txt миллионов просмотров прямых эфиров
+				//- 6
+				+e.col
+					+e.number(style="color: #284BA4;") 487 000 000
+					+e.txt  рублей грантовой поддержки
+				//- 7
+				+e.col.d-flex.align-items-center
+					+e.number() 7
+					+e.txt лет вклада в&nbsp;развитие креативных индустрий
 
 

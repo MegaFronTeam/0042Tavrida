@@ -163,7 +163,7 @@ function eventHandler() {
     },
   });
 
-  $('.sProjects__slider--js').each(function () {
+  $('.sProjects').each(function () {
     let projectSlider = new Swiper($(this).find('.project-slider-js'), {
       slidesPerView: "auto",
       loop: true,
@@ -181,8 +181,8 @@ function eventHandler() {
         loadPrevNextAmount: 10,
       },
       navigation: {
-        nextEl: '.projects-next-js',
-        prevEl: '.projects-prev-js',
+        nextEl: this.querySelector('.projects-next-js'),
+        prevEl: this.querySelector('.projects-prev-js'),
       },
     });
   });
@@ -850,6 +850,7 @@ function eventHandler() {
   makeDDGroup([
     '.faq-items-js',
     '.participants-items-js',
+    '.block-color',
     //'.sMap-dd-group-js',
   ]);
 
@@ -978,6 +979,27 @@ function eventHandler() {
   
 
   $(document).on('click', " .btn-top--js", () => $('html, body').animate({scrollTop: 0}, 0));
+
+
+
+
+  $(".sProjects2022").each(function () {
+
+    let festSlider = new Swiper($(this).find('.sProjects2022__slider--js'), {
+      slidesPerView: 'auto',
+       
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 3,
+      },
+      //
+      navigation: {
+        nextEl: $(this).find('.projects-next-js'),
+        prevEl: $(this).find('.projects-prev-js'),
+      },
+
+    });
+  })
 };
 if (document.readyState !== 'loading') {
   eventHandler();

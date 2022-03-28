@@ -32,9 +32,10 @@
 
   .section-title {
     h2 {
-      font-size: rem(50);
+      // font-size: rem(50);
       line-height: calc(61 / 50);
-      text-transform: uppercase;
+      // text-transform: uppercase;
+      text-transform: none;
     }
   }
 

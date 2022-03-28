@@ -8,7 +8,8 @@
 
 	.section-title{
 		h2{
-
+			font-weight: 900;
+			font-size: 40px;
 		}
 	}
 	&__items{
@@ -56,18 +57,20 @@
 	}
 	&__txt{
 		@include mt();
-		font-weight: 900;
 		padding-top: em(6);
 		color: var(--head-txt-col);
-
-		@extend .h4;
+		
+		// @extend .h4;
+		@include rfs(22px);
+		font-weight: 700;
 		margin-bottom: 0;
+		line-height: calc(26 / 22);
 		@include media-breakpoint-up(lg){
 			// font-size: rem(30);
 			// line-height: (37/30);
 		}
 
-		text-transform: uppercase;
+		// text-transform: uppercase;
 	}
 	&__content{
 		@include media-breakpoint-up(xxl){
@@ -125,4 +128,22 @@
 		}
 	}
 	&__{}
+	.section-title{
+
+		p {
+			max-width: 1000px;
+			font-size: rem(20);
+			margin-bottom: 1em;
+		}
+	}
+	&--color{
+		.sFAQ__item{
+			background: #F1E1F5;
+			border-color: #F1E1F5;
+		}
+		.btn{
+			font-size: rem(20px);
+			padding: rem(18) rem(35);
+		}
+	}
 } // end.sFAQ
