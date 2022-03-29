@@ -479,6 +479,7 @@ function eventHandler() {
 
     let slider = new Swiper($(this).find('.sCurators__slider--js'), {
       slidesPerView: "auto",
+      loop: true,
       lazy: {
         loadPrevNext: true,
         loadPrevNextAmount: 3,
