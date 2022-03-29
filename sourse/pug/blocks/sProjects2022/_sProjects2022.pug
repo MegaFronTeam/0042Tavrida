@@ -1,9 +1,9 @@
 mixin prslide(i,t, color, btn="Подробнее")
 	+e.slide.swiper-slide
 		+e.item(style=`--sl-bg:${color}`)&attributes(attributes)
-			if i 
 			+e.body
-				img(src=`img/svg/tick-${i}.svg`, alt="")
+				if i 
+					img(src=`img/svg/tick-${i}.svg`, alt="")
 				.h5.strong!= t
 				p площадка, где эксперты из разных областей творческих индустрий и креативной экономики делятся своими знаниями и опытом в режиме нон-стоп
 			+e.footer

@@ -957,3 +957,24 @@ p.h5{
 		color: #707070;
 	}
 }
+
+
+.sWaysLinks{
+	&__row{
+		
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include roww(4px, m);
+	}
+	&__item{
+		margin-bottom: 15px;
+		display: inline-block;
+		border: 2px solid ;
+		box-sizing: border-box;
+		border-radius: rem(30);
+		padding: rem(15) rem(25px);
+		font-weight: 500;
+		@extend .text-body;
+	}
+}

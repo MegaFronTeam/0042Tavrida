@@ -1,0 +1,35 @@
+mixin formslide(i,t, p, color, btn="Подробнее")
+	+e.slide.swiper-slide
+		-
+			let bg= color
+			let style = bg ? `--bg-color: ${bg}` : null 
+		+e.item(style= style)&attributes(attributes)
+			if i 
+				img(src=`img/svg/sFormats2022-${i}.svg`, alt="")
+			+e.body
+				.h.strong!= t
+				p= p
+			+e.footer
+				+e.btn(href="#").btn.btn-warning= btn
+
+mixin sFormats2022(data)
+	// start sFormats2022
+	+b.SECTION.sFormats2022.section#sFormats2022&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col-12.col-lg.mb-3.mb-lg-0.order-lg-2
+					h2 Форматы УЧАСТИЯ
+				.col-12.col-lg-auto
+					+b.sl-contr
+						+e.prev.projects-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.projects-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					+formslide(`1`,`ЗАЕЗД`,`Уникальная  площадка, где эксперты  делятся своими знаниями и опытом в режиме нон-стоп`,`linear-gradient(180deg, #6C7795 0%, rgba(108, 119, 149, 0.8) 100%)`)
+					+formslide(`2`,`ВОРКШОП`,`Молодые деятели культуры и искусства из Республики Крым, Краснодарского края и города Севастополя`,` linear-gradient(180deg, #AF81B3 0%, rgba(174, 129, 178, 0.8) 100%)`)
+					+formslide(`3`,`МЕГАНОМИКА`,`Основана на новых подходах к управлению творческих процессов  `,`linear-gradient(180deg, #73A2AA 0%, rgba(115, 162, 170, 0.8) 100%)`)
+					+formslide(``,`ФЕСТИВАЛЬ`,`Фестиваль «Таврида.АРТ» объединит все направления искусства и вновь станет самой большой площадкой  для самореализации `,`linear-gradient(180deg, #8194C2 0%, rgba(129, 148, 194, 0.8) 100%)`)
+					+formslide(`4`,`УНИВЕРСИТЕТ`,`Университет станет ключевым проектом арт-кластера «Таврида», одной из ведущих площадок России по созданию проектов в сфере креативных индустрий.`,`linear-gradient(180deg, #B57777 0%, rgba(181, 119, 119, 0.8) 100%);`,`СКОРО`).disabled
+	// end sFormats2022

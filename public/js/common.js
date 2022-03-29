@@ -1001,6 +1001,23 @@ function eventHandler() {
 
     });
   })
+  $(".sFormats2022").each(function () {
+
+    let festSlider = new Swiper($(this).find('.sFormats2022__slider--js'), {
+      slidesPerView: 'auto',
+       
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 3,
+      },
+      //
+      navigation: {
+        nextEl: $(this).find('.projects-next-js'),
+        prevEl: $(this).find('.projects-prev-js'),
+      },
+
+    });
+  })
 };
 if (document.readyState !== 'loading') {
   eventHandler();

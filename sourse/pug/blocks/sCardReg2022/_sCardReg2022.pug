@@ -1,0 +1,18 @@
+mixin sCardReg2022(data)
+	// start sCardReg2022
+	+b.sCardReg2022.section#sCardReg2022&attributes(attributes)
+		.container
+			.row
+				mixin item(t,p,color)
+					-
+						let bg= color
+						let style = bg ? `--bg-color: ${bg}` : null 
+					+e.col.col-md-6
+						+e.item(style= style)&attributes(attributes)
+							+e.title= t
+							p= p
+							.text-end
+								+e.btn(href="#") Подробнее
+				+item("Грантовый конкурс","Подай заявку с возможность получить до 1,5 млн для реализации проекта","linear-gradient(180deg, #422F4B 0%, rgba(111, 3, 162, 0.8) 100%)")
+				+item("Кастинг-платформа","Проходи кастинги в онлайн и оффлайн формате на интересные проекты","linear-gradient(180deg, #FF6B00 0%, rgba(255, 168, 0, 0.8) 100%)")
+	// end sCardReg2022

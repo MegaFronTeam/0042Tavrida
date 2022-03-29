@@ -19,9 +19,17 @@ mixin sActFormBase(h2="Аудитория форума", ...datas)
 								+e.item
 									+e.bg(style=`--color-bg: ${data.slideColor}`)
 										+pic(`${data.imgNum}`)
+									if data.title
+										.h5.strong!=data.title
 									if data.text
 										+e.txt!= data.text
-									+e.name!=data.name
+									if data.textsm
+										+e.txt.small!= data.textsm
+									if data.name
+										+e.name!=data.name
+									if data.link
+										.m-3
+											a.tdu.text-body(href="#").fw-900.ttu!= data.link
 								//- .swiper-slide
 	// end sActForm
 mixin sActFormBaseProg(h2="Программа антишколы", ...datas)

@@ -1,0 +1,79 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sFormats2022/_sFormats2022.pug
+include ../blocks/sCardReg2022/_sCardReg2022.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'frame3'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+		//- text:`` ,
+	+headerBlock({
+		title: `АРТ-КЛАСТЕР <br> «ТАВРИДА» `,
+		img:"head-2022.png",
+		soc: true
+	}).--frame3
+		+e.footer УНИКАЛЬНАЯ <br> ЭКОСИСТЕМА <br> ПРОЕКТОВ
+	+sActFormBase("Ближайшие мероприятия",
+		{
+			link: "Скоро",
+			title: `Амбассадоры`,
+			textsm: `участие в амбассадорской программе дает возможность стать соорганизатором проектов арт-кластера и получить опыт реализации масштабных мероприятий`,
+			imgNum: `aidio-img-2032-1.png`
+		},
+		{
+			link: "Скоро",
+			title: `Образовательные заезды`,
+			textsm: `площадка, где эксперты из разных областей творческих индустрий и креативной экономики делятся своими знаниями и опытом в режиме нон-стоп`,
+			imgNum: `aidio-img-2032-2.png`
+		},
+		{
+			link: "Скоро",
+			title: `Фестиваль «Таврида.АРТ»`,
+			textsm: `самая большая площадка России для самореализации молодых деятелей культуры, искусств и креативных индустрий`,
+			imgNum: `aidio-img-2032-3.png`
+		},
+		{
+			link: "Скоро",
+			title: `Кастинг-платформа`,
+			textsm: `единственная в России платформа-агрегатор, дающая молодым людям до 35 лет огромные возможности для реализации своего творческого потенциала`,
+			imgNum: `aidio-img-2032-6.png`
+		}
+	)
+	+b.sWaysLinks.section.container
+		.section-title
+			h2 направления
+		+e.row
+			mixin item(t)
+				+e.item(href="#")= t
+			+item(`#кино`)
+			+item(`#мода`)
+			+item(`#музыка`)
+			+item(`#медиа`)
+			+item(`#хореография`)
+			+item(`#дизайн`)
+			+item(`#архитектура`)
+			+item(`#маркетинг`)
+			+item(`#народная культура`)
+			+item(`#театр`)
+			+item(`#изобразительное искусство`)
+			+item(`#литература`)
+			+item(`#цирк`)
+			+item(`#анимация`)
+			+item(`#гастрономия`)
+			+item(`#арт-менеджмент и управление`)
+			+item(`#предпринимательство`)
+			+item(`#индустрия гостеприимства`)
+	+sFormats2022
+	+sCardReg2022
+	+b.btn-top--js
+		+icon("arrow-right")

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>frame3</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="js/dropzone.min.css"/><link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css" rel="stylesheet" />
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">-->
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body> 
+		<div class="main-wrapper">
+			<div class="mm mm--js">
+				<div class="mm__container container">
+					<div class="mm__top-row row">
+						<div class="col-auto">
+							<div class="top-nav__burger burger-js"><span></span></div>
+						</div>
+						<div class="col-auto"><a class="mm__logo" href="#"><img loading="lazy" src="img/svg/logoxl.svg" alt=""/></a>
+						</div>
+					</div>
+					<ul class="navMenu">
+						<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Форум</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Фестиваль Фестивалей</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Таврида.АРТ Moscow</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Кастинг-платформа</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Арт-резиденция</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Грантовый конкурс</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Амбассадоры</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Сотрудничество</a>
+						</li>
+					</ul>
+					<div class="mm__soc">
+						<div class="mm__s-row row">
+							<div class="col-auto"><a class="mm__s-item" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+							</div>
+							<div class="col-auto"><a class="mm__s-item" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+							</div>
+							<div class="col-auto"><a class="mm__s-item" href="#"><img loading="lazy" src="img/svg/yt.svg" alt=""/></a>
+							</div>
+							<div class="col-auto"><a class="mm__s-item" href="#"><img loading="lazy" src="img/svg/ok.svg" alt=""/></a>
+							</div>
+							<div class="col-auto"><a class="mm__s-item" href="#"><img loading="lazy" src="img/svg/inst.svg" alt=""/></a>
+							</div>
+						</div>
+					</div>
+					<div class="mm__location">г. Судак, бухта Капсель
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__row row align-items-center">
+							<div class="col-auto">
+								<div class="top-nav__burger burger-js"><span></span>
+								</div>
+							</div>
+							<div class="col-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logoxl.svg" alt=""/></a>
+							</div>
+							<div class="col-auto ms-auto"><a class="top-nav__mail-us" href="#">
+								<svg class="icon icon-mail ">
+									<use xlink:href="img/svg/sprite.svg#mail"></use>
+								</svg><span class="d-md-block d-none">напишите нам</span></a>
+							</div>
+							<div class="col-auto"><a class="login-btn" href="#">
+								<svg class="icon icon-user ">
+									<use xlink:href="img/svg/sprite.svg#user"></use>
+								</svg><span class="d-md-block d-none">Войти</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start headerBlock-->
+			<div class="headerBlock section section--frame3" id="headerBlock">
+				<div class="headerBlock__container container">
+					<div class="section-title">
+						<h1>АРТ-КЛАСТЕР <br> «ТАВРИДА» </h1>
+						<div class="section-title__footer">УНИКАЛЬНАЯ <br> ЭКОСИСТЕМА <br> ПРОЕКТОВ
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-sm-11 col-md-9 ms-md-auto">
+							<div class="headerBlock__video-bl">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<noscript class="loading-lazy">
+										<source type="image/webp" srcset="img/@2x/webp/head-2022.webp" media="(min-width:576px)"/>
+										<source type="image/webp" srcset="img/@1x/webp/head-2022.webp"/>
+										<source type="image/png" srcset="img/@2x/head-2022.png" media="(min-width:576px)"/>
+										<source type="image/png" srcset="img/@1x/head-2022.png"/><img class="object-fit-js" src="img/@2x/head-2022.png" alt="" loading="lazy"/>
+									</noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-sm-auto">
+								<div class="soc"><a class="soc__item" href="#" target="_blank"><img src="img/svg/vk-2022.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img src="img/svg/tg.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img src="img/svg/bi_tiktok.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img src="img/svg/bi_instagram.svg" alt=""/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<!-- start sActForm-->
+			<section class="sActForm section" id="sActForm">
+				<div class="container">
+					<div class="section-title row align-items-center">
+						<div class="col-12 col-lg mb-3 mb-lg-0 order-lg-2">
+							<h2>Ближайшие мероприятия</h2>
+						</div>
+						<div class="col-12 col-lg-auto">
+							<div class="sl-contr">
+								<div class="sl-contr__prev act-prev-js"><img loading="lazy" src="img/svg/arrow-left.svg" alt=""/>
+								</div>
+								<div class="sl-contr__next act-next-js"><img loading="lazy" src="img/svg/arrow-right.svg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sActForm__slider">
+						<div class="swiper-container act-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sActForm__item">
+										<div class="sActForm__bg" style="--color-bg: undefined">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/aidio-img-2032-1.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/aidio-img-2032-1.webp"/>
+													<source type="image/png" srcset="img/@2x/aidio-img-2032-1.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/aidio-img-2032-1.png"/><img src="img/@2x/aidio-img-2032-1.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="h5 strong">Амбассадоры</div>
+										<div class="sActForm__txt small">участие в амбассадорской программе дает возможность стать соорганизатором проектов арт-кластера и получить опыт реализации масштабных мероприятий
+										</div>
+										<div class="m-3"><a class="tdu text-body fw-900 ttu" href="#">Скоро</a></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sActForm__item">
+										<div class="sActForm__bg" style="--color-bg: undefined">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/aidio-img-2032-2.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/aidio-img-2032-2.webp"/>
+													<source type="image/png" srcset="img/@2x/aidio-img-2032-2.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/aidio-img-2032-2.png"/><img src="img/@2x/aidio-img-2032-2.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="h5 strong">Образовательные заезды</div>
+										<div class="sActForm__txt small">площадка, где эксперты из разных областей творческих индустрий и креативной экономики делятся своими знаниями и опытом в режиме нон-стоп
+										</div>
+										<div class="m-3"><a class="tdu text-body fw-900 ttu" href="#">Скоро</a></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sActForm__item">
+										<div class="sActForm__bg" style="--color-bg: undefined">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/aidio-img-2032-3.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/aidio-img-2032-3.webp"/>
+													<source type="image/png" srcset="img/@2x/aidio-img-2032-3.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/aidio-img-2032-3.png"/><img src="img/@2x/aidio-img-2032-3.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="h5 strong">Фестиваль «Таврида.АРТ»</div>
+										<div class="sActForm__txt small">самая большая площадка России для самореализации молодых деятелей культуры, искусств и креативных индустрий
+										</div>
+										<div class="m-3"><a class="tdu text-body fw-900 ttu" href="#">Скоро</a></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sActForm__item">
+										<div class="sActForm__bg" style="--color-bg: undefined">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/aidio-img-2032-6.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/aidio-img-2032-6.webp"/>
+													<source type="image/png" srcset="img/@2x/aidio-img-2032-6.png" media="(min-width:576px)"/>
+													<source type="image/png" srcset="img/@1x/aidio-img-2032-6.png"/><img src="img/@2x/aidio-img-2032-6.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="h5 strong">Кастинг-платформа</div>
+										<div class="sActForm__txt small">единственная в России платформа-агрегатор, дающая молодым людям до 35 лет огромные возможности для реализации своего творческого потенциала
+										</div>
+										<div class="m-3"><a class="tdu text-body fw-900 ttu" href="#">Скоро</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sActForm-->
+			<div class="sWaysLinks section container">
+				<div class="section-title">
+					<h2>направления</h2>
+				</div>
+				<div class="sWaysLinks__row"><a class="sWaysLinks__item" href="#">#кино</a><a class="sWaysLinks__item" href="#">#мода</a><a class="sWaysLinks__item" href="#">#музыка</a><a class="sWaysLinks__item" href="#">#медиа</a><a class="sWaysLinks__item" href="#">#хореография</a><a class="sWaysLinks__item" href="#">#дизайн</a><a class="sWaysLinks__item" href="#">#архитектура</a><a class="sWaysLinks__item" href="#">#маркетинг</a><a class="sWaysLinks__item" href="#">#народная культура</a><a class="sWaysLinks__item" href="#">#театр</a><a class="sWaysLinks__item" href="#">#изобразительное искусство</a><a class="sWaysLinks__item" href="#">#литература</a><a class="sWaysLinks__item" href="#">#цирк</a><a class="sWaysLinks__item" href="#">#анимация</a><a class="sWaysLinks__item" href="#">#гастрономия</a><a class="sWaysLinks__item" href="#">#арт-менеджмент и управление</a><a class="sWaysLinks__item" href="#">#предпринимательство</a><a class="sWaysLinks__item" href="#">#индустрия гостеприимства</a>
+				</div>
+			</div>
+			<!-- start sFormats2022-->
+			<section class="sFormats2022 section" id="sFormats2022">
+				<div class="container">
+					<div class="section-title row align-items-center">
+						<div class="col-12 col-lg mb-3 mb-lg-0 order-lg-2">
+							<h2>Форматы УЧАСТИЯ</h2>
+						</div>
+						<div class="col-12 col-lg-auto">
+							<div class="sl-contr">
+								<div class="sl-contr__prev projects-prev-js"><img loading="lazy" src="img/svg/arrow-left.svg" alt=""/>
+								</div>
+								<div class="sl-contr__next projects-next-js"><img loading="lazy" src="img/svg/arrow-right.svg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sFormats2022__slider sFormats2022__slider--js swiper-container">
+						<div class="swiper-wrapper">
+							<div class="sFormats2022__slide swiper-slide">
+								<div class="sFormats2022__item" style="--bg-color: linear-gradient(180deg, #6C7795 0%, rgba(108, 119, 149, 0.8) 100%)"><img src="img/svg/sFormats2022-1.svg" alt=""/>
+									<div class="sFormats2022__body">
+										<div class="h strong">ЗАЕЗД</div>
+										<p>Уникальная  площадка, где эксперты  делятся своими знаниями и опытом в режиме нон-стоп</p>
+									</div>
+									<div class="sFormats2022__footer"><a class="sFormats2022__btn btn btn-warning" href="#">Подробнее</a>
+									</div>
+								</div>
+							</div>
+							<div class="sFormats2022__slide swiper-slide">
+								<div class="sFormats2022__item" style="--bg-color:  linear-gradient(180deg, #AF81B3 0%, rgba(174, 129, 178, 0.8) 100%)"><img src="img/svg/sFormats2022-2.svg" alt=""/>
+									<div class="sFormats2022__body">
+										<div class="h strong">ВОРКШОП</div>
+										<p>Молодые деятели культуры и искусства из Республики Крым, Краснодарского края и города Севастополя</p>
+									</div>
+									<div class="sFormats2022__footer"><a class="sFormats2022__btn btn btn-warning" href="#">Подробнее</a>
+									</div>
+								</div>
+							</div>
+							<div class="sFormats2022__slide swiper-slide">
+								<div class="sFormats2022__item" style="--bg-color: linear-gradient(180deg, #73A2AA 0%, rgba(115, 162, 170, 0.8) 100%)"><img src="img/svg/sFormats2022-3.svg" alt=""/>
+									<div class="sFormats2022__body">
+										<div class="h strong">МЕГАНОМИКА</div>
+										<p>Основана на новых подходах к управлению творческих процессов  </p>
+									</div>
+									<div class="sFormats2022__footer"><a class="sFormats2022__btn btn btn-warning" href="#">Подробнее</a>
+									</div>
+								</div>
+							</div>
+							<div class="sFormats2022__slide swiper-slide">
+								<div class="sFormats2022__item" style="--bg-color: linear-gradient(180deg, #8194C2 0%, rgba(129, 148, 194, 0.8) 100%)">
+									<div class="sFormats2022__body">
+										<div class="h strong">ФЕСТИВАЛЬ</div>
+										<p>Фестиваль «Таврида.АРТ» объединит все направления искусства и вновь станет самой большой площадкой  для самореализации </p>
+									</div>
+									<div class="sFormats2022__footer"><a class="sFormats2022__btn btn btn-warning" href="#">Подробнее</a>
+									</div>
+								</div>
+							</div>
+							<div class="sFormats2022__slide swiper-slide">
+								<div class="sFormats2022__item disabled" style="--bg-color: linear-gradient(180deg, #B57777 0%, rgba(181, 119, 119, 0.8) 100%);"><img src="img/svg/sFormats2022-4.svg" alt=""/>
+									<div class="sFormats2022__body">
+										<div class="h strong">УНИВЕРСИТЕТ</div>
+										<p>Университет станет ключевым проектом арт-кластера «Таврида», одной из ведущих площадок России по созданию проектов в сфере креативных индустрий.</p>
+									</div>
+									<div class="sFormats2022__footer"><a class="sFormats2022__btn btn btn-warning" href="#">СКОРО</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sFormats2022-->
+			<!-- start sCardReg2022-->
+			<div class="sCardReg2022 section" id="sCardReg2022">
+				<div class="container">
+					<div class="row">
+								<div class="sCardReg2022__col col-md-6">
+									<div class="sCardReg2022__item" style="--bg-color: linear-gradient(180deg, #422F4B 0%, rgba(111, 3, 162, 0.8) 100%)">
+										<div class="sCardReg2022__title">Грантовый конкурс
+										</div>
+										<p>Подай заявку с возможность получить до 1,5 млн для реализации проекта</p>
+										<div class="text-end"><a class="sCardReg2022__btn" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+								<div class="sCardReg2022__col col-md-6">
+									<div class="sCardReg2022__item" style="--bg-color: linear-gradient(180deg, #FF6B00 0%, rgba(255, 168, 0, 0.8) 100%)">
+										<div class="sCardReg2022__title">Кастинг-платформа
+										</div>
+										<p>Проходи кастинги в онлайн и оффлайн формате на интересные проекты</p>
+										<div class="text-end"><a class="sCardReg2022__btn" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sCardReg2022-->
+			<div class="btn-top btn-top--js">
+				<svg class="icon icon-arrow-right ">
+					<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+				</svg>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-serv" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на территорию Фестиваля бесплатный</li>
+				<li>Участие в программе Фестиваля бесплатное</li>
+				<li>Мерч «Тавриды» бесплатный</li>
+				<li>Проживание в двухместных палатках на территории Фестиваля</li>
+				<li>Питание: за свой счет на фудкортах Фестиваля</li>
+			</ul>
+			<div class="modal-win__title-sm">Бесплатные автобусные рейсы организаторов до площадки фестиваля и обратно:
+			</div>
+			<div class="modal-win__row row">
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Аэропорт
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Автовокзал
+							</div>
+							<div class="modal-win__l-place">г. Судака
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">с. Владиславовки
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="art modal-win" id="modal-art" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__big-txt">На одну ссылку залить портфолио и видеовизитку:
+			</div>
+			<div class="art__sm-title">Портфолио
+			</div>
+			<div class="art__md-txt">Прикрепи фото/видео/файлы своих работ, в зависимости от направления. Пример: для хореографов видео с танцем, для художника фото/сканы работ
+			</div>
+			<div class="art__sm-title">Видеовизитка
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до 1 минуты, где ответь на вопросы:
+			</div>
+			<div class="art__list">
+				<li>перечень значимых для тебя наград</li>
+				<li>опыт участия в федеральных и международных проектах по твоему направлению</li>
+				<li>твои ожидания от фестиваля</li>
+			</div>
+			<div class="art__md-txt mb-2"> Заливай портфолио и видеовизитку на файлообменник по одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt">* при загрузке файла на Яндекс.диск необходимо включить ссылку.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__tel" href="tel:88003022704">8 (800) 302-27-04</a>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:info@crki.art">info@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-serv-country" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на&nbsp;территорию Фестиваля бесплатный</li>
+				<li>Участие в&nbsp;программе Фестиваля бесплатное</li>
+				<li>Мерч &laquo;Тавриды&raquo; бесплатный</li>
+				<li>Питание: за&nbsp;свой счет</li>
+			</ul>
+		</div>
+		<div class="art modal-win" id="modal-art-country" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__sm-title">Видеовизитка
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+			</div>
+			<div class="art__list">
+				<li>Что для тебя арт-кластер &laquo;Таврида&raquo;?</li>
+				<li>Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?</li>
+				<li>Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?</li>
+			</div>
+			<div class="art__sm-title">Правильно оформи видеовизитку!
+			</div>
+			<div class="art__md-txt mb-2">Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+			</div>
+			<div class="art__md-txt mb-2">ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt mb-0">* при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.</div>
+			<div class="sm-txt">* обязательно установи настройку доступа по&nbsp;ссылке.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться на&nbsp;почту:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:tavrida@crki.art">tavrida@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-serv-child" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на&nbsp;территорию Фестиваля бесплатный</li>
+				<li>Участие в&nbsp;программе Фестиваля бесплатное</li>
+				<li>Мерч &laquo;Тавриды&raquo; бесплатный</li>
+				<li>Питание: за&nbsp;свой счет</li>
+			</ul>
+		</div>
+		<div class="art modal-win" id="modal-art-child" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__sm-title">Видеовизитка
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+			</div>
+			<div class="art__list">
+				<li>Что для тебя арт-кластер &laquo;Таврида&raquo;?</li>
+				<li>Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?</li>
+				<li>Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?</li>
+			</div>
+			<div class="art__sm-title">Правильно оформи видеовизитку!
+			</div>
+			<div class="art__md-txt mb-2">Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+			</div>
+			<div class="art__md-txt mb-2">ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt mb-0">* при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.</div>
+			<div class="sm-txt">* обязательно установи настройку доступа по&nbsp;ссылке.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться на&nbsp;почту:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:tavrida@crki.art">tavrida@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-serv-resident" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на&nbsp;территорию Фестиваля бесплатный</li>
+				<li>Участие в&nbsp;программе Фестиваля бесплатное</li>
+				<li>Мерч &laquo;Тавриды&raquo; бесплатный</li>
+				<li>Проживание в&nbsp;двухместных палатках на&nbsp;территории Фестиваля</li>
+				<li>Питание: за&nbsp;свой счет на&nbsp;фудкортах Фестиваля</li>
+			</ul>
+			<div class="modal-win__title-sm">Бесплатные автобусные рейсы организаторов до&nbsp;площадки фестиваля и&nbsp;обратно:
+			</div>
+			<div class="modal-win__row row">
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Аэропорт
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Автовокзал
+							</div>
+							<div class="modal-win__l-place">г. Судака
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">с. Владиславовки
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="art modal-win" id="modal-art-resident" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__sm-title">Портфолио
+			</div>
+			<div class="art__md-txt mb-2">Прикрепи фото/видео/файлы своих работ, в&nbsp;зависимости от&nbsp;направления. Пример: для хореографов видео с&nbsp;танцем, для художника фото/сканы работ.
+			</div>
+			<div class="art__sm-title">Видеовизитка
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+			</div>
+			<div class="art__list">
+				<li>Что для тебя арт-кластер &laquo;Таврида&raquo;?</li>
+				<li>Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?</li>
+				<li>Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?</li>
+			</div>
+			<div class="art__sm-title">Правильно оформи видеовизитку!
+			</div>
+			<div class="art__md-txt mb-2">Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+			</div>
+			<div class="art__md-txt mb-2">ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt mb-0">* при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.</div>
+			<div class="sm-txt">* обязательно установи настройку доступа по&nbsp;ссылке.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться на&nbsp;почту:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:tavrida@crki.art">tavrida@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-serv-together" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на&nbsp;территорию Фестиваля бесплатный</li>
+				<li>Участие в&nbsp;программе Фестиваля бесплатное</li>
+				<li>Мерч &laquo;Тавриды&raquo; бесплатный</li>
+				<li>Проживание в&nbsp;двухместных палатках на&nbsp;территории Фестиваля</li>
+				<li>Питание: за&nbsp;свой счет на&nbsp;фудкортах Фестиваля</li>
+			</ul>
+			<div class="modal-win__title-sm">Бесплатные автобусные рейсы организаторов до&nbsp;площадки фестиваля и&nbsp;обратно:
+			</div>
+			<div class="modal-win__row row">
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Аэропорт
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Автовокзал
+							</div>
+							<div class="modal-win__l-place">г. Судака
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">с. Владиславовки
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="art modal-win" id="modal-art-together" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__sm-title">Портфолио
+			</div>
+			<div class="art__md-txt mb-2">Расскажи о&nbsp;своём опыте участия во&nbsp;Всероссийской акции взаимопомощи #МыВместе в&nbsp;формате небольшого эссе.
+			</div>
+			<div class="art__md-txt mb-2">Не забудь прикрепить самые запоминающиеся для тебя фотографии и видео, связанные с твоей деятельностью.
+			</div>
+			<div class="art__sm-title">Видеоответ
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+			</div>
+			<div class="art__list">
+				<li>В&nbsp;чём твоя роль во&nbsp;Всероссийской акции взаимопомощи #МыВместе?</li>
+				<li>Почему ты&nbsp;хочешь принять участия в&nbsp;фестивале фестивалей &laquo;Таврида.АРТ&raquo;?</li>
+				<li>Чем ты&nbsp;можешь быть полезен и&nbsp;интересен на&nbsp;фестивале?</li>
+			</div>
+			<div class="art__sm-title">Правильно оформи видеоответ!
+			</div>
+			<div class="art__md-txt mb-2">Видеоответ загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+			</div>
+			<div class="art__md-txt mb-2">ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt mb-0">* при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.</div>
+			<div class="sm-txt">* обязательно установи настройку доступа по&nbsp;ссылке.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться на&nbsp;почту:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:tavrida@crki.art">tavrida@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-serv-media" style="display: none">
+			<h4 class="modal-win__title">Сервисный пакет
+			</h4>
+			<ul class="modal-win__list">
+				<li>Вход на&nbsp;территорию Фестиваля бесплатный</li>
+				<li>Участие в&nbsp;программе Фестиваля бесплатное</li>
+				<li>Мерч &laquo;Тавриды&raquo; бесплатный</li>
+				<li>Проживание в&nbsp;двухместных палатках на&nbsp;территории Фестиваля</li>
+				<li>Питание: за&nbsp;свой счет на&nbsp;фудкортах Фестиваля</li>
+			</ul>
+			<div class="modal-win__title-sm">Бесплатные автобусные рейсы организаторов до&nbsp;площадки фестиваля и&nbsp;обратно:
+			</div>
+			<div class="modal-win__row row">
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Аэропорт
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">г. Симферополя
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Автовокзал
+							</div>
+							<div class="modal-win__l-place">г. Судака
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="modal-win__sub-row row">
+						<div class="modal-win__icon-col col-auto">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg>
+						</div>
+						<div class="col">
+							<div class="modal-win__l-name">Ж/д вокзал
+							</div>
+							<div class="modal-win__l-place">с. Владиславовки
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="art modal-win" id="modal-art-media" style="display: none">
+			<h4 class="art__title">Творческое задание
+			</h4>
+			<div class="art__sm-title">Портфолио
+			</div>
+			<div class="art__md-txt mb-2">Прикрепи до&nbsp;5&nbsp;примеров твоих лучших работ/создаваемого контента с&nbsp;указанием ссылок на&nbsp;публикации.
+			</div>
+			<div class="art__sm-title">Видеовизитка
+			</div>
+			<div class="art__md-txt mb-2">Запиши ролик длительностью до&nbsp;1&nbsp;минуты, где ответь на&nbsp;вопросы:
+			</div>
+			<div class="art__list">
+				<li>Что для тебя арт-кластер &laquo;Таврида&raquo;?</li>
+				<li>Какой опыт ты&nbsp;ожидаешь получить на&nbsp;Фестивале?</li>
+				<li>Каким опытом можешь поделиться с&nbsp;другими участниками Фестиваля?</li>
+			</div>
+			<div class="art__sm-title">Правильно оформи видеовизитку!
+			</div>
+			<div class="art__md-txt mb-2">Видеовизитку загружай только на&nbsp;Youtube, открой доступ по&nbsp;ссылке или для всех (как тебе больше нравится).
+			</div>
+			<div class="art__md-txt mb-2">ПОРТФОЛИО заливай на&nbsp;файлообменник по&nbsp;одной ссылке. Рекомендуем использовать Яндекс.диск* или Google диск**. Назови папку/файл с&nbsp;портфолио: фамилия_инициалы участника (иванов_аб).
+			</div>
+			<div class="sm-txt mb-0">* при загрузке файла на&nbsp;Яндекс.диск необходимо включить ссылку.</div>
+			<div class="sm-txt">* обязательно установи настройку доступа по&nbsp;ссылке.</div>
+			<div class="art__foot-row row align-items-center">
+				<div class="col-auto">
+					<div class="art__f-txt">При возникновении вопросов обращаться на&nbsp;почту:
+					</div>
+				</div>
+				<div class="col-auto"><a class="art__mail" href="mailto:tavrida@crki.art">tavrida@crki.art</a>
+				</div>
+			</div>
+		</div>
+		<!-- end modals-->
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<!-- modal libs--><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="js/dropzone.min.js"></script>
+		<!--script(src="libs/datatables.net/jquery.dataTables.min.js")--><script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/masonry-layout/masonry.pkgd.min.js"></script>
+		<script src="libs/imagesloaded/imagesloaded.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js"></script>
+		<script src="libs/select2/js/select2.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
