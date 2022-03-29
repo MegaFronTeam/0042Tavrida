@@ -14,7 +14,6 @@ mixin headerBlock(data)
 					h1.sm!= data.text
 				block
 			.row
-				if data.soc
 				.col-12.col-sm-11.col-md-9.ms-md-auto
 					+e.video-bl
 						if data.video
@@ -24,6 +23,7 @@ mixin headerBlock(data)
 								iframe(src=`${data.video}&autoplay=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
 						if data.img
 							+pic(data.img,'bg').picture-bg
+				if data.soc
 					.col-sm-auto
 						+soc()
 							+e.A.item(href='#' target="_blank"): img(src="img/svg/vk-2022.svg", alt="")
