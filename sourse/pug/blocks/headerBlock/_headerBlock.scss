@@ -57,6 +57,7 @@
     @include block(966,544);
     background: #8000FF;
     border-radius: 30px;
+    overflow: hidden;
 
     &::before{
       content: '';

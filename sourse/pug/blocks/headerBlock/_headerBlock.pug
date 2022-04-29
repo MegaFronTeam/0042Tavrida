@@ -75,3 +75,53 @@ mixin headerBlock2022(data)
 				//- 				+pic(data.img,'bg').picture-bg
 							//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
 	// end headerBlock
+mixin headerBlock20221(data)
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		-
+			let bg= data.bg
+			let style = bg ? `--bg-color: ${bg}` : null 
+		+e.inner(style= style)
+			+e.container.container
+				.row
+					.col-lg-6
+						+b.section-title.pt-0.pb-3
+							if data.back
+								+e.back(href="#")
+									+icon("arrow-left-long")
+									| к списку арт-школ
+							if data.date 
+								+e.data.text-secondary!= data.date
+							if data.title
+								h1!= data.title
+								br
+								br
+								if data.text
+
+									.h5.fw-500.text-secondary!= data.text
+							else
+								h1.sm!= data.text
+							if data.btn
+								a.btn.btn-warning.mt-4.mb-4(href="#")= data.btn
+							block
+					.col.d-none.d-lg-block
+						+e.video-bl
+							if data.video
+								if data.youtube
+									iframe(width="560" height="315" src=`${data.video}?mute=1&autoplay=1&controls=0&disablekb=1&showinfo=0&loop=1&mute=1&rel=0&modestbranding=1` title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;modestbranding; picture-in-picture" allowfullscreen)
+								else
+									iframe(src=`${data.video}&autoplay=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
+						if data.img
+							+pic(data.img,'bg').pic-sq
+				//- .row
+				//- 	.col-12.col-sm-11.col-md-9.ms-auto
+				//- 		+e.video-bl
+				//- 			if data.video
+				//- 				if data.youtube
+				//- 					iframe(width="560" height="315" src=`${data.video}?mute=1&autoplay=1&controls=0&disablekb=1&showinfo=0&loop=1&mute=1&rel=0&modestbranding=1` title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;modestbranding; picture-in-picture" allowfullscreen)
+				//- 				else
+				//- 					iframe(src=`${data.video}&autoplay=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
+				//- 			if data.img
+				//- 				+pic(data.img,'bg').picture-bg
+							//-+e.VIDEO.video(src="videoplayback.mp4" preload muted controls)
+	// end headerBlock
