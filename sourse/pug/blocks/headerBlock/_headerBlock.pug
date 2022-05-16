@@ -84,26 +84,27 @@ mixin headerBlock20221(data)
 		+e.inner(style= style)
 			+e.container.container
 				.row
-					.col-lg-6
-						+b.section-title.pt-0.pb-3
-							if data.back
-								+e.back(href="#")
-									+icon("arrow-left-long")
-									| к списку арт-школ
-							if data.date 
-								+e.data.text-secondary!= data.date
-							if data.title
-								h1!= data.title
-								br
-								br
-								if data.text
+					.col-xl-4.col-lg-5
+						+e.content
+							+b.section-title.pt-0.pb-3
+								if data.back
+									+e.back(href="#")
+										+icon("arrow-left-long")
+										| к списку арт-школ
+								if data.date 
+									+e.data.text-secondary!= data.date
+								if data.title
+									h1!= data.title
+									br
+									br
+									if data.text
 
-									.h5.fw-500.text-secondary!= data.text
-							else
-								h1.sm!= data.text
-							if data.btn
-								a.btn.btn-warning.mt-4.mb-4(href="#")= data.btn
-							block
+										.h5.fw-500.text-secondary!= data.text
+								else
+									h1.sm!= data.text
+								if data.btn
+									a.btn.btn-warning.mt-4.mb-4(href="#")= data.btn
+								block
 					.col
 						+e.video-bl
 							if data.video
