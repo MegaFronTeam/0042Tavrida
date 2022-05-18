@@ -6,8 +6,11 @@
     position: relative;
     z-index: 2;
     @include media-breakpoint-up(md){
-    margin-right: -35%;
+    // margin-right: -35%;
     }
+  }
+  .row{
+    align-items: center;
   }
   --sPT: 0;
   --sTPB: 0;
@@ -37,7 +40,9 @@
       top: 0;
     }
     //left: 9px;
-
+    h2{
+      font-size: 24px;
+    }
     h1{
       color: $body-color;
 
@@ -48,8 +53,9 @@
         flex: rem(60);
         // max-width: rem(300);
       }
+      font-size: rem(40);
       @include media-breakpoint-up(xl){
-        font-size: rem(70);
+        font-size: rem(40);
         // font-size: rem(100.3);
       }
       line-height: 1;
