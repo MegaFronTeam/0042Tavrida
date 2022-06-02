@@ -141,11 +141,9 @@ function eventHandler() {
   //luckyone js
   let residentSlider = new Swiper('.resident-slider-js', {
     slidesPerView: "auto",
+    spaceBetween: 20,
 
     breakpoints: {
-      0: {
-        spaceBetween: 20,
-      },
       1200: {
         spaceBetween: 40,
       },
@@ -167,11 +165,9 @@ function eventHandler() {
     let projectSlider = new Swiper($(this).find('.project-slider-js'), {
       slidesPerView: "auto",
       loop: true,
+      spaceBetween: 20,
 
       breakpoints: {
-        0: {
-          spaceBetween: 20,
-        },
         1200: {
           spaceBetween: 40,
         },
@@ -213,12 +209,10 @@ function eventHandler() {
   });
   //
   let famousSlider = new Swiper('.famous-slider-js', {
-    slidesPerView: "auto",
+    slidesPerView: "auto", 
+      spaceBetween: 20, 
 
     breakpoints: {
-      0: {
-        spaceBetween: 20,
-      },
       768: {
         spaceBetween: 40,
       },
@@ -320,11 +314,9 @@ function eventHandler() {
   });
   let artistSlider = new Swiper('.artist-slider-js', {
     slidesPerView: "auto",
+    spaceBetween: 20,
 
     breakpoints: {
-      0: {
-        spaceBetween: 20,
-      },
       1200: {
         spaceBetween: 40,
       },
@@ -344,11 +336,9 @@ function eventHandler() {
   let feedbackSlider = new Swiper('.feedback-slider-js', {
     slidesPerView: "auto",
     loop: true,
+    spaceBetween: 30,
 
-    breakpoints: {
-      0: {
-        spaceBetween: 30,
-      },
+    breakpoints: { 
       1200: {
         spaceBetween: 40,
       },
@@ -369,11 +359,9 @@ function eventHandler() {
   let usefullSlider = new Swiper('.useful-slider-js', {
     slidesPerView: "auto",
     loop: true,
+    spaceBetween: 20,
 
-    breakpoints: {
-      0: {
-        spaceBetween: 20,
-      },
+    breakpoints: { 
       1200: {
         spaceBetween: 40,
       },
@@ -390,11 +378,9 @@ function eventHandler() {
   let actSlider = new Swiper('.act-slider-js', {
     slidesPerView: "auto",
     loop: true,
+    spaceBetween: 30,
 
-    breakpoints: {
-      0: {
-        spaceBetween: 30,
-      },
+    breakpoints: { 
       1200: {
         spaceBetween: 40,
       },
@@ -926,28 +912,32 @@ function eventHandler() {
     },
   });
   //-
-  let lhSlider = new Swiper('.lh-slider-js', {
-    slidesPerView: "auto",
-    freeMode: true,
-    loopFillGroupWithBlank: true,
-    touchRatio: 0.2,
-    slideToClickedSlide: true,
-    freeModeMomentum: true,
-    // freeModeMomentum: true,
-
-    // breakpoints: {
-    //   319: {
-    //     spaceBetween: 30,
-    //   },
-    //   768: {
-    //     spaceBetween: 40,
-    //   },
-    //   1200: {
-    //     spaceBetween: 71,
-    //   },
-    // },
-  });
-  window.setTimeout(lhSlider.update, 200);
+  window.setTimeout(
+    function () {
+      
+      let lhSlider = new Swiper('.lh-slider-js', {
+        slidesPerView: "auto",
+        freeMode: true,
+        loopFillGroupWithBlank: true,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+        freeModeMomentum: true,
+        // freeModeMomentum: true,
+        
+        // breakpoints: {
+          //   319: {
+            //     spaceBetween: 30,
+            //   },
+            //   768: {
+              //     spaceBetween: 40,
+              //   },
+              //   1200: {
+                //     spaceBetween: 71,
+                //   },
+                // },
+              });
+            }
+    , 200);
   //
   let sOrdersSlider = new Swiper('.sOrders-slider-js', {
     slidesPerView: "auto",
