@@ -1,0 +1,106 @@
+// start .sMerch
+.sMerch {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(40)};
+	.row {
+		--bs-gutter-y: #{var(--bs-gutter-x)};
+		margin-bottom: 39px;
+	}
+
+	&__btn {
+		padding: rem(10) rem(30);
+		border: 1px solid $orange;
+		border-radius: 150px;
+		text-transform: uppercase;
+		color: $orange;
+		font-weight: 800;
+		font-size: 12px;
+		@include mt;
+		&:hover {
+			border: 1px solid $orange;
+			color: $white;
+			background-color: $orange
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMerch
+.merch-item {
+	padding: rem(30) rem(24);
+	height: 100%;
+	min-width: 240px;
+	border: 1px solid #B1CCF3;
+	border-radius: 40px;
+	text-align: center;
+	&__img-wrap {
+		@include block(186,278);
+		margin: 0 auto 28px;
+		max-width: 186px;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			transform: translateY(-50%);
+		}
+	}
+	&__name {
+		margin-bottom: 10px;
+		font-weight: 500;
+		line-height: 1.5;
+	}
+	&__sizes {
+		margin-bottom: rem(30);
+		font-size: 13px;
+		color: $gray-650;
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 47%;
+			height: 40px;
+			padding: 3px 10px;
+			background: #E3EEFF;
+			border-radius: 150px;
+			&:hover {
+				background-color: #b4caeb;
+			}
+		}
+		img {
+			max-height: 100%;
+			min-height: 10px;
+			max-width: 100%;
+		}
+	}
+	.btn-warning {
+		width: 100%;
+		background-color: $orange;
+		font-weight: 800;
+		font-size: 12px;
+		text-transform: uppercase;
+		&:hover {
+			background-color: #ff9326;
+    	border-color: #ff8d1a;
+		}
+	}
+	&__details {
+		font-weight: 500;
+		line-height: 125%;	
+		color: $blue;
+		&:hover{
+			color: #7c8cb3;
+		}
+	}
+}

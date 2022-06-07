@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+include ../blocks/sMerch/_sMerch.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Магазин'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock2022({
+		col: '6',
+		back: 'Назад',
+		text: `Новый мерч<br> от&nbsp;наших партнеров`,
+		descr: 'Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии,',
+		btn:"Подробнее",
+		img:"head-shop.png",
+		bg: "#F1E1F5"
+	}).headerBlock--shop
+	+sMerch
+	+sForm2023()
+	+sParnersAlt()
+	+footer()

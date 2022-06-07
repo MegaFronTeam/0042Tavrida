@@ -291,3 +291,23 @@ border-radius: 30px;
 overflow: hidden;
 
 }
+.headerBlock--shop {
+  .pic-sq{
+    @include block(595,371);
+    img{
+      mix-blend-mode: darken;
+    }
+  }
+  .section-title {
+    p {
+      color: $gray-650;
+    }
+  }
+  .section-title__back {
+    display: flex;
+    align-items: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

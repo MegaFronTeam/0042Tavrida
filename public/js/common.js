@@ -530,6 +530,25 @@ function eventHandler() {
     // },
 
   });
+
+  let merchThumbsSlider = new Swiper(".merch-thumbs-slider--js", {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  
+  let merchSwiper = new Swiper('.merch-slider--js', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },    
+    thumbs: {
+      swiper: merchThumbsSlider,
+    },
+  });
+
   let ssObjects = new Swiper('.sObjects__slider--js', {
     slidesPerView: 1,
     //loop: true,
