@@ -29,9 +29,9 @@ mixin sMerch(data)
 
 mixin merchItem(img="1",name,partner)
 	+b.merch-item
-		+e.img-wrap
+		+e.img-wrap.link-modal(href='#modal-merch')
 			+pic(`merch-${img}.jpg`, '', 0)
-		+e.name!= name
+		+e.name.link-modal(href='#modal-merch')!= name
 		+e.sizes Размеры: XL, L, M, S, XS 
 		+e.links
 			if partner
