@@ -292,6 +292,9 @@ overflow: hidden;
 
 }
 .headerBlock--shop {
+  .headerBlock__inner {
+    padding: 43px 0;
+  }
   .pic-sq{
     @include block(595,371);
     img{

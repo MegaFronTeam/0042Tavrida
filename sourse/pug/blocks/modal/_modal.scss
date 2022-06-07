@@ -313,11 +313,19 @@ a {
 		line-height: 123%;
 		text-transform: uppercase;
 		color: $purple;
+		padding-top: 30px;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(20);
+			padding-top: 0;
+		}
 	}
 	dl {
 		width: 50%;
 		margin: 0 20px 20px 0;
-		overflow: hidden;  
+		overflow: hidden;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
 	}
 	dt {
 		float: left;
@@ -337,6 +345,19 @@ a {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+		}
+	}
+	&__maker {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+		img {
+			@include media-breakpoint-down(sm) {
+				width: 70px;
+			}
+		}
 	}
 	&__descr {
 		font-weight: 300;
@@ -365,6 +386,11 @@ a {
 .merch-slider {
 	height: 475px;
 	width: 100%;
+	margin-bottom: 30px;
+	@include media-breakpoint-down(sm) {
+		height: 320px;
+		margin-bottom: 0;
+	}
 	.swiper-slide {
 		width: 100%;
 		padding: 30px;
@@ -372,33 +398,32 @@ a {
     align-items: center;
 		justify-content: center;
 	}
+	picture {
+		max-height: 100%;
+	}
 	img {
 		max-width: 100%;
 		max-height: 100%;
 	}
 }
 .merch-thumbs-slider {
-	position: absolute;
-	bottom: 56px;
-	left: 0;
-	right: 0;
-	height: 90px;
+	height: 110px;
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 0;
-	@include media-breakpoint-down(xl) {
-		bottom: 10px;
-		// width: 70%;
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 30px;
 	}
-	@media (max-width: 400px) {
-		width: 90%;
-		height: 26%;
+	
+	.swiper-wrapper {
+		justify-content: center;
 	}
 	.swiper-slide {
 		border: 2px solid transparent;
 		display: flex;
     align-items: center;
 		justify-content: center;
+		width: 94px !important;
 	}
 	.swiper-slide-thumb-active {
 		border: 2px solid $orange;
@@ -407,5 +432,7 @@ a {
 		height: 67px;
 		width: auto;
 		object-fit: contain;
+		max-width: 100%;
+		max-height: 100%;
 	}
 }

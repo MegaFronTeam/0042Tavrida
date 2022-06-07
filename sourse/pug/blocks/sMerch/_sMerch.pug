@@ -30,7 +30,7 @@ mixin sMerch(data)
 mixin merchItem(img="1",name,partner)
 	+b.merch-item
 		+e.img-wrap
-			+pic(`merch-${img}.jpg`)
+			+pic(`merch-${img}.jpg`, '', 0)
 		+e.name!= name
 		+e.sizes Размеры: XL, L, M, S, XS 
 		+e.links
@@ -38,7 +38,7 @@ mixin merchItem(img="1",name,partner)
 				a.btn.btn-warning.mt-4.mb-4(href="#") Купить у партнера
 			else
 				a.btn.mt-4.mb-4(href="#")
-					+pic(`wildberries.png`)
+					+pic(`wildberries.png`, '', 0)
 				a.btn.mt-4.mb-4(href="#")
-					+pic(`ozon.png`)
-		+e.details(href="#") Подробнее о товаре
+					+pic(`ozon.png`, '', 0)
+		+e.details.link-modal(href='#modal-merch') Подробнее о товаре

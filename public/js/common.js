@@ -536,17 +536,27 @@ function eventHandler() {
     slidesPerView: 2,
     freeMode: true,
     watchSlidesProgress: true,
+    observer: true,
+    resizeObserver: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      	576: {
+      		spaceBetween: 32,
+      	},
+      }
   });
   
   let merchSwiper = new Swiper('.merch-slider--js', {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },    
+    slidesPerView: 1,
+    spaceBetween: 10,    
     thumbs: {
       swiper: merchThumbsSlider,
     },
+    resizeObserver: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
   });
 
   let ssObjects = new Swiper('.sObjects__slider--js', {
