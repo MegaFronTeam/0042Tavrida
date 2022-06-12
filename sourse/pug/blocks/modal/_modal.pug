@@ -208,6 +208,42 @@ mixin modal()
 				+e.f-txt При возникновении вопросов обращаться на&nbsp;почту:
 			.col-auto
 				+e.mail(href='mailto:tavrida@crki.art') tavrida@crki.art
+	
+	+b.merch.modal-win(id="modal-merch" class=" " style="display: none" )
+		.row
+			.col-lg-6
+				+e.images-wrap
+							.swiper.merch-slider.merch-slider--js
+								.swiper-wrapper
+									.swiper-slide
+										+pic('slider-merch-1.jpg')
+									.swiper-slide
+										+pic('slider-merch-1.jpg')
+							.swiper.merch-thumbs-slider.merch-thumbs-slider--js
+								.swiper-wrapper
+									.swiper-slide
+										+pic('merch-thumbs-1.jpg', '', 0)
+									.swiper-slide
+										+pic('merch-thumbs-2.jpg', '', 0)
+			.col-lg-6
+				+e.title Свитшот «Таврида», Красный и серый две строки
+				+e.properties
+					dl
+						dt Размеры: 
+						dd XL, L, M, S, XS
+						dt Производитель: 
+						dd 
+							a(href="#") OODJi
+						dt Материал: 
+						dd Хлопок
+					+e.maker(href="#")
+						+pic('maker-logo.jpg', '', 0)
+				a.btn(href="#")
+					+pic(`wildberries.png`, '', 0)
+				a.btn(href="#")
+					+pic(`ozon.png`,'',0)
+				+e.descr Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендомКлючевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендом
+				
 	// end modals
 
 mixin modalItem(name, place)

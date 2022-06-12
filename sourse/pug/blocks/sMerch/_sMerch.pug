@@ -1,0 +1,44 @@
+mixin sMerch(data)
+	// start sMerch
+	+b.SECTION.sMerch.section#sMerch&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Новые товары от наших партнеров				
+			.row
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки','partner')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки','partner')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки','partner')
+				.col.col-sm-6.col-lg-4
+					+merchItem('1','Свитшот &laquo;Таврида&raquo;, Красный и&nbsp;серый две строки')
+			.text-center
+				+btn('Показать еще').btn
+	// end sMerch
+
+mixin merchItem(img="1",name,partner)
+	+b.merch-item
+		+e.img-wrap.link-modal(href='#modal-merch')
+			+pic(`merch-${img}.jpg`, '', 0)
+		+e.name.link-modal(href='#modal-merch')!= name
+		+e.sizes Размеры: XL, L, M, S, XS 
+		+e.links
+			if partner
+				a.btn.btn-warning.mt-4.mb-4(href="#") Купить у партнера
+			else
+				a.btn.mt-4.mb-4(href="#")
+					+pic(`wildberries.png`, '', 0)
+				a.btn.mt-4.mb-4(href="#")
+					+pic(`ozon.png`, '', 0)
+		+e.details.link-modal(href='#modal-merch') Подробнее о товаре

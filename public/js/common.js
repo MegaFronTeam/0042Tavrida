@@ -530,6 +530,35 @@ function eventHandler() {
     // },
 
   });
+
+  let merchThumbsSlider = new Swiper(".merch-thumbs-slider--js", {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer: true,
+    resizeObserver: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      	576: {
+      		spaceBetween: 32,
+      	},
+      }
+  });
+  
+  let merchSwiper = new Swiper('.merch-slider--js', {
+    slidesPerView: 1,
+    spaceBetween: 10,    
+    thumbs: {
+      swiper: merchThumbsSlider,
+    },
+    resizeObserver: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+  });
+
   let ssObjects = new Swiper('.sObjects__slider--js', {
     slidesPerView: 1,
     //loop: true,

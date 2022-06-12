@@ -8,7 +8,6 @@ mixin headerBlock(data)
 				if data.title
 					h1!= data.title
 					if data.text
-
 						p!= data.text
 				else
 					h1.sm!= data.text
@@ -42,21 +41,23 @@ mixin headerBlock2022(data)
 		+e.inner(style= style)
 			+e.container.container
 				.row
-					.col-lg-7
+					//- .col-lg-7
+					div(class=`col-lg-${data.col}`)
 						+b.section-title
 							if data.back
 								+e.back(href="#")
 									+icon("arrow-left-long")
-									| к списку арт-школ
+									p= data.back
 							if data.date 
 								+e.data.text-secondary!= data.date
 							if data.title
 								h1!= data.title
 								if data.text
-
 									p!= data.text
 							else
 								h1.sm!= data.text
+							if data.descr 
+								p.h5.fw-400!= data.descr
 							if data.btn
 								a.btn.btn-warning.mt-4.mb-4(href="#")= data.btn
 							block
