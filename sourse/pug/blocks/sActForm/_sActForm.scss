@@ -46,6 +46,11 @@
 	}
 
 	&__slider{
+		&--center{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 930px;
+		}
 		.swiper-container{
 			overflow: visible!important;
 		}
@@ -67,14 +72,16 @@
 		max-width:  100%;
 		width: 100%;
 		@include media-breakpoint-up(md){
-			width: rem(930);
+			// width: rem(930);
+			width: 100%;
 		}
 		@include media-breakpoint-up(xl){
-			width: rem(930);
+			// width: rem(930);
 			// width: calc((100% / 2) - (40px * 1 / 2));
+			width: 100%;
 		}
 		@include media-breakpoint-up(xxl){
-			width: rem(930);
+			width: 100%;
 			// width: calc((100% / 2) - (48px * 1 / 2));
 		}
 	}

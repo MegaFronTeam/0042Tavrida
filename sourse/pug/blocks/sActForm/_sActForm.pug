@@ -45,7 +45,7 @@ mixin sActFormBaseProg(h2="Программа антишколы", ...datas)
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.act-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-			+e.slider 
+			+e.slider--center
 				.swiper-container.act-slider-js
 					.swiper-wrapper
 						- for (var x = 0; x < 3; x++)
@@ -75,7 +75,7 @@ mixin sActForm(h2="Аудитория форума")
 							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 						+e.next.act-next-js
 							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
-			+e.slider
+			+e.slider--center
 				.swiper-container.act-slider-js
 					.swiper-wrapper
 						+sActSlide(`full-1`,  `Архитекторы `)

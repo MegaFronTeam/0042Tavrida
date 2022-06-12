@@ -1,0 +1,122 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sDirection/_sDirection.pug
+include ../blocks/sFpartners/_sFpartners.pug
+include ../blocks/sArtist/_sArtist.pug
+include ../blocks/sWay/_sWay.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sApply/_sApply.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sDev/_sDev.pug
+include ../blocks/sAlgorithm/_sAlgorithm.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sHeaderBlockSchool/_sHeaderBlockSchool.pug
+include ../blocks/sWays/_sWays.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-forum'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+sHeaderBlockSchool
+	+sActFormBaseProg()
+	//- +sAbout({
+	//- 	bgAlt: 'about-bg3.jpg',
+	//- 	title: 'О форуме',
+	//- 	text: `Амбассадор будет представлять «Тавриду» в своем регионе в течение следующего года. В конкурсном отборе могут принимать участие граждане РФ в возрасте от 20 до 35 лет, которые ранее принимали участие в проектах арт-кластера.`
+	//- }).sAbout--forum
+	+sVantage6()
+	//- +sDirection2()
+	//- +sDigits()
+	+sWays(
+		"Направления ",
+		{
+			img: 'way-1.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#D0F1C0',
+			title:`Арт-плейс`,
+			text:`антишкола эффективного управления, продюсирования. Вахтанговский фестиваль театральных менеджеров`,
+			count:'4',
+		},
+		{
+			img: 'way-2.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#B2ECEF',
+			title:`Студия 360`,
+			text:`антишкола индустрии моды, современной хореографии, современной музыки и клипмейкинга`,
+			count:'5',
+		},
+		{
+			img: 'way-3.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#F1AD98',
+			title:`Видеохостинг и диджитал-сервисы`,
+			text:`антишкола видеоконтента, анимации, диджитал-дизайна, онлайн-режиссуры`,
+			count:'6',
+		},
+		{
+			img: 'way-4.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#C8DEFF',
+			title:`Вкусный джаз`,
+			text:`антишкола джазовой музыки, гастрономии, фото- и видеоконтента`,
+			count:'7',
+		},
+		{
+			img: 'way-5.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#C8B2E4',
+			title:`Улица как новая сцена`,
+			text:`антишкола циркового искусства, уличного театра, бардовской песни, уличной музыки, ивент- продюсирования и режиссуры`,
+			count:'8',
+		},
+		{
+			img: 'way-6.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#C8DEFF',
+			title:`Шоу-кейс фестиваля фестивалей`,
+			text:`Антишкола мюзикла, подготовка контента для фестиваля фестивалей «Таврида.АРТ»`,
+			count:'9',
+		},
+		{
+			img: 'way-7.png',
+			col: 'col-lg-4 col-md-6',
+			color: '#B2ECEF',
+			title:`Город ‒ точка роста`,
+			text:`антишкола региональных арт-резиденций, индустрии гостеприимства, архитектуры  и дизайна`,
+			count:'10',
+		})
+
+		
+
+	+sActForm()
+	+sDev()
+	+sFeedBack2()
+	+sAlgorithm()
+	+sApply()
+	//-here
+	//- +sStream
+	+sFAQ()
+	+sNews()
+	+sForm()
+	+sPartners()
+	+footer()
