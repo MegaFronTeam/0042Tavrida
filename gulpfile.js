@@ -40,10 +40,10 @@ function browsersync() {
             baseDir: './' + publicPath,
             middleware: bssi({ baseDir: './' + publicPath, ext: '.html' })
         },
-        ghostMode: { clicks: false },
-        notify: false,
-        online: true,
-        tunnel: 'layouts', // Attempt to use the URL https://layouts.loca.lt
+        // ghostMode: { clicks: false },
+        // notify: false,
+        // online: true,
+        // tunnel: 'layouts', // Attempt to use the URL https://layouts.loca.lt
     })
 }
 function pugFiles() {

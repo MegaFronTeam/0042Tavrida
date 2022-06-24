@@ -253,6 +253,9 @@
 	&--park &__bg-alt{
 		top: rem(0);
 		display: block;
+		right: auto;
+		left: calc(50%);
+		width: auto;
 	}
 	&--park &__text{
 		max-width: rem(550);
