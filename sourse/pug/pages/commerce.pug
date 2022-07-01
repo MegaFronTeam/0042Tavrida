@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sResidents/_sResidents.pug
+include ../blocks/sAchivment/_sAchivment.pug
+include ../blocks/sStory/_sStory.pug
+include ../blocks/sFaumos/_sFaumos.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sCommerceList/_sCommerceList.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sCardsBlock/_sCardsBlock.pug
+include ../blocks/sEventFormats/_sEventFormats.pug
+include ../blocks/sCongressServices/_sCongressServices.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Коммерческие возможности площадки'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock2026({
+		video: `https://www.youtube.com/embed/JN3p9Vzb_nI`,
+		youtube: true,
+	})
+	+sCommerceList
+	+sEventFormats
+	+sCongressServices
+	//- 	//- h2 Lorem ipsum dolor sit amet.
+	//- +sAbout({
+	//- 	bg: 'about-bg.jpg',
+	//- 	title: 'Об арт-кластере',
+	//- 	text: `Арт-кластер &laquo;Таврида&raquo; ‒ это экосистема проектов для реализации творческого и&nbsp;профессионального потенциала молодых деятелей культуры и&nbsp;искусств`
+	//- })
+	//- +sVantage()
+	//- +sCardsBlock
+	//- +sProjects()
+	//- +sFestival()
+	//- +sAchivment()
+	//- +sResidents()
+	//- +sStory()
+	//- +sFaumos()
+	//- +sNews()
+	//- +sForm()
+	//- +sPartners()
+	+sParnersAlt()
+	+footer()

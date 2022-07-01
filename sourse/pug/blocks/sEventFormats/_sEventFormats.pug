@@ -1,0 +1,17 @@
+mixin sEventFormats(data)
+	// start sEventFormats
+	+b.SECTION.sEventFormats.section#sEventFormats&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Форматы мероприятий
+			.row
+				mixin item(bg,title)
+					.col-lg-4
+						+e.item(href="#")
+							+e.IMG.item-bg(src=`img/EventFormats-${bg}.jpg`, alt="")
+							+e.item-title-wrap
+								+e.item-title!=title
+				+item(1,`Корпоративные тренинги`)
+				+item(2,`Мастер-классы`)
+				+item(3,`Онлайн-трансляции`)
+	// end sEventFormats

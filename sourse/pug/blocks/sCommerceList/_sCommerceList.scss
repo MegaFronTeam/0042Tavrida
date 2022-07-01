@@ -1,0 +1,46 @@
+// start .sCommerceList
+.sCommerceList {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(26)};
+	}
+
+	ul {
+		list-style-type: none;
+		margin-bottom: 0;
+		@include media-breakpoint-up(lg){
+			column-count: 2;
+			column-width: auto;
+		}
+	}
+	li {
+		padding-left: rem(52);
+		margin-bottom: rem(14);
+		font-weight: 600;
+		font-size: rem(20);
+		line-height: 180%;
+		position: relative;
+		&::before{
+			content: url(../img/svg/check-color.svg);
+			position: absolute;
+			top: rem(4);
+			left: 0;
+			width: rem(28);
+			height: rem(25);
+		}
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCommerceList

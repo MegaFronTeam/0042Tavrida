@@ -1,0 +1,122 @@
+mixin sCongressServices(data)
+	// start sCongressServices
+	+b.SECTION.sCongressServices.section#sCongressServices&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Конгресс-услуги
+			+congress-item(true,`Шатер №1 БОШ`,`Подиум 6х3 м, блэкаут, художественный свет,<br />2 гримерные комнаты, онлайн-трансляция`,`25 х 40 м`,1)
+			+congress-item(false,`Шатер №2`,`Подиум 4х2 м, танцевальный линолиум, зеркала, станки`,`10 х 20 м`,2)
+			+congress-item(true,`Шатер №3`,`Подиум 4х2 м`,`25 х 40 м`,3,false)
+			+congress-item(false,`Шатер №4`,`Подиум 4х2 м, танцевальный линолиум, зеркала, станки`,`10 х 20 м`,4,false)
+			+congress-item(true,`Шатер №5 Коворкинг`,`Рабочие места с компьютерами`,`15 х 15 м`,5,false)
+			+congress-item(false,`Шатер №6`,`Рабочие места с компьютерами`,`15 х 15 м`,6,false)
+			+congress-item(true,`Шатер №7`,`Рабочие места с компьютерами`,`15 х 15 м`,7,false)
+			+congress-item(false,`Бистро`,`Рабочие места с компьютерами`,`15 х 15 м`,8,false)
+			+congress-item(true,`Шатер №11 Сила (открытый)`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,9,false)
+			+congress-item(false,`Серфприют`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,10,false)
+			+congress-item(true,`Костровая`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,11,false)
+			+congress-item(false,`Кафе в жилой зоне`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,12,false,true,true,true,false,false,false,false,false)
+			+congress-item(true,`Клуб Меганом + веранда`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,13,false,true,true,true,true,true,true,true,true,true,true,false)
+	// end sCongressServices
+
+mixin congress-item(color,title,caption,size,pic,stScreen=true,mobScreen=true,micro=true,sound=true,light=true,flip=true,theatre=true,classRoom=true,table=true,banquet=true,cabaret=true,furshet=true)
+	+b.congress-item(class=(color ? '--color' : ''))
+		+e.title-wrap
+			+e.title-block
+				+e.title!=title
+				+e.size
+					img(src="img/svg/size.svg", alt="")
+					span!=size
+			+e.caption!=caption
+		+e.pic-wrap
+			.row
+				.col-lg-6
+					+pic(`congress-item-${pic}_1.jpg`,'',0)
+				.col-lg-6
+					+pic(`congress-item-${pic}_2.jpg`,'',0)
+		+e.options-wrap
+			.row
+				if stScreen
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('002-teaching')
+							+e.options-title Стационарный экран:
+							+e.options-caption 4 мм: ~ 7X4 м P3,9
+				if mobScreen
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('001-teacher')
+							+e.options-title Экран мобильный: 
+							+e.options-caption ТВ на стойках 65'<br />или 85'
+				if micro
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('003-microphone')
+							+e.options-title Микрофоны:
+							+e.options-caption 8 штук радио
+				if sound
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('004-settings')
+							+e.options-title Звук:
+							+e.options-caption конц. оборудование L'ACOUSTIC
+				if light
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('005-lightbulb')
+							+e.options-title Свет:
+							+e.options-caption общий и художественный
+				if flip
+					.col-lg-2.col-sm-4.col-6
+						+e.options-block
+							+e.options-icon
+								+icon('006-flipchart')
+							+e.options-title Флипчарт:
+							+e.options-caption есть
+		+e.sit-title
+			hr
+			span Рассадка
+			hr
+		+e.sit-wrap
+			.row
+				if theatre
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/theatre.svg", alt="")
+						+e.sit-item-title Театр
+						+e.sit-caption до 150 персон
+				if classRoom
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/classRoom.svg", alt="")
+						+e.sit-item-title Класс
+						+e.sit-caption до 150 персон
+				if table
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/table.svg", alt="")
+						+e.sit-item-title Круглый стол
+						+e.sit-caption до 150 персон
+				if banquet
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/banquet.svg", alt="")
+						+e.sit-item-title Банкет
+						+e.sit-caption до 150 персон
+				if cabaret
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/cabaret.svg", alt="")
+						+e.sit-item-title Кабаре
+						+e.sit-caption до 150 персон
+				if furshet
+					.col-lg-2.col-sm-4.col-6
+						+e.sit-pic
+							img(src="img/svg/furshet.svg", alt="")
+						+e.sit-item-title Фуршет
+						+e.sit-caption до 150 персон
