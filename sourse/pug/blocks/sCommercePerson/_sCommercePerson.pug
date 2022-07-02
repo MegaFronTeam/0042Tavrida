@@ -1,0 +1,19 @@
+mixin sCommercePerson(data)
+	// start sCommercePerson
+	+b.SECTION.sCommercePerson.section#sCommercePerson&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Готовы обсудить детали вашего мероприятия
+			.row
+				mixin item(pic,name,job,tel,telLink,mail)
+					.col-lg-6
+						+e.item
+							+e.pic
+								img(src=`img/commerce-person-${pic}.png`, alt="")
+							+e.name!=name
+							+e.job!=job
+							+e.tel(href=`tel:${telLink}`)!=tel
+							+e.mail(href=`mailto:${mail}`)!=mail
+				+item(1,`ТРЕГУЛОВ МАРАТ`,`Лидер команды, общее руководство отдела`,`+7 (916) 901-55-82`,`+79169015582`,`tregulov@crki.art`)
+				+item(2,`БОЧАРОВ АНТОН`,`Реализация возможностей резидентов, проектов. Использование площадки с целью проведения корпоративных мероприятий`,`+7 (926) 109-78-27`,`+79261097827`,`abocharov@crki.art`)
+	// end sCommercePerson

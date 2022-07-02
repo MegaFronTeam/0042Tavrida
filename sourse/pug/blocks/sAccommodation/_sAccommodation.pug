@@ -1,0 +1,22 @@
+mixin sAccommodation(data)
+	// start sAccommodation
+	+b.SECTION.sAccommodation.section#sAccommodation&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Проживание
+			.row
+				mixin item(houses,title,pic,caption)
+					.col-lg-6
+						+e.item
+							+e.item-pic
+								img(src=`img/accommodation-${pic}.jpg`, alt="")
+								+e.item-text
+									+e.houses
+										+icon('home')
+										span!=`x ${houses}`
+									+e.title!=title
+							+e.caption!=`<strong>Удобства: </strong>${caption}`
+				+item(`25`,`эко-домики`,1,`Фен, чайник, стаканы, душ, туалет, кровать, кондиционер, полотенца, тумбочка, вешалки быстрого доступа, минихолодильник`)
+				+item(`100`,`Дома`,2,`кровать, шкаф с плечиками, минихолодильник, полотенца, розетки, санзона общая отдельностоящая`)
+
+	// end sAccommodation

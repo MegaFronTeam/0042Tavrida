@@ -17,6 +17,9 @@ include ../blocks/sFestival/_sFestival.pug
 include ../blocks/sCardsBlock/_sCardsBlock.pug
 include ../blocks/sEventFormats/_sEventFormats.pug
 include ../blocks/sCongressServices/_sCongressServices.pug
+include ../blocks/sAccommodation/_sAccommodation.pug
+include ../blocks/sCommercePerson/_sCommercePerson.pug
+include ../blocks/sCommerceMap/_sCommerceMap.pug
 
 block variables
 	- let  mainPage= null
@@ -34,6 +37,10 @@ block pagecontent
 	+sCommerceList
 	+sEventFormats
 	+sCongressServices
+	+sAccommodation
+	+sCommercePerson
+	+sCommerceMap
+	+sForm2023
 	//- 	//- h2 Lorem ipsum dolor sit amet.
 	//- +sAbout({
 	//- 	bg: 'about-bg.jpg',
