@@ -62,6 +62,52 @@
 			}
 		}
 	}
+	&__slider{
+		overflow: hidden;
+		margin-bottom: rem(36);
+		position: relative;
+		picture {
+			border-radius: 30px;
+			@include block(512, 312);
+			overflow: hidden;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__slide{
+	}
+	&__slider-btn{
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+		width: rem(50);
+		height: rem(50);
+		border-radius: 50%;
+		background-color: rgba($white,0.9);
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			max-width: 70%;
+		}
+		position: absolute;
+		top: 50%;
+		transform: translatey(-50%);
+		z-index: 2;
+		&--prev{
+			left: rem(10);
+		}
+		&--next{
+			right: rem(10);
+		}
+	}
 	&__title {
 		font-weight: 900;
 		text-transform: uppercase;

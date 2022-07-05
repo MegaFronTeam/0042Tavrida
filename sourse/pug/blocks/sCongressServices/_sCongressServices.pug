@@ -19,6 +19,12 @@ mixin sCongressServices(data)
 			+congress-item(true,`Клуб Меганом + веранда`,`Открытый павильон, есть фитнес<br />оборудование, коврики, петли ТRX`,`15 х 15 м`,13,false,true,true,true,true,true,true,true,true,true,true,false)
 	// end sCongressServices
 
+//- +b.sl-contr
+//- 	+e.prev.act-prev-js
+//- 		img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+//- 	+e.next.act-next-js
+//- 		img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+
 mixin congress-item(color,title,caption,size,pic,stScreen=true,mobScreen=true,micro=true,sound=true,light=true,flip=true,theatre=true,classRoom=true,table=true,banquet=true,cabaret=true,furshet=true)
 	+b.congress-item(class=(color ? '--color' : ''))
 		+e.title-wrap
@@ -28,12 +34,26 @@ mixin congress-item(color,title,caption,size,pic,stScreen=true,mobScreen=true,mi
 					img(src="img/svg/size.svg", alt="")
 					span!=size
 			+e.caption!=caption
-		+e.pic-wrap
-			.row
-				.col-lg-6
+		//- +e.pic-wrap
+		//- 	.row
+		//- 		.col-lg-6
+		//- 			+pic(`congress-item-${pic}_1.jpg`,'',0)
+		//- 		.col-lg-6
+		//- 			+pic(`congress-item-${pic}_2.jpg`,'',0)
+		+e.slider--js.swiper
+			.swiper-wrapper
+				+e.slide.swiper-slide
 					+pic(`congress-item-${pic}_1.jpg`,'',0)
-				.col-lg-6
+				+e.slide.swiper-slide
 					+pic(`congress-item-${pic}_2.jpg`,'',0)
+				+e.slide.swiper-slide
+					+pic(`congress-item-${pic}_1.jpg`,'',0)
+				+e.slide.swiper-slide
+					+pic(`congress-item-${pic}_2.jpg`,'',0)
+			+e.slider-btn--prev
+				img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+			+e.slider-btn--next
+				img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
 		+e.options-wrap
 			.row
 				if stScreen
