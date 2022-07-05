@@ -43,13 +43,23 @@ mixin congress-item(color,title,caption,size,pic,stScreen=true,mobScreen=true,mi
 		+e.slider--js.swiper
 			.swiper-wrapper
 				+e.slide.swiper-slide
-					+pic(`congress-item-${pic}_1.jpg`,'',0)
+					+e.pic(data-fancybox data-src=`img/@2x/congress-item-${pic}_1.jpg`)
+						img(src=`img/@2x/congress-item-${pic}_1.jpg`, alt="")
 				+e.slide.swiper-slide
-					+pic(`congress-item-${pic}_2.jpg`,'',0)
+					+e.pic(data-fancybox data-src=`img/@2x/congress-item-${pic}_1.jpg`)
+						img(src=`img/@2x/congress-item-${pic}_2.jpg`, alt="")
 				+e.slide.swiper-slide
-					+pic(`congress-item-${pic}_1.jpg`,'',0)
+					+e.pic(data-fancybox data-src=`img/@2x/congress-item-${pic}_1.jpg`)
+						img(src=`img/@2x/congress-item-${pic}_1.jpg`, alt="")
 				+e.slide.swiper-slide
-					+pic(`congress-item-${pic}_2.jpg`,'',0)
+					+e.pic(data-fancybox data-src=`img/@2x/congress-item-${pic}_1.jpg`)
+						img(src=`img/@2x/congress-item-${pic}_2.jpg`, alt="")
+				//- +e.slide.swiper-slide
+				//- 	+pic(`congress-item-${pic}_2.jpg`,'',0)
+				//- +e.slide.swiper-slide
+				//- 	+pic(`congress-item-${pic}_1.jpg`,'',0)
+				//- +e.slide.swiper-slide
+				//- 	+pic(`congress-item-${pic}_2.jpg`,'',0)
 			+e.slider-btn--prev
 				img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
 			+e.slider-btn--next
