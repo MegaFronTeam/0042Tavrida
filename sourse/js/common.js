@@ -1051,6 +1051,16 @@ function eventHandler() {
 
 		});
 	})
+	
+	let startModal = document.querySelector(".start-modal");
+
+	startModal.addEventListener("click", function(event){
+		let target = event.target.closest("a");
+		if (!target) {
+			$(this).fadeOut();
+		}
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

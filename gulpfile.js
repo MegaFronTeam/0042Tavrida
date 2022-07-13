@@ -38,7 +38,7 @@ function browsersync() {
     browserSync.init({
         server: {
             baseDir: './' + publicPath,
-            middleware: bssi({ baseDir: './' + publicPath, ext: '.html' })
+            // middleware: bssi({ baseDir: './' + publicPath, ext: '.html' })
         },
         // ghostMode: { clicks: false },
         // notify: false,
@@ -231,10 +231,12 @@ function startwatch() {
     watch(sourse + '/sass/*.svg', { usePolling: true }, svgCopy);
 
     watch([sourse + '/js/common.js'], { usePolling: true }, common);
-    watch(sourse + '/img', { usePolling: true }, img);
+    // watch(sourse + '/img', { usePolling: true }, img);
 }
 
 export let imgAll = series(cleanimg, img) 
 export let libs = series(cleanlibs, copyLibs)
 export let sprite = series(svg, svgCopy)
-export default series(common, libs, styles, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styles, 
+    // imgAll,
+     sprite, pugFiles, parallel(browsersync, startwatch))
