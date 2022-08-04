@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProgramFilter/_sProgramFilter.pug
+include ../blocks/sProgramInfo/_sProgramInfo.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sAccommodation/_sAccommodation.pug
+include ../blocks/sCommercePerson/_sCommercePerson.pug
+include ../blocks/sCommerceMap/_sCommerceMap.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Программа фестиваля'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	.headerBlock
+		.container
+			a.back-link(href="#")
+				+icon('arrow-left-long')
+				span Назад
+			h1 Программа фестиваля
+	+sProgramFilter
+	+sProgramInfo
+	+sForm2023
+	+sParnersAlt()
+	+footer()

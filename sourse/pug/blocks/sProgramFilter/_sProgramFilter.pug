@@ -1,0 +1,31 @@
+mixin sProgramFilter(data)
+	// start sProgramFilter
+	+b.sProgramFilter.section#sProgramFilter&attributes(attributes)
+		.container
+			.row
+				.col-xl-10.col-lg-9
+					+e.filter-block
+						//- +e.filter-string--big.row
+						//- 	+e.filter-title тип участия
+						//- 	+in-c('checkbox','Зритель')
+						//- 	+in-c('checkbox','Участник')
+						+e.filter-string.row
+							+e.filter-title Даты
+							+in-c('checkbox','Все','')
+							+in-c('checkbox','15 авг','')
+							+in-c('checkbox','16 авг','')
+							+in-c('checkbox','17 авг','')
+							+in-c('checkbox','18 авг','')
+							+in-c('checkbox','19 авг','')
+						+e.filter-string.row
+							+e.filter-title Направления
+							+in-c('checkbox','Все','')
+							+in-c('checkbox','Российская культура - источник вдохновения',``)
+							+in-c('checkbox','Жить и работать в России','','#9400d3')
+							+in-c('checkbox','Нас не отменишь',``,`#284ba4`)
+				.col-xl-2.col-lg-3
+					+e.reset-block
+						+e.BUTTON.reset(href="#")
+							+icon('close')
+							span Сбросить фильтры
+	// end sProgramFilter

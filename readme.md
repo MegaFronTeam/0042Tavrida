@@ -40,3 +40,5 @@
 4. <https://megafronteam.github.io/0042Tavrida/public/shop.html>
 07.2022
 1. <https://megafronteam.github.io/0042Tavrida/public/commerce.html>
+08.2022
+1. <https://megafronteam.github.io/0042Tavrida/public/2027.html>

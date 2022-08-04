@@ -1,0 +1,21 @@
+mixin sProgramInfo(data)
+	// start sProgramInfo
+	+b.sProgramInfo.section#sProgramInfo&attributes(attributes)
+		.container
+			mixin item(label="Нас не отменишь",bgcolor="#e3eeff",bgcolorlabel="#284ba4",colorlabel="#ffffff")
+				+e.item(style=`--bg-color:${bgcolor}`)
+					+e.item-head
+						+e.item-bread-wrap
+							+e.item-bread 15 августа
+							+e.item-bread 09:00 – 21:00
+							+e.item-bread Выставочный павильон 13 арт-парка
+						+e.item-label(style=`--bg-color-label:${bgcolorlabel};--color-label:${colorlabel}`)!=label
+					+e.item-title Выставка «Киммерийские просторы»
+					+e.item-caption В 2020 году стартовал новый для «Тавриды» проект, направленный на развитие молодых художников через практику создания инсталляций совместно с популярными художниками-экспертами. Впервые арт-объекты полностью создавались командами: от идеи до застройки, без подрядчиков
+					+e.item-link(href="#") Узнать больше  ↓
+			+item()
+			+item()
+			+item('Российская культура - источник вдохновения','#e6f9f9','#00bac3')
+			+item()
+			+item('Российская культура - источник вдохновения','#e6f9f9','#00bac3')
+	// end sProgramInfo

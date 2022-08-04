@@ -53,8 +53,8 @@ mixin form-wrap(inp, formClasses)
 //- /wrapper for form
 
 
-mixin in-c(typ="checkbox", text, name=typ)
-	+b.LABEL.custom-input.form-check
+mixin in-c(typ="checkbox", text, name=typ,bgcheck='#00bac3',colorcheck='#ffffff')
+	+b.LABEL.custom-input.form-check(style=`--bg-checked:${bgcheck};--color-checked:${colorcheck}`)
 		+e.INPUT.input.form-check-input(name=name, type=typ)&attributes(attributes)
 		if block
 			block 

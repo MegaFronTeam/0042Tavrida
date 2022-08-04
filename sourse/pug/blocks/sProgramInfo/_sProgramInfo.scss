@@ -1,0 +1,96 @@
+// start .sProgramInfo
+.sProgramInfo {
+	--sPT: #{rem(22)};
+	--sPB: 0;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+	&__item {
+		padding: rem(32);
+		border-radius: rem(40);
+		background-color: var(--bg-color, #e3eeff);
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__item-head {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		flex-direction: column;
+		margin-bottom: 17px;
+	}
+	&__item-bread-wrap {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		margin-bottom: 16px;
+	}
+	&__item-bread {
+		position: relative;
+		padding-right: 44px;
+		text-transform: uppercase;
+		color: #707070;
+		font-weight: 800;
+		font-size: rem(12);
+		line-height: 100%;
+		&::after {
+			content: "";
+			position: absolute;
+			right: 20px;
+			width: 2px;
+			height: 12px;
+			top: 0;
+			background-color: #707070;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__item-label {
+		font-weight: 700;
+		font-size: rem(13);
+		line-height: 180%;
+		padding: rem(4.5) rem(16);
+		border-radius: 30px;
+		background-color: var(--bg-color-label, #284ba4);
+		color: var(--color-label, #ffffff);
+	}
+	&__item-title {
+		font-weight: 700;
+		font-size: rem(22);
+		line-height: calc(27 / 22);
+		margin-bottom: rem(16);
+	}
+	&__item-caption {
+		font-size: rem(16);
+		line-height: 180%;
+		margin-bottom: rem(14);
+	}
+	&__item-link {
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 180%;
+	}
+} // end.sProgramInfo
