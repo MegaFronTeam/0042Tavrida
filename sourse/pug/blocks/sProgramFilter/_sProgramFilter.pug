@@ -12,17 +12,17 @@ mixin sProgramFilter(data)
 						+e.filter-string
 							+e.filter-title Даты
 							+e.filter-wrap.row
-								+in-c('checkbox','Все','')
-								+in-c('checkbox','16 авг','')
-								+in-c('checkbox','17 авг','')
-								+in-c('checkbox','18 авг','')
+								+in-c('radio','Все','date')(checked data-date="all")
+								+in-c('radio','16 авг','date')(data-date="16.08.2022")
+								+in-c('radio','17 авг','date')(data-date="17.08.2022")
+								+in-c('radio','18 авг','date')(data-date="18.08.2022")
 						+e.filter-string
 							+e.filter-title Направления
 							+e.filter-wrap.row
-								+in-c('checkbox','Все','')
-								+in-c('checkbox','Российская культура - источник вдохновения',``)
-								+in-c('checkbox','Жить и работать в России','','#9400d3')
-								+in-c('checkbox','Нас не отменишь',``,`#284ba4`)
+								+in-c('radio','Все','idIv')(checked data-id='all')
+								+in-c('radio','Год сохранения культурного наследия','idIv',`#284BA4`)(data-id='Год сохранения культурного наследия')
+								+in-c('radio','Жить и работать в России','idIv','#9400d3')(data-id='Жить и работать в России')
+								+in-c('radio','Нас не отменишь',`idIv`,`#00BAC3`)(data-id='Нас не отменишь')
 				.col-xl-2.col-lg-3
 					+e.reset-block
 						+e.BUTTON.reset(href="#")

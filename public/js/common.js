@@ -1052,14 +1052,69 @@ function eventHandler() {
 		});
 	})
 	
-	let startModal = document.querySelector(".start-modal");
+	try {
+		let startModal = document.querySelector(".start-modal");
+		startModal.addEventListener("click", function(event){
+			let target = event.target.closest("a");
+			if (!target) {
+				$(this).fadeOut();
+			}
+		})
+		
+	} catch (error) {
+		
+	}
+	
+	let items = document.querySelectorAll(".sProgramInfo__item");
+	let currentId='all';
+	let currentDate='all';
 
-	startModal.addEventListener("click", function(event){
-		let target = event.target.closest("a");
-		if (!target) {
-			$(this).fadeOut();
+	function filterEll() {
+		
+	}
+
+	$('.sProgramFilter [data-date]').click(function() {  
+			currentDate = $(this).data("date");
+			console.log(currentDate);
+			for (const item of items) {
+				let id  = item.dataset.id
+				let date  = item.dataset.date
+				if (date != currentDate && currentDate != 'all') {
+					$(item).fadeOut();
+				}
+				else{
+					if (id == currentId || currentId == 'all') { 
+						$(item).fadeIn();
+					} 
+				}
+			}
+	})
+				
+	$('.sProgramFilter [data-id]').click(function() {
+		currentId = $(this).data("id");
+		console.log(currentId);
+		for (const item of items) {
+			let id  = item.dataset.id
+			let date  = item.dataset.date
+			if ( id != currentId && currentId != 'all') {
+				$(item).fadeOut();
+			}
+			else{
+				if (date == currentDate || currentDate == 'all') { 
+					$(item).fadeIn();
+				}
+			}
 		}
 	})
+
+	$(".sProgramFilter__reset").click(function(e) {
+		e.preventDefault();
+		$('[data-date="all"], [data-id="all"]').click();
+		// $(".sProgramInfo__item").fadeIn();
+
+	})
+
+
 
 };
 if (document.readyState !== 'loading') {
