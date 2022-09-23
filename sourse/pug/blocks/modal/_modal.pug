@@ -244,6 +244,29 @@ mixin modal()
 					+pic(`ozon.png`,'',0)
 				+e.descr Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендомКлючевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендом
 				
+	+b.modal-win--add-file(id="modal-add-file" class=" " style="display: none" )
+		.h5 Добавить файлы
+		//- +e.input-files-wrap
+		label.dropzone-wrapper.d-block
+			span Скан паспорта 1 и 2 страницы
+			+b.dropzone(action='/file-upload')
+				#dropzone
+					+e.prev-wrap
+						| Выберите или перетащите файл сюда для загрузки
+					.fallback
+						input(name='file', type='file', multiple='')
+			p pdf, doc, docx, xls, xlsx не более 50 mb
+		label.dropzone-wrapper.d-block
+			span СНИЛС
+			+b.dropzone(action='/file-upload')
+				#dropzone
+					+e.prev-wrap
+						| Выберите или перетащите файл сюда для загрузки
+					.fallback
+						input(name='file', type='file', multiple='')
+			p pdf, doc, docx, xls, xlsx не более 50 mb
+
+		+e.btn.btn.btn-warning(href="#") Добавить
 	// end modals
 
 mixin modalItem(name, place)

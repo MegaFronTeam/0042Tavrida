@@ -948,6 +948,33 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal-win modal-win--add-file" id="modal-add-file" style="display: none">
+			<div class="h5">Добавить файлы</div>
+			<label class="dropzone-wrapper d-block"><span>Скан паспорта 1 и 2 страницы</span>
+				<div class="dropzone" action="/file-upload">
+					<div id="dropzone">
+						<div class="dropzone__prev-wrap">Выберите или перетащите файл сюда для загрузки
+						</div>
+						<div class="fallback">
+							<input name="file" type="file" multiple=""/>
+						</div>
+					</div>
+				</div>
+				<p>pdf, doc, docx, xls, xlsx не более 50 mb</p>
+			</label>
+			<label class="dropzone-wrapper d-block"><span>СНИЛС</span>
+				<div class="dropzone" action="/file-upload">
+					<div id="dropzone">
+						<div class="dropzone__prev-wrap">Выберите или перетащите файл сюда для загрузки
+						</div>
+						<div class="fallback">
+							<input name="file" type="file" multiple=""/>
+						</div>
+					</div>
+				</div>
+				<p>pdf, doc, docx, xls, xlsx не более 50 mb</p>
+			</label><a class="modal-win__btn btn btn-warning" href="#">Добавить</a>
+		</div>
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs--><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>

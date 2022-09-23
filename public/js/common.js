@@ -1114,8 +1114,6 @@ function eventHandler() {
 
 	})
 
-
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
