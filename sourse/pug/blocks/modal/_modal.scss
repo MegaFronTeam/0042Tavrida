@@ -178,6 +178,35 @@
 					height: auto;
 				}
 			}
+			.dropzone .dz-preview .dz-details{
+				opacity: 1 !important;
+				display: flex;
+				flex-direction: column-reverse;
+			}
+			.dz-message {
+				display: block;
+				font-size: rem(13);
+				text-align: left;
+				line-height: 1.8;
+				padding-left: 30px;
+			}
+			.dz-progress{
+				display: none !important;
+			}
+			.dropzone .dz-preview .dz-details .dz-filename {
+				// overflow: hidden;
+				// text-overflow: ellipsis;
+				width: calc(100%  - 30px);
+				text-align: left;
+				line-height: 1.2;
+				span{
+					display: inline-block;
+					max-width: 100%;
+					text-overflow: ellipsis;
+					overflow: hidden;
+
+				}
+			}
 			.dz {
 				&-started {
 					border-color: transparent;
@@ -190,6 +219,7 @@
 				&-image {
 					img {
 						height: auto;
+						display: none !important;
 						@include media-breakpoint-up(lg) {
 							height: auto;
 						}

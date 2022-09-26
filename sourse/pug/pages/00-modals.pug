@@ -33,3 +33,15 @@ block pagecontent
 	+sForm()
 	+sPartners()
 	+footer()
+block scripts
+	script.
+		const dropzone = new Dropzone(".dropzone-js", {
+			url: "/upload", 
+			dictDefaultMessage: `Выберите или перетащите файл сюда для загрузки`,
+			previewTemplate: document.querySelector("#my-template").innerHTML
+		});
+		const dropzone2 = new Dropzone(".dropzone2-js", {
+			url: "/upload", 
+			dictDefaultMessage: `Выберите или перетащите файл сюда для загрузки`,
+			previewTemplate: document.querySelector("#my-template").innerHTML
+		});
