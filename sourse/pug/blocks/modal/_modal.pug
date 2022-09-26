@@ -245,29 +245,38 @@ mixin modal()
 				+e.descr Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендомКлючевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендом
 				
 	+b.modal-win--add-file(id="modal-add-file" class=" " style="display: none" )
-		.h5 Добавить файлы
-		//- +e.input-files-wrap
-		label.dropzone-wrapper.d-block
-			span Скан паспорта 1 и 2 страницы
-			+b.dropzone(action='/file-upload')
-				#dropzone
-					+e.prev-wrap
-						| Выберите или перетащите файл сюда для загрузки
+		form
+			.h5 Добавить файлы
+			//- +e.input-files-wrap
+			.dropzone-wrapper.d-block
+				span Скан паспорта 1 и 2 страницы 
+				+b.dropzone().dropzone-js
+					//- #dropzone
+					//- 	+e.prev-wrap
+					//- 		| Выберите или перетащите файл сюда для загрузки
 					.fallback
 						input(name='file', type='file', multiple='')
-			p pdf, doc, docx, xls, xlsx не более 50 mb
-		label.dropzone-wrapper.d-block
-			span СНИЛС
-			+b.dropzone(action='/file-upload')
-				#dropzone
-					+e.prev-wrap
-						| Выберите или перетащите файл сюда для загрузки
+				p pdf, doc, docx, xls, xlsx не более 50 mb
+			.dropzone-wrapper.d-block
+				span СНИЛС
+				+b.dropzone().dropzone2-js 
 					.fallback
 						input(name='file', type='file', multiple='')
-			p pdf, doc, docx, xls, xlsx не более 50 mb
+				p pdf, doc, docx, xls, xlsx не более 50 mb
 
-		+e.btn.btn.btn-warning(href="#") Добавить
+			+e.btn.btn.btn-warning(href="#") Добавить
 	// end modals
+	#my-template(style='display:none;')
+		#mytmp.dz-preview.dz-file-preview
+			.dz-details
+				.dz-size
+					span(data-dz-size='')
+				.dz-filename
+					span(data-dz-name='')
+				.dz-remove(data-dz-remove='')
+					<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M19 6.91L17.59 5.5L12 11.09L6.41 5.5L5 6.91L10.59 12.5L5 18.09L6.41 19.5L12 13.91L17.59 19.5L19 18.09L13.41 12.5L19 6.91Z" fill="#667985"/>
+						</svg>
 
 mixin modalItem(name, place)
 	.col-6.col-lg-3
@@ -279,3 +288,6 @@ mixin modalItem(name, place)
 				+e.l-place=place
 					if block
 						block
+
+
+

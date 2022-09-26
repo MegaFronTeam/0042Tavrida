@@ -1006,3 +1006,30 @@ p.h5 {
 		text-transform: uppercase;
 	}
 }
+
+
+.dz-remove{
+	z-index: 100;
+	position: absolute;
+	right: 0;
+	// top: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	cursor: pointer !important;
+	svg{
+		cursor: pointer !important;
+
+	}
+
+}
+
+.dropzone{
+	position: relative;
+}
+
+.dz-started{
+	.dz-message{
+		display: none !important;
+	}
+}
