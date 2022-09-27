@@ -1270,11 +1270,13 @@
 			const dropzone = new Dropzone(".dropzone-js", {
 				url: "/upload", 
 				dictDefaultMessage: `Выберите или перетащите файл сюда для загрузки`,
+				maxFiles: 1,
 				previewTemplate: document.querySelector("#my-template").innerHTML
 			});
 			const dropzone2 = new Dropzone(".dropzone2-js", {
 				url: "/upload", 
 				dictDefaultMessage: `Выберите или перетащите файл сюда для загрузки`,
+				maxFiles: 1,
 				previewTemplate: document.querySelector("#my-template").innerHTML
 			});
 		</script>
