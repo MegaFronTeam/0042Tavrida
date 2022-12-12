@@ -1,0 +1,57 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '2024'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock25({
+		pic: 'headerBlock-bg-1.jpg',
+		headline: '25 мая — 1 июня',
+		title: 'архитектурный воркшоп арт-кластера &laquo;Таврида&raquo;',
+		btn: 'подать заявку',
+		caption: true,
+	})
+	.section.container
+		.section-title
+			h2 Преимущества воркшопа
+		.row
+			mixin item(t, p)
+				.col-xl-4.col-md-6
+					+b.do-item
+						.mb-3.strong= t
+						p!= p
+			+item(`Преимущество 1 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Преимущество 2 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 3`,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 4 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 5 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Преимущество 6 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+	+sForm2023()
+	+sParnersAlt()
+	+footer(true)

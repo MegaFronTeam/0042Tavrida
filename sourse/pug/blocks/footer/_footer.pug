@@ -1,18 +1,46 @@
-mixin footer()
+mixin footer(isMore)
   +b.FOOTER.footer
     .container
       +e.H4.headline Контакты
       +e.row.row
-        +footerItem('Телефон:')
-          +e.link(href='tel:88003022704') 8 (800) 302-27-04
-        +footerItem('Сотрудничество:')
-          +e.link(href='mailto:info@crki.art') info@crki.art
-        +footerItem('Пресса:')
-          +e.link(href='mailto:press@crki.art') press@crki.art
-      +e.copy-right Официальный сайт арт-кластера «Таврида»
+        if isMore
+          +footerItem('Сотрудничество:', 'true')
+            +e.link(href='mailto:info@crki.art') info@crki.art
+          +footerItem('Пресс-служба:', 'true')
+            +e.link(href='mailto:press@tavrida.art') press@tavrida.art
+          +footerItem('Грантовый конкурс:', 'true')
+            +e.link(href='mailto:grant@crki.art') grant@crki.art
+          +footerItem('сеть арт-резиденций:', 'true')
+            +e.link(href='mailto:art_region@crki.art') art_region@crki.art
+          +footerItem('Центр практики:', 'true')
+            +e.link(href='mailto:tavrida_praktika@crki.art') tavrida_praktika@crki.art
+          +footerItem('Арт-парк:', 'true')
+            +e.link(href='mailto:artpark@crki.art') artpark@crki.art
+          +footerItem('Кастинг-платформа:', 'true')
+            +e.link(href='mailto:cast@crki.art') cast@crki.art
+          +footerItem('Техническая поддержка сайта:', 'true')
+            +e.link(href='mailto:help@crki.art') help@crki.art
+          +footerItem('Служба заботы об участниках:', 'true')
+            +e.link(href='mailto:tavrida@crki.art') tavrida@crki.art
+        else
+          +footerItem('Телефон:', 'true')
+            +e.link(href='tel:88003022704') 8 (800) 302-27-04
+          +footerItem('Сотрудничество:')
+            +e.link(href='mailto:info@crki.art') info@crki.art
+          +footerItem('Пресса:')
+            +e.link(href='mailto:press@crki.art') press@crki.art
+      +e.copy-right 
+        if isMore
+          +e.other-side(href="#") Версия сайта для слабовидящих
+        | Официальный сайт арт-кластера «Таврида»
   +b.btn-top--js
     +icon('arrow-right')
-mixin footerItem(title)
-  .col-12.col-md-4.col-lg-3
-    +e.title=title
-    block
+mixin footerItem(title, customClass)
+  if customClass
+    .col-12.col-sm-6.col-md-4.col-xl-3
+      +e.title=title
+      block
+  else
+    .col-12.col-md-4.col-lg-3
+      +e.title=title
+      block

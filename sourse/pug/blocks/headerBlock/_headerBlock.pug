@@ -141,3 +141,20 @@ mixin headerBlock2026(data)
 						else
 							iframe(src=`${data.video}&autoplay=1&controls=0&disablekb=1&showinfo=0` width='853' height='480' frameborder='0' allowfullscreen='')
 				+e.caption Площадка Таврида.АРТ дает возможность проведения различных мероприятий: промо, корпоративных, тренингов и т.д. Для вас дотсупны пространства для проведения форумов и конференций, 25 экодомиков и 100 домов
+
+mixin headerBlock25(data)
+	// start headerBlock
+	+b.headerBlock--25.section#headerBlock&attributes(attributes)
+		+e.inner.bg-wrap
+			+pic(data.pic, 'bg', '0').picture-bg
+			+e.back(href="#")
+				+icon("arrow-left-long")
+			if data.headline
+				+e.headline!= headline
+			if data.title
+				h1!= data.title
+			if data.btn
+				a.btn.btn-warning(href="#")= data.btn
+			if data.caption
+				+e.caption Подать заявку на участие можно до 
+					span 20 апреля
