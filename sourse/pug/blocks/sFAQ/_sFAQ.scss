@@ -146,4 +146,35 @@
 			padding: rem(18) rem(35);
 		}
 	}
+	&--25 {
+		.sFAQ {
+			&__item{
+				background: #E3EEFF;
+				border-color: #E3EEFF;
+			}
+			&__content {
+				h5 {
+					margin-bottom: rem(24);
+					font-weight: 700;
+				}
+				p {
+					font-size: rem(16);
+					color: $gray-650;
+					line-height: 1.8em;
+					margin-bottom: rem(16);
+				}
+			}
+			&__text {
+				color: #000;
+				line-height: 1.8em;
+				font-weight: 400 !important;
+				margin-bottom: rem(16) !important;
+			}
+			&__caption {
+				font-size: rem(13);
+				color: $gray-650;
+				line-height: 1.8em;
+			}
+		}
+	}
 } // end.sFAQ

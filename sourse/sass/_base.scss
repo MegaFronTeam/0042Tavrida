@@ -1054,6 +1054,11 @@ p.h5 {
 			max-width: none;
 		}
 	}
+	.sFeedBack {
+		.section-title {
+			flex-direction: row-reverse;
+		}
+	}
 	.sCurators {
 		&__slider {
 			@include media-breakpoint-up(lg) {

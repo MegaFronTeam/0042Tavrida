@@ -91,4 +91,73 @@
 		font-size: rem(20);
 		color: #000;
 	}
+	&--2 {
+		@include media-breakpoint-up(md) {
+			--sPB: 0;
+		}
+		ol {
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			li {
+				font-size: rem(14);
+				font-weight: 700;
+				line-height: 1.57em;
+				@include media-breakpoint-up(lg) {
+					flex-direction: column;
+					width: calc(100% / 3);
+					text-align: center;
+					&:before {
+						padding: rem(1.8) rem(5.4);
+						border-radius: 16.0794px;
+						font-size: rem(25);
+						left: rem(115);
+					}
+					&:after {
+						width: rem(50);
+						height: rem(50);
+						margin-right: 0;
+						border-radius: 17.9931px;
+						margin-bottom: rem(39);
+					}
+				}
+				&:nth-child(1){
+					&:after {
+						background-color: #C8B2E4;
+					}
+				}
+				&:nth-child(2){
+					&:after {
+						background-color: #C8DEFF;
+					}
+				}
+				&:nth-child(3){
+					&:after {
+						background-color:#F1E1F5;
+					}
+				}
+				&:nth-child(4){
+					&:after {
+						background-color: #C8DEFF;
+					}
+				}
+				&:nth-child(5){
+					&:after {
+						background-color: #C8B2E4;
+					}
+				}
+				&:nth-child(6){
+					&:after {
+						background-color: #F1E1F5;
+					}
+				}
+				@include media-breakpoint-up(xl) {
+					&:before {
+						left: rem(149.088);
+					}
+				}
+			}
+		}
+	}
 } // end.sOpportunities

@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sProgramInfo/_sProgramInfo.pug
+include ../blocks/sAboutBlock/_sAboutBlock.pug
+include ../blocks/sUsefulMaterials/_sUsefulMaterials.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sForWhom/_sForWhom.pug
+include ../blocks/sResults/_sResults.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sWorkFormat/_sWorkFormat.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= 'architectural-workshop-page'
+block title
+	- let  title= '2024'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock25({
+		pic: 'headerBlock-bg-4.jpg',
+		title: 'Волонтеры<br>фестиваля',
+	})
+	+sOpportunities(
+		`Возможности`,
+		`Бесплатное обучение`,
+		`Участие во&nbsp;Всероссийском конкурсе молодежных проектов Федерального агентства по&nbsp;делам молодежи с&nbsp;целью получения гранта`,
+		`Получение рекомендаций от&nbsp;организаторов проекта (по&nbsp;запросу)`,
+		`Участие во&nbsp;Всероссийском конкурсе молодежных проектов Федерального агентства по&nbsp;делам мол`,
+		`Бесплатное обучение`,
+		`Получение рекомендаций от&nbsp;организаторов проекта (по&nbsp;запросу)`,
+	).sOpportunities--2
+	+sFAQ25
+	+sCards2('Сервисы')
+		+card(`wsh-4.jpg`,``,`&laquo;Там-там&raquo;&nbsp;&mdash; символ пульсирующей жизни, наполненной светом. Днем он&nbsp;рассеивает солнечные блики, отражая небесную гладь, а&nbsp;ночью сияет подобно луне.`)
+		+card(`wsh-2.jpg`,``,`Совместно со&nbsp;специалистами из&nbsp;различных научных и&nbsp;социокультурных дисциплин группа художнико`)
+		+card(`wsh-3.jpg`,``,`&laquo;Юла&raquo; представляет собой скульптуру, основанную на&nbsp;преобразовании энергии вращения юлы. В&nbsp;то&nbsp;время как юла совершает повторяющиеся движения и&nbsp;ее&nbsp;внешняя оболочка зрительно не&nbsp;меняется`)
+	+sWorkFormat
+	+sFeedBack8()
+	+footer(true)

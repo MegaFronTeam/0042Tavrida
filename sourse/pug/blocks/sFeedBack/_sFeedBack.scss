@@ -110,6 +110,12 @@
 	&__txt{
 		line-height: 1.85;
 		color: $dark-blue;
+		a {
+			display: block;
+			font-weight: 700;
+			color: $orange;
+			margin-bottom: 0;
+		}
 	}
 	&__{}
 	&__{}
