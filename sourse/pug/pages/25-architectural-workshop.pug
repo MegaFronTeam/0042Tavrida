@@ -17,12 +17,15 @@ include ../blocks/sParnersAlt/_sParnersAlt.pug
 include ../blocks/sCurators/_sCurators.pug
 include ../blocks/sWays/_sWays.pug
 include ../blocks/sArrivals/_sArrivals.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sProgramInfo/_sProgramInfo.pug
 //- include ../blocks/sProjects2022/_sProjects2022.pug
 //- include ../blocks/sCardsBlock/_sCardsBlock.pug
 //- include ../blocks/sProjects/_sProjects.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'architectural-workshop-page'
 block title
 	- let  title= '2024'
 	title= title
@@ -52,6 +55,104 @@ block pagecontent
 			+item(`Преимущество 4 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
 			+item(`Преимущество 5 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
 			+item(`Преимущество 6 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+	+sWays(
+		'Форматы мероприятий',
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#B2ECEF',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#C8DEFF',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#F1F1F1',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#F1E1F5',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#E3EEFF',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+		{
+			col: 'col-xl-4 col-md-6',
+			cl:"color-card--without-img",
+			color: '#C8B2E4',
+			title:`Формат проведения мероприятия в&nbsp;одну или несколько строк для наглядности`,
+		},
+	)
+	+sOpportunities(
+		'Возможности для участника',
+		`Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий`,
+		`Интеграция в&nbsp;шоу резидентов: возможность попасть в&nbsp;шорт-лист артистов шоу резидентов арт-кластера &laquo;Таврида&raquo;, которое состоится на&nbsp;фестивале фестивалей &laquo;Таврида.АРТ&raquo; 8 ‒ 12&nbsp;сентября 2021 года`,
+		`Участие в&nbsp;реалити-шоу &laquo;Битва творцов&raquo;: возможность пройти отбор и&nbsp;стать главным героем пилота реалити-шоу &laquo;Битва творцов&raquo; на&nbsp;одном из&nbsp;федеральных телеканалов. Жди подробности`,
+		`Участие в&nbsp;партнерской программе стажировок: возможность стать наставником, экспертом инклюзивной смены антишколы &laquo;Мы&nbsp;вместе&raquo; в&nbsp;следующем году, а&nbsp;также выступить амбассадором инклюзивной смены в&nbsp;составе инклюзивных региональных клубов Росмолодежи для привлечения потенциальных участников`,
+	)
+		+e.caption Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами от&nbsp;практикующих специалистов, дать возможности для старта и&nbsp;показать, что каждый музыкант, дизайнер или танцор может быть настоящим брендом
+	+sActFormBase("Аудитория антишкол",
+		{
+			name: `Танцоры`,
+			text: `Представители театара<br>и кино с разлиными<br>регалиями<br>и послужным списком`,
+			imgNum: `workshop-sl-8.png`
+		},
+		{
+			name: `Музыканты`,
+			text: `Представители театара<br>и кино с разлиными<br>регалиями<br>и послужным списком`,
+			imgNum: `aidio-img-2032-3.png`
+		},
+		{
+			name: `Актеры театра и кино`,
+			text: `Представители театара<br>и кино с разлиными<br>регалиями<br>и послужным списком`,
+			imgNum: `aidio-img-2032-4.png`
+		},
+		{
+			name: `Художники`,
+			text: `Представители театара<br>и кино с разлиными<br>регалиями<br>и послужным списком`,
+			imgNum: `audience-sl-7.png`
+		},
+	)
+	+sCuratorsBody('Организаторы', 'true')
+		.row
+			+e.slider--js.swiper-container 
+				.swiper-wrapper
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-4.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-5.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-6.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально лодотворнойКлючевая задача заезда&nbsp;&mdash; соединить`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-7.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной`,
+					})
+	+sProgramInfo(true)
 	+sForm2023()
 	+sParnersAlt()
 	+footer(true)
