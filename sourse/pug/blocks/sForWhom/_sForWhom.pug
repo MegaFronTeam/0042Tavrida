@@ -1,0 +1,18 @@
+mixin sForWhom(data)
+	// start sForWhom
+	+b.SECTION.sForWhom.section#sForWhom&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Для кого
+			mixin item(i, title, text)
+				li
+					+img(`img/svg/sForWhom-img-${i}.svg`)
+					h5!= title
+					p!= text
+			ul
+				+item(1, 'Резиденты &laquo;Тавриды&raquo; (те, кто был на&nbsp;мероприятиях арт-кластера не&nbsp;менее 2&nbsp;раз), участники проектов арт-кластера &laquo;Таврида&raquo;, участники Национального открытого чемпионата в&nbsp;сфере творческих компетенций ArtMasters', 'Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно')
+				+item(2, 'Блогеры, инфлюенсеры молодежных пабликов и&nbsp;аккаунтов в&nbsp;социальных сетях, представители студенческих СМИ', 'Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно')
+				+item(3, 'Полуфиналисты и&nbsp;финалисты проектов платформы &laquo;Россия&nbsp;&mdash; страна возможностей&raquo;: &laquo;Лидеры России&raquo;, &laquo;Мастера гостеприимства&raquo;, &laquo;Культурный код&raquo;, &laquo;ТопБЛОГ&raquo;,<br>&laquo;Цифровой прорыв&raquo; и&nbsp;т.д.', 'Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно')
+				+item(4, 'Волонтеры движения МыВместе, представители НКО, актив<br>общественных организаций', 'Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно')
+				+item(5, 'Семьи с&nbsp;детьми&nbsp;&mdash; участниками проекта &laquo;Большая перемена&raquo;', 'Возраст от&nbsp;18&nbsp;до&nbsp;35&nbsp;лет включительно')
+	// end sForWhom

@@ -1,0 +1,124 @@
+// start .sResults
+.sResults {
+	--sPT: #{rem(30)};
+	--sPB: 0;
+	// --sTPB: ;
+	ol {
+		@include roww('32px', 'm');
+		--bs-gutter-y: #{rem(32)};
+		display: flex;
+		list-style-type: none;
+		padding-left: 0;
+		counter-reset: num;
+		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
+		@include media-breakpoint-up(lg) {
+			flex-wrap: nowrap;
+		}
+		li {
+			width: 100%;
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - var(--bs-gutter-x));
+			}
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+				.icon {
+					fill: none;
+					stroke: currentColor;
+					stroke-width: 3px;
+					font-size: 35px;
+					margin-left: 6px;
+				}
+			}
+			p {
+				color: $dark;
+				margin-bottom: 0;
+				max-width: rem(290);
+				@include media-breakpoint-up(lg) {
+					max-width: none;
+				}
+			}
+			&:last-child {
+				.sResults__icon-wrap {
+					display: none;
+				}
+			}
+		}
+	}
+	&__icon-wrap {
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			width: 56px;
+			height: 56px;
+			position: absolute;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background-color: $cyan;
+			top: 50%;
+			right: -46px;
+			transform: translateY(-50%);
+		}
+	}
+	&__img-wrap {
+		// border-radius: 10px;
+		margin-bottom: rem(24);
+		color: #fff !important;
+		// background-color: $primary;
+		display: block;
+		
+
+		@include block(352, 256);
+		// overflow: hidden;
+		@include mt;
+		max-width: rem(352);
+		img {
+			width: 101%;
+			height: 101%;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		&:after {
+			content: counter(num);
+			position: absolute;
+			display: block;
+			counter-increment: num;
+			font-weight: 900;
+			font-size: 180px;
+			text-transform: uppercase;
+			line-height: 1;
+			color: #fff;
+			opacity: .8;
+			bottom: -35px;
+			left: 37px;
+			@include media-breakpoint-up(sm) {
+				font-size: 205px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 235px;
+			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #fff;
+		@include rfs(20px);
+
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sResults

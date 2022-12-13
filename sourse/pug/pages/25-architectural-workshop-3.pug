@@ -1,0 +1,98 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sProgramInfo/_sProgramInfo.pug
+include ../blocks/sAboutBlock/_sAboutBlock.pug
+include ../blocks/sUsefulMaterials/_sUsefulMaterials.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sForWhom/_sForWhom.pug
+include ../blocks/sResults/_sResults.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= 'architectural-workshop-page'
+block title
+	- let  title= '2024'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock25({
+		pic: 'headerBlock-bg-3.jpg',
+		title: 'Акселератор грантовых проектов',
+	})
+	+sAboutBlock
+		+item('sAboutm-img-5.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-6.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрийо с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-7.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-8.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрийо с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+	+sWays(
+		'Программа',
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#B2ECEF',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#C8DEFF',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#F1F1F1',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#F1E1F5',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#E3EEFF',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+		{
+			col: 'col-xl-4 col-md-6 sWays__col--other-variant',
+			cl:"color-card--without-img",
+			color: '#C8B2E4',
+			title:`14 апреля 20:00`,
+			text: `Формат проведения мероприятия в одну или несколько строк для наглядности`
+		},
+	)
+	+sForWhom
+	+sCards2
+	+sResults
+	+footer(true)

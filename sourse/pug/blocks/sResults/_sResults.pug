@@ -1,0 +1,18 @@
+mixin sResults(data)
+	// start sResults
+	+b.SECTION.sResults.section#sResults&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Итоги акселератора
+			mixin item(x, p)
+				li
+					+e.img-wrap(href="#")
+						+pic(`${x}`,'bg').picture-bg
+						+e.icon-wrap
+							+icon('arrow-right-2')
+					p!= p
+			ol
+				+item('sResults-img-1.jpg', '&laquo;Там-там&raquo;&nbsp;&mdash; символ пульсирующей жизни, наполненной светом. Днем он&nbsp;рассеивает солнечные блики,')
+				+item('sResults-img-2.jpg', 'Совместно со&nbsp;специалистами из&nbsp;различных научных и&nbsp;социокультурных дисциплин')
+				+item('sResults-img-3.jpg', '&laquo;Юла&raquo; представляет собой скульптуру, основанную на&nbsp;преобразовании энергии вращения юлы. В&nbsp;то&nbsp;время как юла совершает повторяющиеся движения и&nbsp;ее&nbsp;внешняя')
+	// end sResults

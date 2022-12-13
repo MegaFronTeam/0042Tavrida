@@ -1036,6 +1036,16 @@ p.h5 {
 }
 
 .architectural-workshop-page {
+	h2 {
+		font-size: rem(30) !important;
+	}
+	.headerBlock {
+		&__inner {
+			h1 {
+				max-width: rem(637) !important;
+			}
+		}
+	}
 	.sActForm {
 		.section-title {
 			flex-direction: row-reverse;
@@ -1081,6 +1091,19 @@ p.h5 {
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(64);
 			}
+		}
+	}
+	.sCards {
+		h2 {
+			color: $dark !important;
+		}
+		p {
+			font-size: rem(16);
+		}
+	}
+	.sForm {
+		h2 {
+			font-size: rem(40) !important;
 		}
 	}
 }
