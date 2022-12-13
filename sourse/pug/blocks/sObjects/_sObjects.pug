@@ -34,3 +34,36 @@ mixin sObjects(data)
 
 
 	// end sObjects
+
+
+mixin sObjects(data)
+	// start sObjects
+	+b.SECTION.sObjects.section#sObjects&attributes(attributes)
+		.container
+			+b.section-title.row.align-items-center
+				.col.mb-3.mb-lg-0
+					h2 События
+				.col-auto
+					+b.sl-contr
+						+e.prev.feedback-prev-js
+							img(loading="lazy" src="img/svg/arrow-left.svg" alt="")
+						+e.next.feedback-next-js
+							img(loading="lazy" src="img/svg/arrow-right.svg" alt="")
+			+e.slider--js2.swiper-container 
+				.swiper-wrapper
+					mixin slide(x, t="Стоунхендж")
+						+e.slide.swiper-slide
+							+e.img-wrap.bg-wrap.link-modal(href=`#modal-${x}`)
+								+pic(`art-${x}.jpg`,'bg').picture-bg
+								+e.title= t
+					- for (var x = 1; x < 26; x++)
+						+slide(x)
+			mixin modal(x, t="Стоунхендж")
+				+b.modal-win--art(id=`modal-${x}` class=" " style="display: none" )
+					.container
+						+pic(`art-${x}.jpg`,'bg')
+						+e.title= t
+						p В 2020 году стартовал новый проект для «Тавриды», направленный на развитие молодых художников через практику создания инсталляций совместно с популярными художниками-экспертами. Впервые арт-объекты полностью создавались командами: от идеи до застройки, без подрядчиков. В результате воркшопов участники совместно с экспертами возвели арт-объекты, спроектированные на онлайн-сессии и ставшие выставочными экспонатами арт-парка на территории арт-кластера «Таврида».
+			
+			- for (var x = 1; x < 26; x++)
+				+modal(x)

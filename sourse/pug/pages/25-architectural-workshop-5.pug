@@ -25,6 +25,8 @@ include ../blocks/sUsefulMaterials/_sUsefulMaterials.pug
 include ../blocks/sCards/_sCards.pug
 include ../blocks/sForWhom/_sForWhom.pug
 include ../blocks/sResults/_sResults.pug
+include ../blocks/sObjects/_sObjects.pug
+include ../blocks/sHowToDo/_sHowToDo.pug
 //- include ../blocks/sProjects2022/_sProjects2022.pug
 //- include ../blocks/sCardsBlock/_sCardsBlock.pug
 //- include ../blocks/sProjects/_sProjects.pug
@@ -42,9 +44,47 @@ block pagecontent
 		pic: 'headerBlock-bg-5.jpg',
 		title: 'Зрители фестиваля',
 	})
+	+sOpportunities(
+		`Возможности`,
+		`Бесплатное обучение`,
+		`Участие во&nbsp;Всероссийском конкурсе молодежных проектов Федерального агентства по&nbsp;делам молодежи с&nbsp;целью получения гранта`,
+		`Получение рекомендаций от&nbsp;организаторов проекта (по&nbsp;запросу)`,
+		`Участие во&nbsp;Всероссийском конкурсе молодежных проектов Федерального агентства по&nbsp;делам мол`,
+		`Бесплатное обучение`,
+		`Получение рекомендаций от&nbsp;организаторов проекта (по&nbsp;запросу)`,
+	).sOpportunities--2
+	+sCuratorsBody('Организаторы', 'true')
+		.row
+			+e.slider--js.swiper-container 
+				.swiper-wrapper
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-4.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-5.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-6.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально лодотворнойКлючевая задача заезда&nbsp;&mdash; соединить`,
+					})
+					+itemCur({
+						cl: 'swiper-slide ',
+						img:'curator-7.jpg', 
+						title:`Дмитрий<br>Ханкин`,
+						p:`Ключевая задача заезда&nbsp;&mdash; соединить самые творческие аудитории для максимально плодотворной`,
+					})
+	+sObjects
 	.section.container
 		.section-title
-			h2 Возможности
+			h2 Сервис
 		.row
 			mixin item(t, p)
 				.col-xl-4.col-md-6
@@ -57,4 +97,5 @@ block pagecontent
 			+item(`Сервис `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
 			+item(`Сервис `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
 			+item(`Сервис `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+	+sHowToDo
 	+footer(true)

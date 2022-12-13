@@ -1114,6 +1114,29 @@ function eventHandler() {
 
 	})
 
+	let ssObjects2 = new Swiper('.sObjects__slider--js2', {
+		slidesPerView: 1,
+		//loop: true,
+		spaceBetween: 30,
+		watchOverflow: true,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: 'row',
+		//
+		navigation: {
+			nextEl: '.sObjects .sl-contr__next',
+			prevEl: '.sObjects .sl-contr__prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerColumn: 2,
+				slidesPerView: 3
+			},
+			992: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+			},
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
