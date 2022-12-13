@@ -10,11 +10,11 @@ mixin sHowToDo(data)
 				h2 Как добраться
 				.row.gy-4
 					.col-lg
-						+e.img-wrap.bg-wrap.link-modal(href=`#modal-${x}`)
+						+e.img-wrap.bg-wrap(href="#")
 							+pic(`sHowToDo-img-1.jpg`,'bg').picture-bg
 							+e.title Заголовок при наведении на фотографию
 					.col-lg
-						+e.img-wrap.bg-wrap.link-modal(href=`#modal-${x}`)
+						+e.img-wrap.bg-wrap(href="#")
 							+pic(`sHowToDo-img-1.jpg`,'bg').picture-bg
 							+e.title Заголовок при наведении на фотографию
 	// end sHowToDo
