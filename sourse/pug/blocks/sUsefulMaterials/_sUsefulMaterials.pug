@@ -1,0 +1,16 @@
+mixin sUsefulMaterials(data)
+	// start sUsefulMaterials
+	+b.SECTION.sUsefulMaterials.section#sUsefulMaterials&attributes(attributes)
+		.container
+			+b.section-title
+				h2 ПОлезные материалы
+			.row.gy-4
+				mixin item(text)
+					.col-sm-6.col-lg-4
+						+e.item(href="#")
+							+icon('file')
+							p!= text
+				+item('Положение<br>о вступлении<br>в Сеть')
+				+item('Методические материалы от&nbsp;университета креативных индустрий Universal<br>University')
+				+item('Новости федеральной повестки арт-кластера Таврида/новости<br>арт-резиденций')
+	// end sUsefulMaterials

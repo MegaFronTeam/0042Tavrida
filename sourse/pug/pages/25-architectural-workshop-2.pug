@@ -1,0 +1,65 @@
+extends layout/main.pug
+
+
+include ../blocks/sFAQ/_sFAQ.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sVantage/_sVantage.pug
+//- include ../blocks/sProjects/_sProjects.pug
+//- include ../blocks/sResidents/_sResidents.pug
+//- include ../blocks/sAchivment/_sAchivment.pug
+//- include ../blocks/sStory/_sStory.pug
+//- include ../blocks/sFaumos/_sFaumos.pug
+//- include ../blocks/sNews/_sNews.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sFestival/_sFestival.pug
+include ../blocks/sParnersAlt/_sParnersAlt.pug
+include ../blocks/sCurators/_sCurators.pug
+include ../blocks/sWays/_sWays.pug
+include ../blocks/sArrivals/_sArrivals.pug
+include ../blocks/sOpportunities/_sOpportunities.pug
+include ../blocks/sActForm/_sActForm.pug
+include ../blocks/sProgramInfo/_sProgramInfo.pug
+include ../blocks/sAboutBlock/_sAboutBlock.pug
+include ../blocks/sUsefulMaterials/_sUsefulMaterials.pug
+//- include ../blocks/sProjects2022/_sProjects2022.pug
+//- include ../blocks/sCardsBlock/_sCardsBlock.pug
+//- include ../blocks/sProjects/_sProjects.pug
+
+block variables
+	- let  mainPage= 'architectural-workshop-page'
+block title
+	- let  title= '2024'
+	title= title
+block pagecontent
+	+mMenu()
+	+header()
+		+top-nav()
+	+headerBlock25({
+		pic: 'headerBlock-bg-2.jpg',
+		headline: '25 мая — 1 июня',
+		title: 'Конкурс подводных<br>арт-объектов',
+	})
+	+sAboutBlock
+		+item('sAboutm-img-1.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-2.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрийо с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-3.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+		+item('sAboutm-img-4.jpg', 'Формирование личного бренда: знакомство с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрийо с&nbsp;эффективными инструментами продвижения творческих проектов на&nbsp;примере успешных кейсов представителей различных областей креативных индустрий')
+	.section.container
+		.section-title
+			h2 Возможности
+		.row
+			mixin item(t, p)
+				.col-xl-4.col-md-6
+					+b.do-item
+						.mb-3.strong= t
+						p!= p
+			+item(`Преимущество 1 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Преимущество 2 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 3`,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 4 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+			+item(`Преимущество 5 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной синергии, поделиться актуальными инсайтами `)
+			+item(`Преимущество 6 `,`Ключевая задача заезда – соединить самые творческие аудитории для максимально плодотворной`)
+	+sUsefulMaterials
+	+sParnersAlt('true')
+	+footer(true)

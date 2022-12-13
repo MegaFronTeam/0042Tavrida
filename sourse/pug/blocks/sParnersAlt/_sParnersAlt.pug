@@ -1,8 +1,10 @@
-mixin sParnersAlt(data)
+mixin sParnersAlt(form)
 	// start sParnersAlt
 	+b.SECTION.sParnersAlt--js.section#sParnersAlt&attributes(attributes)
 		.container
 			+sParnersAltSlider('Информационные партнеры')
+			if form
+				+sForm2023()
 			+sParnersAltSlider('Партнеры')
 	// end sParnersAlt
 

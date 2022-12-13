@@ -150,7 +150,7 @@ mixin headerBlock25(data)
 			+e.back(href="#")
 				+icon("arrow-left-long")
 			if data.headline
-				+e.headline!= headline
+				+e.headline(class = data.customClass)!= data.headline
 			if data.title
 				h1!= data.title
 			if data.btn

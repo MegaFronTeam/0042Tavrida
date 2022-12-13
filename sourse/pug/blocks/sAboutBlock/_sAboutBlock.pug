@@ -1,0 +1,14 @@
+mixin sAboutBlock(data)
+	// start sAboutBlock
+	+b.SECTION.sAboutBlock.section#sAboutBlock&attributes(attributes)
+		.container
+			+b.section-title
+				h2 О конкурсе
+			mixin item(img, text)
+				+e.row.row
+					.col-lg-6
+						+pic(img)
+					.col-lg-6
+						p!= text
+			block
+	// end sAboutBlock

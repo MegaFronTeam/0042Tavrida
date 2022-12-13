@@ -45,3 +45,4 @@
 
 ========== 12.12.2022
 1. <https://megafronteam.github.io/0042Tavrida/public/25-architectural-workshop.html>
+1. <https://megafronteam.github.io/0042Tavrida/public/25-architectural-workshop-2.html>

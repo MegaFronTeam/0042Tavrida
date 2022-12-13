@@ -321,6 +321,15 @@ font-size: rem(30) !important;
 			}
 		}
 	}
+	&__headline {
+		color: #fff;
+		font-weight: 700;
+		font-size: rem(22);
+		margin-bottom: rem(29);
+		&.darker {
+			color: $gray-650;
+		}
+	}
 }
 
 .section--frame3{
